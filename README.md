@@ -8,3 +8,4 @@ Week 1
 ## Meagan Choo-Kang
 # Wing Kuan Leng :cherry_blossom::blush:
 # Darcy Susel    Hello Class! 
+# Rachelle Bazinet
