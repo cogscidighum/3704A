@@ -11,3 +11,4 @@ Week 1
 # Rachelle Bazinet
 # Oak MacDonald 
 Hi Everyone! 😊
+# Morgan Chau :)
