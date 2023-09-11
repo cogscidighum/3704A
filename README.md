@@ -10,3 +10,4 @@ Week 1
 # Darcy Susel    Hello Class! 
 # Rachelle Bazinet
 # Oak MacDonald 
+Hi Everyone! 😊
