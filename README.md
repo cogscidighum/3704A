@@ -9,3 +9,4 @@ Week 1
 # Wing Kuan Leng :cherry_blossom::blush:
 # Darcy Susel    Hello Class! 
 # Rachelle Bazinet
+# Oak MacDonald 
