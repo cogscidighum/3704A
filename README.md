@@ -13,3 +13,4 @@ Week 1
 Hi Everyone! 😊
 # Morgan Chau :)
 # Sebastian Sharma 
+# Amanda Skolnik
