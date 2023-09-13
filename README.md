@@ -34,4 +34,5 @@ What's up
 # Christine Ndagijimana
 # Ashley Navas
 
-![image](https://github.com/cogscidighum/3704A/assets/113813516/f25ebac4-dd1d-4f7a-8ab9-ae313acfd336)
+![image](https://github.com/cogscidighum/3704A/assets/113813516/51329ff3-8da9-447c-b757-21ad9c1e527c)
+
