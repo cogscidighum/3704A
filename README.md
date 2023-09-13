@@ -24,3 +24,5 @@ Joy Nama
 # Izzy Laidlaw
 # Rianna Ito
 # Teju Oladipo
+# Dominic Weiss
+What's up
