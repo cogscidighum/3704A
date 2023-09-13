@@ -8,6 +8,7 @@ Week 1
 ...
 # Philip Weiss
 # Meagan Choo-Kang
+Steven Pinker, [YouTube Video](https://www.youtube.com/watch?v=7N_NNVeKat8), 209,430 views
 # Wing Kuan Leng :cherry_blossom::blush:
 # Darcy Susel    Hello Class! 
 # Rachelle Bazinet
