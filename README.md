@@ -26,6 +26,6 @@ Hi Everyone! 😊 :)
 # Rianna Ito
 # Teju Oladipo
 # Dominic Weiss
+What's up
 # Mariam Saleh
 # Kaylee Chaput
-What's up
