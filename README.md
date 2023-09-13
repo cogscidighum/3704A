@@ -32,3 +32,5 @@ What's up
 # Elsie Valenzona
 # Maya Pasieczny
 # Christine Ndagijimana
+
+![image](https://github.com/cogscidighum/3704A/assets/113813516/f25ebac4-dd1d-4f7a-8ab9-ae313acfd336)
