@@ -21,3 +21,4 @@ Hi Everyone! 😊
 # Theo Pana
 # Laiza Robert
 Joy Nama
+# Izzy Laidlaw
