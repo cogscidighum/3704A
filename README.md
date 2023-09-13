@@ -5,6 +5,7 @@ Week 1
 # Add your names and other info under your name
 # 1
 ...
+## Philip Weiss
 ## Meagan Choo-Kang
 # Wing Kuan Leng :cherry_blossom::blush:
 # Darcy Susel    Hello Class! 
