@@ -33,6 +33,7 @@ What's up
 # Elsie Valenzona
 # Maya Pasieczny
 # Christine Ndagijimana
+# Ali Zain Vastani 
 # Ashley Navas
 
 ![image](https://github.com/cogscidighum/3704A/assets/144282509/250c892a-0bb0-42a3-8f8a-f4f8f3e3b601)
