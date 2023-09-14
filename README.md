@@ -12,6 +12,7 @@ Steven Pinker, [YouTube Video](https://www.youtube.com/watch?v=7N_NNVeKat8), 209
 # Wing Kuan Leng :cherry_blossom::blush:
 # Darcy Susel    Hello Class! 
 # Rachelle Bazinet
+Patricia Churchland, [YouTube Video](https://youtu.be/9Bv4k8CJnuc?si=L8xorpuqCycBCJte), 9,363 views, ![image](https://github.com/cogscidighum/3704A/assets/144282596/f83048d7-036f-4802-9384-ff6a70e1f700)
 # Oak MacDonald 
 Hi Everyone! 😊 :)
 # Morgan Chau :)
