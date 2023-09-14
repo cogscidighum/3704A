@@ -33,7 +33,7 @@ What's up
 # Kaylee Chaput
 # Elsie Valenzona
 # Maya Pasieczny
-The Politics of Consciousness | video lecture with Yuval Noah Harari -- https://www.youtube.com/watch?v=1rtS2OEV6bM
+# The Politics of Consciousness | video lecture with Yuval Noah Harari, 409K views -- https://www.youtube.com/watch?v=1rtS2OEV6bM
 # Christine Ndagijimana
 # Ali Zain Vastani 
 # Ashley Navas
