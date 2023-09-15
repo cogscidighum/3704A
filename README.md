@@ -29,6 +29,7 @@ Hi Everyone! 😊 :)
 # Izzy Laidlaw
 # Rianna Ito
 # Teju Oladipo
+Noam Chomsky, Advances in AI: ChatGPT -- https://youtu.be/-NMR5JXp37k?si=88PKFKiYMCBUkXxS, 26,042 views
 # Dominic Weiss
 What's up
 # Mariam Saleh
