@@ -19,6 +19,7 @@ Patricia Churchland, [YouTube Video](https://youtu.be/9Bv4k8CJnuc?si=L8xorpuqCyc
 Hi Everyone! 😊 :)
 # Morgan Chau :)
 # Sebastian Sharma 
+Tom Scott, [There is no Algorithm for Truth](https://youtu.be/leX541Dr2rU?si=LQp7DTPWulb_VeIR), 2.5M views
 # Amanda Skolnik
 # Helen Awaju
 # Maddy Millar
