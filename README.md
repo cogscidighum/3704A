@@ -21,6 +21,7 @@ Hi Everyone! 😊 :)
 # Amanda Skolnik
 # Helen Awaju
 # Maddy Millar
+jordan peterson https://youtu.be/hvazKjYe_6k?si=KxSzW-UetmGVhKcg, 236,000 views
 # Leila Dabakuyo
 # Kolene Lamizana
 # Theo Pana
