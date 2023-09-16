@@ -16,7 +16,8 @@ Donald Hoffman, [YouTube Video: If reality is a data structure, can the simulati
 # Rachelle Bazinet
 Patricia Churchland, [YouTube Video](https://youtu.be/9Bv4k8CJnuc?si=L8xorpuqCycBCJte), 9,363 views, ![image](https://github.com/cogscidighum/3704A/assets/144282596/f83048d7-036f-4802-9384-ff6a70e1f700)
 # Oak MacDonald 
-Hi Everyone! 😊 :)
+Bret Weinstein - The Dawn of AGI: Bret speaks with Alexandros Marinos on the Dark Horse Podcast. 41 610 Views
+https://youtu.be/YeucEiOKdiM?si=B_1UJrs40-GOE7yo
 # Morgan Chau :)
 # Sebastian Sharma 
 Tom Scott, [There is no Algorithm for Truth](https://youtu.be/leX541Dr2rU?si=LQp7DTPWulb_VeIR), 2.5M views
