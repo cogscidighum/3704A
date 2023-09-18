@@ -1,10 +1,8 @@
 # Cognitive Science and Digital Humanities Course activities!
 ![image](https://github.com/cogscidighum/3704A/assets/123218209/fe256a22-d469-443f-9ee7-c89497201f61)
-# 0
 # Ahmad Sohrabi
-Week 1
-# Add your names and other info under your name
-# 1
+Actions on Markdown
+# Add your names and other requested info each time
 ...
 # Philip Weiss
 # Meagan Choo-Kang
