@@ -27,6 +27,7 @@ jordan peterson https://youtu.be/hvazKjYe_6k?si=KxSzW-UetmGVhKcg, 236,000 views
 # Leila Dabakuyo
 Timnit Gebru | [How To Stop Artificial Intelligence From Marginalizing Communities](https://youtu.be/PWCtoVt1CJM)| 79,338 views 
 # Kolene Lamizana
+Amy Cuddy | [The power of body language](https://youtu.be/Ks-_Mh1QhMc) | 23 700 189 views
 # Theo Pana
 # Laiza Robert
 The misinformation effect | Elizabeth Loftus | views on september 18, 1,7k -- https://www.youtube.com/watch?v=3RKDVB6qizA
