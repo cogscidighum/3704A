@@ -46,8 +46,7 @@ Lara Boyd, Neuroscientist,[Youtube Video:"After watching this, your brain will n
 # The Politics of Consciousness | video lecture with Yuval Noah Harari, 409K views -- https://www.youtube.com/watch?v=1rtS2OEV6bM
 # Christine Ndagijimana
 # Ali Zain Vastani 
-Yuval Noah Harari, [AI and the future of humanity | Yuval Noah Harari at the Frontiers Forum]([
-](https://www.youtube.com/watch?v=LWiM-LuRe6w), 1.7 million views
+Yuval Noah Harari, [AI and the future of humanity | Yuval Noah Harari at the Frontiers Forum](https://www.youtube.com/watch?v=LWiM-LuRe6w), 1.7 million views
 # Ashley Navas
 ![image](https://github.com/cogscidighum/3704A/assets/144282509/250c892a-0bb0-42a3-8f8a-f4f8f3e3b601)
 
