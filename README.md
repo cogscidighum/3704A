@@ -38,7 +38,7 @@ Noam Chomsky, Advances in AI: ChatGPT -- https://youtu.be/-NMR5JXp37k?si=88PKFKi
 # Dominic Weiss
 What's up
 # Mariam Saleh
-Lara Boyd, Neuroscientist, "After watching this, your brain will not be the same",[Youtube Video](https://www.youtube.com/watch?v=LNHBMFCzznE),38M views
+Lara Boyd, Neuroscientist,[Youtube Video:"After watching this, your brain will not be the same"](https://www.youtube.com/watch?v=LNHBMFCzznE),38M views
 # Kaylee Chaput
 # Elsie Valenzona
 # Maya Pasieczny
