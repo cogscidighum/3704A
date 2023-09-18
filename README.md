@@ -19,6 +19,7 @@ Patricia Churchland, [YouTube Video](https://youtu.be/9Bv4k8CJnuc?si=L8xorpuqCyc
 Bret Weinstein - The Dawn of AGI: Bret speaks with Alexandros Marinos on the Dark Horse Podcast. 41 610 Views
 https://youtu.be/YeucEiOKdiM?si=B_1UJrs40-GOE7yo
 # Morgan Chau :)
+Andrew Huberman - Neuroscientist: "We Are Building a Generation of Low Attention", https://www.youtube.com/watch?v=-xf9pCcVOp4&t=76s&ab, 55,561 views
 # Sebastian Sharma 
 Tom Scott, [There is no Algorithm for Truth](https://youtu.be/leX541Dr2rU?si=LQp7DTPWulb_VeIR), 2.5M views
 # Amanda Skolnik
