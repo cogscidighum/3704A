@@ -27,6 +27,7 @@ Tom Scott, [There is no Algorithm for Truth](https://youtu.be/leX541Dr2rU?si=LQp
 # Maddy Millar
 jordan peterson https://youtu.be/hvazKjYe_6k?si=KxSzW-UetmGVhKcg, 236,000 views
 # Leila Dabakuyo
+Timnit Gebru | [How To Stop Artificial Intelligence From Marginalizing Communities](https://youtu.be/PWCtoVt1CJM)| 79,338 views 
 # Kolene Lamizana
 # Theo Pana
 # Laiza Robert
