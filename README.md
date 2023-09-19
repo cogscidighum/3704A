@@ -37,6 +37,7 @@ The misinformation effect | Elizabeth Loftus | views on september 18, 1,7k -- h
 # Izzy Laidlaw
  Dr Russell A Barkley - [30 Essential Ideas you should know about ADHD, 1B Inhibition, Impulsivity, and Emotion](https://www.youtube.com/watch?v=wg6cfsnmqyg), 774k views
 # Rianna Ito
+Slavoj Žižek | <a href="[https://www.w3schools.com](https://www.youtube.com/watch?v=sG257cOOnw0)">Surplus Happiness | Slavoj Žižek critiques pleasure</a>
 # Teju Oladipo
 Noam Chomsky, Advances in AI: ChatGPT -- https://youtu.be/-NMR5JXp37k?si=88PKFKiYMCBUkXxS, 26,042 views
 # Dominic Weiss
