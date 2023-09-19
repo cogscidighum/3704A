@@ -40,6 +40,7 @@ The misinformation effect | Elizabeth Loftus | views on september 18, 1,7k -- h
 Noam Chomsky, Advances in AI: ChatGPT -- https://youtu.be/-NMR5JXp37k?si=88PKFKiYMCBUkXxS, 26,042 views
 # Dominic Weiss
 What's up
+Nathaniel Drew, "The Secret to Thriving in Hard Times", ![image](https://github.com/cogscidighum/3704A/assets/144282509/f7ac430a-61f4-4af8-900a-822b7fca62b2)
 # Mariam Saleh
 Lara Boyd, Neuroscientist,[Youtube Video:"After watching this, your brain will not be the same"](https://www.youtube.com/watch?v=LNHBMFCzznE),38M views
 # Kaylee Chaput
