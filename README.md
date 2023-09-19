@@ -22,6 +22,7 @@ Andrew Huberman - Neuroscientist: "We Are Building a Generation of Low Attention
 Tom Scott, [There is no Algorithm for Truth](https://youtu.be/leX541Dr2rU?si=LQp7DTPWulb_VeIR), 2.5M views
 # Amanda Skolnik
 # Helen Awaju
+Melanie Mitchell, "How to Build Truly Intelligent AI": https://www.youtube.com/watch?v=cz1UfjZjjyk&t=112s, 44K views
 # Maddy Millar
 jordan peterson https://youtu.be/hvazKjYe_6k?si=KxSzW-UetmGVhKcg, 236,000 views
 # Leila Dabakuyo
