@@ -35,6 +35,7 @@ The misinformation effect | Elizabeth Loftus | views on september 18, 1,7k -- h
 ![qrcode_www youtube com](https://github.com/cogscidighum/3704A/assets/144283223/357a57c5-f58d-4fb6-954b-e2e05117215c)
 # Joy Nama
 # Izzy Laidlaw
+ Dr Russell A Barkley - [30 Essential Ideas you should know about ADHD, 1B Inhibition, Impulsivity, and Emotion](https://www.youtube.com/watch?v=wg6cfsnmqyg), 774k views
 # Rianna Ito
 # Teju Oladipo
 Noam Chomsky, Advances in AI: ChatGPT -- https://youtu.be/-NMR5JXp37k?si=88PKFKiYMCBUkXxS, 26,042 views
