@@ -43,6 +43,7 @@ What's up
 # Mariam Saleh
 Lara Boyd, Neuroscientist,[Youtube Video:"After watching this, your brain will not be the same"](https://www.youtube.com/watch?v=LNHBMFCzznE),38M views
 # Kaylee Chaput
+Jim Davies,  https://www.youtube.com/watch?v=caBIboOGSe4&ab_channel=TEDxTalks, 37,000 views
 # Elsie Valenzona
 # Maya Pasieczny
 # The Politics of Consciousness | video lecture with Yuval Noah Harari, 409K views -- https://www.youtube.com/watch?v=1rtS2OEV6bM
