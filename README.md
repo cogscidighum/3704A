@@ -64,3 +64,5 @@ Poppy Crum - https://youtu.be/SYytiQmXNTc?si=IoSlWQI0WtaIUZ4Q , 130k views
 ![image](https://github.com/cogscidighum/3704A/assets/144282509/250c892a-0bb0-42a3-8f8a-f4f8f3e3b601)
 #Melate Mulugeta 
 Gödel, Escher, Bach author Doug Hofstadter on the state of AI today- https://www.youtube.com/watch?v=lfXxzAVtdpU
+#Ruqayyah Abdullah
+Future Thinking | Jim Davies | TEDxCarletonUniversity https://www.youtube.com/watch?v=TdTP3LKyf4s&ab_channel=TEDxTalks, 27k views
