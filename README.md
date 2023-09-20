@@ -48,6 +48,7 @@ Lara Boyd, Neuroscientist,[Youtube Video:"After watching this, your brain will n
 # Kaylee Chaput
 Anil Seth, https://www.ted.com/talks/anil_seth_your_brain_hallucinates_your_conscious_reality?referrer=playlist-how_your_brain_constructs_real&autoplay=true, 14,187,265 views
 # Elsie Valenzona
+Howard Gardner, ["8 Intelligences: Are You a Jack of All Trades or a Master of One?"](https://www.youtube.com/watch?v=oY2C4YgXm7I&ab_channel=BigThink), 1.5m views
 # Maya Pasieczny
 # The Politics of Consciousness | video lecture with Yuval Noah Harari, 409K views -- https://www.youtube.com/watch?v=1rtS2OEV6bM
 # Christine Ndagijimana
