@@ -55,6 +55,8 @@ Howard Gardner, ["8 Intelligences: Are You a Jack of All Trades or a Master of O
 Jordan Peterson, https://www.youtube.com/watch?v=YG4Y6s_sFmg&t=327s, 672,531 views
 # Ali Zain Vastani 
 Yuval Noah Harari, [AI and the future of humanity | Yuval Noah Harari at the Frontiers Forum](https://www.youtube.com/watch?v=LWiM-LuRe6w), 1.7M views
+# Suban Hussein
+# Lex Fridman podcasts -  https://www.youtube.com/watch?v=e8qJsk1j2zE 493K views
 # Ashley Navas
 ![image](https://github.com/cogscidighum/3704A/assets/144282509/250c892a-0bb0-42a3-8f8a-f4f8f3e3b601)
 
