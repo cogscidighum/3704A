@@ -62,3 +62,6 @@ Poppy Crum - https://youtu.be/SYytiQmXNTc?si=IoSlWQI0WtaIUZ4Q , 130k views
 ![image](https://github.com/cogscidighum/3704A/assets/144282509/250c892a-0bb0-42a3-8f8a-f4f8f3e3b601)
 #Melate Mulugeta 
 Gödel, Escher, Bach author Doug Hofstadter on the state of AI today- https://www.youtube.com/watch?v=lfXxzAVtdpU
+# Isabella St-Marseille
+Marvin Chun, Neuroscience and Artificial Intelligence Need Each Other. https://youtu.be/97iYdJE9mQ4?si=Ls5oht7t4DAQlQ5x 
+![qrcode_www youtube com](https://github.com/cogscidighum/3704A/assets/144955993/e3478b3d-f3a3-46a8-8e9e-d6e2326989e2)
