@@ -44,7 +44,7 @@ Slavoj Žižek | <a href="https://www.youtube.com/watch?v=sG257cOOnw0">Surplus H
 # Teju Oladipo
 Noam Chomsky, Advances in AI: ChatGPT -- https://youtu.be/-NMR5JXp37k?si=88PKFKiYMCBUkXxS, 26,042 views
 # Dominic Weiss
-Nathaniel Drew, "The Secret to Thriving in Hard Times", ![image](https://github.com/cogscidighum/3704A/assets/144282509/f7ac430a-61f4-4af8-900a-822b7fca62b2), https://www.youtube.com/watch?v=LzJfPjTkrW8&ab_channel=NathanielDrew
+Nathaniel Drew, [The Secret to Thriving in Hard Times](https://www.youtube.com/watch?v=LzJfPjTkrW8&ab_channel=NathanielDrew), 126k views
 # Mariam Saleh
 Lara Boyd, Neuroscientist,[Youtube Video:"After watching this, your brain will not be the same"](https://www.youtube.com/watch?v=LNHBMFCzznE),38M views
 # Kaylee Chaput
