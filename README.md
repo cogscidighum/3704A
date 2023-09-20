@@ -21,6 +21,7 @@ Andrew Huberman - Neuroscientist: "We Are Building a Generation of Low Attention
 # Sebastian Sharma 
 Tom Scott, [There is no Algorithm for Truth](https://youtu.be/leX541Dr2rU?si=LQp7DTPWulb_VeIR), 2.5M views
 # Amanda Skolnik
+Dr. Andrew Huberman-Motivation Madness,["Neuroscientist: "DELETE Your Social Media NOW!" - Here's Why!" ](https://www.youtube.com/watch?v=NqMTqy4X6h0), 556K views
 # Helen Awaju
 Melanie Mitchell, "How to Build Truly Intelligent AI": https://www.youtube.com/watch?v=cz1UfjZjjyk&t=112s, 44K views
 # Maddy Millar
