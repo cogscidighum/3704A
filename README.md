@@ -40,6 +40,8 @@ The misinformation effect | Elizabeth Loftus | views on september 18, 1,7k -- h
 ![qrcode_www youtube com](https://github.com/cogscidighum/3704A/assets/144283223/357a57c5-f58d-4fb6-954b-e2e05117215c)
 # Joy Nama
 Martha Nussbaum, "What Is Anger, and Why Should We Care?" - [https://www.youtube.com/watch?v=0UmWoqhkJdU] - 40K
+Action 2 Contribute to our html - [https://github.com/cogscidighum/3704A/blob/03576abd1dc650caca1b1ed7b6a70bfbda323ef1/Assignment2.htm]
+
 # Izzy Laidlaw
  Dr Russell A Barkley - [30 Essential Ideas you should know about ADHD, 1B Inhibition, Impulsivity, and Emotion](https://www.youtube.com/watch?v=wg6cfsnmqyg), 774k views
 # Rianna Ito
