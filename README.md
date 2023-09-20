@@ -58,6 +58,7 @@ Yuval Noah Harari, [AI and the future of humanity | Yuval Noah Harari at the Fro
 # Suban Hussein
 Lex Fridman podcasts -  https://www.youtube.com/watch?v=e8qJsk1j2zE , 493K views
 # Ashley Navas
+Poppy Crum - https://youtu.be/SYytiQmXNTc?si=IoSlWQI0WtaIUZ4Q , 130k views
 ![image](https://github.com/cogscidighum/3704A/assets/144282509/250c892a-0bb0-42a3-8f8a-f4f8f3e3b601)
 
 
