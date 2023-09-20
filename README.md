@@ -51,6 +51,7 @@ Anil Seth, https://www.ted.com/talks/anil_seth_your_brain_hallucinates_your_cons
 # Maya Pasieczny
 # The Politics of Consciousness | video lecture with Yuval Noah Harari, 409K views -- https://www.youtube.com/watch?v=1rtS2OEV6bM
 # Christine Ndagijimana
+Jordan Peterson, https://www.youtube.com/watch?v=YG4Y6s_sFmg&t=327s, 672,531 views
 # Ali Zain Vastani 
 Yuval Noah Harari, [AI and the future of humanity | Yuval Noah Harari at the Frontiers Forum](https://www.youtube.com/watch?v=LWiM-LuRe6w), 1.7M views
 # Ashley Navas
