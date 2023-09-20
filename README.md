@@ -5,7 +5,7 @@ Actions on Markdown
 # Add your names and other requested info each time
 ...
 # Philip Weiss
-Mihaly Csikszentmihalyi, [YouTube Video] (https://youtu.be/fXIeFJCqsPs?si=5YKNRM-tIa2Lx7Bn), 952,791 views
+Mihaly Csikszentmihalyi, [YouTube Video](https://youtu.be/fXIeFJCqsPs?si=5YKNRM-tIa2Lx7Bn), 952,791 views
 # Meagan Choo-Kang
 Steven Pinker, [YouTube Video](https://www.youtube.com/watch?v=7N_NNVeKat8), 209,430 views
 # Wing Kuan Leng :cherry_blossom::blush:
