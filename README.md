@@ -30,6 +30,7 @@ Timnit Gebru | [How To Stop Artificial Intelligence From Marginalizing Communiti
 # Kolene Lamizana
 Amy Cuddy | [The power of body language](https://youtu.be/Ks-_Mh1QhMc) | 23 700 189 views
 # Theo Pana
+Elizabeth Loftus, [How reliable is your memory?](https://youtu.be/PB2OegI6wvI?si=PPNstchm3jIO87Y3), 2,190,333 views
 # Laiza Robert
 The misinformation effect | Elizabeth Loftus | views on september 18, 1,7k -- https://www.youtube.com/watch?v=3RKDVB6qizA
 ![qrcode_www youtube com](https://github.com/cogscidighum/3704A/assets/144283223/357a57c5-f58d-4fb6-954b-e2e05117215c)
