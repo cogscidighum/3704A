@@ -15,7 +15,7 @@ Mihaly Csikszentmihalyi, [YouTube Video](https://youtu.be/fXIeFJCqsPs?si=5YKNRM-
 # Meagan Choo-Kang
 Steven Pinker, [YouTube Video](https://www.youtube.com/watch?v=7N_NNVeKat8), 209,430 views
 # Wing Kuan Leng :cherry_blossom::blush:
-Daniel Kahneman,[Ted talk:the_riddle_of_experience_vs_memory](https://www.ted.com/talks/daniel_kahneman_the_riddle_of_experience_vs_memory?language=en),6,953,062 views
+Daniel Kahneman,[The riddle of experience vs memory](https://www.youtube.com/watch?v=XgRlrBl-7Yg),1.2M views
 # Darcy Susel    Hello Class!
 Donald Hoffman, [YouTube Video: If reality is a data structure, can the simulation theory hold up?](https://www.youtube.com/watch?v=FWiPeySFTqI), 23,434 views
 # Rachelle Bazinet
