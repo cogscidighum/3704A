@@ -37,7 +37,7 @@ jordan peterson https://youtu.be/hvazKjYe_6k?si=KxSzW-UetmGVhKcg, 236,000 views
 Timnit Gebru | [How To Stop Artificial Intelligence From Marginalizing Communities](https://youtu.be/PWCtoVt1CJM)| 79,338 views 
 # Kolene Lamizana
 Amy Cuddy | [The power of body language](https://youtu.be/Ks-_Mh1QhMc) | 23 700 189 views
-Action 2 | [The code] (https://github.com/cogscidighum/3704A/blob/main/index.html) | [The page] ()
+Action 2 | [The code](https://github.com/cogscidighum/3704A/blob/main/index.html) | [The page]()
 # Theo Pana
 Elizabeth Loftus, [How reliable is your memory?](https://youtu.be/PB2OegI6wvI?si=PPNstchm3jIO87Y3), 2,190,333 views
 # Laiza Robert
