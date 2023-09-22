@@ -32,7 +32,7 @@ Dr. Andrew Huberman-Motivation Madness,["Neuroscientist: "DELETE Your Social Med
 # Helen Awaju
 Melanie Mitchell, "How to Build Truly Intelligent AI": https://www.youtube.com/watch?v=cz1UfjZjjyk&t=112s, 44K views
 # Maddy Millar
-jordan peterson https://youtu.be/hvazKjYe_6k?si=KxSzW-UetmGVhKcg, 236,000 views
+jordan peterson [youtube video](https://youtu.be/hvazKjYe_6k?si=KxSzW-UetmGVhKcg), 236,000 views
 # Leila Dabakuyo
 Timnit Gebru | [How To Stop Artificial Intelligence From Marginalizing Communities](https://youtu.be/PWCtoVt1CJM)| 79,338 views 
 # Kolene Lamizana
