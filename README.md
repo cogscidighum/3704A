@@ -13,7 +13,7 @@ Actions on Markdown
 # Philip Weiss
 Mihaly Csikszentmihalyi, [YouTube Video](https://youtu.be/fXIeFJCqsPs?si=5YKNRM-tIa2Lx7Bn), 952,791 views
 # Meagan Choo-Kang
-Steven Pinker, [YouTube Video](https://www.youtube.com/watch?v=7N_NNVeKat8), 209,430 views
+Janelle Shane, [The danger of AI is weirder than you think](https://www.youtube.com/watch?v=OhCzX0iLnOc&t=85s), 2.7M views
 # Wing Kuan Leng :cherry_blossom::blush:
 Daniel Kahneman,[The riddle of experience vs memory](https://www.youtube.com/watch?v=XgRlrBl-7Yg),1.2M views
 # Darcy Susel    Hello Class!
