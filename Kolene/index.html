@@ -5,12 +5,14 @@
 	</head>
 			<body>
 				<script>
+					var photo = element.getID(photoFrame);
+					photo.setAttribute("onClick",logPhotos());
 					async function logPhotos() {
 						const res = await fetch("https://www.freepik.com/free-photos-vectors/power-pose");
 						const photos = await res.json();
-						var photo = element.getID(photoFrame);
 						photo.appendChild(photos);
 					}
+					
 				</script>
 				<h1>Cognitive Science and Dig humanities - Action 4</h1>
 				<h1>Amy Cuddy - On Power Poses</h1>
@@ -32,12 +34,6 @@
 					papers 
 				</p>
 				<img id="photoFrame></img>
-				<form>
-	  				<label for="fname">First name:</label><br>
-					<input type="text" id="fname" name="fname"><br>
-					<label for="lname">Last name:</label><br>
-					<input type="text" id="lname" name="lname">
-				</form>
 			</body>
 </html>
 
