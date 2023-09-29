@@ -6,7 +6,6 @@
 			<body>
 				<script>
 					var photo = element.getID(photoFrame);
-					photo.setAttribute("onClick",logPhotos());
 					async function logPhotos() {
 						const res = await fetch("https://www.freepik.com/free-photos-vectors/power-pose");
 						const photos = await res.json();
@@ -33,7 +32,7 @@
 					capable.
 					papers 
 				</p>
-				<element onClick="myScript" id="photoFrame">Image</element>
+				<element onClick="logPhotos()" id="photoFrame">Image</element>
 			</body>
 </html>
 
