@@ -39,7 +39,7 @@ Timnit Gebru | [How To Stop Artificial Intelligence From Marginalizing Communiti
 # Kolene Lamizana
 Amy Cuddy | [The power of body language](https://youtu.be/Ks-_Mh1QhMc) | 23 700 189 views  
 
-Action 2 | [The code](https://github.com/cogscidighum/3704A/blob/main/index.html) | [The page]()
+Action 4 | [The code](https://github.com/cogscidighum/3704A/blob/main/index.html) | [The page](https://cogscidighum.github.io/3704A/Kolene/index.html)
 # Theo Pana
 Elizabeth Loftus, [How reliable is your memory?](https://youtu.be/PB2OegI6wvI?si=PPNstchm3jIO87Y3), 2,190,333 views
 # Laiza Robert
