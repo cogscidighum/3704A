@@ -18,7 +18,7 @@ Janelle Shane, [The danger of AI is weirder than you think](https://www.youtube.
 # Wing Kuan Leng :cherry_blossom::blush:
 Daniel Kahneman,[The riddle of experience vs memory](https://www.youtube.com/watch?v=XgRlrBl-7Yg),1.2M views
 # Darcy Susel    Hello Class!
-Donald Hoffman, [YouTube Video: If reality is a data structure, can the simulation theory hold up?](https://www.youtube.com/watch?v=FWiPeySFTqI), 23,434 views
+Donald Hoffman, [YouTube Video: Do we see reality as it is?](https://www.youtube.com/watch?v=oYp5XuGYqqY), 2.4M views
 # Rachelle Bazinet
 Patricia Churchland, [YouTube Video](https://youtu.be/9Bv4k8CJnuc?si=L8xorpuqCycBCJte), 9,363 views, ![image](https://github.com/cogscidighum/3704A/assets/144282596/f83048d7-036f-4802-9384-ff6a70e1f700)
 # Oak MacDonald 
