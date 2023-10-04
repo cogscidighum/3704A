@@ -32,6 +32,7 @@ Tom Scott, [There is no Algorithm for Truth](https://youtu.be/leX541Dr2rU?si=LQp
 Dr. Andrew Huberman-Motivation Madness,["Neuroscientist: "DELETE Your Social Media NOW!" - Here's Why!" ](https://www.youtube.com/watch?v=NqMTqy4X6h0), 556K views
 # Helen Awaju
 Melanie Mitchell, "How to Build Truly Intelligent AI": https://www.youtube.com/watch?v=cz1UfjZjjyk&t=112s, 44K views
+[Action 3 page](https://cogscidighum.github.io/3704A/Helen/index.html)
 # Maddy Millar
 jordan peterson [youtube video](https://youtu.be/hvazKjYe_6k?si=KxSzW-UetmGVhKcg), 236,000 views
 # Leila Dabakuyo
