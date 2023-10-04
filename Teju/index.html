@@ -1,1 +1,21 @@
-<h1>Hello Everyone!</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blinking feature using CSS</title>
+    <style>
+        .blink {
+            animation: blinker 2.5s linear infinite;
+            color: black;
+            font-family: sans-serif;
+        }
+        @keyframes blinker {
+            10% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p class="blink"> Hello Everyone! </p>
+</body>
+</html>
