@@ -36,6 +36,7 @@ Melanie Mitchell, "How to Build Truly Intelligent AI": https://www.youtube.com/w
 jordan peterson [youtube video](https://youtu.be/hvazKjYe_6k?si=KxSzW-UetmGVhKcg), 236,000 views
 # Leila Dabakuyo
 Timnit Gebru | [How To Stop Artificial Intelligence From Marginalizing Communities](https://youtu.be/PWCtoVt1CJM)| 79,338 views 
+[Action 3](https://cogscidighum.github.io/3704A/LeilaD/index.html)
 # Kolene Lamizana
 Amy Cuddy | [The power of body language](https://youtu.be/Ks-_Mh1QhMc) | 23 700 189 views  
 
