@@ -80,3 +80,7 @@ Gödel, Escher, Bach author Doug Hofstadter on the state of AI today- https://ww
 Future Thinking | Jim Davies | TEDxCarletonUniversity https://www.youtube.com/watch?v=TdTP3LKyf4s&ab_channel=TEDxTalks, 27k views
 # Ryan Lyster
 Ryan Holiday, The Daily Stoic - [Casey Neistat On Finding Purpose and Balancing Ambition](https://www.youtube.com/watch?v=7a-_SElFFN0), 32K Views
+# Isabella St-Marseille 
+Neuroscience and Artificial Intelligence Need Each Other | Marvin Chun | 39.3k views
+https://www.youtube.com/watch?v=97iYdJE9mQ4&t=713s 
+ 
