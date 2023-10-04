@@ -20,7 +20,7 @@ Daniel Kahneman,[The riddle of experience vs memory](https://www.youtube.com/wat
 # Darcy Susel    Hello Class!
 Donald Hoffman, [YouTube Video: Do we see reality as it is?](https://www.youtube.com/watch?v=oYp5XuGYqqY), 2.4M views
 # Rachelle Bazinet
-Patricia Churchland, [YouTube Video](https://youtu.be/9Bv4k8CJnuc?si=L8xorpuqCycBCJte), 9,363 views, ![image](https://github.com/cogscidighum/3704A/assets/144282596/f83048d7-036f-4802-9384-ff6a70e1f700)
+Patricia Churchland, [The Brains Behind Morality | Patricia Churchland | TEDxNorrköping](https://www.youtube.com/watch?v=LJ7szK1Rz4w&ab_channel=TEDxTalks), 8,026 views
 # Oak MacDonald 
 Bret Weinstein - The Dawn of AGI: Bret speaks with Alexandros Marinos on the Dark Horse Podcast. 41 610 Views
 https://youtu.be/YeucEiOKdiM?si=B_1UJrs40-GOE7yo
