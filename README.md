@@ -53,7 +53,7 @@ Martha Nussbaum, "What Is Anger, and Why Should We Care?" - [https://www.youtube
 # Rianna Ito
 Slavoj Žižek | <a href="https://www.youtube.com/watch?v=sG257cOOnw0">Surplus Happiness | Slavoj Žižek critiques pleasure</a> | 95k
 # Teju Oladipo
-Noam Chomsky, Advances in AI: ChatGPT -- <a>https://www.youtube.com/watch?v=-NMR5JXp37k </a>, 26,042 views
+Noam Chomsky, Advances in AI: ChatGPT -- [youtube video](https://youtu.be/hvazKjYe_6k?si=KxSzW-UetmGVhKcg)</a>, 26,042 views
 # Dominic Weiss
 Nathaniel Drew, [The Secret to Thriving in Hard Times](https://www.youtube.com/watch?v=LzJfPjTkrW8&ab_channel=NathanielDrew), 126k views
 # Mariam Saleh
