@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>CelSci</title>
+  </head>
+
+  <body>
+    <script>
+        const celscilist = {
+          'Noam Chomsky': { 'info': { 'views': 26042} },
+     
+        };
+     
+        class Celsci {
+          static iscelsci(x) {
+            let y = "false";
+            if (x > 10000) {
+              y = "true";
+            }
+            return y;
+          }
+        }
+        
+        function checkcelsci(x) {
+          const result = Celsci.iscelsci(celscilist[x]['info']['views']);
+          return result;
+        }
+        
+        document.write(checkcelsci('Noam Chomsky'));     
+    </script>
+  </body>
+</html>
+
