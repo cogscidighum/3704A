@@ -1,7 +1,15 @@
-<body>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>Our celsci</title>
+  </head>
+
+  <body>
     <script>
         const celscilist = {
           'JordanPeterson': { 'info': { 'views': 300000 } },
+        
         };
         
         class Celsci {
@@ -18,3 +26,8 @@
           const result = Celsci.iscelsci(celscilist[x]['info']['views']);
           return result;
         }
+        
+        document.write(checkcelsci('JordanPeterson'));     
+    </script>
+  </body>
+</html>
