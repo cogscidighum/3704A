@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Mulish" rel="stylesheet">
+    <title>Our celsci</title>
+  </head>
+  <style>
+  body {
+    font-family: 'Mulish';
+    color: #594a4e;
+    }
+  </style>
+  <body>
+    <h1>Digital Humantinities Scientist Celebrity</h1>
+    <h2>Janelle Shane</h2>
+    <p id="status"></p>
+    <script>
+        const celscilist = {
+          'Janelle Shane': { 'info': { 'views': 2700000 } },
+        };
+        
+        class Celsci {
+          static iscelsci(x) {
+            let y = "Not famous";
+            if (x > 500) {
+              y = 'Famous';
+            }
+            return y;
+          }
+        }
+        
+        function checkcelsci(x) {
+          const result = Celsci.iscelsci(celscilist[x]['info']['views']);
+          return result;
+        }
+        
+        document.getElementById("status").innerHTML = "<b>Status:</b> " + checkcelsci('Janelle Shane');     
+    </script>
+  </body>
+</html>
