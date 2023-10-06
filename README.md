@@ -14,7 +14,7 @@ Actions on Markdown
 Mihaly Csikszentmihalyi, [YouTube Video](https://youtu.be/fXIeFJCqsPs?si=5YKNRM-tIa2Lx7Bn), 952,791 views
 # Meagan Choo-Kang
 Janelle Shane, [The danger of AI is weirder than you think](https://www.youtube.com/watch?v=OhCzX0iLnOc&t=85s), 2.7M views  
-[Homepage](https://cogscidighum.github.io/3704A/meagan/index.html) | [Celebrity Famous Page] (https://cogscidighum.github.io/3704A/meagan/celebrity.html)
+[Homepage](https://cogscidighum.github.io/3704A/meagan/index.html) | [Celebrity Famous Page](https://cogscidighum.github.io/3704A/meagan/celebrity.html)
 # Wing Kuan Leng :cherry_blossom::blush:
 Daniel Kahneman,[The riddle of experience vs memory](https://www.youtube.com/watch?v=XgRlrBl-7Yg),1.2M views
 # Darcy Susel    Hello Class!
