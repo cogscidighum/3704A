@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>CelSci</title>
+  </head>
+
+  <body>
+    <script>
+        const celscilist = {
+          'The riddle of experience vs. memory by Daniel Kahneman': { 'info': { 'views': 1.2000000} },
+          'Thinking Fast and Slow by Daniel Kahneman': { 'info': { 'views': 460000 } },
+        };
+        
+        class Celsci {
+          static iscelsci(x) {
+            let y = "false";
+            if (x > 1000000) {
+              y = "true";
+            }
+            return y;
+          }
+        }
+        
+        function checkcelsci(x) {
+          const result = Celsci.iscelsci(celscilist[x]['info']['views']);
+          return result;
+        }
+        
+        document.write(checkcelsci('dd'));     
+    </script>
+  </body>
+</html>
