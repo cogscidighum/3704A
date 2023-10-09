@@ -11,6 +11,30 @@
 						const photos = await res.json();
 						photo.appendChild(photos);
 					}
+
+					const celscilist = {
+				            amyCuddy: 2000000,
+				        };
+				        var views=0;       
+				        for (const [key, value] of Object.entries(celscilist)) 
+				        {
+				            views= views+value;
+				        }
+				        var avarageview=views/Object.keys(celscilist).length;
+				        document.getElementById("celscilist_holder").innerHTML =Object.entries(celscilist)+" Average Views:"+ avarageview;
+				        processing();
+				        
+				        function processing()
+				        {
+				            if (celscilist[document.getElementById("txt-inp1").value]>=avarageview)
+				            {
+				            document.getElementById("output_holder").innerHTML="High views";
+				            }
+				            else
+				            {
+				            document.getElementById("output_holder").innerHTML="Low views";
+				            }
+				          }
 					
 				</script>
 				<h1>Cognitive Science and Dig humanities - Action 4</h1>
@@ -33,6 +57,7 @@
 					papers 
 				</p>
 				<element onClick="logPhotos()" id="photoFrame">Image</element>
+				<div id="output_holder">Views</div>
 			</body>
 </html>
 
