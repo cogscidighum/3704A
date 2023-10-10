@@ -70,7 +70,7 @@ Jordan Peterson, https://www.youtube.com/watch?v=YG4Y6s_sFmg&t=327s, 672,531 vie
 # Ali Zain Vastani 
 Yuval Noah Harari, [AI and the future of humanity | Yuval Noah Harari at the Frontiers Forum](https://www.youtube.com/watch?v=LWiM-LuRe6w), 1.7M views
 # Suban Hussein
-Lex Fridman podcasts -  https://www.youtube.com/watch?v=e8qJsk1j2zE , 493K views
+Lex Fridman podcasts -  [Joscha Bach: Life, Intelligence, Consciousness, AI & the Future of Humans | Lex Fridman Podcast #392](https://www.youtube.com/watch?v=e8qJsk1j2zE) , 493K views
 # Ashley Navas
 Poppy Crum - https://youtu.be/SYytiQmXNTc?si=IoSlWQI0WtaIUZ4Q , 130k views
 ![image](https://github.com/cogscidighum/3704A/assets/144282509/250c892a-0bb0-42a3-8f8a-f4f8f3e3b601)
