@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+
+    <title>CelSCi</title>
+
+  </head>
+
+  <body>
+
+
+    <script>
+        const celscilist = {
+          'Melanie Mitchell': { 'info': { 'views': 44K } },
+        };
+        
+        class Celsci {
+          static iscelsci(x) {
+            let y = "false";
+            if (x > 500) {
+              y = 'true';
+            }
+            return y;
+          }
+        }
+        
+        function checkcelsci(x) {
+          const result = Celsci.iscelsci(celscilist[x]['info']['views']);
+          return result;
+        }
+        
+        document.write(checkcelsci('Melanie Mitchell'));     
+
+    </script>
+  </body>
+</html>
