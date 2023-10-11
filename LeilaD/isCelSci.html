@@ -9,6 +9,7 @@
     <script>
         const celscilist = {
           'Timinit Gebru': { 'info': { 'views': 79692  } },
+					'Random': { 'info': { 'views': 100  } },
         };
         
         class Celsci {
@@ -23,10 +24,12 @@
         
         function checkcelsci(x) {
           const result = Celsci.iscelsci(celscilist[x]['info']['views']);
-          return 'Timinit Gebru is a Celsci is...' + result;
+          return  x + ' is a CelSci is...' + result + "<br>" ;
+          
         }
         
-        document.write(checkcelsci('Timinit Gebru'));     
+        document.write(checkcelsci('Timinit Gebru'));
+				document.write(checkcelsci('Random'));       
     </script>
   </body>
 </html>
