@@ -15,10 +15,42 @@
     <h1>Digital Humantinities Scientist Celebrity</h1>
     <h2>Janelle Shane</h2>
     <p id="status"></p>
+    <p id="average"></p>
     <script>
         const celscilist = {
           'Janelle Shane': { 'info': { 'views': 2700000 } },
+          'Mihaly Csikszentmihalyi' : { 'info': { 'views': 952,791} },
+          'Daniel Kahneman' :  { 'info': { 'views': 1200000} },
+          'Donald Hoffman' : { 'info': { 'views': 2400000 } },
+          'Partricia Churchland' : { 'info': { 'views': 8026 } },
+          'Bret Weinstein' : { 'info': { 'views': 41610 } },
+          'Andrew Huberman' : { 'info': { 'views': 55561 } },
+          'Tom Scott' : { 'info': { 'views': 2500000 } },
+          'Melanie Mitchell' : { 'info': { 'views': 44000 } },
+          'Jordan Peterson' : { 'info': { 'views': 236000 } },
+          
         };
+
+        // Step 1: Extract 'views' values into an array
+        const viewsArray = Object.values(celscilist).map(item => item.info.views);
+
+        // Step 2: Calculate the sum of 'views' values
+        const sumOfViews = viewsArray.reduce((total, views) => total + views, 0);
+
+        // Step 3: Calculate the average
+        const averageViews = sumOfViews / viewsArray.length;
+        let sumOfViews = 0;
+        let count = 0;
+
+        for (const key in celscilist) {
+          if (celscilist.hasOwnProperty(key)) {
+            const views = celscilist[key].info.views;
+            sumOfViews += views;
+            count++;
+          }
+        }
+
+        const averageViews = sumOfViews / count;
         
         class Celsci {
           static iscelsci(x) {
@@ -35,7 +67,8 @@
           return result;
         }
         
-        document.getElementById("status").innerHTML = "<b>Status:</b> " + checkcelsci('Janelle Shane');     
+        document.getElementById("status").innerHTML = "<b>Status:</b> " + checkcelsci('Janelle Shane');  
+        document.getElementById("average").innerHTML = "<b>Average:</b> " + averageViews; 
     </script>
   </body>
 </html>
