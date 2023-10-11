@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>CelSciCheck</title>
+  </head>
+
+  <body>
+    <script>
+        const celscilist = {
+          'Timinit Gebru': { 'info': { 'views': 79692  } },
+        };
+        
+        class Celsci {
+          static iscelsci(x) {
+            let y = "false";
+            if (x > 500) {
+              y = 'true';
+            }
+            return y;
+          }
+        }
+        
+        function checkcelsci(x) {
+          const result = Celsci.iscelsci(celscilist[x]['info']['views']);
+          return 'Timinit Gebru is a Celsci is...' + result;
+        }
+        
+        document.write(checkcelsci('Timinit Gebru'));     
+    </script>
+  </body>
+</html>
