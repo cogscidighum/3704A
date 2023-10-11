@@ -19,7 +19,7 @@
     <script>
         const celscilist = {
           'Janelle Shane': { 'info': { 'views': 2700000 } },
-          'Mihaly Csikszentmihalyi' : { 'info': { 'views': 952,791} },
+          'Mihaly Csikszentmihalyi' : { 'info': { 'views': 952791} },
           'Daniel Kahneman' :  { 'info': { 'views': 1200000} },
           'Donald Hoffman' : { 'info': { 'views': 2400000 } },
           'Partricia Churchland' : { 'info': { 'views': 8026 } },
@@ -28,29 +28,38 @@
           'Tom Scott' : { 'info': { 'views': 2500000 } },
           'Melanie Mitchell' : { 'info': { 'views': 44000 } },
           'Jordan Peterson' : { 'info': { 'views': 236000 } },
-          
+          'Timnit Gebru' : { 'info': { 'views': 79338 } },
+          'Amy Cuddy' : { 'info': { 'views': 23700189 } },
+          'Elizabeth Loftus' : { 'info': { 'views': 2190333 } },
+          'Martha Nussbaum' : { 'info': { 'views': 40000 } },
+          'Russell Barkley' : { 'info': { 'views': 774000 } },
+          'Slavoj Žižek' : { 'info': { 'views': 95000 } },
+          'Noam Chomsky' : { 'info': { 'views': 26042 } },
+          'Nathaniel Drew' : { 'info': { 'views': 126000 } },
+          'Laura Boyd' : { 'info': { 'views': 3800000 } },
+          'Anil Seth' : { 'info': { 'views': 14187265 } },
         };
 
         // Step 1: Extract 'views' values into an array
         const viewsArray = Object.values(celscilist).map(item => item.info.views);
 
         // Step 2: Calculate the sum of 'views' values
-        const sumOfViews = viewsArray.reduce((total, views) => total + views, 0);
+        let sumOfViews = viewsArray.reduce((total, views) => total + views, 0);
 
         // Step 3: Calculate the average
-        const averageViews = sumOfViews / viewsArray.length;
-        let sumOfViews = 0;
+        let averageViews = sumOfViews / viewsArray.length;
+        sumOfViews = 0;
         let count = 0;
 
         for (const key in celscilist) {
           if (celscilist.hasOwnProperty(key)) {
-            const views = celscilist[key].info.views;
+            let views = celscilist[key].info.views;
             sumOfViews += views;
             count++;
           }
         }
 
-        const averageViews = sumOfViews / count;
+        averageViews = sumOfViews / count;
         
         class Celsci {
           static iscelsci(x) {
