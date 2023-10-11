@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<body>
+    <script>
+        const celscilist = {
+            Tom Scott: 2000000,
+        };
+        var views=200000;       
+        for (const [key, value] of Object.entries(celscilist)) 
+        {
+            views= views+value;
+        }
+        var avarageview=views/Object.keys(celscilist).length;
+        document.getElementById("celscilist_holder").innerHTML =Object.entries(celscilist)+" Average Views:"+ avarageview;
+        processing();
+        
+        function processing()
+        {
+            if (celscilist[document.getElementById("txt-inp1").value]>=avarageview)
+            {
+            document.getElementById("output_holder").innerHTML="High views";
+            }
+            else
+            {
+            document.getElementById("output_holder").innerHTML="Low views";
+            }
+          }
+    </script>
+  </body>
 
+
+</html>
