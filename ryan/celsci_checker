@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>Ryan's CelSci List</title>
+  </head>
+  <body>
+    <script>
+        const celscilist = {
+          'Ryan Holiday': { 'info': { 'views': 32000 } },
+          'Random': { 'info': { 'views': 100 } },
+        };
+
+        class Celsci {
+          static iscelsci(x) {
+            let y = "false";
+            if (x > 500) {
+              y = 'true';
+            }
+            return y;
+          }
+        }
+
+        function checkcelsci(x) {
+          const result = Celsci.iscelsci(celscilist[x]['info']['views']);
+          return x + ' is a CelSci is...' + result + "<br>";
+        }
+
+        document.write(checkcelsci('Ryan Holiday'));     
+        document.write(checkcelsci('Random'));
+    </script>
+  </body>
+</html>
