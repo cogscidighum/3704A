@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cognitive Science and Dig humanities</title>
+	</head>
+			<body>
+				<script>
+					var photo = document.getElementById("photoFrame");
+					async function logPhotos() {
+						const res = await fetch("https://www.freepik.com/free-photos-vectors/power-pose");
+						const photos = await res.json();
+						photo.appendChild(photos);
+					}
+
+					const celscilist = {
+				            amyCuddy: 2000000,
+				        };
+				        var views=0;       
+				        for (const [key, value] of Object.entries(celscilist)) 
+				        {
+				            views= views+value;
+				        }
+				        var averageview=views/Object.keys(celscilist).length;
+				        document.getElementById("celscilist_holder").innerHTML = Object.entries(celscilist)+" Average Views:"+ averageview;
+				        processing();
+				        
+				        function processing()
+				        {
+				            if (celscilist[document.getElementById("txt-inp1").value]>=averageview)
+				            {
+				            	document.getElementById("output_holder").innerHTML="High views";
+				            }
+				            else
+				            {
+				            	document.getElementById("output_holder").innerHTML="Low views";
+				            }
+				          }
+					
+				</script>
+				<h1>Cognitive Science and Dig humanities - Action 4</h1>
+				<h1>Amy Cuddy - On Power Poses</h1>
+       				<iframe width="560" height="315" src="https://www.youtube.com/embed/Ks-_Mh1QhMc?si=cPCZeHN-aYP8Y3fo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
+				<p>
+					This is a recording of the 2013 ted talk of the American social psychologist Amy Cuddy. 
+					In 2012 the psychologist puclished a research paper about the benefits
+					of power poses. Reporting that participants of the reserach could be perceived
+					as more confident during interview when they had practice a power pose for a
+					given amount of time before the interview. The research cause severely critised and
+					refuted later on, and is now often used as a prime example of the cause of the replication
+					crisis. This idea of power pose that Cuddy is sharing aligns with the Emotional Quotient (EQ)
+					concept discussed in lecture 4. Part of the research was to have blind judges
+					(they did not know which participants had practices power poses) use their understanding of 
+					other peoples emotional state and body language, to judge the confidence of the participants.
+					It also, correctly or falsely, engages someones body language to (potentially and allegedly)
+					change their mental and emotional perception of self, by making them feel more confident and
+					capable.
+					papers 
+				</p>
+				<element onClick="logPhotos()" id="photoFrame">Image</element>
+				<input type='text' id='txt-inp1' value='DanielDennett'>
+				<button type="button" onclick="processing()">Process</button>
+				<h2>Output:</h2>
+				<div id="output_holder">Views</div>
+			</body>
