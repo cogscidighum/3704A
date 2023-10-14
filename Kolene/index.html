@@ -5,7 +5,7 @@
 	</head>
 			<body>
 				<script>
-					var photo = element.getID(photoFrame);
+					var photo = document.getElementById("photoFrame");
 					async function logPhotos() {
 						const res = await fetch("https://www.freepik.com/free-photos-vectors/power-pose");
 						const photos = await res.json();
@@ -20,19 +20,19 @@
 				        {
 				            views= views+value;
 				        }
-				        var avarageview=views/Object.keys(celscilist).length;
-				        document.getElementById("celscilist_holder").innerHTML =Object.entries(celscilist)+" Average Views:"+ avarageview;
+				        var averageview=views/Object.keys(celscilist).length;
+				        document.getElementById("celscilist_holder").innerHTML = Object.entries(celscilist)+" Average Views:"+ averageview;
 				        processing();
 				        
 				        function processing()
 				        {
-				            if (celscilist[document.getElementById("txt-inp1").value]>=avarageview)
+				            if (celscilist[document.getElementById("txt-inp1").value]>=averageview)
 				            {
-				            document.getElementById("output_holder").innerHTML="High views";
+				            	document.getElementById("output_holder").innerHTML="High views";
 				            }
 				            else
 				            {
-				            document.getElementById("output_holder").innerHTML="Low views";
+				            	document.getElementById("output_holder").innerHTML="Low views";
 				            }
 				          }
 					
@@ -57,6 +57,9 @@
 					papers 
 				</p>
 				<element onClick="logPhotos()" id="photoFrame">Image</element>
+				<input type='text' id='txt-inp1' value='DanielDennett'>
+				<button type="button" onclick="processing()">Process</button>
+				<h2>Output:</h2>
 				<div id="output_holder">Views</div>
 			</body>
 </html>
