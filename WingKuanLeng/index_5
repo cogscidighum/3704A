@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>CelSci</title>
+  </head>
+
+  <body>
+    <script>
+        const celscilist = {
+        // Determine if the views for 'Daniel Kahneman' is greater than the calculated average views
+          'Daniel Kahneman': { 'info': { 'views': 1200000 } },
+          'Mihaly Csikszentmihalyi': { 'info': { 'views': 952791 } },
+          'Donald Hoffman': { 'info': { 'views': 2400000 } },
+          'Janelle Shane': { 'info': { 'views': 2700000 } },
+          'Patricia Churchland': { 'info': { 'views': 8026 } },
+          'Bret Weinstein': { 'info': { 'views': 41610 } },
+          'Andrew Huberman': { 'info': { 'views': 55561 } },
+          'Tom Scott': { 'info': { 'views': 2500000 } },
+          'Dr. Andrew Huberman': { 'info': { 'views': 556000 } },
+          'Melanie Mitchell': { 'info': { 'views': 44000 } },
+          'Jordan Peterson': { 'info': { 'views': 236000 } },
+          'Timnit Gebru': { 'info': { 'views': 79338  } },
+          'Amy Cuddy': { 'info': { 'views': 23700189 } },
+          'Elizabeth Loftus': { 'info': { 'views': 2190333 } },
+          'Martha Nussbaum': { 'info': { 'views': 40000 } },
+          'Elizabeth Loftus': { 'info': { 'views': 17000 } },
+          ' Dr Russell A Barkley': { 'info': { 'views': 774000 } },
+          'Slavoj Žižek': { 'info': { 'views': 95000 } },
+          'Nathaniel Drew': { 'info': { 'views': 126000 } },
+          'Noam Chomsky': { 'info': { 'views': 26042 } },
+          'Lara Boyd': { 'info': { 'views': 38000000 } },
+          'Howard Gardner': { 'info': { 'views': 15000000 } },
+          'Yuval Noah Harari': { 'info': { 'views': 409000 } },
+          'Jordan Peterson': { 'info': { 'views': 672531 } },
+          'Yuval Noah Harari': { 'info': { 'views': 15000000 } },
+          'Lex Fridman': { 'info': { 'views': 493000 } },
+          'Poppy Crum ': { 'info': { 'views': 130000 } },
+          'Ryan Holiday': { 'info': { 'views': 32000 } },
+          'Jim Davies': { 'info': { 'views': 27000 } },
+          'Marvin Chun': { 'info': { 'views': 39300  } },
+         
+        };
+
+        // Step 1: Extract 'views' values into an array
+        //const viewsArray = Object.values(celscilist).map(item => item.info.views);
+
+        // Step 2: Calculate the sum of 'views' values
+        //const sumOfViews = viewsArray.reduce((total, views) => total + views, 0);
+
+        // Step 3: Calculate the average
+        //const averageViews = sumOfViews / viewsArray.length;
+        let sumOfViews = 0;
+        let count = 0;
+
+        for (const key in celscilist) {
+          if (celscilist.hasOwnProperty(key)) {
+            const views = celscilist[key].info.views;
+            sumOfViews += views;
+            count++;
+          }
+        }
+
+        const averageViews = sumOfViews / count;
+        
+        class Celsci {
+          static iscelsci(x) {
+            let y = "false";
+            if (x > averageViews) {
+              y = "true";
+            }
+            return y;
+          }
+        }
+        
+        function checkcelsci(x) {
+          const result = Celsci.iscelsci(celscilist[x]['info']['views']);
+          return result;
+        }
+        
+        document.write(checkcelsci('Daniel Kahneman'));
+        
+
+    </script>
+  </body>
+</html>
