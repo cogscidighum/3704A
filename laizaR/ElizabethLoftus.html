@@ -8,16 +8,20 @@
     <script>
         const celscilist = {
           'Elizabeth Loftus': { 'info': { 'views': 3036 } },
+          'Mihaly Csikszentmihalyi': {'info' : {'views': 952791}},
+          'Janelle Shane': {'info': {'views': 2700000}},
+          'Daniel Kahneman': { 'info': { 'views': 1200000 } },
+          'Donald Hoffman': {'info' : {'views': 2400000}},
+          'Patricia Churchland': {'info': {'views': 8026}},
+          'Bret Weinstein': { 'info': { 'views': 41610 } },
+          'Andrew Huberman': {'info' : {'views': 55561}},
+          'Tom Scott': {'info': {'views': 2500000}},
+          'Melanie Mitchell': { 'info': { 'views': 44000 } },
+          'Jordan Peterson': {'info' : {'views': 236000}},
+          'Timnit Gebru': {'info': {'views': 79338}},
         };
-        class Celsci {
-          static iscelsci(x) {
-            let y = "false";
-            if (x > 500) {
-              y = 'true';
-            }
-            return y;
-          }
-        }
+        
+      
         
         function checkcelsci(x) {
           const result = Celsci.iscelsci(celscilist[x]['info']['views']);
