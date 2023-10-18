@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>CelSci</title>
+  </head>
+
+  <body>
+    <script>
+          const celscilist = {
+    'dd': { 'info': { 'views': 41100 } },
+    'jp': { 'info': { 'views': 41101 } },
+    'ns': { 'info': { 'views': 11400 } },
+    'ap': { 'info': { 'views': 5400 } },
+    'sp': { 'info': { 'views': 400 } },
+          };
+  
+          // Extract 'views' values into an array
+          const viewsArray = Object.values(celscilist).map(item => item.info.views);
+          // Calculate the sum of 'views' values
+          function calculateAverage(viewsArray ) {
+            const sum = viewsArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+            
+            return sum / viewsArray.length;
+          }
+          
+          class Celsci {
+            static iscelsci(x) {
+              let y = "false";
+              if (x > calculateAverage(viewsArray)) {
+                y = "true";
+              }
+              return y;
+            }
+          }
+          
+          function checkcelsci(x) {
+            const result = Celsci.iscelsci(celscilist[x]['info']['views']);
+            return result;
+          }
+        
+        // Get the max value from the array
+        const maxViews = Math.max(...viewsArray);
+        
+        function findKeyByViews(obj, viewsValue) {
+          return Object.keys(obj).find(key => obj[key].info.views === viewsValue);
+        };
+        // Call the function with data and maxViews as arguments
+        let no1 = findKeyByViews(celscilist, maxViews);
+        
+        document.write("dd is aboveavg? ",checkcelsci('dd')," #1 is: ",no1, " with viewcounts of ", maxViews );
+    </script>
+  </body>
+</html>
