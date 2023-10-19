@@ -38,16 +38,9 @@
           'rh': { 'info': { 'views': 32000 } },
           'mcc': { 'info': { 'views': 39300 } },
           'jd': { 'info': { 'views': 27000 } },
+          
         };
 
-        // Step 1: Extract 'views' values into an array
-        //const viewsArray = Object.values(celscilist).map(item => item.info.views);
-
-        // Step 2: Calculate the sum of 'views' values
-        //const sumOfViews = viewsArray.reduce((total, views) => total + views, 0);
-
-        // Step 3: Calculate the average
-        //const averageViews = sumOfViews / viewsArray.length;
         let sumOfViews = 0;
         let count = 0;
 
@@ -75,10 +68,9 @@
           const result = Celsci.iscelsci(celscilist[x]['info']['views']);
           return result;
         }
-        doument.write('Status: ')
-        document.write(checkcelsci('jp'));
         
-
+        document.write('Status: ');
+        document.write(checkcelsci('jp'));
     </script>
   </body>
 </html>
