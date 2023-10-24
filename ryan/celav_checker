@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head>
+  <head>
     <meta charset="utf-8">
-    <title> CelebrityAvergaeChecker </title>
-</head>
-<body>
+    <title>CelSci</title>
+  </head>
+  <body>
     <script>
+        // Updated list with new data
         const celscilist = {
             'Mihaly Csikszentmihalyi': { 'info': { 'views': 952791 }},
             'Janelle Shane': { 'info': { 'views': 2700000 }},
@@ -40,28 +41,39 @@
         let count = 0;
 
         for (const key in celscilist) {
-            if (celscilist.hasOwnProperty(key)) {
-                const views = celscilist[key].info.views;
-                sumOfViews += views;
-                count++;
-            }
+          if (celscilist.hasOwnProperty(key)) {
+            const views = celscilist[key].info.views;
+            sumOfViews += views;
+            count++;
+          }
         }
 
         const averageViews = sumOfViews / count;
 
-     
+        // Class to determine whether the number of views is above or below average
+        class Celsci {
+          static iscelsci(x) {
+            return x > averageViews ? "true" : "false"; // simplified statement
+          }
+        }
+
+        // Function to check each entry and print the result
+        function checkcelsci(x) {
+          const result = Celsci.iscelsci(celscilist[x]['info']['views']);
+          return x + " is above average: " + result + "<br>";
+        }
+
+        // Print the average views
         document.write("Average views: " + averageViews.toFixed(0) + "<br><br>");
 
-                function checkIfAboveAverage(views) {
-            return views > averageViews ? 'true' : 'false';
-        }
-
+        // Checking each person in the list and printing whether they are above or below average
         for (const person in celscilist) {
-            if (celscilist.hasOwnProperty(person)) {
-                const personViews = celscilist[person].info.views;
-                document.write(person + " is a CelSci: " + checkIfAboveAverage(personViews) + "<br>");
-            }
+          if (celscilist.hasOwnProperty(person)) {
+            document.write(checkcelsci(person));
+          }
         }
+        
     </script>
-</body>
+  </body>
 </html>
+
