@@ -2,26 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Mulish" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+    .center{
+      text-align: center;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
     body {
     font-family: 'Mulish';
     background: #ffc6c7;
     color: #594a4e;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
     }
+
+    .margin {margin-bottom: 25px;}
+
   </style>
 <body>
-  <h1>Meagan</h1>
-  <h2>Video Summary</h2>
-  <br>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/OhCzX0iLnOc?si=Xao-rA71LYVKk5o6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  <br>
-  <p>In this video, Janelle Shane demonstrates that the way we train AI can greatly affect its performance. If we do not give it <br>
-  give it clear instructions, it will tend to do something unexpected to solve the problem. One of the examples she gave was of an experiement<br>
-  that asked an AI to go across an obstacle course (in a virtual environment). The expected outcome was that it would create a "body" and use its<br>
-  legs to run across the course. But instead, it made itself into a giant tower, and when it falls down it can reach the end of the obstacle course.<br>
-  Shane compared modern AI intelligence to a earthworm or less. Although AI can follow instructions well, it doesn't have an understanding of what it's doing<br>
-  and what it should be doing. As a result, AI can can up with some weird solutions.</p>
+  <h1 class="center margin">Meagan's Webpage</h1>
+  <h2 class="margin">Janelle Shane</h2>
+  <div class="container-fluid margin">
+    <div class="row">
+      <div class="col-xs-6 col-sm-4">
+        <img src="https://images.squarespace-cdn.com/content/v1/5d62d15300eb5b0001437ac0/1566760058767-QI1E28TSHWM77ZPK4X5J/Janelle_Shane_headshot1_web.jpg?format=2500w" alt="Janelle Shane" width="75%">
+      </div>
+      <div class="col-xs-6 col-sm-8">
+        <p>Janelle Shane is a research scientist in optics. Her work involves creating computer-controlled holograms to study the brain. She also runs a blog about machine learning, 
+          <a href="https://www.aiweirdness.com/">aiweirdness</a>.
+          In her blog, she writes about weird things that artificial intellgence comes up with. She runs experiments that prompts
+          different AI models to generate receipes, paint colours, cat names, and candy heart messages. Her work has been published
+          in New York Times, The Atlantic, WIRED, Popular Science, All Things Considered, and Slate. In addition, she is also a 2019 TED fellow.
+          She has also written her own book, "You Look Like a Thing and I Love You: How AI Works and Why it's Making the World a Weirder Place".
+          <br><br>
+          Her social media links:
+          <a href="https://www.instagram.com/janellecshane/">Instagram</a> |
+          <a href="https://twitter.com/JanelleCShane">Twitter</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid margin">
+    <h2 class="margin">My Opinion</h2>
+    <p>She seems like a good person. I like her approach to AI from a more humourous perspective. Often in the media, AI is 
+      portrayed as evil, and we often warned that they might end up like Terminator. However, Shane's appraoch to AI is much more light-hearted and 
+      she shows that current AI is not really that smart as the media makes it out to be. AI still makes mistakes, and those mistakes differ from what
+      humans do. 
+    </p>
+  </div>
+
+  <div class="container-fluid margin">
+    <h2 class="margin">Her Blog</h2>
+    <p>Some of my favourite blog posts:</p>
+    <ul>
+      <li><a href="https://www.aiweirdness.com/once-again-a-neural-net-tries-to-19-06-03/">Once again, a neural net tries to name cats</a></li>
+      <li><a href="https://www.aiweirdness.com/baby-onesie-designs/">Baby onesie designs</a></li>
+      <li><a href="https://www.aiweirdness.com/candy-heart-messages-written-by-a-18-02-09/">Candy Heart messages written by a neural network</a></li>
+    </ul>
+    <iframe  width="600" height="500" src="https://www.aiweirdness.com/" title="Blog" frameborder="0"></iframe>
+  </div>
+  <div class="container-fluid"></div>
+    <h2 class="margin">Video Summary</h2>
+    <h4>The Dangers of AI is Weirder Than You Think</h4>
+    <iframe width="600" height="350" src="https://www.youtube.com/embed/OhCzX0iLnOc?si=Xao-rA71LYVKk5o6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <p></p>In this video, Janelle Shane demonstrates that the way we train AI can greatly affect its performance. If we do not give it 
+    give it clear instructions, it will tend to do something unexpected to solve the problem. One of the examples she gave was of an experiement
+    that asked an AI to go across an obstacle course (in a virtual environment). The expected outcome was that it would create a "body" and use its
+    legs to run across the course. But instead, it made itself into a giant tower, and when it falls down it can reach the end of the obstacle course.
+    Shane compared modern AI intelligence to a earthworm or less. Although AI can follow instructions well, it doesn't have an understanding of what it's doing
+    and what it should be doing. As a result, AI can can up with some weird solutions.</p>
+</div>
 </body>
 </html>
