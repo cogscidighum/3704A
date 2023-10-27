@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html>
-body {
-font-family: 'Times New Roman':
-background:PapayaWhip;
+  background:#FFEFD5;
 <head>
-  <h1 style="color:SaddleBrown";> Project One </h1>
+  <h1 style="color:SaddleBrown"; font-family: "Times New Roman";> Project One </h1>
 <h2 style= "color:SlateGray";> Teju Oladipo - CGSC 3704A</h2>
-}
 <br>
 <head>
 <h2 style= "color: SaddleBrown"; Noam Chomsky </h2>
-  <iframe width="560" height="315" src="https://www.thenation.com/wp-content/uploads/2018/12/noam-chomsky-smile-ap-img.jpg" frameborder="0"</iframe>
+  <iframe width="100" height="100" src="https://www.thenation.com/wp-content/uploads/2018/12/noam-chomsky-smile-ap-img.jpg" frameborder="0"</iframe>
 <h3 style= "color: SlateGray"; Insert overview of Noam Chomsky </h3>
 <br>
