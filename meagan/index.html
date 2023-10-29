@@ -14,12 +14,23 @@
     * {
       box-sizing: border-box;
     }
+    header {
+      background: #594a4e;
+      color: white;
+      padding:10px;
+    }
+    
+    a{
+      color:#f76083;
+    }
+
     .center{
       text-align: center;
       display: block;
       margin-left: auto;
       margin-right: auto;
     }
+
     body {
     font-family: 'Mulish';
     background: #ffc6c7;
@@ -30,24 +41,66 @@
     margin-left: 80px;
     }
 
+    li{
+      margin-top: 10px;
+    }
+
     .margin {margin-bottom: 25px;}
 
+    #backToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #ff8ba7;
+    color: #594a4e;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+
+  #backToTop:hover {
+    background-color: #f76083;
+  }
+
   </style>
+  <header>
+      <h1 class="center">Meagan's Webpage</h1>
+  </header>
 <body>
-  <h1 class="center margin">Meagan's Webpage</h1>
-  <h2 class="margin">Janelle Shane</h2>
+  <button onclick="topFunction()" id="backToTop" title="Back to Top">Top</button>
+  <div class="margin"></div>
+  <h2>Table of Contents</h2>
+  <ol>
+    <li><a href="#biography">Biography</a></li>
+    <li><a href="#herBlog">Her Blog</a></li>
+    <li><a href="#videoSummary">Video Summary</a></li>
+    <li><a href="#opinion">My Opinion</a></li>
+  </ol>
+  <div class="margin"></div>
+  <h1 class="margin center">Janelle Shane</h1>
+
+  <h2 class="margin" id="biography">Biography</h2>
   <div class="container-fluid margin">
     <div class="row">
       <div class="col-xs-6 col-sm-4">
         <img src="https://images.squarespace-cdn.com/content/v1/5d62d15300eb5b0001437ac0/1566760058767-QI1E28TSHWM77ZPK4X5J/Janelle_Shane_headshot1_web.jpg?format=2500w" alt="Janelle Shane" width="75%">
       </div>
       <div class="col-xs-6 col-sm-8">
-        <p>Janelle Shane is a research scientist in optics. Her work involves creating computer-controlled holograms to study the brain. She also runs a blog about machine learning, 
+        <p>Janelle Shane is a research scientist in optics. Her work involves creating computer-controlled holograms to study the brain. 
+          Additionally, she runs a blog about machine learning called 
           <a href="https://www.aiweirdness.com/">aiweirdness</a>.
-          In her blog, she writes about weird things that artificial intellgence comes up with. She runs experiments that prompts
-          different AI models to generate receipes, paint colours, cat names, and candy heart messages. Her work has been published
-          in New York Times, The Atlantic, WIRED, Popular Science, All Things Considered, and Slate. In addition, she is also a 2019 TED fellow.
-          She has also written her own book, "You Look Like a Thing and I Love You: How AI Works and Why it's Making the World a Weirder Place".
+          , where she writes about weird things that artificial intellgence comes up with. She conducts experiments that prompts 
+          different AI models to generate recipes, paint colours, cat names, candy heart messages, etc. 
+          Her work has been featured in New York Times, The Atlantic, WIRED, Popular Science, All Things Considered, and Slate. 
+          Furthermore, she was honored as a TED fellow in 2019. I included her TED Talk below, where she explains that AI is more 
+          silly than it is dangerous. She has also authored her own book, 
+          <a href=https://mybook.to/YouLookLikeAThing>"You Look Like a Thing and I Love You: How AI Works and Why it's Making the World a Weirder Place"</a>.
+          Much like her TED talk, in her book she talks about silly solutions that AIs come up with and examines just how intelligent they truly are.
           <br><br>
           Her social media links:
           <a href="https://www.instagram.com/janellecshane/">Instagram</a> |
@@ -58,34 +111,63 @@
   </div>
 
   <div class="container-fluid margin">
-    <h2 class="margin">My Opinion</h2>
-    <p>She seems like a good person. I like her approach to AI from a more humourous perspective. Often in the media, AI is 
-      portrayed as evil, and we often warned that they might end up like Terminator. However, Shane's appraoch to AI is much more light-hearted and 
-      she shows that current AI is not really that smart as the media makes it out to be. AI still makes mistakes, and those mistakes differ from what
-      humans do. 
-    </p>
-  </div>
-
-  <div class="container-fluid margin">
-    <h2 class="margin">Her Blog</h2>
+    <h2 class="margin" id="herBlog">Her Blog</h2>
     <p>Some of my favourite blog posts:</p>
     <ul>
       <li><a href="https://www.aiweirdness.com/once-again-a-neural-net-tries-to-19-06-03/">Once again, a neural net tries to name cats</a></li>
-      <li><a href="https://www.aiweirdness.com/baby-onesie-designs/">Baby onesie designs</a></li>
-      <li><a href="https://www.aiweirdness.com/candy-heart-messages-written-by-a-18-02-09/">Candy Heart messages written by a neural network</a></li>
+      <img src="https://www.aiweirdness.com/content/images/public/images/7937f8f4-b22b-4468-b426-eb623d422576_2000x1000.jpg" width="600">
+      <li><a href="https://www.aiweirdness.com/this-neural-net-knows-what-smells-20-03-06/">This neural net knows what smells good</a></li>
+      <img src="https://www.aiweirdness.com/content/images/size/w1590/image/fetch/w_1200-c_limit-f_jpg-q_auto:good-fl_progressive:steep/https-3A-2F-2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com-2Fpublic-2Fimages-2Ffb166769-b205-45be-b809-cd90b0af07e4_500x188.png" width="600">
+      <li><a href="https://www.aiweirdness.com/finest-pies-19-11-26/">Finest Pies</a></li>
+      <img src="https://www.aiweirdness.com/content/images/public/images/dd69bd9f-44f6-43f9-94eb-ca74c4e233b2_500x144.png" width="600">
     </ul>
+    <div class="margin"></div>
+    <p>You can read her blog here!</p>
     <iframe  width="600" height="500" src="https://www.aiweirdness.com/" title="Blog" frameborder="0"></iframe>
   </div>
-  <div class="container-fluid"></div>
-    <h2 class="margin">Video Summary</h2>
-    <h4>The Dangers of AI is Weirder Than You Think</h4>
-    <iframe width="600" height="350" src="https://www.youtube.com/embed/OhCzX0iLnOc?si=Xao-rA71LYVKk5o6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <p></p>In this video, Janelle Shane demonstrates that the way we train AI can greatly affect its performance. If we do not give it 
-    give it clear instructions, it will tend to do something unexpected to solve the problem. One of the examples she gave was of an experiement
-    that asked an AI to go across an obstacle course (in a virtual environment). The expected outcome was that it would create a "body" and use its
-    legs to run across the course. But instead, it made itself into a giant tower, and when it falls down it can reach the end of the obstacle course.
-    Shane compared modern AI intelligence to a earthworm or less. Although AI can follow instructions well, it doesn't have an understanding of what it's doing
-    and what it should be doing. As a result, AI can can up with some weird solutions.</p>
-</div>
+
+  <div class="container-fluid">
+      <h2 class="margin" id="videoSummary">Video Summary</h2>
+      <h4>The Dangers of AI is Weirder Than You Think</h4>
+      <iframe width="600" height="350" src="https://www.youtube.com/embed/OhCzX0iLnOc?si=Xao-rA71LYVKk5o6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <p></p>In this video, Janelle Shane demonstrates that the way we train AI can significantly impact its performance. 
+      If we do not provide clear instructions, it tends to product unexpected solutions to problems. One of the examples she 
+      provided was an experiment that tasked an AI with navigating an obstacle course in a virtual environment. The expected outcome 
+      was that it would create a "body" and use its legs to run across the course. But instead, it made itself into a giant tower. 
+      When it toppled over, it reached the end of the obstacle course. Shane likened the intelligence of modern AI to that of an 
+      earthworm or even less. Although AI can follow instructions well, it lacks an understanding of what it's doing and what it 
+      should be doing. As a result, AI tends to come up with unconventional, and sometimes silly, solutions. </p>
+  </div>
+
+  <div class="container-fluid margin">
+    <h2 class="margin" id="opinion">My Opinion</h2>
+    <p>I appreciate Shane’s humorous approach to AI. The media frequently portrays AI as malevolent, and we often warned about
+      potential Terminator scenarios. However, Shane's perspective on AI is much more light-hearted and she demonstrates that 
+      currently AI is not really that smart as the media often portrays it to be. Apart from her views on AI, I do not know much
+        else about her, as she primarily focuses on “AI weirdness” on her social media. Nonetheless, based on what I can discern,
+        she seems to have a sense of humour!
+    </p>
+  </div>
+
+<script>
+  let mybutton = document.getElementById("backToTop");
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  // When the user clicks on the button, go to top
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
 </body>
 </html>
