@@ -68,7 +68,7 @@ Howard Gardner, ["8 Intelligences: Are You a Jack of All Trades or a Master of O
 # Christine Ndagijimana
 Jordan Peterson, https://www.youtube.com/watch?v=YG4Y6s_sFmg&t=327s, 672,531 views
 # Ali Zain Vastani 
-Yuval Noah Harari, [AI and the future of humanity | Yuval Noah Harari at the Frontiers Forum](https://www.youtube.com/watch?v=LWiM-LuRe6w), 1.7M views
+Marc Andreessen: Future of the Internet, Technology, and AI | Lex Fridman Podcast, [Marc Andreessen: Future of the Internet, Technology, and AI | Lex Fridman Podcast](https://www.youtube.com/watch?v=-hxeDjAxvJ8), 1.1M views
 # Suban Hussein
 Lex Fridman podcasts -  [Joscha Bach: Life, Intelligence, Consciousness, AI & the Future of Humans | Lex Fridman Podcast #392](https://www.youtube.com/watch?v=e8qJsk1j2zE) , 493K views
 # Ashley Navas
