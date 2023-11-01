@@ -1,1 +1,22 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+<meta charset="utf-8" />
+  <h1> CGSC 3704 Project </h1>
+  <h2> Ashley Navas - 101226785 </h2>
+</video>
+  <br>
+  <iframe width="560" height="315" src="https://www.youtube.com/watch?si=IoSlWQI0WtaIUZ4Q&v=SYytiQmXNTc&feature=youtu.be&ab_channel=TEDxTalks"> </iframe>
+  <br>
+  <br>
+<meta charset="utf-8"  />
+  <a href="https://www.poppycrum.com/who-is-poppy" title="Poppy Crum">Poppy Crum</a>
+  <blockquote>
+  Poppy Crum is an adjunct professor at Standford University and focuses on the impact of new technological developments on the neuroplasticity of the brain and learning. She is also a neuroscientist and technologist who works with top companies and organizations, such as Dolby, to develop empathetic technologies that change their business processes. Her goal is to build technologies that best enhance our experiences and how we interact with the world. She has a master's degree in experimental psychology and cognitive science at McGill University, and her PhD in neuroscience and psychophysics at UC Berkeley. 
+</blockquote>
+  
+  <h1 style="color:green;"> Summary </h1>
+  <h3 style="font-family:verdana;"> add summary
+  </h3>
+  <img src="https://gray-kfda-prod.cdn.arcpublishing.com/resizer/OxzMg3oCbPB1_p9_-r0j-ddgzr0=/980x0/smart/filters:quality(85)/cloudfront-us-east-1.images.arcpublishing.com/gray/3V4MSGKLHVFZTA7ZJYEYWH2RVA.jpg" alt="The dress" style="width:200px">
