@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>ACogSphere: Sentiment Analysis</title>
+    <button id="run">ACTION</button>
+    <label>Output:</label>   
+    <h3>Analyzing ...</h3>
+    <div id="output2">Often in the media, AI is portrayed as dangerous and bent on destroying humanity. However, Janelle Shane offers a different view. She compares the intelligence of AI to an earthworm and highlights silly mistakes made by AIs. Her comedic approach helps educate and alliveate people's fears of AI through her TED Talk, blog, and social media. She is a cognitive digital celebrity scientist as she foucses on AI and evaluates their problem solving skills in relation to typical human responses.</div>
+</head>
+<body> 
+  <script type="module">
+  import { pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.7.0'
+  
+  const generate = document.getElementById("run");   
+  generate.addEventListener("click", async () =>   // Start (
+  {
+      try 
+  {
+      let pipe = await pipeline('text-classification');
+      let output = await pipe('Often in the media, AI is portrayed as dangerous and bent on destroying humanity. However, Janelle Shane offers a different view. She compares the intelligence of AI to an earthworm and highlights silly mistakes made by AIs. Her comedic approach helps educate and alliveate peoples fears of AI through her TED Talk, blog, and social media. She is a cognitive digital celebrity scientist as she foucses on AI and evaluates their problem solving skills in relation to typical human responses.'); 
+      output2.textContent = JSON.stringify(output);
+  } 
+      catch (error)
+  {
+      console.log("Error:",error.message);
+  }
+  }
+  )//End )
+</script>
+</body>
+     
