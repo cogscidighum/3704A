@@ -4,7 +4,7 @@
 <head>
    <title>BCogSphere: Retreival</title>
 		<button id="action">ACTION</button>
-    <label>Output for Janelle Shane's video:</label>   
+    <label>Output</label>   
     <div id="output">Ready!</div>
 </head>
   
