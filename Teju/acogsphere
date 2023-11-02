@@ -3,8 +3,8 @@
 <head>
    <title>ACogSphere: Sentiment Analysis</title>
     <button id="run">ACTION</button>
-    <label>Output:</label>   
-    <div id="output2">Waiting to analyze Noam Chomsky's Video!</div>
+    <label><h3>Waiting to analyze Noam Chomsky's video...</h3></label>   
+    <div id="output2">In this video, Noam Chomsky explains that the advances in AI are useful for some purposes, but not when it comes to understanding language processing in humans. He mentions that one thing that AI has achieved is structure dependence. He explains that humans do not have this capacity through an example of a study done with German speakers. In this study, German speakers were given two invented languages, one based on human language structure and one based on a different structure, such as linear order. The participant’s brains were observed while reading this language. The results showed that while reading the language that violates language rules, brain patterns appeared as if they were solving a puzzle, not understanding language. The results of this study reveal that the human brain is structured in a way where it expects certain things to be true; however, AI is able to achieve things that violate certain assumptions</div>
 </head>
 <body> 
   <script type="module">
@@ -16,7 +16,7 @@
       try 
   {
       let pipe = await pipeline('text-classification');
-      let output = await pipe('In this video, Noam Chomsky explains that the advances in AI are useful for some purposes, but not when it comes to understanding language processing in humans. He mentions that one thing that AI has achieved is structure dependence. He explains that humans do not have this capacity through an example of a study done with German speakers. In this study, German speakers were given two invented languages, one based on human language structure and one based on a different structure, such as linear order. The participant’s brains were observed while reading this language. The results showed that while reading the language that violates language rules, brain patterns appeared as if they were solving a puzzle, not understanding language. The results of this study reveal that the human brain is structured in a way where it expects certain things to be true; however, AI is able to achieve things that violate certain assumptions. '); 
+      let output = await pipe('In this video, Noam Chomsky explains that the advances in AI are useful for some purposes, but not when it comes to understanding language processing in humans. He mentions that one thing that AI has achieved is structure dependence. He explains that humans do not have this capacity through an example of a study done with German speakers. In this study, German speakers were given two invented languages, one based on human language structure and one based on a different structure, such as linear order. The participant’s brains were observed while reading this language. The results showed that while reading the language that violates language rules, brain patterns appeared as if they were solving a puzzle, not understanding language. The results of this study reveal that the human brain is structured in a way where it expects certain things to be true; however, AI is able to achieve things that violate certain assumptions'); 
       output2.textContent = JSON.stringify(output);
   } 
       catch (error)
