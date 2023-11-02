@@ -16,7 +16,7 @@
     generate.addEventListener("click", async () =>{
         try {         
 
-          const app = await client("https://cognitivescience-cogsphere.hf.space");
+          const app = await client("https://cognitivescience-cogsphere.hf.space/");
           const lastview = await app.predict("/predict", [      
            "https://www.youtube.com/watch?v=-NMR5JXp37k&t=101s",
           ]);
