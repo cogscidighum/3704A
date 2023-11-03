@@ -2,19 +2,15 @@
 <html>
   <head>
     <style>
-      /* CSS to center-align text */
       body {
         text-align: left;
         background-color: #CCCCFF;
       }
-
-      /* CSS to style the first letter in a specific paragraph */
       .first-letter::first-letter {
         font-size: 2em;
         font-weight: bold;
       }
 
-      /* CSS to style the rest of the paragraph */
       .first-letter {
         font-size: 1em;
         font-weight: normal;
@@ -24,8 +20,6 @@
         line-height: 1.5;
         /* 1.5 line spacing */
       }
-
-      /* CSS to create a two-column layout */
       .container {
         display: flex;
         justify-content: space-between;
@@ -53,12 +47,15 @@
       .right-column p {
         margin-bottom: 20px;
       }
+      .title-text {
+        font-size: 1.4em
+      }
     </style>
   </head>
   <body>
     <h1>Leng's Page : Project One </h1>
-    <p>Introducing celebrity scientist</p>
-    <p> Daniel Kahneman </p>
+    <p class="title-text"><strong>Introducing celebrity scientist : <strong class="title-text">  Daniel Kahneman</strong></p>
+
     <div class="container">
       <div class="left-column">
         <!-- Insert Picture -->
