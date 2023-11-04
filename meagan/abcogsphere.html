@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<html>
+	<head>
+		<button id="run">Check</button>
+    <h3>Output:</h3> 
+    <div id="output2">Waiting to Check</div>
+	</head>
+<body> 
+<script type="module">
+    import { pipeline, env } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.7.0'; 
+    import { client } from "https://cdn.jsdelivr.net/npm/@gradio/client@0.1.4/dist/index.min.js";
+    const generate = document.getElementById("run");  
+    
+    const celscilist = {
+          'Janelle Shane': { 'info': { 'views': 2700000, 'link': "https://www.youtube.com/watch?v=OhCzX0iLnOc"} },
+          'Mihaly Csikszentmihalyi' : { 'info': { 'views': 952791} },
+          'Daniel Kahneman' :  { 'info': { 'views': 1200000} },
+          'Donald Hoffman' : { 'info': { 'views': 2400000 } },
+          'Partricia Churchland' : { 'info': { 'views': 8026 } },
+          'Bret Weinstein' : { 'info': { 'views': 41610 } },
+          'Andrew Huberman' : { 'info': { 'views': 55561 } },
+          'Tom Scott' : { 'info': { 'views': 2500000 } },
+          'Melanie Mitchell' : { 'info': { 'views': 44000 } },
+          'Jordan Peterson' : { 'info': { 'views': 236000 } },
+          'Timnit Gebru' : { 'info': { 'views': 79338 } },
+          'Amy Cuddy' : { 'info': { 'views': 23700189 } },
+          'Elizabeth Loftus' : { 'info': { 'views': 2190333 } },
+          'Martha Nussbaum' : { 'info': { 'views': 40000 } },
+          'Russell Barkley' : { 'info': { 'views': 774000 } },
+          'Slavoj Žižek' : { 'info': { 'views': 95000 } },
+          'Noam Chomsky' : { 'info': { 'views': 26042 } },
+          'Nathaniel Drew' : { 'info': { 'views': 126000 } },
+          'Laura Boyd' : { 'info': { 'views': 3800000 } },
+          'Anil Seth' : { 'info': { 'views': 14187265 } },
+          'Howard Gardner' : { 'info': { 'views': 1500000 } },
+          'Yuval Noah Harari' : { 'info': { 'views': 1700000 } },
+          'Lex Fridman' : { 'info': { 'views': 493000 } },
+          'Poppy Crum' : { 'info': { 'views': 13000 } },
+          'Ryan Holiday' : { 'info': { 'views': 32000 } },
+          'Marvin Chun' : { 'info': { 'views': 39300 } },
+    };
+    
+    // Calculate the sum of 'views' values
+    function calculateAverage(viewsArray) {
+        const sum = viewsArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);       
+        return sum / viewsArray.length;
+    } 
+    function findKeyByViews(obj, viewsValue) {
+        return Object.keys(obj).find(key => obj[key].info.views === viewsValue);
+    };
+
+    generate.addEventListener("click", async () =>{
+        try {         
+            env.useBrowserCache=true;
+            env.allowLocalModels=true;
+            let pipe = await pipeline('text-classification');
+            let output = await pipe('Often in the media, AI is portrayed as dangerous and bent on destroying humanity. However, Janelle Shane offers a different view. She compares the intelligence of AI to an earthworm and highlights silly mistakes made by AIs. Her comedic approach helps educate and alliveate peoples fears of AI through her TED Talk, blog, and social media. She is a cognitive digital celebrity scientist as she foucses on AI and evaluates their problem solving skills in relation to typical human responses.');
+        
+            class Celsci {
+                static iscelsci(x) {
+                    let y = "Not Above Average by ";
+                    if (x > calculateAverage(viewsArray)) {
+                        y = "Above Average by ";
+                    }
+                    return y;
+                }             
+                static iscelscinow(x) {
+                    let y = "Not Above Average by ";
+                    if (x > calculateAverage(viewsArray)) {
+                        y = "Above Average by ";
+                    }
+                    return y;
+                }
+            } 
+            function checkcelsci(x) {
+                const result = Celsci.iscelsci(celscilist[x]['info']['views']);
+                return result;
+            }
+            // Extract 'views' values into an array
+            const viewsArray = Object.values(celscilist).map(item => item.info.views);
+                    
+            //async function checkcelscinow(x){
+            const app = await client("https://cognitivescience-cogsphere.hf.space");
+            const lastview = await app.predict("/predict", [celscilist["Janelle Shane"]['info']['link'], ]);
+
+            // Get the max value from the array
+            const maxViews = Math.max(...viewsArray);        
+            
+            // Call the function with data and maxViews as arguments
+            let no1 = findKeyByViews(celscilist, maxViews);
+            //new    
+            document.write("Janelle Shane with views: ",celscilist["Janelle Shane"]['info']['views'] , " is " , checkcelsci('Janelle Shane'), Math.trunc(calculateAverage(viewsArray)), " views <br> #1 is: ", no1, " with viewcounts of ", maxViews, "<br>Janelle Shane sentiment result is ", JSON.stringify(output), " with latest views: ", lastview.data);                 
+        
+    } catch (error){
+            console.log("Error:",error.message);       
+        }   
+    }       
+)
+    </script>
+    </body>
+</html>
