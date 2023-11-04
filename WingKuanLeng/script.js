@@ -1,6 +1,6 @@
 <html lang="en-us">
 <head>
-  <button id="run">Click to Check</button>
+  <button id="run">Click to Compare</button>
   <h3>Output:</h3>
   <div id="output2">Waiting_to_be_analyse</div>
 </head>
