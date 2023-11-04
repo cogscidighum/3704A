@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-  <button id="run">Check</button>
+  <button id="run">Click to Check</button>
   <h3>Output:</h3>
-  <div id="output2">Waiting4Check</div>
+  <div id="output2">Waiting_to_be_analyse</div>
 </head>
 <body>
   <script type="module">
@@ -103,7 +103,7 @@
         // Call the function with data and maxViews as arguments
         let no1 = findKeyByViews(celscilist, maxViews);
 
-        document.write("Daniel Kahneman's video with views: ", celscilist["Daniel Kahneman"]['info']['views'], " is: ", checkcelsci('Daniel Kahneman'), Math.trunc(calculateAverage(viewsArray)), " and the #1 is: ", no1, " with viewcounts of ", maxViews, " but Daniel Kahneman sentiment result is ", JSON.stringify(output), " with latest views: ", lastview.data);
+        document.write("Daniel Kahneman's video with views: ", celscilist["Daniel Kahneman"]['info']['views'], " is: ", checkcelsci('Daniel Kahneman'), Math.trunc(calculateAverage(viewsArray)), " Among all other Celebrity Scientist's Youtube videos the #1 is: ", no1, " with viewcounts of ", maxViews, " but Daniel Kahneman sentiment result is ", JSON.stringify(output), " with latest views: ", lastview.data);
       } catch (error) {
         console.log("Error:", error.message);
       }
