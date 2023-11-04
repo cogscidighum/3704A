@@ -1,4 +1,11 @@
-
+<html lang="en-us">
+<head>
+  <button id="run">Click to Check</button>
+  <h3>Output:</h3>
+  <div id="output2">Waiting_to_be_analyse</div>
+</head>
+<body>
+  <script type="module">
     import { pipeline, env } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.7.0';
     import { client } from "https://cdn.jsdelivr.net/npm/@gradio/client@0.1.4/dist/index.min.js";
 
@@ -100,4 +107,6 @@
         console.log("Error:", error.message);
       }
     })
- 
+  </script>
+</body>
+</html>
