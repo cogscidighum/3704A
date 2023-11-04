@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>ACogSphere: Sentiment Analysis</title>
+    <button id="run">Click to Analyse</button>
+    <label>Output:</label>   
+    <div id="output2">Waiting to analyse</div>
+</head>
+<body> 
+  <script type="module">
+  import { pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.7.0'
+  
+  const generate = document.getElementById("run");   
+  generate.addEventListener("click", async () =>   // Start (
+  {
+      try 
+  {
+      let pipe = await pipeline('text-classification');
+      let output = await pipe('Every moment in your life is a decision waiting to be made. Daniel Kahneman is a psychologist and an economist. His famous notable works relate to the psychology of judgment and decision thinking. The first YouTube video “Thinking Fast and Slow l Daniel Kahneman” was posted by Long Now Foundation, which is an American non-profit organization that advocates for  “slower/better” thinking versus the “faster and cheaper” mentality. Long Now Foundation invited Daniel Kahneman to give his talk about his book - “Thinking, Fast and Slow”  which was published in 2011. He introduced the dual-process model of System 1 and System 2. In the second video, he talks about how cognitive traps can influence the way we think about “happiness”.');
+      output2.textContent = JSON.stringify(output);
+  } 
+      catch (error)
+  {
+      console.log("Error:",error.message);
+  }
+  }
+  )//End )
+</script>
+</body>
+     
