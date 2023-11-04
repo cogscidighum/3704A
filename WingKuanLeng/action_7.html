@@ -71,7 +71,7 @@
           static iscelsci(x) {
             let y = "Not Above Average: ";
             if (x > calculateAverage(viewsArray)) {
-              y = "Above Average: ";
+              y = "Above Average:   ";
             }
             return y;
           }
@@ -103,7 +103,7 @@
         // Call the function with data and maxViews as arguments
         let no1 = findKeyByViews(celscilist, maxViews);
 
-        document.write("Daniel Kahneman's video with views: ", celscilist["Daniel Kahneman"]['info']['views'], " is: ", checkcelsci('Daniel Kahneman'), Math.trunc(calculateAverage(viewsArray)), " Among all other Celebrity Scientist's Youtube videos the #1 is: ", no1, " with viewcounts of ", maxViews, " but Daniel Kahneman sentiment result is ", JSON.stringify(output), " with latest views: ", lastview.data);
+        document.write("Daniel Kahneman's video with views: ", celscilist["Daniel Kahneman"]['info']['views'], " is: ", checkcelsci('Daniel Kahneman'), Math.trunc(calculateAverage(viewsArray)),  " <br>  Among all other Celebrity Scientist's Youtube videos the #1 is: ", no1, " with viewcounts of ", maxViews, " but Daniel Kahneman sentiment result is ", JSON.stringify(output), " with latest views: ", lastview.data);
       } catch (error) {
         console.log("Error:", error.message);
       }
