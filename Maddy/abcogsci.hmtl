@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Check Views</title>
+</head>
+<body>
+    <button id="run">Check</button>
+    <h3>Output:</h3>
+    <div id="output2">Waiting to Check</div>
+
+    <script type="module">
+        import { pipeline, env } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.7.0';
+        import { client } from "https://cdn.jsdelivr.net/npm/@gradio/client@0.1.4/dist/index.min.js";
+
+        const generate = document.getElementById("run");
+
+        const celscilist = {
+            'jp': { 'info': { 'views': 300000, 'link': "https://www.youtube.com/watch?v=hvazKjYe_6k" } },
+            'js': { 'info': { 'views': 2700000 } },
+          'dk': { 'info': { 'views': 1200000 } },
+          'dh': { 'info': { 'views': 2400000 } },
+          'pc': { 'info': { 'views': 8026 } },
+          'bw': { 'info': { 'views': 41610 } },
+          'ah': { 'info': { 'views': 55561 } },
+          'ts': { 'info': { 'views': 2500000 } },
+          'ahhm': { 'info': { 'views': 556000 } },
+          'mm': { 'info': { 'views': 44000 } },
+          'tg': { 'info': { 'views': 79338 } },
+          'ac': { 'info': { 'views': 23700189 } },
+          'el': { 'info': { 'views': 2190333 } },
+          'elm': { 'info': { 'views': 1700 } },
+          'mn': { 'info': { 'views': 40000 } },
+          'rab': { 'info': { 'views': 774000 } },
+          'sz': { 'info': { 'views': 95000 } },
+          'nc': { 'info': { 'views': 26042 } },
+          'nd': { 'info': { 'views': 126000 } },
+          'lb': { 'info': { 'views': 38000000 } },
+          'ast': { 'info': { 'views': 12187265 } },
+          'hg': { 'info': { 'views': 1500000 } },
+          'ynh': { 'info': { 'views': 409000 } },
+          'jpp': { 'info': { 'views': 672531 } },
+          'ynha': { 'info': { 'views': 1700000 } },
+          'jb': { 'info': { 'views': 493000 } },
+          'pcc': { 'info': { 'views': 130000 } },
+          'rh': { 'info': { 'views': 32000 } },
+          'mcc': { 'info': { 'views': 39300 } },
+          'jd': { 'info': { 'views': 27000 } },
+           
+        };
+
+        // Calculate the sum of 'views' values
+        function calculateAverage(viewsArray) {
+            const sum = viewsArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+            return sum / viewsArray.length;
+        }
+
+        function findKeyByViews(obj, viewsValue) {
+            return Object.keys(obj).find(key => obj[key].info.views === viewsValue);
+        }
+
+        generate.addEventListener("click", async () => {
+            try {
+                env.useBrowserCache = true;
+                env.allowLocalModels = true;
+                let pipe = await pipeline('text-classification');
+                let output = await pipe('Jordan Peterson talks about how your memory impacts how you make decisions in your life with a few examples. He declares that the purpose of your memory is to “provide a map for navigating life”, meaning that the memories you form are used to aid you in reacting to events in your life.He states that you need to have some form of malevolence in your life at an early age to learn how to deal with the good and bad respectively with a level of independence, and if you cannot receive that then you will face the consequences as time passes.His main example is bullying, and how it can manifest itself with rage over time and progress into murderous fantasies (from a client of his).His ideology to prevent this in the future, as well as to limit this in current individuals is to self-reflect on how you may have played a part in bad moments and memories in your life, and that all these moments are useful to learn from and make better decisions in your next encounter. Peterson also takes the stance on being assertive in your negative environments early on to prevent the snowball effect of being bullied and other traumatic events that become repetitive in your psyche. Overall, he states that you need to build a level of immunity and confidence in yourself, so you are prepared for negative events that are inevitable in life, and you need to gain an understanding of your past to learn how to better respond in the future.');
+
+                class Celsci {
+                    static iscelsci(x) {
+                        let y = "The Views are not above average  :  ";
+                        if (x > calculateAverage(viewsArray)) {
+                            y = " the view are above average  ";
+                        }
+                        return y;
+                    }
+
+                    static iscelscinow(x) {
+                        let y = "The views are above average :  ";
+                        if (x > calculateAverage(viewsArray)) {
+                            y = "Above Average : ";
+                        }
+                        return y;
+                    }
+                }
+            // find the sum of views
+                function checkcelsci(x) {
+                    const result = Celsci.iscelsci(celscilist[x]['info']['views']);
+                    return result;
+                }
+
+              // Extract 'views' values into an array
+                const viewsArray = Object.values(celscilist).map(item => item.info.views);
+
+                
+                const app = await client("https://cognitivescience-cogsphere.hf.space");
+                const lastview = await app.predict("/predict", [celscilist["jp"]['info']['link'], ]);
+
+                // Get the max value from the array
+                const maxViews = Math.max(...viewsArray);
+
+                // Call the function with data and maxViews as arguments
+                let no1 = findKeyByViews(celscilist, maxViews);
+                // result
+                document.write("Jordan Peterson has the views of : ", celscilist["jp"]['info']['views'], " and ", checkcelsci('jp'), Math.trunc(calculateAverage(viewsArray)), " views, number 1 is: ", no1, " with the views of ", maxViews, " and Jordan Peterson sentiment result is ", JSON.stringify(output), " with current number of views: ", lastview.data);
+
+            } catch (error) {
+                console.log("Error:", error.message);
+            }
+        });
+    </script>
+</body>
+</html>
