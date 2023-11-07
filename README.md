@@ -24,6 +24,8 @@ Patricia Churchland, [The Brains Behind Morality | Patricia Churchland | TEDxNor
 [Action III](https://cogscidighum.github.io/3704A/RachelleBazinet/index.html)
 # Oak MacDonald 
 Bret Weinstein, [The Dawn of AGI: Bret speaks with Alexandros Marinos on the Dark Horse Podcast.](https://youtu.be/YeucEiOKdiM?si=B_1UJrs40-GOE7yo), 41 610 Views
+[Project 1]( https://cogscidighum.github.io/3704A/Oak/Project1.html) 
+[Action V]( https://cogscidighum.github.io/3704A/Oak/ActionV.html)
 # Morgan Chau :)
 Andrew Huberman - Neuroscientist: "We Are Building a Generation of Low Attention", https://www.youtube.com/watch?v=-xf9pCcVOp4&t=76s&ab, 55,561 views
 # Sebastian Sharma 
