@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>CelSci</title>
+  </head>
+
+  <body>
+    <script>
+          const celscilist = {
+          'jp': { 'info': { 'views': 300000 } },
+          'js': { 'info': { 'views': 2700000 } },
+          'dk': { 'info': { 'views': 1200000 } },
+          'dh': { 'info': { 'views': 2400000 } },
+          'pc': { 'info': { 'views': 8026 } },
+          'bw': { 'info': { 'views': 41610 } },
+          'ah': { 'info': { 'views': 55561 } },
+          'ts': { 'info': { 'views': 2500000 } },
+          'ahhm': { 'info': { 'views': 556000 } },
+          'mm': { 'info': { 'views': 44000 } },
+          'tg': { 'info': { 'views': 79338 } },
+          'ac': { 'info': { 'views': 23700189 } },
+          'el': { 'info': { 'views': 2190333 } },
+          'elm': { 'info': { 'views': 1700 } },
+          'mn': { 'info': { 'views': 40000 } },
+          'rab': { 'info': { 'views': 774000 } },
+          'sz': { 'info': { 'views': 95000 } },
+          'nc': { 'info': { 'views': 26042 } },
+          'nd': { 'info': { 'views': 126000 } },
+          'lb': { 'info': { 'views': 38000000 } },
+          'ast': { 'info': { 'views': 12187265 } },
+          'hg': { 'info': { 'views': 1500000 } },
+          'ynh': { 'info': { 'views': 409000 } },
+          'jpp': { 'info': { 'views': 672531 } },
+          'ynha': { 'info': { 'views': 1700000 } },
+          'jb': { 'info': { 'views': 493000 } },
+          'pcc': { 'info': { 'views': 130000 } },
+          'rh': { 'info': { 'views': 32000 } },
+          'mcc': { 'info': { 'views': 39300 } },
+          'jd': { 'info': { 'views': 27000 } },
+        };
+  
+          // Extract 'views' values into an array
+          const viewsArray = Object.values(celscilist).map(item => item.info.views);
+          // Calculate the sum of 'views' values
+          function calculateAverage(viewsArray ) {
+            const sum = viewsArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+            
+            return sum / viewsArray.length;
+          }
+          
+          class Celsci {
+            static iscelsci(x) {
+              let y = "false";
+              if (x > calculateAverage(viewsArray)) {
+                y = "true";
+              }
+              return y;
+            }
+          }
+          
+          function checkcelsci(x) {
+            const result = Celsci.iscelsci(celscilist[x]['info']['views']);
+            return result;
+          }
+        
+        // Get the max value from the array
+        const maxViews = Math.max(...viewsArray);
+        
+        function findKeyByViews(obj, viewsValue) {
+          return Object.keys(obj).find(key => obj[key].info.views === viewsValue);
+        };
+        // Call the function with data and maxViews as arguments
+        let no1 = findKeyByViews(celscilist, maxViews);
+        
+        document.write("Is Bret Weinstein number 1? ",checkcelsci('bw')," #1 is: ",no1, " with viewcounts of ", maxViews );
+    </script>
+  </body>
+</html>
