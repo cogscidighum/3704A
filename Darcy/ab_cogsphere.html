@@ -26,7 +26,7 @@ let output = await pipe('Donald Hoffman questions if what we see and perceive in
           'Janelle Shane': { 'info': { 'views': 2755716, 'link': "https://www.youtube.com/watch?v=OhCzX0iLnOc&t=85s" } },
           'Daniel Kahneman': { 'info': { 'views': 1274170, 'link': "https://www.youtube.com/watch?v=XgRlrBl-7Yg" } },
           'Patricia Churchland': { 'info': { 'views': 8026, 'link': "https://www.youtube.com/watch?v=LJ7szK1Rz4w" } },
-          'Bret Weinstein': { 'info': { 'views': 41610, 'link': https://www.youtube.com/watch?v=YeucEiOKdiM" } },
+          'Bret Weinstein': { 'info': { 'views': 41610, 'link': "https://www.youtube.com/watch?v=YeucEiOKdiM" } },
           'Andrew Huberman': { 'info': { 'views': 55561, 'link': "https://www.youtube.com/watch?v=-xf9pCcVOp4&t=76s&ab" } },
           'Tom Scott': { 'info': { 'views': 2555516, 'link': "https://www.youtube.com/watch?v=leX541Dr2rU" } },
           'Andrew Huberman 2': { 'info': { 'views': 620004, 'link': "https://www.youtube.com/watch?v=NqMTqy4X6h0" } },
@@ -52,7 +52,7 @@ let output = await pipe('Donald Hoffman questions if what we see and perceive in
           'Ryan Holiday': { 'info': { 'views': 34846, 'link': "https://youtu.be/IZefk4gzQt4" } },
           'Marvin Chun': { 'info': { 'views': 76604, 'link': "https://youtu.be/IZefk4gzQt4" } },
           'Doug Hofstadter': { 'info': { 'views': 75493, 'link': "https://www.youtube.com/watch?v=lfXxzAVtdpU" } },
-          'Jim Davies': { 'info': { 'views': 27628, 'link': "https://www.youtube.com/watch?v=TdTP3LKyf4s&ab_channel=TEDxTalks" } },
+          'Jim Davies': { 'info': { 'views': 27628, 'link': "https://www.youtube.com/watch?v=TdTP3LKyf4s" } },
               };
           // Extract 'views' values into an array
           const viewsArray = Object.values(celscilist).map(item => item.info.views);
@@ -91,7 +91,7 @@ let output = await pipe('Donald Hoffman questions if what we see and perceive in
         //async function checkcelscinow(x){
           const app = await client("https://cognitivescience-cogsphere.hf.space");
           const lastview = await app.predict("/predict", [      
-            celscilist["dd"]['info']['link'], 
+            celscilist["Donald Hoffman"]['info']['link'], 
           ]);
            //result=result.data; //Celsci.iscelscinow(result.data);
         //return result.data  
