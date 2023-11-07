@@ -8,6 +8,11 @@
     <h3>Output:</h3>
     <div id="output2">Waiting to Check</div>
 
+<script type="module">
+    import { pipeline, env } from './js-modules/transformers.js';
+    import { client } from './js-modules/client.js';
+</script>
+
     <script type="module">
         import { pipeline, env } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.7.0';
         import { client } from "https://cdn.jsdelivr.net/npm/@gradio/client@0.1.4/dist/index.min.js";
