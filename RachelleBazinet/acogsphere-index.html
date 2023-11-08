@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>ACogSphere: Sentiment Analysis</title>
+    <button id="run">ACTION</button>
+    <label>Output:</label>   
+    <div id="output2"> Philosophy of mind has puzzled many academics throughout history. From Renee Descartes's Dualism to Hilary Putnam’s Computational Functionalism, this debate has given rise to various different views on how thought is connected to the brain. 
+      Among these philosophers, there is one in particular that will be the focus of today. Patricia Smith Churchland is a Canadian-American known for taking a neuroscientific view on the classic mind-body problem in philosophy. 
+      This position is called Eliminative Materialism, which postulates the ultimate reduction of the entirety of the folk psychology framework to the neuroscientific underpinnings of the brain. 
+      Churchland earned her Bachelor’s degree in Arts at the University of British Columbia and continued her education where she obtained her Master’s degree in Arts at the University of Pittsburg (Braund, 2008). 
+      She then studied at Oxford University and gained her Bachelor of Philosophy, a post-graduate degree involving a supervised research project or a thesis. Throughout her career, the neurophilosopher gained numerous awards and has had many publications (Braund, 2008).
+      The focus will be on the TED talk based on her book entitled “Braintrust – What Neuroscience Tells Us About Morality”. 
+      To begin, there will be an overview of the TED talk, focusing on the main points made by Churhcland. Secondly, there will be a critical analysis of two components that she mentions in the video. 
+      Finally, I will provide a short discussion about the content overall.
+    </div>
+</head>
+<body> 
+  <script type="module">
+  import { pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.7.0'
+  
+  const generate = document.getElementById("run");   
+  generate.addEventListener("click", async () =>   // Start (
+  {
+      try 
+  {
+      let pipe = await pipeline('text-classification');
+      let output = await pipe('a great life!'); 
+      output2.textContent = JSON.stringify(output);
+  } 
+      catch (error)
+  {
+      console.log("Error:",error.message);
+  }
+  }
+  )//End )
+</script>
+</body>
+         
