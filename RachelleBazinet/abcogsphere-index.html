@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+
+    <button id="run">Check</button>
+    <h3>Output:</h3> 
+    <div id="output2">Waiting4Check</div>
+  </head>
+  <body> 
+<script type="module">
+   import { pipeline, env } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.7.0'; 
+    import { client } from "https://cdn.jsdelivr.net/npm/@gradio/client@0.1.4/dist/index.min.js";
+
+    const generate = document.getElementById("run");   
+    generate.addEventListener("click", async () =>{
+        try {         
+env.useBrowserCache=false;
+env.allowLocalModels=false;
+
+let pipe = await pipeline('text-classification');
+let output = await pipe('Donald Hoffman questions if what we see and perceive in the world really is the true reality of our surroundings. Our perception is not the real reality that we exist in. I view his theory as if we are living in some kind of simulation like the Matrix. Hoffman is stating that based on the theory of evolution, we misinterpret our perceptions of the world. Based on our history, it is not the first time we have done this, just like when people believed Earth was the centre of the universe until proven otherwise. Hoffman hypothesizes that spacetime and physical objects do not exist in the way we interpret it. Each element still carries consequences and should take the items seriously (such as staying away from things that are dangerous and could impact our survival) but they do not exist in our environment literally as we see it. Hoffman is arguing that reality is like a computer desktop, and physical objects are the icons on the desktop. We see a representation of the icon, not actually what the icon is made up of and this can be applied to our physical world.');
+//new action
+        const celscilist = {
+          'dh': { 'info': { 'views': 2504274, 'link': "https://www.youtube.com/watch?v=oYp5XuGYqqY"} },
+          'mc': { 'info': { 'views': 952791, 'link': "https://www.youtube.com/watch?v=fXIeFJCqsPs" } },
+          'jsh': { 'info': { 'views': 2755716, 'link': "https://www.youtube.com/watch?v=OhCzX0iLnOc&t=85s" } },
+          'dk': { 'info': { 'views': 1274170, 'link': "https://www.youtube.com/watch?v=XgRlrBl-7Yg" } },
+          'pat.c': { 'info': { 'views': 8026, 'link': "https://www.youtube.com/watch?v=LJ7szK1Rz4w" } },
+          'bw': { 'info': { 'views': 41610, 'link': "https://www.youtube.com/watch?v=YeucEiOKdiM" } },
+          'ah': { 'info': { 'views': 55561, 'link': "https://www.youtube.com/watch?v=-xf9pCcVOp4&t=76s&ab" } },
+          'ts': { 'info': { 'views': 2555516, 'link': "https://www.youtube.com/watch?v=leX541Dr2rU" } },
+          'ah2': { 'info': { 'views': 620004, 'link': "https://www.youtube.com/watch?v=NqMTqy4X6h0" } },
+          'mm': { 'info': { 'views': 44875, 'link': "https://www.youtube.com/watch?v=cz1UfjZjjyk&t=112s" } },
+          'jp': { 'info': { 'views': 236000, 'link': "https://www.youtube.com/watch?v=hvazKjYe_6k" } },
+          'tg': { 'info': { 'views': 79338, 'link': "https://www.youtube.com/watch?v=PWCtoVt1CJM" } },
+          'ac': { 'info': { 'views': 23700189, 'link': "https://www.youtube.com/watch?v=Ks-_Mh1QhMc" } },
+          'el': { 'info': { 'views': 2190333, 'link': "https://www.youtube.com/watch?v=PB2OegI6wvI" } },
+          'el2': { 'info': { 'views': 2975, 'link': "https://www.youtube.com/watch?v=3RKDVB6qizA" } },
+          'mn': { 'info': { 'views': 41046, 'link': "https://www.youtube.com/watch?v=0UmWoqhkJdU" } },
+          'r.a.b': { 'info': { 'views': 786116, 'link': "https://www.youtube.com/watch?v=wg6cfsnmqyg" } },
+          'sŽ': { 'info': { 'views': 153187, 'link': "https://www.youtube.com/watch?v=sG257cOOnw0" } },
+          'nc': { 'info': { 'views': 26042, 'link': "https://www.youtube.com/watch?v=-NMR5JXp37k" } },
+          'nd': { 'info': { 'views': 126828, 'link': "https://www.youtube.com/watch?v=LzJfPjTkrW8" } },
+          'lb': { 'info': { 'views': 39097670, 'link': "https://www.youtube.com/watch?v=LNHBMFCzznE" } },
+          'as': { 'info': { 'views': 14187265, 'link': "https://www.youtube.com/watch?v=lyu7v7nWzfo" } },
+          'hg': { 'info': { 'views': 1508453, 'link': "https://www.youtube.com/watch?v=oY2C4YgXm7I" } },
+          'y.n.h': { 'info': { 'views': 439139, 'link': "https://www.youtube.com/watch?v=1rtS2OEV6bM" } },
+          'jp2': { 'info': { 'views': 672531, 'link': "https://www.youtube.com/watch?v=YG4Y6s_sFmg&t=327s" } },
+          'ma': { 'info': { 'views': 1124069, 'link': "https://www.youtube.com/watch?v=-hxeDjAxvJ8" } },
+          'jb': { 'info': { 'views': 528348, 'link': "https://www.youtube.com/watch?v=YG4Y6s_sFmg&t=327s" } },
+          'pc': { 'info': { 'views': 133328, 'link': "https://youtu.be/SYytiQmXNTc?si=IoSlWQI0WtaIUZ4Q" } },
+          'rh': { 'info': { 'views': 34846, 'link': "https://youtu.be/IZefk4gzQt4" } },
+          'mc': { 'info': { 'views': 76604, 'link': "https://youtu.be/IZefk4gzQt4" } },
+          'dh': { 'info': { 'views': 75493, 'link': "https://www.youtube.com/watch?v=lfXxzAVtdpU" } },
+          'jd': { 'info': { 'views': 27628, 'link': "https://www.youtube.com/watch?v=TdTP3LKyf4s" } },
+              };
+          // Extract 'views' values into an array
+          const viewsArray = Object.values(celscilist).map(item => item.info.views);
+          // Calculate the sum of 'views' values
+          function calculateAverage(viewsArray ) {
+            const sum = viewsArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+            
+            return sum / viewsArray.length;
+          }
+          
+          class Celsci {
+            static iscelsci(x) {
+              let y = "Not Above Average: ";
+              if (x > calculateAverage(viewsArray)) {
+                y = "Above Average: ";
+              }
+              return y;
+            }
+          
+          
+            static iscelscinow(x) {
+              let y = "Not Above Average: ";
+              if (x > calculateAverage(viewsArray)) {
+                y = "Above Average: ";
+              }
+              return y;
+            }
+          }
+          
+          
+          function checkcelsci(x) {
+            const result = Celsci.iscelsci(celscilist[x]['info']['views']);
+            return result;
+          }
+          //new
+        //async function checkcelscinow(x){
+          const app = await client("https://cognitivescience-cogsphere.hf.space");
+          const lastview = await app.predict("/predict", [      
+            celscilist["Donald Hoffman"]['info']['link'], 
+          ]);
+           //result=result.data; //Celsci.iscelscinow(result.data);
+        //return result.data  
+          
+        //}
+          
+        
+        // Get the max value from the array
+        const maxViews = Math.max(...viewsArray);
+        
+        function findKeyByViews(obj, viewsValue) {
+          return Object.keys(obj).find(key => obj[key].info.views === viewsValue);
+        };
+        // Call the function with data and maxViews as arguments
+        let no1 = findKeyByViews(celscilist, maxViews);
+        //new
+
+
+          
+        document.write("Donald Hoffman with views: ",celscilist["Donald Hoffman"]['info']['views'] , " is: " , checkcelsci('Donald Hoffman'), Math.trunc(calculateAverage(viewsArray)), " and the #1 is: ", no1, " with viewcounts of ", maxViews, " but Donald Hoffman sentiment result is ", JSON.stringify(output), " with latest views: ", lastview.data);                 
+            } catch (error){
+                 console.log("Error:",error.message);       
+            }   
+        }       
+)
+    </script>
+    </body>
+</html>
