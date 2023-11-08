@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>ACogSphere: Sentiment Analysis</title>
+    <button id="run">ACTION</button>
+    <label>Output:</label>   
+    <div id="output2">Waiting to analyize a great life!</div>
+</head>
+<body> 
+  <script type="module">
+  import { pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.7.0'
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/SYytiQmXNTc?si=eP9rdSFCbbNYww_v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <a href="https://cogscidighum.github.io/3704A/Ashley/index.html" title="Poppy Crum">Project 1</a>
+  const generate = document.getElementById("run");   
+  generate.addEventListener("click", async () =>   // Start (
+  {
+      try 
+  {
+      let pipe = await pipeline('text-classification');
+      let output = await pipe('a great life!'); 
+      output2.textContent = JSON.stringify(output);
+  } 
+      catch (error)
+  {
+      console.log("Error:",error.message);
+  }
+  }
+  )//End )
+</script>
+</body>
+     
