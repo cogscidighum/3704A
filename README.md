@@ -47,8 +47,8 @@ Action 4 | [The code](https://github.com/cogscidighum/3704A/blob/main/index.html
 # Theo Pana
 Elizabeth Loftus, [How reliable is your memory?](https://youtu.be/PB2OegI6wvI?si=PPNstchm3jIO87Y3), 2,190,333 views
 # Laiza Robert
-The misinformation effect | Elizabeth Loftus | views on september 18, 1,7k -- https://www.youtube.com/watch?v=3RKDVB6qizA
-![qrcode_www youtube com](https://github.com/cogscidighum/3704A/assets/144283223/357a57c5-f58d-4fb6-954b-e2e05117215c)
+[The misinformation effect](https://www.youtube.com/watch?v=3RKDVB6qizA) | Elizabeth Loftus | views on september 18, 1,7k -- 
+[Project1](https://cogscidighum.github.io/3704A/laizaR/project1)
 # Joy Nama
 Martha Nussbaum, "What Is Anger, and Why Should We Care?" - [https://www.youtube.com/watch?v=0UmWoqhkJdU] - 40K
 # Izzy Laidlaw
