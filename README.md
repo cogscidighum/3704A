@@ -87,3 +87,6 @@ Neuroscience and Artificial Intelligence Need Each Other | Marvin Chun | 39.3k v
 https://www.youtube.com/watch?v=97iYdJE9mQ4&t=713s 
 # Melate Mulugeta 
 Gödel, Escher, Bach author Doug Hofstadter on the state of AI today- https://www.youtube.com/watch?v=lfXxzAVtdpU #Ruqayyah Abdullah Future Thinking | Jim Davies | TEDxCarletonUniversity https://www.youtube.com/watch?v=TdTP3LKyf4s&ab_channel=TEDxTalks, 27k views
+# Tassie Bouraoui
+Yejin Choi, Why AI is Incredibly Smart and Shockingly Stupid - 1,796,434 views
+https://www.ted.com/talks/yejin_choi_why_ai_is_incredibly_smart_and_shockingly_stupid?language=en
