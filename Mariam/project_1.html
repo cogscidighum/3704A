@@ -3,6 +3,41 @@
 <html lang="en">
 
  <h1>Lara Boyd - Tedtalk</h1>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>CelSciLaraboyd</title>
+  </head>
+
+  <body>
+    <script>
+        const celscilist = {
+          'dd': { 'info': { 'views': 39000000 } },
+          'jp': { 'info': { 'views':  } },
+        };
+
+        class Celsci {
+          static iscelsci(x) {
+            let y = "false";
+            if (x > 500) {
+              y = 'true';
+            }
+            return y;
+          }
+        }
+
+        function checkcelsci(x) {
+          const result = Celsci.iscelsci(celscilist[x]['info']['views']);
+          return result;
+        }
+
+        document.write(checkcelsci('dd'));     
+    </script>
+  </body>
+</html>
+
+ 
  <div style="text-align: center;">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/LNHBMFCzznE" frameborder="0" allowfullscreen></iframe>
 </div>
