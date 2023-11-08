@@ -1,28 +1,57 @@
 <!DOCTYPE html>
-<html>
+
+<html style= "background-color:LavenderBlush"
 	<head>
-      <h2>
-        CogSciDigHumJS
+      <center><h2 style="color: IndianRed;font-family: Palatino;" >Rate Your Celscis!
       </h2>
+     
     <iframe
     src="https://cogsphere-acogsphere.hf.space"
-    frameborder="0"
-    width="350"
-    height="150"
+    width="500"
+    height="200"
     ></iframe>
     <br>  
+     <img
+    src="https://64.media.tumblr.com/15dfbcf8059b0e1d90843e95d2163421/tumblr_ohu68qhSqh1s5wnpzo1_400.gif"
+    width="200"
+    height="200"
+    ></img>
     </head>
     <body> 
-    <label for "nameinput">Name:</label>
-    <input type="text" id="nameinput" placeholder="Enter Your Name Here"></input>
     <br>
-    <div id="output" style="color: green; ">Waiting!</div>
-     <label>Pick a Celsci and Rate then Vote!</label>
-  <button type="button" style="background-color: orange" id="button1" onclick="click"> Vote! </button>
+    <label for "nameinput"> What's your name?:</label>
+    <input type="text" id="nameinput" placeholder="Enter Name"></input>
+    <br>
+    <div>
+    <title>Blinking feature using CSS</title>
+    <style>
+        .blink {
+            animation: blinker 2.5s linear infinite;
+            color: IndianRed;
+            font-family: Didot;
+        }
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p class="blink"> Waiting </p>
+     <label style = "font-size:20px;"> Step 1: Pick a Celsci</label>
+     <br>
+     <label style = "font-size:20px;"> Step 2: Rate your Celsci</label>
+     <br>
+     <label style = "font-size:20px;"> Step 3: Click Vote! </label>
+     <br>
+       <center><button type="button" style="background-color: pink; width: 200px;" id="button1" onclick="click"> Vote! </button></center>
+
  <script>       
  var celscilist=[ 
          'Celscis List','Anil Seth','Andrew2 Huberman','Donald Hoffman', 'Doug Hofstadter','Howard Gardner', 'Janelle Shane', 'Daniel Kahneman', 'Elizabeth Loftus', 'Elizabeth2 Loftus', 'Patricia Churchland','Bret Weinstein','Andrew Huberman', 'Tom Scott',  'Melanie Mitchell',  'Jordan Peterson',  'Timnit Gebru',  'Amy Cuddy',  'Mihaly Csikszentmihalyi',  'Martha Nussbaum',  'Noam Chomsky',  'Russell A Barkley',  'Slavoj Žižek',  'Nathaniel Drew', 'Lara Boyd',  'Yuval Noah Harari',  'Jordan2 Peterson',  'Yuval2 Noah Harari',  'Joscha Bach',  'Poppy Crum',  'Ryan Holiday',  'Marvin Chun',  'Jim Davies' 
 ]
+
 // Create a select element
 var select = document.createElement("select");
 var select2 = document.createElement("select");
@@ -83,6 +112,9 @@ const result = await app.predict(0, [
             }       
         }       
 )
+
     </script>
+    
     </body>
 </html>
+
