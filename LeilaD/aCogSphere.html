@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>ACogSphere: Sentiment Analysis</title>
+    <button id="run">ACTION</button>
+    <label>Output:</label>   
+    <div id="output2">Waiting to analyize a great life!</div>
+</head>
+<body> 
+  <script type="module">
+  import { pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.7.0'
+  
+  const generate = document.getElementById("run");   
+  generate.addEventListener("click", async () =>   // Start (
+  {
+      try 
+  {
+      let pipe = await pipeline('text-classification');
+      let output = await pipe('In our current technological landscape, discussions on AI technology are at the forefront. Ranging from fantastical questions such as, “Will the robots spare us if they become our overlords?” to more grounded questions like “How do we ensure AI is being trained on quality, ethically obtained data?”. I personally think that both of these examples of raised questions make for interesting conversation. However, I do think the latter is a more immediate concern to address and one that’s more within our reach. AI technology has been touted as a capstone of impartiality or as a thing that has the inability to be biased. This is idyllic, the reality is that there is a lot of oversight on the part of individuals and companies who are spearheading said technology, the oversight of not considering that the end users of these AI systems will consist of a wide range of individuals. This is mainly a result of human biases becoming a part of training data. Dr. Timnit Gebru is a Computer Scientist and Political activist who earned a Bachelor and Master of Science degrees in electrical engineering and a PhD in computer vision at Stanford University. Timnit Gebru is a prominent AI researcher who has worked with notable technology companies such as Apple, Microsoft and Google.'); 
+      output2.textContent = JSON.stringify(output);
+  } 
+      catch (error)
+  {
+      console.log("Error:",error.message);
+  }
+  }
+  )//End )
+</script>
+</body>
+     
