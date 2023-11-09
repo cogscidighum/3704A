@@ -1,33 +1,122 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <title>Martha Nussbaumt</title>
-  </head>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Martha Nussbaum</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #f5f5f5;
+        color: #333333;
+        line-height: 1.6;
+    }
 
-  <body>
-    <script>
-        const celscilist = {
-          'Martha Nussbaum': { 'info': { 'views': 41000 } },
-  
-        };
-        
-        class Celsci {
-          static iscelsci(x) {
-            let y = "false";
-            if (x > 500) {
-              y = 'true';
-            }
-            return y;
-          }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .image-content {
+        flex: 1;
+        padding: 20px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .image-content img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    .text-content {
+        flex: 1;
+        padding: 20px;
+    }
+
+    .best-works {
+        background-color: #f7f7f7;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #5a5a5a;
+    }
+
+    h2 {
+        color: #333333;
+        margin-top: 20px;
+    }
+
+    p {
+        text-align: justify;
+        margin-bottom: 20px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 315px;
+        border: none;
+    }
+
+
+   
+    .caption {
+        text-align: center;
+        color: #777777; /* Caption color */
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+            align-items: center;
         }
-        
-        function checkcelsci(x) {
-          const result = Celsci.iscelsci(celscilist[x]['info']['views']);
-          return result;
+        .image-content, .text-content {
+            width: 100%;
         }
-        
-        document.write(checkcelsci('dd'));     
-    </script>
-  </body>
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="image-content">
+        <img src="https://cdn2.opendemocracy.net/media/images/Martha3_ieyTw6J.width-800.jpg" alt="Martha Nussbaum">
+        <!-- Caption -->
+        <div class="caption">Martha Nussbaum</div>
+    </div>
+    <div class="text-content">
+        <h1>Martha Nussbaum</h1>
+        <p>Martha Nussbaum is an American philosopher and the current Ernst Freund Distinguished Service Professor of Law and Ethics at the University of Chicago, where she is jointly appointed in the Law School and the Philosophy department. She has made significant contributions to political philosophy, ethics, and ancient philosophy, with a particular focus on the development of a capabilities approach, which emphasizes the role of governments in ensuring that citizens have the opportunity to perform activities they choose to live a fulfilled life.</p>
+        <p>Nussbaum has written and edited numerous books and articles, delving into issues like human emotions, feminism, and justice. Her work extends beyond pure academic philosophy, as she is actively involved in legal and ethical discussions worldwide. She has been awarded numerous prizes and honors for her work in philosophy and human development. Her influence is significant in fields as diverse as law, education, feminism, and development economics.</p>
+        <h2>Martha Nussbaum, "What Is Anger, and Why Should We Care?"</h2>
+        <iframe src="https://www.youtube.com/embed/0UmWoqhkJdU" allowfullscreen></iframe>
+        <h2>The Nature of Anger</h2>
+        <p>Martha Nussbaum's perspective on anger delves into its multifaceted nature and implications for human behavior and society. She characterizes anger as a response to perceived wrongs, often driven by a desire for retribution. Nussbaum questions the rationality and moral justifiability of this retaliatory aspect of anger. She also explores the consequences of anger, recognizing its potential for both personal harm and societal discord, as it can lead to cycles of retaliation and escalating conflicts. However, she acknowledges its capacity to signal injustices and motivate positive change. Nussbaum advocates for a transition from anger rooted in a desire for payback to a forward-looking perspective she terms 'Transition-Anger,' which prioritizes preventing harm and rectifying situations without seeking revenge. In the context of justice and societal progress, she critiques the role of anger in political movements and public life, expressing concern that retributive anger may hinder meaningful progress and advocating for a more compassionate and rational approach to policymaking. Ultimately, Nussbaum emphasizes the importance of understanding anger, as it significantly impacts interpersonal relationships, social interactions, and the political environment, calling for a critical examination of how we respond to harm to promote reconciliation and constructive solutions rather than perpetuating harm.</p>
+        <h2>My Personal Opinion</h2>
+        <p>Martha Nussbaum's perspective on anger is both thought-provoking and influential, reflecting her broader commitment to a philosophy that serves humanity's quest for justice and well-being. Her argument against the traditional payback concept of anger is grounded in the belief that justice should not be about retribution but rather about repairing harm and preventing future injustices. This shift from a backward-looking to a forward-looking perspective on justice is compelling because it emphasizes constructive social change over the satisfaction of immediate emotional responses.</p>
+        <p>Nussbaum's critique of anger can serve as a valuable framework for personal development and public discourse. By challenging us to respond to wrongdoing with thoughtful consideration of future consequences, rather than an instinctive desire for revenge, she provides a pathway towards more empathetic and productive interactions.</p>
+        <p>However, some might argue that Nussbaum's position underestimates the motivational role of anger in fighting against systemic injustices. Anger has historically been a driving force in many social movements, galvanizing individuals and communities to seek change. Thus, while the desire for retribution may not be the most constructive approach, the energy and attention that anger can bring to injustices should not be dismissed.</p>
+        <p>Nussbaum's work invites a critical examination of our emotional lives, offering a rich and complex understanding of anger's role in human affairs. It challenges individuals to aspire to higher standards of personal conduct and societies to aim for a more compassionate form of political engagement. Her contributions to this field encourage a reassessment of conventional wisdom on emotions and their place in ethics and politics.</p>
+        <div class="best-works" style="background-color: #f7f7f7;">
+            <h2>Martha Nussbaum's Best Works</h2>
+            <ul>
+                <li><a href="#">1. "The Fragility of Goodness: Luck and Ethics in Greek Tragedy and Philosophy"</a></li>
+                <li><a href="#">2. "Upheavals of Thought: The Intelligence of Emotions"</a></li>
+                <li><a href="#">3. "The Monarchy of Fear: A Philosopher Looks at Our Political Crisis"</a></li>
+                <li><a href="#">4. "The Upheaval of Emotions: Philosophy, Psychology, and Politics"</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
 </html>
