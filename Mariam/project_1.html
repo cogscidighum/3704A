@@ -126,34 +126,7 @@ She holds prestigious titles, including Canada Research Chair in Neurobiology of
 </div>  
 
 
-<html>
-<head>
-   <title>ACogSphere: Sentiment Analysis</title>
-    <button id="run">ACTION</button>
-    <label>Output:</label>   
-    <div id="output2">I hope you enjoyed my Project!</div>
-</head>
-<body> 
-  <script type="module">
-  import { pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.7.0'
 
-  // Define a JavaScript function
-  async function analyzeSentiment() {
-      try {
-          let pipe = await pipeline('text-classification');
-          let output = await pipe('a great life!'); 
-          output2.textContent = JSON.stringify(output);
-      } catch (error) {
-          console.log("Error:", error.message);
-      }
-  }
-
-  // Add an event listener to call the function when the button is clicked
-  const generate = document.getElementById("run");   
-  generate.addEventListener("click", analyzeSentiment);
-  </script>
-</body>
-</html>
 
 
 
@@ -206,7 +179,6 @@ She holds prestigious titles, including Canada Research Chair in Neurobiology of
 
         generate.addEventListener("click", async () => {
             try {
-                // Instead of calling the Gradio app, we'll set the output message directly
                 output.textContent = "Hope you enjoyed reading my Project_1 ! ";
             } catch (error) {
                 console.log("Error:", error.message);
