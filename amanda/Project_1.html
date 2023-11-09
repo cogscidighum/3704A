@@ -147,7 +147,11 @@ In summary, Andrew Huberman's insights on dopamine, its effects on our experienc
 
 
   
- <html>
+
+  
+  
+  
+  <html>
 <head>
    <title>ACogSphere: Sentiment Analysis</title>
     <button id="run">ACTION</button>
@@ -158,7 +162,7 @@ In summary, Andrew Huberman's insights on dopamine, its effects on our experienc
   <script type="module">
   import { pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.7.0'
 
-  // Define a JavaScript function
+
   async function analyzeSentiment() {
       try {
           let pipe = await pipeline('text-classification');
@@ -169,7 +173,7 @@ In summary, Andrew Huberman's insights on dopamine, its effects on our experienc
       }
   }
 
-  // Add an event listener to call the function when the button is clicked
+ 
   const generate = document.getElementById("run");   
   generate.addEventListener("click", analyzeSentiment);
   </script>
