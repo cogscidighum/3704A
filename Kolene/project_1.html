@@ -4,6 +4,23 @@
 		<title>Cognitive Science and Dig humanities</title>
 	</head>
 			<body>
+				<script type="module">
+					import { pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.7.0'
+					
+					const generate = document.getElementById("run");   
+					generate.addEventListener("click", async () =>   // Start (
+					{
+					let abstract = getElementById("Abstract");
+					try {
+						let pipe = await pipeline('text-classification');
+						let output = await pipe(abstract);
+					} 
+					catch (error){
+						console.log("Error:",error.message);
+					}
+					}
+					))
+				</script>
 				<style>
 					p {
 						margin-right: 90px;
@@ -63,6 +80,11 @@
 				on the subject. Additonally, it will tackle the controversies of the replication crisis, notably the critics on Amy Cuddy's
 				paper. 
 				</p>
+				<h2>Special Action 1</h2>
+				<button id="run">See the sentiment of this abstract</button>
+				<br>
+				<label>Sentiment:</label>   
+				<div id="output2">Waiting to Analyse...</div>
 
 				<h2 id="tTitle">The Talk and Paper</h2>
 				<p id="theTalk">
