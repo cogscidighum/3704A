@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Project 1</title>
-    <link rel="icon" href="https://miro.medium.com/v2/resize:fit:1400/1*VpYiz-mEEyF5JiGm0LhcZw.gif">
+    <link rel="icon" href="https://www.iconninja.com/files/205/914/484/leather-brown-folder-icon.png">
   </head>
     <style>
       body{
@@ -77,10 +77,41 @@
   </p>
 
    <p>
-    Dr. Timnit Gebru is a Computer Scientist and Political activist who earned a Bachelor and Master of Science degrees in electrical engineering and a PhD in computer vision at Stanford University. Timnit Gebru is a prominent AI researcher who has worked with notable technology companies such as Apple, Microsoft and Google.<sup> <a href="#ref1">1</a></sup>
+    Dr. Timnit Gebru is a Computer Scientist and Political activist who earned her a Bachelor and Master of Science degree in electrical engineering and a PhD in computer vision at Stanford University. Timnit Gebru is a prominent AI researcher who has worked with notable technology companies such as Apple, Microsoft and Google.<sup> <a href="#ref1">1</a></sup>
   </p>
   </div>
-<br>
+
+<div style="text-align: left;">
+<details>
+  <summary style= "font-family: Georgia, serif; font-size: 20px;
+  font-weight: bold;">ACogSphere - Sentiment analysis on this abstract!</summary>
+  <button id="run">ACTION</button>
+  <br>
+  <label>Sentiment:</label>   
+  <div id="output2">Waiting to Analyse...</div>
+  <script type="module">
+    import { pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.7.0'
+    
+    const generate = document.getElementById("run");   
+    generate.addEventListener("click", async () =>   // Start (
+    {
+        try 
+    {
+        let pipe = await pipeline('text-classification');
+        let output = await pipe('In our current technological landscape, discussions on AI technology are at the forefront. Ranging from fantastical questions such as, “Will the robots spare us if they become our overlords?” to more grounded questions like “How do we ensure AI is being trained on quality, ethically obtained data?”. I personally think that both of these examples of raised questions make for interesting conversation. However, I do think the latter is a more immediate concern to address and one that’s more within our reach. AI technology has been touted as a capstone of impartiality or as a thing that has the inability to be biased. This is idyllic, the reality is that there is a lot of oversight on the part of individuals and companies who are spearheading said technology, the oversight of not considering that the end users of these AI systems will consist of a wide range of individuals. This is mainly a result of human biases becoming a part of training data. Dr. Timnit Gebru is a Computer Scientist and Political activist who earned a Bachelor and Master of Science degrees in electrical engineering and a PhD in computer vision at Stanford University. Timnit Gebru is a prominent AI researcher who has worked with notable technology companies such as Apple, Microsoft and Google.'); 
+        output2.textContent = JSON.stringify(output);
+    } 
+        catch (error)
+    {
+        console.log("Error:",error.message);
+    }
+    }
+    )//End )
+  </script>
+
+  </details>
+  </div>
+
 
 <h2 id="Research">Research in Cognitive Science</h2>
   <p>Her research focuses mostly on AI ethics and most of her research involves finding existing biases in AI systems. and analysing them and pointing out the problems that they could cause</p>
@@ -89,20 +120,20 @@
 <h5>Notable papers include;</h5>
 <h4 style="text-decoration-line: underline; text-decoration-style: dashed;">On the dangers of stochastic parrots: Can language models be too big?🦜<sup> <a href="#ref2">2</a></sup></h4>
 <h5>Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, and Shmargaret Shmitchell. 2021.</h5>
-<p>The authors use the term “stochastic parrot” to refer to how LLMs do not truly understand what they are outputting. The output consists of the probability of what the next word should be based on sentence strict and other things that it has been exposed to in it’s training data. The authors say “coherence is in the eye of the beholder” meaning that these Language modes just seem coherent and that “Our human understanding of coherence derives from our ability to recognize interlocutors’ beliefs”.</p>
-<p>They evaluate if the outcome of training such large AI models is truly is worth the environmental risks. They cite another paper that recorded that training an AI model emitted 284t of CO<sub>2</sub>. Though in the specific instance they mention, the energy is from a renewable source, energy from renewable sources are still costly to the environment.They say that there is a need to develop energy-efficient ways to create models.</p>
-<p>As the paper comes to an end, the authors summarise by saying that LLMs are trained on all kinds of data and we need to document the source of the training data, the mention the term “documentation debt” which means that we are not documenting the datasets in the first place and now they are too large to make significant progress if we attempt to start now. Documentation will be helpful in tracing the origins of certain bias related problems so we can know how to avoid these issues in the future.</p>
+<p>The authors use the term “stochastic parrot” to refer to how LLMs do not truly understand what they are outputting. The output consists of probability of what the next word should be based on sentence strict and other things that it has been exposed to in it’s training data. The authors say “coherence is in the eye of the beholder” meaning that these Language modes just seem coherent and that “Our human understanding of coherence derives from our ability to recognize interlocutors’ beliefs”.</p>
+<p>They evaluate if the outcome of training such large AI models is truly is worth the environmental risks.They cite another paper that recorded that training an AI model and emitted 284t of CO<sub>2</sub>. Though in the specific instance they mention , the energy is from a renewable source, energy from renewable sources are still costly to the environment.They say that there is a need to develop energy efficient ways to create models.</p>
+<p>As the paper comes to an end, the authors summarise by saying that LLMs are trained on all kinds of data and we need to document the source of the training data, the mention a term “documentation debt” which means that we are not documenting the datasets in the first place and now they are too large to make significant progress if we attempt to start now. Documentation will be helpful to trace the origins of certain bias related problems so we can know how to avoid these issues in the future.</p>
 <p>In conclusion Bender et al. invite us to think about if the effects training has on the environment are truly worth is and if it’s truly necessary to want bigger models, than those that currently exist, in the case that it is, how do we plan to curb the risks that we have already witnessed from encoding biases in existing models and to think about the problems that can arise from developing more sophisticated ways to mimic humans and the ways the technology can be misused.</p>
 <h4 style="text-decoration-line: underline; text-decoration-style: dashed;">Saving Face: Investigating the Ethical Concerns of Facial Recognition Auditing<sup> <a href="#ref3">3</a></sup></h4>
 <h5>Inioluwa Deborah Raji, Timnit Gebru, Margaret Mitchell, Joy Buolamwini, Joonseok Lee, Emily Denton. 2020.</h5>
-<p>In this paper, the authors talk about how facial recognition software being used as biometrics is a sensitive area. It requires us to be very careful about how accurate we are making it especially since we may be using it in situations that have very high ethical implications.</p>
+<p>In this paper, the authors talk about how facial recognition software being used as biometrics is sensitive area. It requires us to be very careful about how accurate we are making it especially since we may be using it in situations that have very high ethical implications.</p>
 
 <p>Facial processing technology(FPT) can perform tasks ranging from face detection to facial analysis and face verification or identification. It can be used for simple things like gauging customer satisfaction to more complex things such as tracking individuals.FPT can be misused, for example, when it is used to track individuals (surveillance) or when the data used in this technology is not sourced in an ethical way.
 </p>
 
 <p>The methodology for this paper involved preparing a set of 80 images of celebrities to use as a benchmark to test some facial recognition APIs from Microsoft, Amazon, and Clarifai on tasks such as automatic gender recognition, smile detection, and name identification. APIs from these companies performed very well in recognising people from their image set they categorised as being in the "lighter male subgroup". </p>
 
-<p>They highlight problems they have identified with not ethically sourcing training data for these technologies. For example, IBM Diversity in Faces (DiF) dataset used photos from Flicker and while the photos are free online for everyone to use for commercial reasons, the individuals in the images did not agree to be included in training data (in the same way that authors did not agree for their work to be included in OpenAI training data and some are currently suing).
+<p>They highlight problems they have identified with not ethically sourcing training data for these technologies. For example, IBM Diversity in Faces (DiF) dataset used photos from Flicker and while the photos are free online for everyone to use for commercial reasons, the individuals in the images did not agree to be included in training data (in the same way that authors did not agree for their work to be included in OpenAI training data and some are currently sueing).
 </p>
 
 <p>Raji et al. conclude that if we are going to use AI in important ethical situations, we should accord the same importance to the quality of the data and also how we are evaluating these systems</p>
@@ -110,14 +141,11 @@
 <br>
 
   <h2 id="Projects">Projects</h2>
-      <p>Here are a couple of projects Timnit Gebru has been a part of;</p>
-      <p><iframe style="float: right; padding: 10px; border: none;" src="https://www.dair-institute.org" width="360" height="320"></iframe></p>
+  <p> Timnit Gebru left Google after the publishing of "On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?" and cofounded DAIR with some other researchers.</p>
+      <p style="text-align: center;"><iframe style="padding: 10px; border: none;" src="https://www.dair-institute.org" width="80%" height="400"></iframe></p>
   <h3 style="text-decoration-line: underline; text-decoration-style: dashed;">DAIR (Distributed Artificial Intelligence Research Institute)</h3>
-  
-  <p>Lorem Ipsum is simply dummy text</p>
-  <h3 style="text-decoration-line: underline; text-decoration-style: dashed;">Impact</h3>
-  <p> Lorem Ipsum is simply dummy text</p>
-
+  <p>Gebru and a couple of other AI researchers founded DAIR , an AI research lab that works on research that will benefit communities instead of harming them (like surveillance AI). On their website it says the the research philosophy aims to mitigate the harm caused by AI technology and to create a space where beneficial technology and tools can be made.</p>
+  <p>Some of the projects include; using computer vision and satellite images to observe some South African townships to observe the remnants of the urban landscape from the apartheid era and an article on how tech companies don’t have ethical employment practices for their AI technologies, highlighting the fact that they outsource work from employees in the global south who were being unfairly compensated.</p>
   <br>
 
 <h2 id="Video">How To Stop Artificial Intelligence From Marginalizing Communities<sup> <a href="#ref4">4</a></sup></h2>
@@ -125,24 +153,54 @@
 <div style="text-align: left;">
 <p> In this video, Timnit Gebru talks about automation bias, where we fully trust information AI systems or algorithms are giving us and take it as fact, this can have many harmful effects. From small things like false results of minor calculations to us being blissfully misinformed because the information came from an AI so ‘it must be true’.</p>
 <p> Gebru also speaks on surveillance AI in the US and that she personally does not think that it is appropriate to use such AI in high stakes situations such as this where the freedom of individuals and risky situations with the legal system relies on AI.</p>
-<p>She talks about how we unknowingly program our biases into AI systems, likening the failure to consider inclusivity (on the part of developers of these AI systems) to early Automobile testing, when seatbelts would only be tested on men. As a result of crash testing be so centered towards men, since they were being seen as the 'default, women and children were disproportionately at risk of dying in car accidents. Illustrating that (not-so) small oversights like this can cause a significant amount of damage.</p>
+<p>She talks about how we unknowingly program our biases into AI systems, likening the failure to consider inclusivity (on the part of developers of these AI systems) to early Automobile testing, when seatbelts would only be tested on men. As a result of crash testing be so centered towards men, since they were being seen as the 'default, women and children were disproportionately at risk of dying in car accidents<sup> <a href="#ref5">5</a></sup>. Illustrating that (not-so) small oversights like this can cause a significant amount of damage.</p>
 <p>Timnit suggests that, as a resolution to these kinds of problems there should be more laws to regulate AI and it should be heavily tested before being implemented with the general public. She says as well that people making AI should mirror the communities that are the intended end users. Surveillance AI in the US and that she does not think that it is appropriate to use such AI in high stakes situations such as this. </p>  
+<div style="text-align: left;">
+  <details>
+    <summary style= "font-family: Georgia, serif; font-size: 20px;
+    font-weight: bold;">BCogSphere - Check how many views this video currently has!</summary>
+    <button id="action">ACTION</button>
+    <br>
+    <label>Views:</label>   
+    <div id="output">Ready to check!</div>
+
+    <script type="module"> 
+      import { client } from "https://cdn.jsdelivr.net/npm/@gradio/client@0.1.4/dist/index.min.js";
+  
+      const generate = document.getElementById("action");   
+      generate.addEventListener("click", async () =>{
+          try {         
+  
+            const app = await client("https://cognitivescience-cogsphere.hf.space");
+            const lastview = await app.predict("/predict", [      
+             "https://youtu.be/PWCtoVt1CJM?si=dsSwr_qX5r_tfaTP",
+            ]);
+             output.textContent = JSON.stringify(lastview.data);     
+            
+              } catch (error){
+                   console.log("Error:",error.message);                
+              }       
+          }       
+  )
+      </script>
+
+  </details>
+</div>
 </div>  
 <br>
 
 <h2 id="Perception">Public Perception</h2>
-<p>Lorem Ipsum is simply dummy text<</p>
+<p>Timnit Gebru is very controversial figure in AI research. Here are some things that affect public perception.</p>
 <div style="text-align: left;">
-<h3 style="text-align: left;">Google</h3>
-<p>Lorem Ipsum is simply dummy text<</p>
-
-<h3 style="text-align: left;">'Is this truly science?'</h3>
-<p> Lorem Ipsum is simply dummy text</p>
+<p>Timnit Gebru’s work has been criticised as advocacy masquerading as science because a lot of her work focuses on examining biases against minority groups that technology companies don’t usually have in mind when developing technology, her work has been described as being solely advocacy and social activism but that’s not true because papers she’s authored portray that actual empirical research is being carried out so I don’t see why it can’t be both.</p>
 </div>
 <br>
 
 <h2 id="Reflection">Reflection</h2>
-  <p> Lorem Ipsum is simply dummy text</p>
+  <p> I personally agree with what Timnit Gebru says in this video and from reading some papers she has authored, I find her work interesting. I agree that we need to be critically examine outputs from AI systems we engage with, wether it’s very small outputs like false results of minor calculations or hallucinations (when AI makes up information and insists it exists) both of these are simpler to verify and are not as significant on a large scale, compared what surveillance AI outputs can be used for.</p>
+  <p>The suggestion that there should be more laws to regulate AI is one that I agree with as well, I believe that more companies should have a record of what their datasets consist of and should also disclose it to the public. They also need to be more mindful of what they are including in the datasets. I believe that companies need to explicitly ask the permission of authors and artists  to include their work in their datasets and should also be transparent about what being part of their datasets will entail, for example some people might not want replicas of their likeness or voices to be produced and I believe that those sentiments should be respected.</p>
+  <p>This Ted Talk was recorded in 2018 and since that time there have been some improvements on laws to regulate AI, the UN recently announced a new AI advisory board, it’s a relatively new board that was announced in October 2023 , though I think that the formation of this board is overdue, I do hope that the regulations the board comes up with will not be overlooked by technology companies.<sup> <a href="#ref6">6</a></sup></p>
+  <p>I think that Timnit’s work is a combination of both Hot Cognition (EQ) and Cold Cognition(SQ). During the class lecture on Social Cognition, it was mentioned that Digital humanities can help in bridging both EQ and SQ and I believe that Timnit’s work is an example of this. I think that wanting to make a change and trying to combat biases is an EQ skill and Timnit combines this with the SQ skill of carrying out research to empirically asses the problem of algorithmic biases.</p>
 <br>
 
 <div style="text-align: left;"></div>
@@ -150,18 +208,18 @@
   <summary style= "font-family: Georgia, serif; font-size: 24px;
   font-weight: bold;">Additional information</summary>
   <ol>
-    <li></li>
+    <li>She named one of the 100 most influential people of the year 2022</li>
+    <p style="padding-left: 20px;">Noble, Safiya. “Timnit Gebru: The 100 Most Influential People of 2022.” Time,  <a href="time.com/collection/100-most-influential-people-2022/6177822/timnit-gebru/">.time.com/collection/100-most-influential-people-2022/6177822/timnit-gebru/</a></p>
     <br>
-    <li></li>
+    <li>Timnit Gebru and Émile Torres (a philosopher) coined the term TESCREAL to refer to the ideologies of prominent thinkers in current technological advances (such as Elon musk, Sam Altman and Nick Bostrom). Émile says that they focus on nonexitent threats compared to focusing on the present.</li>
+    <p style="padding-left: 20px;">Torres, Émile P. “TESCREALism: The Acronym behind Our Wildest AI Dreams and Nightmares.” Truthdig,  <a href="www.truthdig.com/articles/the-acronym-behind-our-wildest-ai-dreams-and-nightmares/">www.truthdig.com/articles/the-acronym-behind-our-wildest-ai-dreams-and-nightmares/</a></p>
     <br>
-    <li></li>
-    <br>
-    <li></li>
   </ol>
 </details>
 </div>
 
 <h2 id="References">References</h2>
+<p><i>I sourced some of the code used in this project(specifically the side bar and the drop down menus) from W3schools.com and used chatGPT for the syntax of the attribute values,an example of a prompt used is</i> "&lt;p&gt;&lt;frame style="text-align: center; padding: 10px; border: none;"&gt;..... why does the alignment not work?"</p>
     <div style="text-align: left;">
       <ol>
         <li id="ref1">AI, People In. 2017. "Timnit Gebru Honored as an Alicorn of Artificial Intelligence by People in AI." Medium. September 18, 2017. <a href="https://theselfpreneur.com/people-in-ai-timnit-gebru-alicorn-of-artificial-intelligence-8a83d132aa47">https://theselfpreneur.com/people-in-ai-timnit-gebru-alicorn-of-artificial-intelligence-8a83d132aa47</a>.</li>
@@ -171,7 +229,13 @@
         <li id="ref3">Raji, I. D., Gebru, T., Mitchell, M., Buolamwini, J., Lee, J., &; Denton, E. (2020). Saving Face: Investigating the Ethical Concerns of Facial Recognition Auditing. ArXiv:2001.00964 [Cs].<a href="https://arxiv.org/abs/2001.00964">https://arxiv.org/abs/2001.00964</a></li>
         <br> 
         <li id="ref4">How To Stop Artificial Intelligence From Marginalizing Communities? | Timnit Gebru | TEDxCollegePark. (n.d.). Www.youtube.com. Retrieved November 8, 2023, from <a href="https://youtu.be/PWCtoVt1CJM?si=dsSwr_qX5r_tfaTP">https://youtu.be/PWCtoVt1CJM?si=dsSwr_qX5r_tfaTP</a></li>
-        </ol>
+        <br>
+        <li id="ref5">Barry, K. (2019, October 24). The Crash Test Bias: How Male-Focused Testing Puts Female Drivers at Risk. Consumer Reports. <a href=https://www.consumerreports.org/car-safety/crash-test-bias-how-male-focused-testing-puts-female-drivers-at-risk> https://www.consumerreports.org/car-safety/crash-test-bias-how-male-focused-testing-puts-female-drivers-at-risk/</a></li>
+        <br>
+        <li id="ref6">What the U.N.'s AI Advisory Group Will Do. (2023, October 26). TIME.  <a href="https://time.com/6328861/un-advisory-group-ai/">https://time.com/6328861/un-advisory-group-ai/</a></li>
+        <br>
+        <li>“How to Create a Hoverable Side Navigation.” Www.w3schools.com,  <a href="www.w3schools.com/howto/howto_css_sidenav_buttons.asp">www.w3schools.com/howto/howto_css_sidenav_buttons.asp</a></li>
+      </ol>
       </div>
 </div>
 
@@ -179,7 +243,7 @@
 
 <div style="background-color: #362B21; color: white; text-align: right;padding: 10px;">
   <p>Leila G. D.<br>
-    <!-- 101196770<br> -->
+    101196770<br>
     CGSC 3704<br>
     Prof. Ahmad Sohrabi<br>
     Nov 2023
