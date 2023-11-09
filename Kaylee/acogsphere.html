@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>ACogSphere: Sentiment Analysis</title>
+    <button id="run">ACTION</button>
+    <label>Output:</label>   
+    <div id="output2">In this video, In this video, neuroscientist Anil Seth explores a variety of explanations behind the mystery of consciousness that he has spent decades of his career researching. He stresses the importance of the understanding of human consciousness, emphasizing on the fact that without consciousness, humans have nothing. He investigates the complex and dependent relationship between consciousness, the brain, and body, and he looks at the results of famous optical illusions and experiments, proving that the human brain tends to use various different prediction processes for different sensory inputs in its role as a “prediction engine”. </div>
+</head>
+<body> 
+  <script type="module">
+  import { pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.7.0'
+  
+  const generate = document.getElementById("run");   
+  generate.addEventListener("click", async () =>   // Start (
+  {
+      try 
+  {
+      let pipe = await pipeline('text-classification');
+      let output = await pipe('a great life!'); 
+      output2.textContent = JSON.stringify(output);
+  } 
+      catch (error)
+  {
+      console.log("Error:",error.message);
+  }
+  }
+  )//End )
+</script>
+</body>
