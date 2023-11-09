@@ -5,10 +5,11 @@
 	</head>
 			<body>
 				<script type="module">
+					//Action1
 					import { pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.7.0'
 					
 					const generate = document.getElementById("run");   
-					generate.addEventListener("click", async () =>   // Start (
+					generate.addEventListener("click", async () => (
 					{
 					let abstract = getElementById("Abstract");
 					try {
@@ -20,6 +21,25 @@
 					}
 					}
 					))
+
+					//Action2
+					import { client } from "https://cdn.jsdelivr.net/npm/@gradio/client@0.1.4/dist/index.min.js";
+					
+					const generate = document.getElementById("action");   
+					generate.addEventListener("click", async () =>{
+					try {         
+					
+					const app = await client("https://cognitivescience-cogsphere.hf.space");
+					const lastview = await app.predict("/predict", [      
+					"https://www.youtube.com/watch?v=Ks-_Mh1QhMc&ab_channel=TED",
+					]);
+					output.textContent = JSON.stringify(lastview.data);     
+					
+					} catch (error){
+					console.log("Error:",error.message);                
+					}       
+					}       
+					)	
 				</script>
 				<style>
 					p {
@@ -98,6 +118,10 @@
 					<img src="./DIGH3.png">
 					<img src="./DIGH4.png">
 				</div>
+				<button id="action">ACTION</button>
+				<br>
+				<label>Views:</label>   
+				<div id="output">Ready to check!</div>
 
 				<h2 id="cTitle">The controversy</h2>
 				<p id="TheControversy">
