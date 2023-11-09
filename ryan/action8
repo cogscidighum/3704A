@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>CelSci</title>
+    <style>
+        .section {
+            margin-bottom: 20px;
+        }
+        .header {
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .number {
+            color: purple
+        }
+        .footer {
+            font-size: 0.8em;
+            text-align: center;
+            margin-top: 30px;
+            color: grey;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        const celscilist = {
+            'Mihaly Csikszentmihalyi': { 'info': { 'views': 952791 }},
+            'Janelle Shane': { 'info': { 'views': 2700000 }},
+            'Daniel Kahneman': { 'info': { 'views': 1200000 }},
+            'Donald Hoffman': { 'info': { 'views': 2400000 }},
+            'Patricia Churchland': { 'info': { 'views': 8026 }},
+            'Bret Weinstein': { 'info': { 'views': 41610 }},
+            'Andrew Huberman': { 'info': { 'views': 55561 }},
+            'Tom Scott': { 'info': { 'views': 2500000 }},
+            'Melanie Mitchell': { 'info': { 'views': 44000 }},
+            'Jordan Peterson': { 'info': { 'views': 236000 }},
+            'Timnit Gebru': { 'info': { 'views': 79338 }},
+            'Amy Cuddy': { 'info': { 'views': 23700189 }},
+            'Elizabeth Loftus': { 'info': { 'views': 2190333 }},
+            'Martha Nussbaum': { 'info': { 'views': 40000 }},
+            'Dr. Russell A Barkley': { 'info': { 'views': 774000 }},
+            'Slavoj Žižek': { 'info': { 'views': 95000 }},
+            'Noam Chomsky': { 'info': { 'views': 26042 }},
+            'Nathaniel Drew': { 'info': { 'views': 126000 }},
+            'Lara Boyd': { 'info': { 'views': 38000000 }},
+            'Anil Seth': { 'info': { 'views': 14187265 }},
+            'Howard Gardner': { 'info': { 'views': 1500000 }},
+            'Yuval Noah Harari': { 'info': { 'views': 409000 }},
+            'Lex Fridman': { 'info': { 'views': 493000 }},
+            'Poppy Crum': { 'info': { 'views': 130000 }},
+            'Ryan Holiday': { 'info': { 'views': 32000 }},
+            'Marvin Chun': { 'info': { 'views': 39300 }},
+            'Jim Davies': { 'info': { 'views': 27000 }},
+        };
+
+        const viewsArray = Object.values(celscilist).map(item => item.info.views);
+
+        function calculateAverage(viewsArray) {
+            const sum = viewsArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+            return sum / viewsArray.length;
+        }
+
+        const averageViews = calculateAverage(viewsArray);
+
+        document.write("<div class='section'>");
+        document.write("<div class='header'>Average Views</div>");
+        document.write("Average views: <span class='number'>" + averageViews.toFixed(0) + "</span>");
+        document.write("</div>");
+
+        document.write("<div class='section'>");
+        document.write("<div class='header'>Average Checker</div>");
+
+        for (const person in celscilist) {
+            const views = celscilist[person].info.views;
+            if (views > averageViews) {
+                document.write(person + " is above the average with <span class='number'>" + views + "</span> views.<br>");
+            } else {
+                document.write(person + " is below the average with <span class='number'>" + views + "</span> views.<br>");
+            }
+        }
+        document.write("</div>");
+
+        const maxViews = Math.max(...viewsArray);
+        function findKeyByViews(obj, viewsValue) {
+            return Object.keys(obj).find(key => obj[key].info.views === viewsValue);
+        };
+        let no1 = findKeyByViews(celscilist, maxViews);
+
+        document.write("<div class='section'>");
+        document.write("<div class='header'>Max Views</div>");
+        document.write("#1 is: " + no1 + " with total views of <span class='number'>" + maxViews + "</span>");
+        document.write("</div>");
+
+        
+        document.write("<div class='footer'>This was created by Ryan Lyster.</div>");
+    </script>
+</body>
+</html>
