@@ -13,44 +13,12 @@
 					h2 {
 						text-align: center;
 					}
-					h2:hover, h2:active{font-size: 150%;}
+					h2:hover {font-size: 150%;}
 					
 				</style>
-				<script>
-					var photo = document.getElementById("photoFrame");
-					async function logPhotos() {
-						const res = await fetch("https://www.freepik.com/free-photos-vectors/power-pose");
-						const photos = await res.json();
-						photo.appendChild(photos);
-					}
-
-					const celscilist = {
-				            amyCuddy: 2000000,
-				        };
-				        var views=0;       
-				        for (const [key, value] of Object.entries(celscilist)) 
-				        {
-				            views= views+value;
-				        }
-				        var averageview=views/Object.keys(celscilist).length;
-				        document.getElementById("celscilist_holder").innerHTML = Object.entries(celscilist)+" Average Views:"+ averageview;
-				        processing();
-				        
-				        function processing()
-				        {
-				            if (celscilist[document.getElementById("txt-inp1").value]>=averageview)
-				            {
-				            	document.getElementById("output_holder").innerHTML="High views";
-				            }
-				            else
-				            {
-				            	document.getElementById("output_holder").innerHTML="Low views";
-				            }
-				          }
-				</script>
-				
 				<h1>Cognitive Science and Dig humanities - Project 1</h1>
-				<h1>Amy Cuddy - On Power Poses</h1>
+				
+				<h2>Amy Cuddy - On Power Poses</h2>
        				<iframe width="560" height="315" src="https://www.youtube.com/embed/Ks-_Mh1QhMc?si=cPCZeHN-aYP8Y3fo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
 
 				<h2 id="aTitle">Abstract</h2>
@@ -94,13 +62,5 @@
 
 				<p id="debukingThePaper"> </p>
 
-				<p id="myOpinionAfterTheDebunk">
-					
-				</p>
-				
-				<input type='text' id='txt-inp1' value='DanielDennett'>
-				<button type="button" onclick="processing()">Process</button>
-				<h2>Output:</h2>
-				<div id="output_holder">Views</div>
 			</body>
 </html>
