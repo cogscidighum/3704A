@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+ <!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <title>My GitHub Page</title>
+</head>
+<body style="background-color:Beige;">
+
+
+ <h1>Lara Boyd - Tedtalk</h1>
+
+ <div style="text-align: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/LNHBMFCzznE" frameborder="0" allowfullscreen></iframe>
+</div>
+
+ 
+ <p id="intro">
+   <h1>Critical Analysis</h1> 
