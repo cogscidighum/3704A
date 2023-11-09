@@ -7,7 +7,8 @@
 				<script type="module">
 					//Action1
 					import { pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.7.0'
-					
+					import { client } from "https://cdn.jsdelivr.net/npm/@gradio/client@0.1.4/dist/index.min.js";
+
 					const generate = document.getElementById("run");   
 					generate.addEventListener("click", async () => (
 					{
@@ -23,7 +24,6 @@
 					))
 
 					//Action2
-					import { client } from "https://cdn.jsdelivr.net/npm/@gradio/client@0.1.4/dist/index.min.js";
 					
 					const generate = document.getElementById("action");   
 					generate.addEventListener("click", async () =>{
@@ -145,7 +145,7 @@
 				
 				<h2 id="mTitle">My Opinion</h2>
 				<p id="myOpinion">
-					The replication crisis has started nuances discussions; Amy Cuddy’s influential work on power posing has brought forth how the crisis has highlighted the need for rigorous research verification methods to be adopted. I think it was also a good reminder of the importance of conceptual and exact replications of studies. The conversations it started also made me realize that the focus on being published, the difficulties to justify publications of a failed replication and the discomfort researchers have to ask help from the original authors makes it hard to apply the verification measures. Regarding power poses, although the conversation is still opened about the limitations of the original paper, I think it is still valuable to explore the impact of body language on psychological states.
+					Amy Cuddy’s work and its role in the replication crisis has sparked nuanced dicussions on the need for rigorous research verification methods to be adopted. I think it was also a good reminder of the importance of conceptual and exact replications of studies. The conversations it started also made me realize that the focus on being published, the difficulties to justify publications of a failed replication and the discomfort researchers have to ask help from the original authors makes it hard to apply the verification measures. Regarding power poses, although the conversation is still opened about the limitations of the original paper, I think it is still valuable to explore the impact of body language on psychological states.
 				</p>
 
 				<h2 id="ref">References</h2>
