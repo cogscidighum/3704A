@@ -96,6 +96,39 @@ She holds prestigious titles, including Canada Research Chair in Neurobiology of
   <img src="https://www.centreforbrainhealth.ca/wp-content/uploads/2021/07/Boyd-Lara-scaled-e1625760559566.jpg" style="width:500px;height:500px;">
 </div>  
 
+
+<html>
+<head>
+   <title>ACogSphere: Sentiment Analysis</title>
+    <button id="run">ACTION</button>
+    <label>Output:</label>   
+    <div id="output2">I hope you enjoyed my Project!</div>
+</head>
+<body> 
+  <script type="module">
+  import { pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.7.0'
+
+  // Define a JavaScript function
+  async function analyzeSentiment() {
+      try {
+          let pipe = await pipeline('text-classification');
+          let output = await pipe('a great life!'); 
+          output2.textContent = JSON.stringify(output);
+      } catch (error) {
+          console.log("Error:", error.message);
+      }
+  }
+
+  // Add an event listener to call the function when the button is clicked
+  const generate = document.getElementById("run");   
+  generate.addEventListener("click", analyzeSentiment);
+  </script>
+</body>
+</html>
+
+
+  
+
   <h1>References</h1>
 Health Research BC. (2023). Award Researcher: Lara Boyd. https://healthresearchbc.ca/award_researcher/lara-boyd
  <p id="space">
