@@ -40,6 +40,7 @@
 
 
 
+   
 
 
 
@@ -187,6 +188,33 @@ She holds prestigious titles, including Canada Research Chair in Neurobiology of
 
 
 
+<!DOCTYPE html>
+<html>
+<head>
+   <title>BCogSphere: Retrieval</title>
+</head>
+<body>
+    <button id="action">ACTION</button>
+    <label>Output:</label>
+    <div id="output">Ready!</div>
+
+    <script type="module">
+        import { client } from "https://cdn.jsdelivr.net/npm/@gradio/client@0.1.4/dist/index.min.js";
+
+        const generate = document.getElementById("action");
+        const output = document.getElementById("output");
+
+        generate.addEventListener("click", async () => {
+            try {
+                // Instead of calling the Gradio app, we'll set the output message directly
+                output.textContent = "Hope you enjoyed reading";
+            } catch (error) {
+                console.log("Error:", error.message);
+            }
+        });
+    </script>
+</body>
+</html>
 
 
 
