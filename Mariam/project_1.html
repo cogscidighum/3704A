@@ -43,15 +43,6 @@
    
 
 
-
-
-
-
-
-   
-
-
-
  <div style="text-align: center;">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/LNHBMFCzznE" frameborder="0" allowfullscreen></iframe>
 </div>
@@ -129,39 +120,6 @@ She holds prestigious titles, including Canada Research Chair in Neurobiology of
 
 
 
-
-<head>
-   <title>BCogSphere: Retrieval</title>
-</head>
-<body>
-    <button id="action">ACTION</button>
-    <label>Output:</label>
-    <div id="output">Ready!</div>
-
-    <script type="module">
-        import { client } from "https://cdn.jsdelivr.net/npm/@gradio/client@0.1.4/dist/index.min.js";
-
-        const generate = document.getElementById("action");
-        const output = document.getElementById("output");
-
-        generate.addEventListener("click", async () => {
-            try {
-                const app = await client("https://cognitivescience-cogsphere.hf.space");
-                const lastview = await app.predict("/predict", [
-                    "https://youtu.be/IZefk4gzQt4",
-                ]);
-                output.textContent = JSON.stringify(lastview.data);
-            } catch (error) {
-                console.log("Error:", error.message);
-            }
-        });
-    </script>
-</body>
-</html>
-
-
-
-<!DOCTYPE html>
 <html>
 <head>
    <title>BCogSphere: Retrieval</title>
@@ -187,11 +145,6 @@ She holds prestigious titles, including Canada Research Chair in Neurobiology of
     </script>
 </body>
 </html>
-
-
-
-
-
 
 
 
