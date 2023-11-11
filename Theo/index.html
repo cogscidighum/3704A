@@ -1,40 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Theo</title>
-    <!-- <link rel="stylesheet" href="stylesheet.css"> -->
-</head>
-  
-<body>
-  
-    <header>
-        <h1>Welcome to Theo's Page!</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#video">Video</a></li>
-            </ul>
-        </nav>
-    </header>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>CelSci</title>
+  </head>
 
-    <main>
-        <section id="home">
-            <h2>Home</h2>
-            <p>This is the home of my webpage. Use the nav bar to navigate through the page.</p>
-        </section>
+  <body>
+    <script>
+        const celscilist = {
+          'Elizabeth Loftus': { 'info': { 'views': 2200000 } },
+          'Janelle Shane': { 'info': { 'views': 2700000 } },
+          'Mihaly Csikszentmihalyi' : { 'info': { 'views': 952791} },
+          'Daniel Kahneman' :  { 'info': { 'views': 1200000} },
+          'Donald Hoffman' : { 'info': { 'views': 2400000 } },
+          'Partricia Churchland' : { 'info': { 'views': 8026 } },
+          'Bret Weinstein' : { 'info': { 'views': 41610 } },
+          'Andrew Huberman' : { 'info': { 'views': 55561 } },
+          'Tom Scott' : { 'info': { 'views': 2500000 } },
+          'Melanie Mitchell' : { 'info': { 'views': 44000 } },
+          'Jordan Peterson' : { 'info': { 'views': 236000 } },
+          'Timnit Gebru' : { 'info': { 'views': 79338 } },
+          'Amy Cuddy' : { 'info': { 'views': 23700189 } },
+          'Elizabeth Loftus' : { 'info': { 'views': 2190333 } },
+          'Martha Nussbaum' : { 'info': { 'views': 40000 } },
+          'Russell Barkley' : { 'info': { 'views': 774000 } },
+          'Slavoj Žižek' : { 'info': { 'views': 95000 } },
+          'Noam Chomsky' : { 'info': { 'views': 26042 } },
+          'Nathaniel Drew' : { 'info': { 'views': 126000 } },
+          'Laura Boyd' : { 'info': { 'views': 3800000 } },
+          'Anil Seth' : { 'info': { 'views': 14187265 } },
+          'Howard Gardner' : { 'info': { 'views': 1500000 } },
+          'Yuval Noah Harari' : { 'info': { 'views': 1700000 } },
+          'Lex Fridman' : { 'info': { 'views': 493000 } },
+          'Poppy Crum' : { 'info': { 'views': 13000 } },
+          'Ryan Holiday' : { 'info': { 'views': 32000 } },
+          'Marvin Chun' : { 'info': { 'views': 39300 } },
+        };
 
-        <section id="video">
-            <h2>Elizabeth Loftus, How reliable is your memory?</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/PB2OegI6wvI" id="iframe1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p>Psychologist Elizabeth Loftus talks about the creation of false memories: situations where people recall details of events differently from what actually occurred, or sometimes remember events that never happened at all. According to Loftus, the creation of false memories is much more common than most people think. She shares stories and statistics detailing cases of gross errors in memory recollection.</p>
-        </section>
-    </main>
+        // Step 1: Extract 'views' values into an array
+        //const viewsArray = Object.values(celscilist).map(item => item.info.views);
 
-    <footer>
-        <p>Welcome to Theo's footer</p>
-    </footer>
-  
-</body>
+        // Step 2: Calculate the sum of 'views' values
+        //const sumOfViews = viewsArray.reduce((total, views) => total + views, 0);
+
+        // Step 3: Calculate the average
+        //const averageViews = sumOfViews / viewsArray.length;
+        
+        let sumOfViews = 0;
+        let count = 0;
+
+        for (const key in celscilist) {
+          if (celscilist.hasOwnProperty(key)) {
+            const views = celscilist[key].info.views;
+            sumOfViews += views;
+            count++;
+          }
+        }
+
+        const averageViews = sumOfViews / count;
+        
+        class Celsci {
+          static iscelsci(x) {
+            let y = "false";
+            if (x > averageViews) {
+              y = "true";
+            }
+            return y;
+          }
+        }
+        
+        function checkcelsci(x) {
+          const result = Celsci.iscelsci(celscilist[x]['info']['views']);
+          return result;
+        }
+        
+        document.write(checkcelsci('dd'));
+        
+    </script>
+  </body>
 </html>
