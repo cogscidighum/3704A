@@ -69,6 +69,7 @@
       padding: 20px;
       border-radius: 10px;
       margin-top: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
     h1, h2, h4 {
@@ -99,6 +100,14 @@
       width: 100%;
       height: 100%;
     }
+
+    .card {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
@@ -120,24 +129,34 @@
 
   <button onclick="topFunction()" id="backToTop" title="Back to Top">Top</button>
 
-  <div class="margin"></div>
-
-  <h2>Table of Contents</h2>
-  <ol>
-    <li><a href="#introduction">Introduction</a></li>
-    <li><a href="#biography">Biography</a></li>
-    <li><a href="#videoSummary">Video Summary</a></li>
-    <li><a href="#criticalAnalysis">Critical Analysis</a></li>
-    <li><a href="#references">References</a></li>
-  </ol>
-
-  <div class="margin"></div>
-
-  <h1 class="margin">Elizabeth Loftus</h1>
-
-  <div class="container-fluid margin">
-    <h2 id="introduction">Introduction</h2>
+<div class="container-fluid margin">
+  <h2 id="introduction">Introduction</h2>
+  <div class="row">
+    <div class="col-md-6">
     <p>Elizabeth Loftus, a prominent cognitive psychologist and a renowned figure in the field of memory research, has dedicated her career to unraveling the complexities of human memory. In her YouTube video titled "How Reliable is Your Memory?" she delves into the intricate nature of memory, challenging common beliefs about its accuracy and highlighting the susceptibility of memory to external influences. This critical analysis aims to examine Loftus's perspective, offering both praise for her groundbreaking contributions and constructive criticism where warranted.</p>
+
+    <p>Elizabeth Loftus has undeniably made substantial contributions to the understanding of memory. Her groundbreaking work has debunked the myth of memory infallibility, emphasizing the crucial role of external factors in shaping and distorting our recollections. The misinformation effect, eloquently demonstrated through Loftus's experiments, has prompted a paradigm shift in how society perceives and relies on memory, especially within legal systems. By challenging long-held assumptions, Loftus has opened new avenues for research and raised critical questions about the reliability of memory in various contexts.</p>
+    </div>
+    <div class="col-md-6">
+      <img src="https://www.verywellmind.com/thmb/UJ0EwCLjxXA3CUSUHBQdXfLNLAw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Elizabeth-Loftus-56a792243df78cf772973bba.jpg" alt="Elizabeth Loftus 1" class="img-fluid card mb-3">
+      <img src="https://wpvip.ted.com/wp-content/uploads/sites/2/2013/06/tg2013_027570_dsc_1945.jpg" alt="Elizabeth Loftus 2" class="img-fluid card mb-3">
+      <img src="https://www.nih.gov/sites/default/files/news-events/research-matters/2008/20080915-memory.jpg" alt="Brain image" class="img-fluid card">
+    </div>
+  </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <img src="https://via.placeholder.com/300" alt="Image 1" class="img-fluid card">
+      </div>
+      <div class="col-md-4">
+        <img src="https://via.placeholder.com/300" alt="Image 2" class="img-fluid card">
+      </div>
+      <div class="col-md-4">
+        <img src="https://via.placeholder.com/300" alt="Image 3" class="img-fluid card">
+      </div>
+    </div>
+
+    <p>This critical analysis aims to examine Loftus's perspective, offering both praise for her groundbreaking contributions and constructive criticism where warranted.</p>
 
     <p>Elizabeth Loftus has undeniably made substantial contributions to the understanding of memory. Her groundbreaking work has debunked the myth of memory infallibility, emphasizing the crucial role of external factors in shaping and distorting our recollections. The misinformation effect, eloquently demonstrated through Loftus's experiments, has prompted a paradigm shift in how society perceives and relies on memory, especially within legal systems. By challenging long-held assumptions, Loftus has opened new avenues for research and raised critical questions about the reliability of memory in various contexts.</p>
   </div>
@@ -145,47 +164,69 @@
   <div class="container-fluid margin">
     <h2 class="margin" id="biography">Biography</h2>
     <div class="row">
-      <div class="col-md-4">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Elizabeth_Loftus-TAM_9-July_2011.JPG/330px-Elizabeth_Loftus-TAM_9-July_2011.JPG" alt="Elizabeth Loftus" class="img-fluid">
-      </div>
-      <div class="col-md-8">
-        <p>Elizabeth Loftus is a distinguished cognitive psychologist known for her groundbreaking work in the field of memory research. With a focus on the malleability of human memory, Loftus has challenged conventional beliefs about its infallibility. Her research has significant implications, especially in legal contexts where eyewitness testimony plays a crucial role. Explore more about her on her <a href="https://en.wikipedia.org/wiki/Elizabeth_Loftus" target="_blank">official Wikipedia page</a>.<br><br> Connect with Elizabeth Loftus on:
-          <a href="https://twitter.com/eloftus1?lang=en" target="_blank">Twitter</a> |
-          <a href="https://www.linkedin.com/in/elizabeth-loftus/?originalSubdomain=ca" target="_blank">LinkedIn</a></p>
+      <div class="
+col-md-6">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Elizabeth_Loftus-TAM_9-July_2011.JPG/330px-Elizabeth_Loftus-TAM_9-July_2011.JPG" alt="Elizabeth Loftus 4" class="img-fluid card">
+</div>
+<div class="col-md-6">
+<p>Elizabeth Loftus is a distinguished cognitive psychologist known for her groundbreaking work in the field of memory research. With a focus on the malleability of human memory, Loftus has challenged conventional beliefs about its infallibility. Her research has significant implications, especially in legal contexts where eyewitness testimony plays a crucial role.</p>
+<p>Explore more about her on her <a href="https://en.wikipedia.org/wiki/Elizabeth_Loftus" target="_blank">official Wikipedia page</a>. Connect with Elizabeth Loftus on:
+<a href="https://twitter.com/eloftus1?lang=en" target="_blank">Twitter</a> |
+<a href="https://www.linkedin.com/in/elizabeth-loftus/?originalSubdomain=ca" target="_blank">LinkedIn</a>
+</p>
 </div>
 </div>
 
   </div>
   <div class="container-fluid">
     <h2 class="margin" id="videoSummary">Video Summary</h2>
-    <h4>How Reliable is Your Memory? | Elizabeth Loftus</h4>
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/PB2OegI6wvI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="row">
+      <div class="col-md-6">
+        <h4>How Reliable is Your Memory? | Elizabeth Loftus</h4>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/PB2OegI6wvI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <p>
+          Psychologist Elizabeth Loftus talks about the creation of false memories: situations where people recall details of events differently from what actually occurred, or sometimes remember events that never happened at all. According to Loftus, the creation of false memories is much more common than most people think. She shares stories and statistics detailing cases of gross errors in memory recollection.
+        </p>
+      </div>
     </div>
-    <p>
-      Psychologist Elizabeth Loftus talks about the creation of false memories: situations where people recall details of events differently from what actually occurred, or sometimes remember events that never happened at all. According to Loftus, the creation of false memories is much more common than most people think. She shares stories and statistics detailing cases of gross errors in memory recollection.
-    </p>
   </div>
   <div class="container-fluid">
     <h2 class="margin" id="criticalAnalysis">Critical Analysis</h2>
-    <p>Agreeing with Loftus's perspective is inevitable given the substantial evidence she presents. The misinformation effect and the unreliability of eyewitness testimony are undeniable phenomena supported by robust empirical research. Loftus's findings have far-reaching implications, particularly in the legal system, where her work has led to critical reconsiderations of the weight assigned to eyewitness accounts.</p>
+    <div class="row">
+      <div class="col-md-4">
+        <p>Agreeing with Loftus's perspective is inevitable given the substantial evidence she presents. The misinformation effect and the unreliability of eyewitness testimony are undeniable phenomena supported by robust empirical research. Loftus's findings have far-reaching implications, particularly in the legal system, where her work has led to critical reconsiderations of the weight assigned to eyewitness accounts.</p>
+      </div>
+      <div class="col-md-4">
+        <p>However, a cautious approach is necessary, especially when applying Loftus's findings universally. While her research has illuminated important aspects of memory, it is essential to recognize that not all memories are equally susceptible to external influence. The agreement with Loftus should be tempered with an acknowledgment of the complexities inherent in human memory.</p>
+      </div>
+      <div class="col-md-4">
+        <p>That being said, while Loftus's work has been groundbreaking, it is essential to scrutinize her perspective critically. One potential critique lies in the generalization of her findings to all aspects of memory. While her experiments reveal the vulnerability of episodic memory, it is crucial to acknowledge that memory is a multifaceted construct with different subsystems. Loftus's emphasis on the fallibility of memory might inadvertently overshadow its remarkable capacity for accurate recollection in many instances.</p>
+      </div>
+    </div>
 vbnet
 Copy code
-<p>However, a cautious approach is necessary, especially when applying Loftus's findings universally. While her research has illuminated important aspects of memory, it is essential to recognize that not all memories are equally susceptible to external influence. The agreement with Loftus should be tempered with an acknowledgment of the complexities inherent in human memory.</p>
-
-<p>That being said, while Loftus's work has been groundbreaking, it is essential to scrutinize her perspective critically. One potential critique lies in the generalization of her findings to all aspects of memory. While her experiments reveal the vulnerability of episodic memory, it is crucial to acknowledge that memory is a multifaceted construct with different subsystems. Loftus's emphasis on the fallibility of memory might inadvertently overshadow its remarkable capacity for accurate recollection in many instances.</p>
-
-<p>Furthermore, Loftus's focus on external influences and misinformation might downplay the significance of intrinsic factors shaping memory. Individual differences, cognitive biases, and emotional states can also significantly impact memory formation and retrieval. A more comprehensive exploration of these factors could provide a more nuanced understanding of memory's intricacies.</p>
+<div class="row">
+  <div class="col-md-12">
+    <p>Furthermore, Loftus's focus on external influences and misinformation might downplay the significance of intrinsic factors shaping memory. Individual differences, cognitive biases, and emotional states can also significantly impact memory formation and retrieval. A more comprehensive exploration of these factors could provide a more nuanced understanding of memory's intricacies.</p>
+  </div>
+</div>
   </div>
   <div class="container-fluid margin">
     <h2 class="margin" id="references">References</h2>
-    <p>
-      E. F. Loftus, and J. E. Pickrell, The Formation of False Memories. <a href="https://scholar.google.ca/scholar?hl=en&as_sdt=0%2C5&q=elizabeth+loftus&btnG=" target="_blank">link</a><br><br>
-      E. F. Loftus, Eyewitness Testimony <a href="https://scholar.google.ca/scholar?hl=en&as_sdt=0%2C5&q=elizabeth+loftus&btnG=" target="_blank">link</a><br><br>
-      TED. (2013, 09, 23). <em>How Reliable is Your Memory? | Elizabeth Loftus</em> [Video]. YouTube. <a href="https://www.youtube.com/watch?v=PB2OegI6wvI" target="_blank">link</a>
-      <br><br>
-      Note: This webpage was crafted using HTML, CSS, and a touch of JavaScript for user interactivity.
-    </p>
+    <div class="row">
+      <div class="col-md-6">
+        <p>E. F. Loftus, and J. E. Pickrell, The Formation of False Memories. <a href="https://scholar.google.ca/scholar?hl=en&as_sdt=0%2C5&q=elizabeth+loftus&btnG=" target="_blank">link</a></p>
+        <p>E. F. Loftus, Eyewitness Testimony <a href="https://scholar.google.ca/scholar?hl=en&as_sdt=0%2C5&q=elizabeth+loftus&btnG=" target="_blank">link</a></p>
+      </div>
+      <div class="col-md-6">
+        <p>TED. (2013, 09, 23). <em>How Reliable is Your Memory? | Elizabeth Loftus</em> [Video]. YouTube. <a href="https://www.youtube.com/watch?v=PB2OegI6wvI" target="_blank">link</a></p>
+        <p>Note: This webpage was crafted using HTML, CSS, and a touch of JavaScript for user interactivity.</p>
+      </div>
+    </div>
   </div>
   <script>
     let mybutton = document.getElementById("backToTop");
