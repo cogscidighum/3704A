@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html style="background-color: RosyBrown">
+
+<head>
+    <h1 style="color: LightPink; font-family: Times; font-size: 40px; text-align: center;"> Project 1 </h1>
+    <h2 style="color: DimGrey; font-family: Didot; font-size: 25px; text-align: center;"> Analogy: The Key to Truly Intelligent AI </h2>
+    <h2 style="color: DimGrey; font-family: Didot; font-size: 20px;"> Helen Awaju </h2>
+    <br>
+    <center><h2 style="color: DimGrey; font-family: Didot; font-size: 20px;" class="blink"> Melanie Mitchell </h2></center>
+    <center><img src="https://d2r55xnwy6nx47.cloudfront.net/uploads/2021/12/Mitchell-Melanie-520x520.jpg" alt="Melanie Mitchell" height="300" width="300"></center>
+    <br>
+    <style>
+        .blink {
+            animation: blinker 2s linear infinite;
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 style="color: DimGrey; font-family: Didot; font-size: 20px; text-align: left;"> Mitchell's Journey to AI: </h2>
+
+    <p style="color: DimGrey; font-family: Didot;">
+        The cognitive celebrity scientist that I've chosen is Melanie Mitchell, who transitioned from her profession as a high school math teacher to a cognitive scientist due to the inspiration she gathered from reading the Pulitzer Prize-winning book "Gödel, Escher, Bach" in 1979. To gain more knowledge of the field, she sought an internship with the author of the book, Douglas Hofstadter, who is an AI researcher. Convinced of Mitchell's keenness on the topic of AI, Hofstadter agreed to extend their internship, which led to a six-year-long collaboration. Together, they worked on developing the computer program, Copycat, designed for insightful analogical reasoning. Mitchell then decided to concentrate her studies on understanding how humans make analogies and think abstractly in hopes of potentially enabling machines to one day be capable of recognizing and understanding analogies.
+    </p>
+
+    <center><h2 style="color: DimGrey; font-family: Didot; font-size: 20px;" class="blink"> Video </h2></center>
+
+    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/cz1UfjZjjyk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
+
+    <h2 style="color: DimGrey; font-family: Didot; font-size: 20px; text-align: left;"> Importance of Analogy in AI: </h2>
+
+    <p style="color: DimGrey; font-family: Didot;">
+        Humans' ability to utilize analogies allows for the creation of an internal model of the world, the simulation of said model, and the predictions of possible outcomes, which can then be compared back to real life. This allows for flexibility and the use of common sense in open-ended situations. Mitchell recognizes that AI has the capacity to complete particular and detail-specific tasks using their deep neural networks, yet AI often has difficulties transferring knowledge from different circumstances. The ability to create analogies is human-specific; however, Mitchell believes that this is crucial in developing more human-like intelligence. Therefore, this inability results in AI sometimes being described as unreliable when facing unfamiliar situations. Therefore, if AI gained this skill to analogize and think abstractly, this would allow it to be more reliable and adaptable in the real world; this concept is described as the "barrier of meaning."
+    </p>
+
+    <h2 style="color: DimGrey; font-family: Didot; font-size: 20px; text-align: left;"> Challenges of AI Research: </h2>
+
+    <p style="color: DimGrey; font-family: Didot;">
+        Mitchell expresses that AI used to integrate other disciplines, including psychology, in its early stages, which focused on logic and rule-based systems; but it has then-on been heavily focused on statistics involving the use of extensive examples which is insufficient in accomplishing true abstraction and generalization. It is clear that deep learning and neural networks have been productive; however, there are constrictions and limitations to this method which can be further assessed through the reevaluation of the earlier ideas like developmental psychology and feedback mechanisms in the brain.
+    </p>
+
+    <center><img src="https://zeroeyes.com/wp-content/uploads/2021/10/AdobeStock_214469252.jpg" alt="Melanie Mitchell" height="200" width="300"></center>
+
+    <br>
+
+    <h2 style="color: DimGrey; font-family: Didot; font-size: 20px; text-align: left;"> Opinions: </h2>
+
+    <p style="color: DimGrey; font-family: Didot;">
+        Many of Melanie Mitchell's observations, as presented in the film, are ones I share. Her focus on the value of analogies in AI draws attention to an important—yet frequently disregarded—aspect of the field's evolution. I also worry about the shortcomings of existing AI systems, especially when it comes to how they perform outside of preset circumstances. I share Mitchell's view that a holistic approach is crucial for the advancement of AI, and it has called for a return to interdisciplinary approaches and a reevaluation of deep learning techniques. Her notion to include feedback mechanisms into neural networks and take inspiration from developmental psychology is what really interests me. Exploring these aspects could open up exciting avenues for creating AI systems that not only mimic human cognition more effectively but also demonstrate adaptability in navigating real-world complexities. The fusion of AI with insights from diverse disciplines, especially those related to human development, could lead to groundbreaking discoveries in the area. More specifically, I believe that integrating psychological principles into AI development, particularly in areas related to analogical reasoning, emotional intelligence, and cognitive processes, can enhance the ability of AI systems to think and respond in a manner more aligned with human intelligence, supporting Melanie Mitchell's perspective on the interdisciplinary nature of AI research.
+    </p>
+
+    <br>
+
+    <h2 style="color: DimGrey; font-family: Didot; font-size: 20px; text-align: center;"> References </h2>
+
+    <p style="color: DimGrey; font-family: Didot;">
+        Mitchell, Melanie. “How to Build Truly Intelligent Ai.” YouTube, YouTube, 4 Aug. 2021, www.youtube.com/watch?v=cz1UfjZjjyk.
+    </p>
+
+    <p style="color: DimGrey; font-family: Didot;">
+        Pavlus, John, and substantive Quanta Magazine moderates comments to facilitate an informed. “The Computer Scientist Training Ai to Think with Analogies.” Quanta Magazine, 4 Aug. 2021, www.quantamagazine.org/melanie-mitchell-trains-ai-to-think-with-analogies-20210714/.
+    </p>
+    
+    <p style="color: DimGrey; font-family: Didot; text-size: 15;">
+    	Photo References  
+    </p>
+
+    <p style="color: DimGrey; font-family: Didot;">
+        In the Deep, a Drive to Find Dark Matter - D2r55xnwy6nx47.Cloudfront.Net, d2r55xnwy6nx47.cloudfront.net/uploads/2016/12/elena-apriles-drive-to-find-dark-matter-20161220.pdf. Accessed 13 Nov. 2023.
+    </p>
+
+    <p style="color: DimGrey; font-family: Didot;">
+        Criss, Major Jordan, et al. “Homepage.” ZeroEyes, 11 Nov. 2023, zeroeyes.com/.
+    </p>
+</body>
+
+</html>
