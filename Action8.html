@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <style>
+        .blink {
+            animation: blinker 2.5s linear infinite;
+            color: darkblue;
+            font-family: cursive;
+        }
+        @keyframes blinker {
+            10% {
+                opacity: 0;
+            }
+        }
+		body {
+  		background-color: lightgray;
+		}   
+  </style>
+</head>
+      <h2 style="text-align:center" class="blink">CogSciDigHumJS</h2>
+          <center><img src="https://t3.ftcdn.net/jpg/02/78/34/04/240_F_278340471_pUlwAaBNW5wU181zVxoT6rQZdzuv7Jnm.jpg" alt="red carpet"></center><br>
+    <center><iframe
+    src="https://cogsphere-acogsphere.hf.space"
+    frameborder="100"
+    width="500"
+    height="350"
+    ></iframe></center>
+    <br>  
+    </head>
+    <body> 
+    <center><label for "nameinput">Name:</label></center>
+    <br>
+    <br>
+    <center><input type="text" id="nameinput" placeholder="Enter Your Name Here"></input></center>
+    <br>
+    <br>
+    <center><div id="output" class="blink" style="color: red; ">Waiting!</div></center>
+    <br>
+    <br>
+<label>Pick a Celsci from the list, Rate it on a scale from 1-5, then Vote!</label>
+		<script>
+	var celscilist=[ 
+'Celscis List','Anil Seth','Andrew2 Huberman','Donald Hoffman', 'Doug Hofstadter','Howard Gardner', 'Janelle Shane', 'Daniel Kahneman', 'Elizabeth Loftus', 'Elizabeth2 Loftus', 'Patricia Churchland','Bret Weinstein','Andrew Huberman', 'Tom Scott',  'Melanie Mitchell',  'Jordan Peterson',  'Timnit Gebru',  'Amy Cuddy',  'Mihaly Csikszentmihalyi',  'Martha Nussbaum',  'Noam Chomsky',  'Russell A Barkley',  'Slavoj Žižek',  'Nathaniel Drew', 'Lara Boyd',  'Yuval Noah Harari',  'Jordan2 Peterson',  'Yuval2 Noah Harari',  'Joscha Bach',  'Poppy Crum',  'Ryan Holiday',  'Marvin Chun',  'Jim Davies' 
+]    
+// Create a select element
+var select = document.createElement("select");
+var select2 = document.createElement("select");
+   
+// Create a function to add an option element with a given value and text
+function addOption(value, text) {
+  // Create an option element
+  var option = document.createElement("option");
+  // Set the value and text attributes
+  option.value = value;
+  option.text = text;
+  // Append the option to the select element
+  select.appendChild(option);
+}
+
+function addOption2(value, text) {
+  // Create an option element
+  var option2 = document.createElement("option");
+  // Set the value and text attributes
+  option2.value = value;
+  option2.text = text;
+  // Append the option to the select element
+  select2.appendChild(option2);
+}
+   
+// Loop from 1 to n and call the addOption function with the loop index as the value and text
+for (var i = 0; i < celscilist.length; i++) {
+  addOption(i, celscilist[i]);
+}
+
+// Loop from 1 to n and call the addOption function with the loop index as the value and text
+  addOption2(0, "Rate");
+
+   for (var i = 0; i < 5; i++) {
+  addOption2(i, i+1);
+}
+   
+// Append the select element to the document body
+document.body.appendChild(select);
+document.body.appendChild(select2);
+    </script>
+<script type="module"> 
+    import { client } from "https://cdn.jsdelivr.net/npm/@gradio/client@0.1.4/dist/index.min.js";
+    const generate = document.getElementById("button1");   
+    generate.addEventListener("click", async () =>{
+        try {         
+
+ const app = await client("https://cogsphere-acogsphere.hf.space");
+const result = await app.predict(0, [		
+				 nameinput.value, // string  in 'Name' Textbox component		
+				select2.value.toString(), // string  in 'How satisfied are you with using gradio?' Radio component		
+				celscilist[select.value], // string  in 'Comments' Textbox component
+	]);         
+                         //output.appendChild(document.createTextNode(lastview.data))
+           output.innerHTML = "Sent!" //lastview.data 
+            } catch (error){
+                 console.log("Error:",error.message); 
+            }       
+        }       
+)
+    </script><button type="button" style="background-color: yellow" id="button1" onclick="click"> Vote! </button>
+    </body>
+</html>
