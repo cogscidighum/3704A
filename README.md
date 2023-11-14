@@ -62,7 +62,7 @@ Nathaniel Drew, [The Secret to Thriving in Hard Times](https://www.youtube.com/w
 # Mariam Saleh
 Lara Boyd, Neuroscientist,[Youtube Video:"After watching this, your brain will not be the same"](https://www.youtube.com/watch?v=LNHBMFCzznE),38M views
 # Kaylee Chaput
-Anil Seth, https://www.ted.com/talks/anil_seth_your_brain_hallucinates_your_conscious_reality?referrer=playlist-how_your_brain_constructs_real&autoplay=true, 14,187,265 views <br>
+Anil Seth, [Your brain hallucinates your conscious reality](https://www.ted.com/talks/anil_seth_your_brain_hallucinates_your_conscious_reality?referrer=playlist-how_your_brain_constructs_real&autoplay=true), 14,187,265 views <br>
 [Anil Seth Project 1 Page](https://htmlpreview.github.io/?https://github.com/cogscidighum/3704A/blob/main/Kaylee/project1.html) <br>
 [Action 8 Page](https://htmlpreview.github.io/?https://github.com/cogscidighum/3704A/blob/main/Kaylee/action8.html)
 # Elsie Valenzona
