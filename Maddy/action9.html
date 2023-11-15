@@ -1,0 +1,77 @@
+<!DOCTYPE html> 
+<html> </html>
+
+var results = [];
+
+
+function playGame() {
+  var table = document.getElementById("resultTable");
+  var tableHTML = table.innerHTML;
+
+
+  if (!tableHTML.trim()) {
+    tableHTML += "<tr><th>Round</th><th>User Choice</th><th>Computer Choice</th><th>Result</th></tr>";
+  }
+
+  while (true) {
+    var userChoice = prompt("Choose: rock (r), paper (p), scissors (s), or 'x' to leave the game?");
+
+    if (userChoice === null || userChoice.toLowerCase() === 'x') {
+      alert("Game over. Thanks for playing!");
+      break;
+    }
+
+    if (!(userChoice.toLowerCase() === 'r' || userChoice.toLowerCase() === 'p' || userChoice.toLowerCase() === 's')) {
+      alert("Invalid choice. Please choose 'r', 'p', 's', or 'x'.");
+      continue;
+    }
+
+    var computerChoice = Math.random();
+
+    if (computerChoice > 0 && computerChoice < 0.33) {
+      computerChoice = "r";
+    } else if (computerChoice > 0.34 && computerChoice < 0.67) {
+      computerChoice = "p";
+    } else {
+      computerChoice = "s";
+    }
+
+    var result = "";
+    if (userChoice.toLowerCase() + computerChoice == "sp" || userChoice.toLowerCase() + computerChoice == "rs" || userChoice.toLowerCase() + computerChoice == "pr") {
+      result = "Win";
+    } else {
+      result = "Lose";
+    }
+
+    results.push({
+      round: results.length + 1,
+      userChoice: userChoice,
+      computerChoice: computerChoice,
+      result: result
+    });
+
+  
+    tableHTML += "<tr><td>" + results.length + "</td><td>" + userChoice + "</td><td>" + computerChoice + "</td><td>" + result + "</td></tr>";
+
+  
+    table.innerHTML = tableHTML;
+  }
+}
+
+
+document.write("<style>");
+document.write("body { text-align: center; font-family: 'Helvetica', sans-serif; }");
+document.write("h1 { color: purple; }");
+document.write("button { margin-top: 15px; padding: 10px 20px; font-size: 16px; background-color: purple; color: white; border: none; cursor: pointer; }");
+document.write("table { margin: auto; border-collapse: collapse; width: 50%; color: sage; }");
+document.write("th, td { padding: 10px; border: 1px solid #ddd; text-align: center; }");
+document.write("th { background-color: #e1d3ed; color: white; }");
+document.write("</style>");
+
+document.write("<h1>Rock Paper Scissors</h1>");
+
+
+document.write("<button onclick='playGame()'>Play</button>");
+
+document.write("<table id='resultTable'></table>");
+
