@@ -1,77 +1,118 @@
-<!DOCTYPE html> 
-<html> </html>
+<!DOCTYPE html>
+<html lang="en">
 
-var results = [];
-
-
-function playGame() {
-  var table = document.getElementById("resultTable");
-  var tableHTML = table.innerHTML;
-
-
-  if (!tableHTML.trim()) {
-    tableHTML += "<tr><th>Round</th><th>User Choice</th><th>Computer Choice</th><th>Result</th></tr>";
-  }
-
-  while (true) {
-    var userChoice = prompt("Choose: rock (r), paper (p), scissors (s), or 'x' to leave the game?");
-
-    if (userChoice === null || userChoice.toLowerCase() === 'x') {
-      alert("Game over. Thanks for playing!");
-      break;
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Helvetica', sans-serif;
+      background-color: #f0f0f0;
     }
 
-    if (!(userChoice.toLowerCase() === 'r' || userChoice.toLowerCase() === 'p' || userChoice.toLowerCase() === 's')) {
-      alert("Invalid choice. Please choose 'r', 'p', 's', or 'x'.");
-      continue;
+    h1 {
+      color: purple;
     }
 
-    var computerChoice = Math.random();
-
-    if (computerChoice > 0 && computerChoice < 0.33) {
-      computerChoice = "r";
-    } else if (computerChoice > 0.34 && computerChoice < 0.67) {
-      computerChoice = "p";
-    } else {
-      computerChoice = "s";
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: purple;
+      color: white;
+      border: none;
+      cursor: pointer;
     }
 
-    var result = "";
-    if (userChoice.toLowerCase() + computerChoice == "sp" || userChoice.toLowerCase() + computerChoice == "rs" || userChoice.toLowerCase() + computerChoice == "pr") {
-      result = "Win";
-    } else {
-      result = "Lose";
+    table {
+      margin: auto;
+      border-collapse: collapse;
+      width: 50%;
+      color: sage;
     }
 
-    results.push({
-      round: results.length + 1,
-      userChoice: userChoice,
-      computerChoice: computerChoice,
-      result: result
-    });
+    th,
+    td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
 
-  
-    tableHTML += "<tr><td>" + results.length + "</td><td>" + userChoice + "</td><td>" + computerChoice + "</td><td>" + result + "</td></tr>";
+    th {
+      background-color: #e1d3ed;
+      color: white;
+    }
+  </style>
+</head>
 
-  
-    table.innerHTML = tableHTML;
-  }
-}
+<body>
+  <h1>Rock Paper Scissors</h1>
+  <button onclick='playGame()'>Play</button>
+  <table id='resultTable'>
+    <tr>
+      <th>Round</th>
+      <th>User Choice</th>
+      <th>Computer Choice</th>
+      <th>Result</th>
+    </tr>
+  </table>
 
+  <script>
+    var results = [];
 
-document.write("<style>");
-document.write("body { text-align: center; font-family: 'Helvetica', sans-serif; }");
-document.write("h1 { color: purple; }");
-document.write("button { margin-top: 15px; padding: 10px 20px; font-size: 16px; background-color: purple; color: white; border: none; cursor: pointer; }");
-document.write("table { margin: auto; border-collapse: collapse; width: 50%; color: sage; }");
-document.write("th, td { padding: 10px; border: 1px solid #ddd; text-align: center; }");
-document.write("th { background-color: #e1d3ed; color: white; }");
-document.write("</style>");
+    function playGame() {
+      var table = document.getElementById("resultTable");
+      var tableHTML = table.innerHTML;
 
-document.write("<h1>Rock Paper Scissors</h1>");
+      if (!tableHTML.trim()) {
+        tableHTML += "<tr><th>Round</th><th>User Choice</th><th>Computer Choice</th><th>Result</th></tr>";
+      }
 
+      while (true) {
+        var userChoice = prompt("Choose: rock (r), paper (p), scissors (s), or 'x' to leave the game?");
 
-document.write("<button onclick='playGame()'>Play</button>");
+        if (userChoice === null || userChoice.toLowerCase() === 'x') {
+          alert("Game over. Thanks for playing!");
+          break;
+        }
 
-document.write("<table id='resultTable'></table>");
+        if (!(userChoice.toLowerCase() === 'r' || userChoice.toLowerCase() === 'p' || userChoice.toLowerCase() === 's')) {
+          alert("Invalid choice. Please choose 'r', 'p', 's', or 'x'.");
+          continue;
+        }
 
+        var computerChoice = Math.random();
+
+        if (computerChoice > 0 && computerChoice < 0.33) {
+          computerChoice = "r";
+        } else if (computerChoice > 0.34 && computerChoice < 0.67) {
+          computerChoice = "p";
+        } else {
+          computerChoice = "s";
+        }
+
+        var result = "";
+        if (userChoice.toLowerCase() + computerChoice == "sp" || userChoice.toLowerCase() + computerChoice == "rs" || userChoice.toLowerCase() + computerChoice == "pr") {
+          result = "Win";
+        } else {
+          result = "Lose";
+        }
+
+        results.push({
+          round: results.length + 1,
+          userChoice: userChoice,
+          computerChoice: computerChoice,
+          result: result
+        });
+
+        tableHTML += "<tr><td>" + results.length + "</td><td>" + userChoice + "</td><td>" + computerChoice + "</td><td>" + result + "</td></tr>";
+
+        table.innerHTML = tableHTML;
+      }
+    }
+  </script>
+</body>
+
+</html>
