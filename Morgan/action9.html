@@ -1,0 +1,34 @@
+<center>
+<html lang="en">
+<h3> Rock Paper Scissors </h3>
+<style>
+    body {
+	background: Tomato;
+    font-family: Courier New;
+    }
+   
+</style>
+<script>
+
+var results=0;
+
+for (var i=0;i<3;i++)
+  {
+ var userChoice = prompt("rock (r), paper (p) or scissor (s)?");
+var computerChoice = Math.random();
+if (computerChoice > 0 && computerChoice < 0.33) {
+  computerChoice = "r";
+} else if (computerChoice > 0.34 && computerChoice < 0.67) {
+  computerChoice = "p";
+} else {
+  computerChoice = "s";
+}
+
+if (userChoice+computerChoice=="sp" || userChoice+computerChoice=="rs" || userChoice+computerChoice=="pr")  
+{
+results+=1;
+}
+
+}
+document.write ("Results: You've won"," ", results," ", "times out of 3.")
+</script>
