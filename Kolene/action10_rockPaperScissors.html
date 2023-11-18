@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+ <body>
  <script>
     // Simple RPS
     var userChoice = prompt("Do you choose rock, paper or scissors?");
@@ -12,14 +13,13 @@
     computerChoice = "scissors";
     }
     if (computerChoice == userChoice){
-    console.log("you tied")
+      console.log("you tied")
     }
     document.getElementById("Result").innerHTML = computerChoice
   </script>
-  <body>
-    <h1>Play Rock Paper Scissors</h1>
-    <p id="Result"></p>
-  </body>
+  <h1>Play Rock Paper Scissors</h1>
+  <p id="Result"></p>
+ </body>
 </html>
 
 
