@@ -1,0 +1,54 @@
+<center>
+<html lang="en">
+    <style>
+        .blink {
+            animation: blinker 2.5s linear infinite;
+            color: darkblue;
+            font-family: verdana;
+        }
+        @keyframes blinker {
+            10% {
+                opacity: 0;
+            }
+        }
+		body {
+  		background-color: lightblue;
+        font-family: 'verdana';
+		}   
+</style>
+<head>
+<h3 class="blink">Let's Play Rock, Paper, Scissors!</h2>
+<centre><img src="https://andygrunwald.com/images/posts/playing-rock-paper-scissors-with-500-people/rock-paper-scissors-game-rules.png" alt="Rock Paper Scissors Rules" width="70%" height=80%>
+
+<h4 style="text-align:center"> We will play 3 rounds. Best out of 3 wins. </h4>
+<h4 style="text-align:center"> Good luck!</h4>
+<script>
+var results=0;
+for (var i=1;i<4;i++)
+  {
+ var userChoice = prompt("rock (r), paper (p) or scissor (s)?");
+var computerChoice = Math.random();
+if (computerChoice > 0 && computerChoice < 0.33) {
+  computerChoice = "r";
+} else if (computerChoice > 0.34 && computerChoice < 0.67) {
+  computerChoice = "p";
+} else {
+  computerChoice = "s";
+}
+
+if (userChoice+computerChoice=="sp" || userChoice+computerChoice=="rs" || userChoice+computerChoice=="pr")  
+{
+results+=1;
+}
+
+document.write("Game Results= ", i + ". User Choice: ",userChoice ,  "   , Computer's choice: " ,computerChoice);
+document.write("<br>");
+}
+document.write("<br>");
+document.write ("Final score: You won"," ", results," ", "rounds out of 3.")
+document.write("<br>");
+document.write("<br>");
+document.write ("  Thanks for playing!")
+</script>
+</head/>
+</html>
