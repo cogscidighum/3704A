@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+    }
+    h1 {
+      color: #333;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    #result {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Rock Paper Scissors</h1>
+
+  <!-- Button to trigger the game -->
+  <button onclick="playGamePrompt()">Play Game (Prompt)</button>
+
+  <!-- Result display -->
+  <div id="result"></div>
+
+  <script>
+    function playGamePrompt() {
+      var userChoice = prompt("Do you choose rock, paper, or scissors?");
+      var computerChoice = Math.random();
+      if (computerChoice > 0 && computerChoice < 0.33) {
+        computerChoice = "Rock";
+      } else if (computerChoice > 0.34 && computerChoice < 0.67) {
+        computerChoice = "Paper";
+      } else {
+        computerChoice = "Scissors";
+      }
+
+      var result = determineWinner(userChoice, computerChoice);
+      displayResult(userChoice, computerChoice, result);
+    }
+
+    function determineWinner(userChoice, computerChoice) {
+      // Implement your logic to determine the winner (e.g., compare choices)
+      // Return 'win', 'lose', or 'tie'
+    }
+
+    function displayResult(userChoice, computerChoice, result) {
+      var resultElement = document.getElementById('result');
+      resultElement.innerHTML = `You chose ${userChoice}. Computer chose ${computerChoice}. Result: ${result}`;
+    }
+  </script>
+
+</body>
+</html>
