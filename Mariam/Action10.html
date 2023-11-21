@@ -32,26 +32,27 @@
   
   <button onclick="playGamePrompt()">Play Game (Prompt)</button>
 
+  
   <div id="result"></div>
 
   <script>
     function playGamePrompt() {
-      var userChoice = prompt("Do you choose rock, paper, or scissors?");
-      var computerChoice = Math.random();
-      if (computerChoice > 0 && computerChoice < 0.33) {
-        computerChoice = "Rock";
-      } else if (computerChoice > 0.34 && computerChoice < 0.67) {
-        computerChoice = "Paper";
-      } else {
-        computerChoice = "Scissors";
-      }
+      var userChoice = prompt("Enter your choice: \n1 for Rock, 2 for Paper, 3 for Scissors");
+      userChoice = parseInt(userChoice); // Convert input to integer
 
-      var result = determineWinner(userChoice, computerChoice);
-      displayResult(userChoice, computerChoice, result);
+      // Validate user input
+      if (userChoice >= 1 && userChoice <= 3) {
+        var computerChoice = Math.floor(Math.random() * 3) + 1; // Generates a random number between 1 and 3
+
+        var result = determineWinner(userChoice, computerChoice);
+        displayResult(userChoice, computerChoice, result);
+      } else {
+        alert("Invalid choice. Please enter 1, 2, or 3.");
+      }
     }
 
     function determineWinner(userChoice, computerChoice) {
-      
+  
     }
 
     function displayResult(userChoice, computerChoice, result) {
