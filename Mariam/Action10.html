@@ -51,9 +51,19 @@
       }
     }
 
-    function determineWinner(userChoice, computerChoice) {
-  
-    }
+   function determineWinner(userChoice, computerChoice) {
+  if (userChoice === computerChoice) {
+    return 'It\'s a tie!';
+  } else if (
+    (userChoice === 1 && computerChoice === 3) ||
+    (userChoice === 2 && computerChoice === 1) ||
+    (userChoice === 3 && computerChoice === 2)
+  ) {
+    return 'You win!';
+  } else {
+    return 'You lose!';
+  }
+}
 
     function displayResult(userChoice, computerChoice, result) {
       var resultElement = document.getElementById('result');
