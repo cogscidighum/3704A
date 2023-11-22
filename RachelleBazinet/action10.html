@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Courier, Monospace;
+      text-align: left;
+      margin: 50px;
+    }
+
+    #result {
+      font-family: Courier, Monospace;
+      font-size: 18px;
+      margin-top: 20px;
+      width: 80%;
+    }
+
+    #score {
+      font-family: Courier, Monospace;
+      font-size: 18px;
+      margin-top: 20px;
+      border: 2px solid #ddd;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: ForestGreen;
+      width: 50%;
+      box-sizing: border-box;
+    }
+
+    button {
+      font-family: Courier, Monospace;
+      background-color: DarkGreen;
+      color: black;
+      padding: 5px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      width: 10%;
+      height: 30px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      font-family: Courier, Monospace;
+      background-color: #9EA9D9;
+    }
+  
+  </style>
+</head>
+<body style ="background-color: HoneyDew";>
+
+  <center><h1> Rock Paper Scissors </h1></center>
+
+  <center><label for="userChoice">Enter: rock, paper, or scissors:</label></center>
+  <center><input type="text" id="userChoice" placeholder="Enter choice"></center>
+
+  <center><button onclick="playGame()">Play</button></center>
+
+  <center><div id="result"></div>
+  <div id="score">The Score<br>You: <span id="userScore">0</span><br>Computer: <span id="computerScore">0</span></div></center>
+
+  <script>
+    var userScore = 0;
+    var computerScore = 0;
+
+    function playGame() {
+      var userChoice = document.getElementById("userChoice").value.toLowerCase();
+
+      // Validate user input
+      if (!isValidChoice(userChoice)) {
+        alert("Invalid input. Please enter 'rock', 'paper', or 'scissors'.");
+        return;
+      }
+
+      var computerChoice = Math.random();
+
+      if (computerChoice > 0 && computerChoice < 0.33) {
+        computerChoice = "rock";
+      } else if (computerChoice > 0.34 && computerChoice < 0.67) {
+        computerChoice = "paper";
+      } else {
+        computerChoice = "scissors";
+      }
+
+      displayChoices(userChoice, computerChoice);
+      
+      var result = determineWinner(userChoice, computerChoice);
+      displayResult(result);
+      updateScore(result);
+    }
+
+    function determineWinner(user, computer) {
+      if (user === computer) {
+        return "It's a tie!";
+      } else if (
+        (user === "rock" && computer === "scissors") ||
+        (user === "paper" && computer === "rock") ||
+        (user === "scissors" && computer === "paper")
+      ) {
+        userScore++;
+        return "You win!";
+      } else {
+        computerScore++;
+        return "Computer wins!";
+      }
+    }
+
+    function displayChoices(user, computer) {
+      var resultElement = document.getElementById("result");
+      resultElement.innerHTML = "<p>Your choice: " + user + "</p><p>Computer's choice: " + computer + "</p>";
+    }
+
+    function displayResult(result) {
+      var resultElement = document.getElementById("result");
+      resultElement.innerHTML += "<p>" + result + "</p>";
+    }
+
+    function updateScore(result) {
+      var userScoreElement = document.getElementById("userScore");
+      var computerScoreElement = document.getElementById("computerScore");
+
+      userScoreElement.textContent = userScore;
+      computerScoreElement.textContent = computerScore;
+    }
+
+    function reloadPage() {
+      location.reload();
+    }
+
+    function isValidChoice(choice) {
+      return choice === "rock" || choice === "paper" || choice === "scissors";
+    }
+  </script>
+
+</body>
+</html>
