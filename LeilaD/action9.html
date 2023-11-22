@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock, Paper, Scissors</title>
+</head>
+
+<style>
+      body{
+        background: #D4C9BC;
+}
+</style>
+<body>
+<h1 style="text-align: center;">Play Rock Paper Scissors !</h1>
+<div id="innerHTML">Waiting...</div>
+<br>
+<br>
+<br>
+<br>
+<p style="text-align: right;"> <button id="startButton">Start Game</button></p>
+
+<script>
+function rpsFunction() {
+  var userChoice = prompt("Do you choose rock, paper or scissors?");
+  var computerChoice = Math.random();
+  if (computerChoice > 0 && computerChoice < 0.33) {
+  computerChoice = "Rock";
+  } else if (computerChoice > 0.34 && computerChoice < 0.67) {
+  computerChoice = "Paper";
+  } else {
+    computerChoice = "Scissors";
+  }
+
+  console.log("Computer choice: " + computerChoice);
+  console.log("Your choice: " );
+
+
+document.getElementById("startButton").addEventListener("click", rpsFunction);
+</script>
+
+</body>
+</html>
