@@ -3,20 +3,23 @@
 <head>
 <script type="text/javascript">
 window.onload = function () {
-    var chart = new CanvasJS.Chart("chartContainer");
+    var chart = new CanvasJS.Chart("chartContainer")
 
-    chart.options.axisY = { prefix: "$", suffix: "K" };
-    chart.options.title = { text: "CelSci Views $ Duration" };
+    chart.options.axisY = {suffix: "K" };
+    chart.options.title = { text: "Noam Chomsky's Video Views & Duration", fontFamily: "TimesNewRoman",};
+        
 
     var series1 = { //dataSeries - first quarter
         type: "column",
         name: "Views",
+        color: "Linen",
         showInLegend: true
     };
 
     var series2 = { //dataSeries - second quarter
         type: "column",
-        name: "Duration",
+        name: "Duration (seconds)",
+        color:"PaleVioletRed",
         showInLegend: true
     };
 
@@ -26,19 +29,19 @@ window.onload = function () {
 
 
     series1.dataPoints = [
-            { label: "Video 1", y: 58 },
-            { label: "Video 2", y: 69 },
-            { label: "Video 3", y: 80 },
-            { label: "Video 4", y: 74 },
-            { label: "Video 5", y: 64 }
+            { label: "Video 1", y: 47},
+            { label: "Video 2", y: 40},
+            { label: "Video 3", y: 162 },
+            { label: "Video 4", y: 69 },
+            { label: "Video 5", y: 67 }
     ];
 
     series2.dataPoints = [
-        { label: "Video 1", y: 63 },
-        { label: "Video 2", y: 73 },
-        { label: "Video 3", y: 88 },
-        { label: "Video 4", y: 77 },
-        { label: "Video 5", y: 60 }
+        { label: "Video 1", y: 4},
+        { label: "Video 2", y: 4.8 },
+        { label: "Video 3", y: 7 },
+        { label: "Video 4", y: 4 },
+        { label: "Video 5", y: 2 }
     ];
 
     chart.render();
@@ -52,3 +55,4 @@ window.onload = function () {
     </div>
 </body>
 </html>
+
