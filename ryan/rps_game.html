@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Rock, Paper, Scissors Game</title>
+    <style>
+        .game-result {
+            margin: 5px;
+            font-size: 18px;
+            color: purple; 
+        }
+        .game-title {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <script type="module">
+        let results = 0;
+        let playAgain = true;
+        let gameCount = 0;
+        const playerName = prompt("Enter your name:");
+
+        while (playAgain) {
+            gameCount++;
+            const userChoice = prompt("Choose rock (r), paper (p) or scissor (s):");
+            let computerChoice = Math.random();
+
+            if (computerChoice < 0.33) {
+                computerChoice = "r";
+            } else if (computerChoice < 0.67) {
+                computerChoice = "p";
+            } else {
+                computerChoice = "s";
+            }
+
+            let resultMessage = "";
+
+            if (userChoice + computerChoice === "sp" || userChoice + computerChoice === "rs" || userChoice + computerChoice === "pr") {
+                results += 1;
+                resultMessage = "You win!";
+            } else if (userChoice + computerChoice === "sr" || userChoice + computerChoice === "rp" || userChoice + computerChoice === "ps") {
+                resultMessage = "You lose!";
+            } else {
+                resultMessage = "It's a tie!";
+            }
+
+            document.body.innerHTML += `<div class='game-result'><div class='game-title'>Game ${gameCount}</div>${playerName}, your choice: ${userChoice}<br>Computer's choice: ${computerChoice}<br>Result: ${resultMessage}<br>Cumulative Score: ${results}</div><br>`;
+
+            playAgain = confirm("Do you want to play again?");
+        }
+    </script>
+</body>
+</html>
