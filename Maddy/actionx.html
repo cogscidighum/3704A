@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript">
+        window.onload = function () {
+            var chart = new CanvasJS.Chart("chartContainer");
+
+            chart.options.axisY = {
+                prefix: " ",
+                suffix: " views",
+                fontFamily: "Helvetica",
+                interval: 1000000, // Set the interval to a larger value
+                maximum: 5000000 // Set the maximum value of the Y-axis
+            };
+            chart.options.title = { text: "Jordan Peterson Views and Duration", fontFamily: "Helvetica" };
+
+            var series1 = { //dataSeries - first quarter
+                type: "column",
+                name: "Views",
+                showInLegend: true
+            };
+
+            var series2 = { //dataSeries - second quarter
+                type: "column",
+                name: "Duration",
+                showInLegend: true
+            };
+
+            chart.options.data = [];
+            chart.options.data.push(series1);
+            chart.options.data.push(series2);
+
+            series1.dataPoints = [
+                { label: "Video 1", y: 443021 },
+                { label: "Video 2", y: 2000000 },
+                { label: "Video 3", y: 4300000 },
+                { label: "Video 4", y: 2000000 },
+                { label: "Video 5", y: 2400000 }
+            ];
+
+            series2.dataPoints = [
+                { label: "Video 1", y: 29 },
+                { label: "Video 2", y: 10 },
+                { label: "Video 3", y: 14231 },
+                { label: "Video 4", y: 49 },
+                { label: "Video 5", y: 11 }
+            ];
+
+            chart.render();
+        }
+    </script>
+    <script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+</head>
+
+<body>
+    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+</body>
+
+</html>
