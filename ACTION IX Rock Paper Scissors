@@ -1,0 +1,20 @@
+var results=0;
+
+for (var i=0;i<3;i++)
+  {
+ var userChoice = prompt("Choose one: rock (r), paper (p) or scissor (s)?");
+var computerChoice = Math.random();
+if (computerChoice > 0 && computerChoice < 0.33) {
+  computerChoice = " + rock: ";
+} else if (computerChoice > 0.34 && computerChoice < 0.67) {
+  computerChoice = " + paper: ";
+} else {
+  computerChoice = " + scissors: ";
+}
+
+if (userChoice+computerChoice=="You chose scissors, the computer chose paper, so the score is " || userChoice+computerChoice=="You chose rock, the computer chose scissors, so the score is " || userChoice+computerChoice=="you chose paper, the computer chose rock, so the score is ")  
+{
+results+=1;
+}
+document.write(userChoice,computerChoice, results, " "); 
+}
