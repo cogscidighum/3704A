@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer", {theme: "light2"});
+
+    chart.options.axisY = { prefix: "", suffix: "K" };
+    chart.options.title = { text: "Janelle Shane's Views & Duration" };
+
+    var series1 = { //dataSeries - first quarter
+        type: "column",
+        name: "Views",
+        showInLegend: true
+    };
+
+    var series2 = { //dataSeries - second quarter
+        type: "column",
+        name: "Duration (min)",
+        showInLegend: true
+    };
+
+    chart.options.data = [];
+    chart.options.data.push(series1);
+    chart.options.data.push(series2);
+
+
+    series1.dataPoints = [     
+            { label: "The danger of AI is weirder than you think", y: 2700 } // https://www.youtube.com/watch?v=OhCzX0iLnOc&t=9s&pp=ygUNamFuZWxsZSBzaGFuZQ%3D%3D
+    ];
+
+    series2.dataPoints = [
+        { label: "The danger of AI is weirder than you think", y: 10.29 },
+    ];
+
+    chart.render();
+
+    var chart2 = new CanvasJS.Chart("chartContainer2", {theme: "light2"});
+
+    chart2.options.axisY = { prefix: "", suffix: "K" };
+    chart2.options.title = { text: "Janelle Shane's Views & Duration" };
+
+    var series1 = { //dataSeries - first quarter
+        type: "column",
+        name: "Views",
+        showInLegend: true
+    };
+
+    var series2 = { //dataSeries - second quarter
+        type: "column",
+        name: "Duration (min)",
+        showInLegend: true
+    };
+
+    chart2.options.data = [];
+    chart2.options.data.push(series1);
+    chart2.options.data.push(series2);
+    series1.dataPoints = [     
+            { label: "What AI can do - and can't", y: 0.231 }, // https://www.youtube.com/watch?v=NFbJSQIfZrw&pp=ygUNamFuZWxsZSBzaGFuZQ%3D%3D
+            { label: "You Look Like a Thing and I Love You | Talks at Google", y: 11 },  // https://www.youtube.com/watch?v=2ZiPEOFnK1o&pp=ygUNamFuZWxsZSBzaGFuZQ%3D%3D
+            { label: "Machine learning failures - for art", y: 13 }, // https://www.youtube.com/watch?v=yneJIxOdMX4&pp=ygUNamFuZWxsZSBzaGFuZQ%3D%3D
+            { label: "Distinguished Speaker Series: Janelle Shane on what AI can do - and can't", y: 0.203 } // https://www.youtube.com/watch?v=Uw6M_ISpMgk&pp=ygUNamFuZWxsZSBzaGFuZQ%3D%3D
+    ];
+
+    series2.dataPoints = [
+        { label: "What AI can do - and can't", y: 3.31 },
+        { label: "You Look Like a Thing and I Love You | Talks at Google", y: 39.38 },
+        { label: "Machine learning failures - for art", y: 38.48 },
+        { label: "Distinguished Speaker Series: Janelle Shane on what AI can do - and can't", y: 40.35 }
+    ];
+    chart2.render();
+}
+</script>
+<script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+</head>
+
+<body>
+    <div id="chartContainer" style="height: 350px; width: 30%;"></div>
+    <br>
+    <p>I split up the graphs because the scale for the first video made the other videos look very small</p>
+    <br>
+    <div id="chartContainer2" style="height: 600px; width: 100%;"></div>
+    
+</body>
+</html>
