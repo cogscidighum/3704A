@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>stlite app</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@stlite/mountable@0.39.0/build/stlite.css"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://cdn.jsdelivr.net/npm/@stlite/mountable@0.39.0/build/stlite.js"></script>
+    <script>
+      stlite.mount(
+        `
+import streamlit as st
+
+st.title("Anil Seth")
+
+import numpy as np
+import pandas as pd
+
+st.subheader("Important Youtube Talks - Views and Duration")
+data = np.array([
+    [14187265, 1012],
+    [0, 0],
+    [0, 0],
+    [0, 0],
+    [0, 0]
+])
+
+data = pd.DataFrame(
+    data,
+    columns=['Views', 'Duration (seconds)'])
+
+st.bar_chart(data)
+
+st.subheader("Anil Seth Youtube Talks DataFrame")
+df = pd.DataFrame(data)
+
+st.dataframe(df)
+`,
+        document.getElementById("root")
+      );
+    </script>
+  </body>
+</html>
