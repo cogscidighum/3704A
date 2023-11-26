@@ -1,35 +1,53 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <script type="module">
-var results = 0;
-var playAgain = true;
+<html>
+<head>
+  <style>
+    body {
+      background-color: #66CCFF;
+      font-family: Arial, sans-serif;
+    }
 
-while (playAgain) {
-  var userChoice = prompt("rock (r), paper (p) or scissor (s)?");
-  var computerChoice = Math.random();
+    h2 {
+      color: #333;
+    }
+  </style>
+</head>
 
-  if (computerChoice > 0 && computerChoice < 0.33) {
-    computerChoice = "r";
-  } else if (computerChoice > 0.34 && computerChoice < 0.67) {
-    computerChoice = "p";
-  } else {
-    computerChoice = "s";
-  }
+<body>
+  <h2>
+    Play Rock Paper Scissors!
+  </h2>
 
-  var resultMessage = "";
+  <script>
+    var results = 0;
+    var resultMessage = "";
+    var userChoice = "";
+    while (userChoice.toLowerCase() !== "end") {
+      userChoice = prompt("Enter rock (r), paper (p), scissor (s), or type 'end' to stop:");
 
-  if (userChoice + computerChoice == "sp" || userChoice + computerChoice == "rs" || userChoice + computerChoice == "pr") {
-    results += 1;
-    resultMessage = "You win!";
-  } else if (userChoice + computerChoice == "sr" || userChoice + computerChoice == "rp" || userChoice + computerChoice == "ps") {
-    resultMessage = "You lose!";
-  } else {
-    resultMessage = "It's a tie!";
-  }
+      if (userChoice.toLowerCase() === "end") {
+        break;
+      }
+      var computerChoice = Math.random();
+      if (computerChoice > 0 && computerChoice < 0.33) {
+        computerChoice = "r";
+      } else if (computerChoice > 0.34 && computerChoice < 0.67) {
+        computerChoice = "p";
+      } else {
+        computerChoice = "s";
+      }
 
-  document.write("<div style='background-color: #add8e6; padding: 10px; margin: 5px; font-size: 18px; display: inline-block;'>Your choice: " + userChoice + "<br>Computer's choice: " + computerChoice + "<br>Result: " + resultMessage + "</div><br>");
+      if (userChoice + computerChoice == "sp" || userChoice + computerChoice == "rs" || userChoice + computerChoice == "pr") {
+        results += 1;
+        resultMessage = "You win!";
+      } else if (userChoice + computerChoice == "sr" || userChoice + computerChoice == "rp" || userChoice + computerChoice == "ps") {
+        resultMessage = "You lose!";
+      } else {
+        resultMessage = "It's a tie!";
+      }
 
-  playAgain = confirm("Do you want to play again?");
-}
+      document.write("Your move: ", userChoice, " ", "<br>Computer's move: ", computerChoice, " ", "<br>Result: ", results, " ", resultMessage, "<br><br>");
+    }
   </script>
+</body>
 </html>
