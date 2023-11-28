@@ -1,0 +1,58 @@
+<html>
+<head>
+<script type="text/javascript">
+window.onload = function () {
+	var chart = new CanvasJS.Chart("chartContainer");
+
+	chart.options.axisY = {suffix: "K" };
+	chart.options.title = { text: "Andrew Huberman's Views + Duration" };
+
+	var series1 = { //dataSeries - first quarter
+    	type: "column",
+    	name: "Views",
+    	color: "Black",
+  	 
+    	showInLegend: true
+	};
+
+	var series2 = { //dataSeries - second quarter
+    	type: "column",
+    	name: "Duration in minutes",
+    	color: "Red",
+ 	 
+    	showInLegend: true
+	};
+
+	chart.options.data = [];
+	chart.options.data.push(series1);
+	chart.options.data.push(series2);
+
+
+	series1.dataPoints = [
+        	{ label: "Video 1", y: 12},
+        	{ label: "Video 2", y: 3},
+        	{ label: "Video 3", y: 687 },
+        	{ label: "Video 4", y: 634 },
+        	{ label: "Video 5", y: 423 }
+	];
+
+	series2.dataPoints = [
+    	{ label: "Video 1", y: 17 },
+    	{ label: "Video 2", y: 4 },
+    	{ label: "Video 3", y: 129 },
+    	{ label: "Video 4", y: 94 },
+    	{ label: "Video 5", y: 104 }
+	];
+
+	chart.render();
+}
+</script>
+<script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+</head>
+
+<body>
+	<div id="chartContainer" style="height: 300px; width: 100%;">
+	</div>
+</body>
+</html>
+
