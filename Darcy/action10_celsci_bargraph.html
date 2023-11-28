@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer");
+
+    chart.options.axisY = { prefix: "$", suffix: "K", minimum: 0, maximum: 7000000 };   
+    chart.options.title = { text: "CelSci Views $ Duration" };
+
+    var series1 = { //dataSeries - first quarter
+        type: "column",
+        name: "Views",
+        showInLegend: true
+    };
+
+    var series2 = { //dataSeries - second quarter
+        type: "column",
+        name: "Duration in seconds",
+        showInLegend: true,
+        axisYType: "secondary", //a secondary y-axis for series2
+    };
+
+    chart.options.data = [];
+    chart.options.data.push(series1);
+    chart.options.data.push(series2);
+
+
+    series1.dataPoints = [
+            { label: "Video 1: Do we see reality as it is?", y: 2534204 },
+            { label: "Video 2: Donald Hoffman: Reality is an Illusion", y: 6852659 },
+            { label: "Video 3: Donald Hoffman - What is Consciousness?", y: 173478 },
+            { label: "Video 4: Truth vs Reality: How we evolved to survive, not to see what’s really there", y: 754806 },
+            { label: "Video 5: Does Consciousness Survive Death?", y: 126755 }
+    ];
+
+    series2.dataPoints = [
+        { label: "Video 1: Do we see reality as it is?", y: 1310 },
+        { label: "Video 2: Donald Hoffman: Reality is an Illusion", y: 11775 },
+        { label: "Video 3: Donald Hoffman - What is Consciousness?", y: 1632 },
+        { label: "Video 4: Truth vs Reality: How we evolved to survive, not to see what’s really there", y: 554 },
+        { label: "Video 5: Does Consciousness Survive Death?", y: 633 }
+    ];
+
+    chart.render();
+}
+</script>
+<script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+</head>
+
+<body>
+    <div id="chartContainer" style="height: 300px; width: 100%;">
+    </div>
+</body>
+</html>
