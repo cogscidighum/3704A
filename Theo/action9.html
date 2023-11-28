@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <link href="https://fonts.googleapis.com/css?family=Mulish" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Mulish';
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        h1 {
+            color: #007BFF;
+        }
+        .center {
+            margin: 0;
+            position: absolute;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        .button1 {
+            margin: 0;
+            font-size: 24px;
+            background-color: #ff8ba7; 
+            border-radius: 8px; 
+            border: none; 
+            padding: 10px;
+            width: 30%;
+        }
+        .button1:hover {
+            background-color:  #ff8ba6af;
+            color: rgba(0, 0, 0, 0.19);
+        }
+        #resultsContainer {
+            margin-top: 20px;
+            text-align: left;
+        }
+        #score {
+            font-size: 20px;
+            color: #28a745;
+        }
+        #resetButton {
+            margin-top: 10px;
+            font-size: 16px;
+            background-color: #007BFF; 
+            color: white;
+            border: none;
+            padding: 8px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #resetButton:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body> 
+    <h1>Rock, Paper, Scissors</h1>
+    <button type="button" class="button1 center" id="button1" onclick="computerPlay()">Play</button><br>
+    <h2>Total Score: <span id="score">0</span></h2>
+    <div id="resultsContainer"></div>
+    <button type="button" id="resetButton" onclick="resetGame()">Reset Game</button>
+
+    <script>
+        var results = 0;
+        var trials = 0;
+
+        function computerPlay(){
+            var userChoice = prompt("rock (r), paper (p) or scissor (s)?");
+            var currentScore = "LOSE";
+
+            var computerChoice = Math.random();
+            if (computerChoice > 0 && computerChoice < 0.33) {
+                computerChoice = "r";
+            } else if (computerChoice > 0.34 && computerChoice < 0.67) {
+                computerChoice = "p";
+            } else {
+                computerChoice = "s";
+            }
+
+            if (userChoice+computerChoice=="sp" || userChoice+computerChoice=="rs" || userChoice+computerChoice=="pr")  {
+                results += 1;
+                currentScore = "WIN";
+            }
+
+            trials += 1;
+
+            const resultsContainer = document.getElementById("resultsContainer");
+            const ul = document.createElement("ul");
+            ul.innerHTML = `${trials}. User: ${userChoice} vs Computer: ${computerChoice} --> ${currentScore}`;
+            resultsContainer.appendChild(ul);
+
+            document.getElementById("score").innerHTML = results;
+        }
+
+        function resetGame() {
+            results = 0;
+            trials = 0;
+            document.getElementById("score").innerHTML = results;
+            document.getElementById("resultsContainer").innerHTML = "";
+        }
+    </script>
+</body>
+</html>
