@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>ACogSphere: Sentiment Analysis</title>
+    <button id="run">ACTION</button>
+    <label>Output:</label>   
+    <h3>Analyzing ...</h3>
+    <div id="output2">In Elizabeth Loftus' YouTube video titled "How Reliable is Your Memory?" she delves into the intricate nature of memory, challenging common beliefs about its accuracy and highlighting the susceptibility of memory to external influences.</div>
+</head>
+<body> 
+  <script type="module">
+  import { pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.7.0'
+  
+  const generate = document.getElementById("run");   
+  generate.addEventListener("click", async () =>   // Start (
+  {
+      try 
+  {
+      let pipe = await pipeline('text-classification');
+      let output = await pipe('In Elizabeth Loftus' YouTube video titled "How Reliable is Your Memory?" she delves into the intricate nature of memory, challenging common beliefs about its accuracy and highlighting the susceptibility of memory to external influences.'); 
+      output2.textContent = JSON.stringify(output);
+  } 
+      catch (error)
+  {
+      console.log("Error:",error.message);
+  }
+  }
+  )//End )
+</script>
+</body>
+     
