@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            // Chart 1
+            var chart = new CanvasJS.Chart("chartContainer", { theme: "light2" });
+
+            chart.options.axisY = { prefix: "", suffix: "K" };
+            chart.options.title = { text: "Elizabeth Loftus' Views & Duration" };
+
+            var series1 = { type: "column", name: "Views", showInLegend: true };
+            var series2 = { type: "column", name: "Duration (min)", showInLegend: true };
+
+            chart.options.data = [];
+            chart.options.data.push(series1);
+            chart.options.data.push(series2);
+
+            series1.dataPoints = [
+                { label: "How reliable is your memory?", y: 2700 } // https://www.youtube.com/watch?v=PB2OegI6wvI
+            ];
+
+            series2.dataPoints = [
+                { label: "How reliable is your memory?", y: 10.29 },
+            ];
+
+            chart.render();
+
+            // Chart 2
+            var chart2 = new CanvasJS.Chart("chartContainer2", { theme: "light2" });
+
+            chart2.options.axisY = { prefix: "", suffix: "K" };
+            chart2.options.title = { text: "Elizabeth Loftus' Views & Duration" };
+
+            var series1_2 = { type: "column", name: "Views", showInLegend: true };
+            var series2_2 = { type: "column", name: "Duration (min)", showInLegend: true };
+
+            chart2.options.data = [];
+            chart2.options.data.push(series1_2);
+            chart2.options.data.push(series2_2);
+
+            series1_2.dataPoints = [
+                { label: "The misinformation effect", y: 0.231 }, // https://www.youtube.com/watch?v=3RKDVB6qizA&
+                { label: "How Memory can be Manipulated", y: 11 },  // https://www.youtube.com/watch?v=3RKDVB6qizA&
+                { label: "The Memory Factory", y: 13 }, // https://www.youtube.com/watch?v=KC9CRBvIAsQ
+                { label: "How Does Memory Work?", y: 0.203 } // https://www.youtube.com/watch?v=D022rRNHzcA
+            ];
+
+            series2_2.dataPoints = [
+                { label: "The misinformation effect", y: 3.31 },
+                { label: "How Memory can be Manipulated", y: 39.38 },
+                { label: "The Memory Factory", y: 38.48 },
+                { label: "How Does Memory Work?", y: 40.35 }
+            ];
+
+            chart2.render();
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Mulish';
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        h1 {
+            color: #007BFF;
+        }
+        .chart-container {
+            width: 50%;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Elizabeth Loftus' Video Analytics</h1>
+
+    <div class="chart-container">
+        <div id="chartContainer" style="height: 350px;"></div>
+    </div>
+
+    <br>
+    <p>Additional videos:</p>
+    <br>
+
+    <div class="chart-container">
+        <div id="chartContainer2" style="height: 600px;"></div>
+    </div>
+</body>
+</html>
