@@ -1,88 +1,124 @@
 <!DOCTYPE html>
-<html>
-	<head>
-      <h2>
-        CogSciDigHumJS
-      </h2>
-    <iframe
-    src="https://cogsphere-acogsphere.hf.space"
-    frameborder="0"
-    width="350"
-    height="150"
-    ></iframe>
-    <br>  
-    </head>
-    <body> 
-    <label for "nameinput">Name:</label>
-    <input type="text" id="nameinput" placeholder="Enter Your Name Here"></input>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CogSciDigHumJS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        h2 {
+            color: #007BFF;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        #output {
+            color: green;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #FFA500;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #FF8C00;
+        }
+
+        iframe {
+            width: 100%;
+            height: 200px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cognitive Science Digital Humanities</h1>
+    <div>
+        <iframe src="https://cogsphere-acogsphere.hf.space" frameborder="0"></iframe>
+    </div>
+    <label for="nameinput">Name:</label>
+    <input type="text" id="nameinput" placeholder="Enter Your Name Here">
     <br>
-    <div id="output" style="color: green; ">Waiting!</div>
-     <label>Pick a Celsci and Rate then Vote!</label>
-  <button type="button" style="background-color: orange" id="button1" onclick="click"> Vote! </button>
- <script>       
- var celscilist=[ 
-         'Celscis List','Anil Seth','Andrew2 Huberman','Donald Hoffman', 'Doug Hofstadter','Howard Gardner', 'Janelle Shane', 'Daniel Kahneman', 'Elizabeth Loftus', 'Elizabeth2 Loftus', 'Patricia Churchland','Bret Weinstein','Andrew Huberman', 'Tom Scott',  'Melanie Mitchell',  'Jordan Peterson',  'Timnit Gebru',  'Amy Cuddy',  'Mihaly Csikszentmihalyi',  'Martha Nussbaum',  'Noam Chomsky',  'Russell A Barkley',  'Slavoj Žižek',  'Nathaniel Drew', 'Lara Boyd',  'Yuval Noah Harari',  'Jordan2 Peterson',  'Yuval2 Noah Harari',  'Joscha Bach',  'Poppy Crum',  'Ryan Holiday',  'Marvin Chun',  'Jim Davies' 
-]
-// Create a select element
-var select = document.createElement("select");
-var select2 = document.createElement("select");
-   
-// Create a function to add an option element with a given value and text
-function addOption(value, text) {
-  // Create an option element
-  var option = document.createElement("option");
-  // Set the value and text attributes
-  option.value = value;
-  option.text = text;
-  // Append the option to the select element
-  select.appendChild(option);
-}
+    <div id="output">Waiting!</div>
+    <label for="celsciSelect">Select a Celsci:</label>
+    <select id="celsciSelect"></select>
+    <label for="ratingSelect">Rate:</label>
+    <select id="ratingSelect"></select>
+    <button type="button" id="button1">Vote!</button>
 
-function addOption2(value, text) {
-  // Create an option element
-  var option2 = document.createElement("option");
-  // Set the value and text attributes
-  option2.value = value;
-  option2.text = text;
-  // Append the option to the select element
-  select2.appendChild(option2);
-}
-   
-// Loop from 1 to n and call the addOption function with the loop index as the value and text
-for (var i = 0; i < celscilist.length; i++) {
-  addOption(i, celscilist[i]);
-}
+    <script>
+        var celscilist = [
+            'Celscis List', 'Anil Seth', 'Andrew2 Huberman', 'Donald Hoffman', 'Doug Hofstadter', 'Howard Gardner', 'Janelle Shane', 'Daniel Kahneman', 'Elizabeth Loftus', 'Elizabeth2 Loftus', 'Patricia Churchland', 'Bret Weinstein', 'Andrew Huberman', 'Tom Scott', 'Melanie Mitchell', 'Jordan Peterson', 'Timnit Gebru', 'Amy Cuddy', 'Mihaly Csikszentmihalyi', 'Martha Nussbaum', 'Noam Chomsky', 'Russell A Barkley', 'Slavoj Žižek', 'Nathaniel Drew', 'Lara Boyd', 'Yuval Noah Harari', 'Jordan2 Peterson', 'Yuval2 Noah Harari', 'Joscha Bach', 'Poppy Crum', 'Ryan Holiday', 'Marvin Chun', 'Jim Davies'
+        ];
 
-// Loop from 1 to n and call the addOption function with the loop index as the value and text
-  addOption2(0, "Rate");
+        // Create a select element for Celsci
+        var celsciSelect = document.getElementById("celsciSelect");
+        for (var i = 0; i < celscilist.length; i++) {
+            addOption(celsciSelect, i, celscilist[i]);
+        }
 
-   for (var i = 0; i < 5; i++) {
-  addOption2(i, i+1);
-}
-   
-// Append the select element to the document body
-document.body.appendChild(select);
-document.body.appendChild(select2);
+        // Create a select element for rating
+        var ratingSelect = document.getElementById("ratingSelect");
+        addOption(ratingSelect, 0, "Rate");
+        for (var i = 1; i <= 5; i++) {
+            addOption(ratingSelect, i, i);
+        }
+
+        function addOption(select, value, text) {
+            var option = document.createElement("option");
+            option.value = value;
+            option.text = text;
+            select.appendChild(option);
+        }
+
+        var generateButton = document.getElementById("button1");
+        generateButton.addEventListener("click", async () => {
+            try {
+                const app = await client("https://cogsphere-acogsphere.hf.space");
+                const result = await app.predict(0, [
+                    nameinput.value,
+                    ratingSelect.value.toString(),
+                    celscilist[celsciSelect.value],
+                ]);
+                output.innerHTML = "Sent!";
+            } catch (error) {
+                console.log("Error:", error.message);
+            }
+        });
     </script>
-<script type="module"> 
-    import { client } from "https://cdn.jsdelivr.net/npm/@gradio/client@0.1.4/dist/index.min.js";
-    const generate = document.getElementById("button1");   
-    generate.addEventListener("click", async () =>{
-        try {         
-
- const app = await client("https://cogsphere-acogsphere.hf.space");
-const result = await app.predict(0, [		
-				 nameinput.value, // string  in 'Name' Textbox component		
-				select2.value.toString(), // string  in 'How satisfied are you with using gradio?' Radio component		
-				celscilist[select.value], // string  in 'Comments' Textbox component
-	]);         
-                         //output.appendChild(document.createTextNode(lastview.data))
-           output.innerHTML = "Sent!" //lastview.data 
-            } catch (error){
-                 console.log("Error:",error.message); 
-            }       
-        }       
-)
-    </script>
-    </body>
+</body>
 </html>
