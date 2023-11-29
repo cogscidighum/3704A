@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <script src="https://d3js.org/d3.v7.min.js"></script>
+
+   <h3>Reading JSON & CSV Files: JavaScript</h3>
+<button type="button" onclick="populate()"> Read JSON</button>  
+<div id="outjson">JSON:</div>
+<button type="button" onclick="Action101()"> Read CSV</button>
+
+<div id="outcsv">CSV:</div>
+
+   
+ </head>
+<body>
+<script>
+      
+function Action101(){    
+var url = "https://cogscidighum.github.io/3704A/Darcy/actionx.csv";
+// Read the CSV file from the URL
+d3.csv (url, function (data) {
+ document.getElementById('outcsv').innerHTML=JSON.stringify(data);
+
+});
+} 
+
+    async function populate() {
+      
+        const requestURL = 'https://cogscidighum.github.io/3704A/Darcy/actionx.json';
+        const request = new Request(requestURL);
+  
+        const response = await fetch(request);
+        const celscisText = await response.text();
+  
+        //const celscilist1 = JSON.parse(celscisText);
+ document.getElementById('outjson').innerHTML=celscisText;
+   
+    }
+</script>
+</body>
