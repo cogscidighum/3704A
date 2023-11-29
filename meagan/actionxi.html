@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <link href="https://fonts.googleapis.com/css?family=Mulish" rel="stylesheet">
+      <script type="module">
+    import { pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.6.2';
+    </script>
+		<script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite@0.4.1/dist/lite.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gradio/lite@0.4.1/dist/lite.css" />
+	</head>
+    <style>
+        body {
+            font-family: 'Mulish';
+        }
+    </style>
+	<body>
+      <h1>Meagan's Celsci: Janelle Shane</h1>
+      <h3>Determine positivity of videos based on the title</h3>
+<gradio-lite>
+
+<gradio-requirements>
+transformers_js_py
+</gradio-requirements>
+
+<gradio-file name="app.py" entrypoint>
+from transformers_js import import_transformers_js
+import gradio as gr
+transformers = await import_transformers_js()
+pipeline = transformers.pipeline
+pipe = await pipeline('sentiment-analysis')
+
+async def classify(Check ):
+	return await pipe(text)
+
+demo = gr.Interface(classify, "textbox", "json", height=6000, examples=["The danger of AI is weirder than you think", "What AI can do - and can't", "You Look Like a Thing and I Love You | Talks at Google", "Machine learning failures - for art","Distinguished Speaker Series: Janelle Shane on what AI can do - and can't"])
+demo.launch(height=6000)
+</gradio-file>
+</gradio-lite>
+    </body>
+</html>
