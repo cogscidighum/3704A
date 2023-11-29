@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+   <title>Meagan</title>
+	<head>
+        <link href="https://fonts.googleapis.com/css?family=Mulish" rel="stylesheet">
+		<script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
+	</head>
+    <style>
+        body {
+            font-family: 'Mulish';
+        }
+    </style>
+	<body>
+        <h3>Janelle Shane's Max!</h3>
+        <p>taking a few seconds to load...</p>
+		<gradio-lite>
+			import gradio as gr
+			import pandas as pd
+			def show_df(as1,as2,as3):
+				 df = pd.DataFrame({
+					  "Videos" : ["The danger of AI is weirder than you think", "What AI can do - and can't", "You Look Like a Thing and I Love You | Talks at Google", "Machine learning failures - for art","Distinguished Speaker Series: Janelle Shane on what AI can do - and can't"], 
+					  "Views" : [2700, 0.231, 11, 13, 0.203], 
+					  "Duration" : [10.29, 3.31, 39.38,  38.48, 40.35]})
+				 print(as1)
+				 df = df.style.highlight_max(color = 'lightgreen', axis = 0)
+				 return df
+			with gr.Blocks() as demo:
+				with gr.Row():
+					with gr.Column():
+						data = gr.Dataframe()
+						demo.load(show_df, None, [data], height=6000)
+			demo.launch(height=6000)
+		</gradio-lite>
+	</body>
+</html>
