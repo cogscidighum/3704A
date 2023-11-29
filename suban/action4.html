@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>CelSci</title>
+  </head>
+
+  <body>
+    <script>
+        const celscilist = {
+          'Amy Cuddy': { 'info': { 'views': 23700189 } },
+          'Anil Seth': { 'info': { 'views': 14187265 } },
+          'Andrew Huberman': { 'info': { 'views': 620097 } },
+          'Bret Weinstein': { 'info': { 'views': 41610 } },
+          'Daniel Kahneman': { 'info': { 'views': 1274191 } },
+          'Donald Hoffman': { 'info': { 'views': 2508599 } },
+          'Elizabeth Loftus': { 'info': { 'views': 2190333 } },
+          'Howard Gardner': { 'info': { 'views': 1508456 } },
+          'Janelle Shane': { 'info': { 'views': 2755737 } },
+          'Jim Davies': { 'info': { 'views': 27629 } },
+          'Jordan Peterson': { 'info': { 'views': 672531 } },
+          'Joscha Bach': { 'info': { 'views': 528452 } },
+          'Lara Boyd': { 'info': { 'views': 39098264 } },
+          'Mihaly Csikszentmihalyi': { 'info': { 'views': 952791 } },
+          'Martha Nussbaum': { 'info': { 'views': 41046 } },
+          'Marvin Chun': { 'info': { 'views': 76605 } },
+          'Melanie Mitchell': { 'info': { 'views': 44875 } },
+          'Nathaniel Drew': { 'info': { 'views': 126829 } },
+          'Noam Chomsky': { 'info': { 'views': 26042 } },
+          'Patricia Churchland': { 'info': { 'views': 8026 } },
+          'Poppy Crum': { 'info': { 'views': 133333 } },
+          'Russell Barkley': { 'info': { 'views': 786168 } },
+          'Slavoj Žižek': { 'info': { 'views': 153254 } },
+          'Timnit Gebru': { 'info': { 'views': 79338 } },
+          'Tom Scott': { 'info': { 'views': 2555553 } },
+          'Yuval Noah Harari': { 'info': { 'views': 1860000 } }
+        };
+        
+        class Celsci {
+          static iscelsci(x) {
+            let y = "false";
+            if (x > 500) {
+              y = "true";
+            }
+            return y;
+          }
+        }
+        
+        function checkcelsci(x) {
+          const result = Celsci.iscelsci(celscilist[x]['info']['views']);
+          return result;
+        }
+        
+        document.write(checkcelsci('Joscha Bach'));     
+    </script>
+  </body>
+</html>
+
