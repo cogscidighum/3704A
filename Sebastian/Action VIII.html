@@ -1,29 +1,32 @@
 <!DOCTYPE html>
+<html lang="en-us">
 <html>
 <head>
-   <title>ACogSphere: Sentiment Analysis</title>
-    <button id="run">ACTION</button>
+   <title>BCogSphere: Retreival</title>
+		<button id="action">ACTION</button>
     <label>Output:</label>   
-    <div id="output2">Waiting to analyize a great life!</div>
+    <div id="output">Ready!</div>
 </head>
-<body> 
-  <script type="module">
-  import { pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.7.0'
   
-  const generate = document.getElementById("run");   
-  generate.addEventListener("click", async () =>   // Start (
-  {
-      try 
-  {
-      let pipe = await pipeline('text-classification');
-      let output = await pipe('a great life!'); 
-      output2.textContent = JSON.stringify(output);
-  } 
-      catch (error)
-  {
-      console.log("Error:",error.message);
-  }
-  }
-  )//End )
-</script>
-</body>
+	<body> 
+<script type="module"> 
+    import { client } from "https://cdn.jsdelivr.net/npm/@gradio/client@0.1.4/dist/index.min.js";
+
+    const generate = document.getElementById("action");   
+    generate.addEventListener("click", async () =>{
+        try {         
+
+          const app = await client("https://cognitivescience-cogsphere.hf.space");
+          const lastview = await app.predict("/predict", [      
+           "https://youtu.be/leX541Dr2rU?si=ReaFmniyI8y4GJmp",
+          ]);
+           output.textContent = JSON.stringify(lastview.data);     
+          
+            } catch (error){
+                 console.log("Error:",error.message);                
+            }       
+        }       
+)
+    </script>
+    </body>
+</html>
