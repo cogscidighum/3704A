@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>CelSci</title>
+  </head>
 
+  <body>
+    <script>
+        const celscilist = {
+          'dd': { 'info': { 'views': 600 } },
+          'jp': { 'info': { 'views': 400 } },
+        };
+
+        // Step 1: Extract 'views' values into an array
+        const viewsArray = Object.values(celscilist).map(item => item.info.views);
+
+        // Step 2: Calculate the sum of 'views' values
+        const sumOfViews = viewsArray.reduce((total, views) => total + views, 0);
+
+        // Step 3: Calculate the average
+        const averageViews = sumOfViews / viewsArray.length;
+        
+        let sumOfViews = 0;
+        let count = 0;
+
+        for (const key in celscilist) {
+          if (celscilist.hasOwnProperty(key)) {
+            const views = celscilist[key].info.views;
+            sumOfViews += views;
+            count++;
+          }
+        }
+
+        const averageViews = sumOfViews / count;
+        
+        class Celsci {
+          static iscelsci(x) {
+            let y = "false";
+            if (x > averageViews) {
+              y = "true";
+            }
+            return y;
+          }
+        }
+        
+        function checkcelsci(x) {
+          const result = Celsci.iscelsci(celscilist[x]['info']['views']);
+          return result;
+        }
+        
+        document.write(checkcelsci('dd'));
+        
+    </script>
+  </body>
+</html>
