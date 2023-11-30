@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+<html style= "background-color:#77DD77">
+   <title>Your Name</title>
+  <h3 style = "font-color:#E5E4E2; font-family: Arial; font-style: italic">Compare Noam Chomsky's Top Videos!.. Loading....</h3>
+  <head>
+    <script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
+  </head>
+  <body>
+    <gradio-lite>
+      import gradio as gr
+      import pandas as pd
+      def show_df(as1,as2,as3):
+         df = pd.DataFrame({
+            "Videos" : ["The Concept of Language", "Why does the U.S. Support Israel", "On Being Truly Educated", "Chomsky on Religion", "Ali G Interviews"], 
+            "Views (M)" : [1.7, 5.3, 2.2, 1.1, 6.3], 
+            "Duration (Mins)" : [27, 7, 3, 6, 3]})
+         print(as1)
+         df = df.style.highlight_max(color = 'lightgreen', axis = 0)
+         return df
+      with gr.Blocks() as demo:
+        with gr.Row():
+          with gr.Column():
+            data = gr.Dataframe()
+            demo.load(show_df, None, [data])
+      demo.launch()
+    </gradio-lite>
+  </body>
+  <head>
+<script type="text/javascript">
+window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer")
+
+   
+    chart.options.title = { text: "Top Video Views vs. Duration", fontFamily: "Times"};
+        
+
+    var series1 = { //dataSeries - first quarter
+        type: "column",
+        name: "Views (millions)",
+        color: "#77DD77",
+        showInLegend: true
+    };
+
+    var series2 = { //dataSeries - second quarter
+        type: "column",
+        name: "Duration (minutes)",
+        color:"#2C3539",
+        showInLegend: true
+    };
+
+    chart.options.data = [];
+    chart.options.data.push(series1);
+    chart.options.data.push(series2);
+
+
+    series1.dataPoints = [
+            { label: "Video 1", y: 1.7},
+            { label: "Video 2", y: 5.3},
+            { label: "Video 3", y: 2.2 },
+            { label: "Video 4", y: 1.1 },
+            { label: "Video 5", y: 6.3 }
+    ];
+
+    series2.dataPoints = [
+        { label: "Video 1", y: 27},
+        { label: "Video 2", y: 7 },
+        { label: "Video 3", y: 3 },
+        { label: "Video 4", y: 6 },
+        { label: "Video 5", y: 3 }
+    ];
+
+    chart.render();
+}
+</script>
+<script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+</head>
+
+<body>
+    <div id="chartContainer" style="height: 300px; width: 100%;">
+    </div>
+</body>
+</html>
