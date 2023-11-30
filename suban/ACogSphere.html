@@ -4,8 +4,7 @@
    <title>ACogSphere: Sentiment Analysis</title>
     <button id="run">ACTION</button>
     <label>Output:</label>   
-    <div id="output2">JOSCHA BACH is a cognitive scientist working for MIT Media Lab and the Harvard Program for Evolutionary Dynamics. He earned his Ph.D. in cognitive science from the University of Osnabrück, Germany, and has built computational models of motivated decision-making, perception, categorization, and concept formation. He is especially interested in the philosophy of AI and in the augmentation of the human mind. In of the podcasts that he joined with Lex Fridman, he is interested in the concept of lucidity, which refere to metal calrity, an can be achieved by gradually becoming more aware of reality. This process of acquiring mental clarity can be described by seven stages; reactive survival, personal self, social self, rational agency, self-authoring, enlightment, transcendence.
-</div>
+    <div id="output2">Waiting to analyize a great life!</div>
 </head>
 <body> 
   <script type="module">
@@ -17,8 +16,7 @@
       try 
   {
       let pipe = await pipeline('text-classification');
-      let output = await pipe('JOSCHA BACH is a cognitive scientist working for MIT Media Lab and the Harvard Program for Evolutionary Dynamics. He earned his Ph.D. in cognitive science from the University of Osnabrück, Germany, and has built computational models of motivated decision-making, perception, categorization, and concept formation. He is especially interested in the philosophy of AI and in the augmentation of the human mind. In of the podcasts that he joined with Lex Fridman, he is interested in the concept of lucidity, which refere to metal calrity, an can be achieved by gradually becoming more aware of reality. This process of acquiring mental clarity can be described by seven stages; reactive survival, personal self, social self, rational agency, self-authoring, enlightment, transcendence.
-'); 
+      let output = await pipe('JOSCHA BACH is a cognitive scientist working for MIT Media Lab and the Harvard Program for Evolutionary Dynamics. He earned his Ph.D. in cognitive science from the University of Osnabrück, Germany, and has built computational models of motivated decision-making, perception, categorization, and concept formation. He is especially interested in the philosophy of AI and in the augmentation of the human mind. In this particular podcasts that he joined with Lex Fridman, Joshua Bach explores how going through difficult times, or experiencing suffering, can lead to personal growth and self-improvement. The discussion emphasizes that facing challenges can help us become better individuals.'); 
       output2.textContent = JSON.stringify(output);
   } 
       catch (error)
