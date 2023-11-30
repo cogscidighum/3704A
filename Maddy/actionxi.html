@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+<html>
+   <title>Maddy</title>
+	<h3>Jordan Peterson: Analysis</h3>
+	<head>
+		<script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
+	</head>
+	<body>
+		<gradio-lite>
+			import gradio as gr
+			import pandas as pd
+			def show_df(as1,as2,as3):
+				 df = pd.DataFrame({
+					  "Videos" : ["The best way to learn critical thinking", "How to stop procrastinating", "The mind of highly disagreeable people", "This is how your memories affect your deicision making", "How to overcome social anxiety"], 
+					  "Views" : [1900000, 2400000, 2000000, 452000, 8200000], 
+					  "Duration" : [401, 1109, 1009, 2751, 440]})
+				 print(as1)
+				 df = df.style.highlight_max(color = 'lightgreen', axis = 0)
+				 return df
+			with gr.Blocks() as demo:
+				with gr.Row():
+					with gr.Column():
+						data = gr.Dataframe()
+						demo.load(show_df, None, [data])
+			demo.launch()
+		</gradio-lite>
+	</body>
+</html>
