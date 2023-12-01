@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>CelSci</title>
+  </head>
+
+  <body>
+    <script>
+          const celscilist = {
+          'MihalyCsikszentmihalyi': { 'info': { 'views': 952791  } },
+          'js': { 'info': { 'views': 2756311 } },
+          'dk': { 'info': { 'views': 1274668 } },
+          'dh': { 'info': { 'views': 2509952 } },
+          'pc': { 'info': { 'views': 8026 } },
+          'bw': { 'info': { 'views': 41610 } },
+          'ah': { 'info': { 'views': 55561 } },
+          'ts': { 'info': { 'views': 2556445 } },
+          'ah': { 'info': { 'views': 622161 } },
+          'mm': { 'info': { 'views': 44889 } },
+          'jp': { 'info': { 'views': 331219 } },
+          'tg': { 'info': { 'views': 79338 } },
+          'ac': { 'info': { 'views': 23700189 } },
+          'el': { 'info': { 'views': 2190333  } },
+          'el': { 'info': { 'views': 3041 } },
+          'mn': { 'info': { 'views': 41064 } },
+          'rb': { 'info': { 'views': 786938 } },
+          'sz': { 'info': { 'views': 154418 } },
+          'nc': { 'info': { 'views': 126875 } },
+          'nd': { 'info': { 'views': 2190333 } },
+          'lb': { 'info': { 'views': 39106997 } },
+          'as': { 'info': { 'views': 14187265 } },
+          'hg': { 'info': { 'views': 1508566 } },
+          'ynh': { 'info': { 'views': 440574 } },
+          'nc': { 'info': { 'views': 26042 } },
+          'jp': { 'info': { 'views': 672531 } },
+          'ynh': { 'info': { 'views': 1863528 } },
+          'lf': { 'info': { 'views': 530132 } },
+          'pc': { 'info': { 'views': 133554 } },
+          'rh': { 'info': { 'views': 34959 } }
+          'mc': { 'info': { 'views': 76654 } },
+        };
+  
+          // Extract 'views' values into an array
+          const viewsArray = Object.values(celscilist).map(item => item.info.views);
+          // Calculate the sum of 'views' values
+          function calculateAverage(viewsArray ) {
+            const sum = viewsArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+            
+            return sum / viewsArray.length;
+          }
+          
+          class Celsci {
+            static iscelsci(x) {
+              let y = "false";
+              if (x > calculateAverage(viewsArray)) {
+                y = "true";
+              }
+              return y;
+            }
+          }
+          
+          function checkcelsci(x) {
+            const result = Celsci.iscelsci(celscilist[x]['info']['views']);
+            return result;
+          }
+        
+        // Get the max value from the array
+        const maxViews = Math.max(...viewsArray);
+        
+        function findKeyByViews(obj, viewsValue) {
+          return Object.keys(obj).find(key => obj[key].info.views === viewsValue);
+        };
+        // Call the function with data and maxViews as arguments
+        let no1 = findKeyByViews(celscilist, maxViews);
+        
+        document.write("dd is aboveavg? ",checkcelsci('dd')," #1 is: ",no1, " with viewcounts of ", maxViews );
+    </script>
+  </body>
+</html>
