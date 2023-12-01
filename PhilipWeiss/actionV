@@ -39,7 +39,6 @@
           'pc': { 'info': { 'views': 133554 } },
           'rh': { 'info': { 'views': 34959 } }
           'mc': { 'info': { 'views': 76654 } },
-    
         };
 
         // Step 1: Extract 'views' values into an array
