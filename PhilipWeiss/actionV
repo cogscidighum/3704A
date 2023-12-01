@@ -8,7 +8,29 @@
   <body>
     <script>
         const celscilist = {
-          'dd': { 'info': { 'views': 600 } },
+          'dd': { 'info': Mihaly Csikszentmihalyi { 'views': 952791  } },
+          'jp': { 'info': Janelle Shane { 'views': 2700000 } },
+          'jp': { 'info': Daniel Kahneman { 'views': 1200000 } },
+          'jp': { 'info': Donald Hoffman { 'views': 2400000 } },
+          'jp': { 'info': Patricia Churchland { 'views': 8026 } },
+          'jp': { 'info': Bret Weinstein { 'views': 41610 } },
+          'jp': { 'info': Andrew Huberman { 'views': 55561 } },
+          'jp': { 'info': Tom Scott { 'views': 2500000 } },
+          'jp': { 'info': Andrew Huberman { 'views': 556000 } },
+          'jp': { 'info': Melanie Mitchell { 'views': 44000 } },
+          'jp': { 'info': Jordan Peterson { 'views': 236000 } },
+          'jp': { 'info': Timnit Gebru { 'views': 79338 } },
+          'jp': { 'info': Amy Cuddy { 'views': 23700189 } },
+          'jp': { 'info': Elizabeth Loftus { 'views': 2190333  } },
+          'jp': { 'info': Elizabeth Loftus { 'views': 1700 } },
+          'jp': { 'info': Martha Nussbaum { 'views': 40000 } },
+          'jp': { 'info': Russell A. Barkley { 'views': 774000 } },
+          'jp': { 'info': Slavoj Žižek { 'views': 95000 } },
+          'jp': { 'info': Noam Chomsky { 'views': 26,042 } },
+          'jp': { 'info': Nathaniel Drew { 'views': 126000 } },
+          'jp': { 'info': Lara Boyd { 'views': 38000000 } },
+          'jp': { 'info': { 'views': 400 } },
+          'jp': { 'info': { 'views': 400 } },
           'jp': { 'info': { 'views': 400 } },
         };
 
