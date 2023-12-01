@@ -8,4 +8,38 @@ if (computerChoice > 0 && computerChoice < 0.33) {
   computerChoice = "Scissors";
 }
 console.log(computerChoice); 
+#Loops   
+  // loop: JS
+let n=5;
+for (let i = 1; i &lt;= n; i++) {
+console.log(i, 'hi');
+};
+# Gauss story in JS
+function additiveFactorial(n) {
+let result = 0;
+for (let i = 1; i &lt;= n; i++) {
+result += i;
+}
+return result;
+}
+
+const n = parseInt(prompt("Enter a positive integer: "));
+const result = additiveFactorial(n);
+console.log(`The additive factorial of ${n} is ${result}`);
+  # Tower of London Simulation by recursion: JS
+
+function towerOfLondon(n, sourcePeg, auxiliaryPeg, targetPeg) {
+
+if (n === 1) {
+console.log(`Move disk 1 from ${sourcePeg} to ${targetPeg}`);
+return;
+}
+
+towerOfLondon(n - 1, sourcePeg, targetPeg, auxiliaryPeg);
+console.log(`Move disk ${n} from ${sourcePeg} to ${targetPeg}`);
+
+towerOfLondon(n - 1, auxiliaryPeg, sourcePeg, targetPeg);
+}
+const n = parseInt(prompt("Enter the number of disks:"));
+towerOfLondon(n, "A", "B", "C");
   
