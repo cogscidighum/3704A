@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var chart = new CanvasJS.Chart("chartContainer");
+
+            chart.options.axisY = { prefix: "$", suffix: "K", title: "Money Generated from View Count" };
+            chart.options.title = { text: "CelSci Views $ Duration" };
+
+            var series1 = { //dataSeries - first quarter
+                type: "column",
+                name: "Views",
+                showInLegend: true
+            };
+
+            var series2 = { //dataSeries - second quarter
+                type: "column",
+                name: "Duration",
+                showInLegend: true
+            };
+
+            chart.options.data = [];
+            chart.options.data.push(series1);
+            chart.options.data.push(series2);
+
+           series1.dataPoints = [
+                { label: "Daniel Kahneman", y: 1200000 },
+                { label: "Mihaly Csikszentmihalyi", y: 952791 },
+                { label: "Donald Hoffman", y: 2400000 },
+                { label: "Tom Scott", y: 2500000 },
+                { label: "Andrew Huberman", y: 55561 },
+                { label: "Jordan Peterson", y: 236000 } 
+            ];
+
+            series2.dataPoints = [
+                { label: "Daniel Kahneman", y: 20.36 },
+                { label: "Mihaly Csikszentmihalyi", y: 18.55 },
+                { label: "Donald Hoffman", y: 21.50 },
+                { label: "Tom Scott", y: 59.34 },
+                { label: "Andrew Huberman", y: 8.20 },
+                { label: "Jordan Peterson", y: 27.51 } 
+            ];
+          
+            // Set the range for the y-axis
+            chart.options.axisY.maximum = 3000000; // Adjust the maximum value as needed for "Views"
+            chart.options.axisY.minimum = 0;
+
+            // Duration is in minutes, so set a reasonable maximum value
+            chart.options.axisY2 = { prefix: "", title: "Duration (minutes)", maximum: 60, minimum: 0 };
+            series2.axisYType = "secondary";
+
+            chart.render();
+        }
+    </script>
+</head>
+
+<body>
+    <div id="chartContainer" style="height: 400px; width: 100%;"></div>
+</body>
+</html>
