@@ -29,8 +29,8 @@ transformers = await import_transformers_js()
 pipeline = transformers.pipeline
 pipe = await pipeline('sentiment-analysis')
 
-async def classify(Check ):
-	return await pipe(text)
+async def classify(Check):
+	return await pipe(Check)
 
 demo = gr.Interface(classify, "textbox", "json", height=6000, examples=["The danger of AI is weirder than you think", "What AI can do - and can't", "You Look Like a Thing and I Love You | Talks at Google", "Machine learning failures - for art", "TECHTalk Leading the AI/ML Revolution"])
 demo.launch(height=6000)
