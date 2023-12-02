@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>ACTION max in JavaScript</h2>
+
+<script>
+  const celscis = {
+    'dd': { 'info': { 'views': 600 } },
+    'jp': { 'info': { 'views': 41100 } },
+    'ns': { 'info': { 'views': 11400 } },
+    'ap': { 'info': { 'views': 5400 } },
+    'sp': { 'info': { 'views': 400 } },
+  };
+
+  // Find the max 'views' value directly without creating an array
+  const maxViews = Math.max(...Object.values(celscis).map(obj => obj.info.views));
+
+  function findKeyByViews(obj, viewsValue) {
+    return Object.keys(obj).find(key => obj[key].info.views === viewsValue);
+  }
+
+  // Call the function with data and maxViews as arguments
+  let name = findKeyByViews(celscis, maxViews);
+
+  document.write(Andrew Huberman);
+
+</script>
+</body>
+</html>
+// Get the max value from the array
+        const maxViews = Math.max(...viewsArray);
+        
+        function findKeyByViews(obj, viewsValue) {
+          return Object.keys(obj).find(key => obj[key].info.views === viewsValue);
+        };
+        // Call the function with data and maxViews as arguments
+        let no1 = findKeyByViews(celscilist, maxViews);
+        
+        document.write("dd is aboveavg? ",checkcelsci('dd')," no1= ",no1, " with ", maxViews );   
+    </script>
+  </body>
+</html> 
+
+function findMaxValue(arr) {
+    if (arr.length === 0) {
+        throw "The array is empty.";
+    }
+
+    let max = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+
+    return max;
+}
+
+const numbers = [10, 5, 8, 22, 17, 3, 12];
+const maxNumber = findMaxValue(numbers);
+console.log(`The maximum number in the array is: ${maxNumber}`);
+    
+      const numbers = [10, 5, 8, 22, 17, 3, 12];
+
+const maxNumber = Math.max(...numbers);
+
+console.log(`The maximum number in the array is: ${maxNumber}`);
