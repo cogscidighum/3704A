@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+    button {
+      background-color: #f385c6;
+      color: black;
+      padding: 5px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      width: 10%;
+      height: 30px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #f385c6;
+    }
+  
+  </style>
+<head>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <h3>Reading JSON Files: JavaScript</h3>
+  <button type="button" onclick="populate()">Read JSON</button>
+  <pre id="outjson">JSON:</pre>
+</head>
+
+<body>
+  <script>
+    async function populate() {
+      const requestURL = 'https://cogscidighum.github.io/3704A/WingKuanLeng/action10.json';
+      const request = new Request(requestURL);
+
+      const response = await fetch(request);
+      const jsonData = await response.json();
+
+      const formattedJson = JSON.stringify(jsonData, null, 2); // 2 spaces for indentation
+
+      document.getElementById('outjson').textContent = formattedJson;
+    }
+  </script>
+</body>
+
+</html>
