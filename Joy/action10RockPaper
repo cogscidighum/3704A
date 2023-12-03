@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rock Paper Scissors Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0e0e0;
+            text-align: center;
+            padding: 50px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rock Paper Scissors Game</h1>
+    <button onclick="playGame('Rock')">Rock</button>
+    <button onclick="playGame('Paper')">Paper</button>
+    <button onclick="playGame('Scissors')">Scissors</button>
+    <div id="result"></div>
+
+    <script>
+        function playGame(userChoice) {
+            var choices = ['Rock', 'Paper', 'Scissors'];
+            var computerChoice = choices[Math.floor(Math.random() * 3)];
+            var result = '';
+
+            if (userChoice === computerChoice) {
+                result = 'It\'s a tie!';
+            } else if (
+                (userChoice === 'Rock' && computerChoice === 'Scissors') ||
+                (userChoice === 'Scissors' && computerChoice === 'Paper') ||
+                (userChoice === 'Paper' && computerChoice === 'Rock')
+            ) {
+                result = 'You win!';
+            } else {
+                result = 'Computer wins!';
+            }
+
+            document.getElementById('result').innerText = 'Your choice: ' + userChoice + 
+                '\nComputer\'s choice: ' + computerChoice + 
+                '\n' + result;
+        }
+    </script>
+</body>
+</html>
