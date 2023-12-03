@@ -1,53 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <title>stlite app</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@stlite/mountable@0.39.0/build/stlite.css"
-    />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="https://cdn.jsdelivr.net/npm/@stlite/mountable@0.39.0/build/stlite.js"></script>
-    <script>
-      stlite.mount(
-        `
-import streamlit as st
+<script type="text/javascript">
+window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer")
 
-st.title("Anil Seth")
+    chart.options.axisY = {suffix: "K" };
+    chart.options.title = { text: "Anil Seth - Video Views & Duration", fontFamily: "ComicSans",};
+        
 
-import numpy as np
-import pandas as pd
+    var series1 = { //dataSeries - first quarter
+        type: "column",
+        name: "Views",
+        color: "teal",
+        showInLegend: true
+    };
 
-st.subheader("Important Youtube Talks - Views and Duration")
-data = np.array([
-    [14187265, 1012],
-    [0, 0],
-    [0, 0],
-    [0, 0],
-    [0, 0]
-])
+    var series2 = { //dataSeries - second quarter
+        type: "column",
+        name: "Duration (minutes)",
+        color:"darkseagreen",
+        showInLegend: true
+    };
 
-data = pd.DataFrame(
-    data,
-    columns=['Views', 'Duration (seconds)'])
+    chart.options.data = [];
+    chart.options.data.push(series1);
+    chart.options.data.push(series2);
 
-st.bar_chart(data)
 
-st.subheader("Anil Seth Youtube Talks DataFrame")
-df = pd.DataFrame(data)
+    series1.dataPoints = [
+            { label: "Video 1", y: 8},
+            { label: "Video 2", y: 21},
+            { label: "Video 3", y: 194 },
+            { label: "Video 4", y: 99 },
+            { label: "Video 5", y: 13 }
+    ];
 
-st.dataframe(df)
-`,
-        document.getElementById("root")
-      );
-    </script>
-  </body>
+    series2.dataPoints = [
+        { label: "Video 1", y: 15.22},
+        { label: "Video 2", y: 3.50 },
+        { label: "Video 3", y: 5.39 },
+        { label: "Video 4", y: 23.11 },
+        { label: "Video 5", y: 10.30 }
+    ];
+
+    chart.render();
+}
+</script>
+<script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+</head>
+
+<body>
+    <div id="chartContainer" style="height: 300px; width: 100%;">
+    </div>
+</body>
 </html>
