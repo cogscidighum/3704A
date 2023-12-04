@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<!DOCTYPE html>
+<html>
+  <head>
+      <script type="module">
+    import { pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.6.2';
+</script>
+    <script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite@0.4.1/dist/lite.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gradio/lite@0.4.1/dist/lite.css" />
+  </head>
+    <style>
+        body {
+            font-family: 'mulish';
+        }
+    </style>
+	<body>
+      <h3>
+        Kaylee Chaput's CelSci: Anil Seth - this will take a few seconds to load...
+      </h3>
+<gradio-lite>
+
+<gradio-requirements>
+transformers_js_py
+</gradio-requirements>
+
+<gradio-file name="app.py" entrypoint>
+from transformers_js import import_transformers_js
+import gradio as gr
+transformers = await import_transformers_js()
+pipeline = transformers.pipeline
+pipe = await pipeline('sentiment-analysis')
+
+async def classify(text):
+  return await pipe(text)
+
+demo = gr.Interface(classify, "textbox", "json", examples=["Can science explain consciousness and reality | Anil Seth", "How Do Our Brains Perceive the World Around Us? - with Anil Seth", "The Scientific Problem of Consciousness", "Anil Seth: How your brain invents your self","Anil Seth: How We Build Perception From The Inside Out"])
+demo.launch()
+</gradio-file>
+</gradio-lite>
+    </body>
+</html>
