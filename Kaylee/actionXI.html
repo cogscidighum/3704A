@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Your Name</title>
+   <script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
+</head>
+<body>
+   <h3>Maximum view count and video duration for Anil Seth - taking a few seconds to load...</h3>
+   
+  	<img src="https://media.tenor.com/13VnwKt5qS0AAAAd/waiting.gif" alt="waiting!!" style="width:380px;height:250px;">
+
+   <gradio-lite>
+      import gradio as gr
+      import pandas as pd
+
+      def show_df(as1, as2, as3):
+         df = pd.DataFrame({
+            "Videos": ["Can science explain consciousness and reality | Anil Seth", "How Do Our Brains Perceive the World Around Us? - with Anil Seth",
+                       "The Scientific Problem of Consciousness", "Anil Seth: How your brain invents your self",
+                       "Anil Seth: How We Build Perception From The Inside Out"],
+            "Views": [8406, 21702, 194390, 99320, 13802],
+            "Duration": [15.22, 3.5, 5.39, 23.11, 10.3]
+         })
+         print(as1)
+         df = df.style.highlight_max(color='lightgreen', axis=0)
+         return df
+
+      with gr.Blocks() as demo:
+         with gr.Row():
+            with gr.Column():
+               data = gr.Dataframe()
+               demo.load(show_df, None, [data])
+         demo.launch()
+   </gradio-lite>
+</body>
+</html>
