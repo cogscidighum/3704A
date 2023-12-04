@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 <html style= "background-color:lightblue">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +7,7 @@
 
 body { 
   margin: 0;
-  font-family: mulish;
+  font-family: gillsans;
 }
 
 .header {
@@ -67,147 +66,87 @@ body {
 .sticky + .content {
   padding-top: 60px;
 }
+
+.button {
+  border: none;
+  color: white;
+  padding: 3px 17px;
+  text-align: center;
+  text-decoration: none;
+  display: inline;
+  font-size: 12px;
+  font-family:gillsans;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid red;
+}
+
+.button1:hover {
+  background-color: red;
+  color: white;
+}
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid white;
+}
+
+.button2:hover {
+  background-color: red;
+  color: white;
+}
+
+.button3 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #ff0000;
+}
+
+.button3:hover {
+  background-color: #ff0000;
+  color: white;
+}
+
 </style>
 </head>
 <body>
 <div class="header">
-  <a href="#default" class="logo">Anil Seth - CGSC 3704A</a>
+  <a href="#default" class="logo">Kaylee Chaput - CGSC 3704A</a>
   <div class="header-right">
-    <a class="active" href="#home">Home</a>
-    <a href="https://cogscidighum.github.io/3704A/Kaylee/actionX.html">
-    <button>Stats</button>
-</a>
-    <a href="#about">Videos</a>
-    <a href="#about">More</a>
+    <a href="https://cogscidighum.github.io/3704A/Kaylee/home.html">
+    <button class="button button1">Home</button>
+    <a href="https://cogscidighum.github.io/3704A/Kaylee/stats.html">
+    <button class="button button1">Stats</button>
+    <a href="https://cogscidighum.github.io/3704A/Kaylee/videos.html">
+    <button class="button button1">Videos</button>
+    </a>
   </div>
 </div>
-<center><h3>Here is a graph comparing the amount of views and the duration of 5 of Anil Seth's YouTube videos:
 <center><div style="padding:20px">
-<br>
-<head>
-<script type="text/javascript">
-window.onload = function () {
-    var chart = new CanvasJS.Chart("chartContainer")
-
-    chart.options.axisY = {suffix: "K" };
-    chart.options.title = { text: "Anil Seth - Video Views & Duration", fontFamily: "ComicSans",};
-        
-
-    var series1 = { //dataSeries - first quarter
-        type: "column",
-        name: "Views",
-        color: "teal",
-        showInLegend: true
-    };
-
-    var series2 = { //dataSeries - second quarter
-        type: "column",
-        name: "Duration (minutes)",
-        color:"darkseagreen",
-        showInLegend: true
-    };
-
-    chart.options.data = [];
-    chart.options.data.push(series1);
-    chart.options.data.push(series2);
-
-
-    series1.dataPoints = [
-            { label: "Video 1", y: 8},
-            { label: "Video 2", y: 21},
-            { label: "Video 3", y: 194 },
-            { label: "Video 4", y: 99 },
-            { label: "Video 5", y: 13 }
-    ];
-
-    series2.dataPoints = [
-        { label: "Video 1", y: 15.22},
-        { label: "Video 2", y: 3.50 },
-        { label: "Video 3", y: 5.39 },
-        { label: "Video 4", y: 23.11 },
-        { label: "Video 5", y: 10.30 }
-    ];
-
-    chart.render();
-}
-</script>
-<script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
-</head>
+<marquee behavior="scroll" direction="right" font-family="gillsans">Here are some popular YouTube videos with Anil Seth!</marquee>
+<u><h2>Video 1:</h2></u>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KzchHqEEh1I?si=9eOwf6AuUqhO6Xqq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<br><p>enter summary here</p>
+<u><h2>Video 2:</h2></u>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EWEwpS8L5Cw?si=uxEGA_7pwwLRTrQM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<br><p>enter summary here</p>
+<u><h2>Video 3:</h2></u>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CJhSSPO8Ulk?si=x-UYq_3f4QMX3si2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<br><p>enter summary here</p>
+<u><h2>Video 4:</h2></u>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/z7_LwuuPsAE?si=02ZaoeMNU8drOvCA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<br><p>enter summary here</p>
+<u><h2>Video 5:</h2></u>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FfOu14wIvM4?si=WrbwgTtSBMl0H6JM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<br><p>enter summary here</p>
+</div>
 <body>
-    <div id="chartContainer" style="height: 300px; width: 100%;">
-    </div>
-</body>
-<head>
-   <title>Your Name</title>
-   <script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
-</head>
-<body>
-   <h4 style="align:justify">Below you can view the maximum view count and video duration for Anil Seth's YouTube videos. This will take a few seconds to load...</h4>
-   
-  	<img src="https://media.tenor.com/13VnwKt5qS0AAAAd/waiting.gif" alt="waiting!!" style="width:280px;height:150px;"><br>
-    
-   <gradio-lite>
-      import gradio as gr
-      import pandas as pd
-
-      def show_df(as1, as2, as3):
-         df = pd.DataFrame({
-            "Videos": ["Can science explain consciousness and reality | Anil Seth", "How Do Our Brains Perceive the World Around Us? - with Anil Seth",
-                       "The Scientific Problem of Consciousness", "Anil Seth: How your brain invents your self",
-                       "Anil Seth: How We Build Perception From The Inside Out"],
-            "Views": [8406, 21702, 194390, 99320, 13802],
-            "Duration": [15.22, 3.5, 5.39, 23.11, 10.3]
-         })
-         print(as1)
-         df = df.style.highlight_max(color='lightgreen', axis=0)
-         return df
-
-      with gr.Blocks() as demo:
-         with gr.Row():
-            with gr.Column():
-               data = gr.Dataframe()
-               demo.load(show_df, None, [data])
-         demo.launch()
-   </gradio-lite>
-</body>
-<body>
-  <head>
-      <script type="module">
-    import { pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.6.2';
-</script>
-    <script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite@0.4.1/dist/lite.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gradio/lite@0.4.1/dist/lite.css" />
-  </head>
-    <style>
-        body {
-            font-family: 'mulish';
-        }
-    </style>
-	<body>
-      <h4 style="align:justify">Here you can view the positivity score of the videos by clicking on the title of one in the vertical menu and then clicking 'submit'. This will take a few seconds to load...
-      </h4>
-<gradio-lite>
-
-<gradio-requirements>
-transformers_js_py
-</gradio-requirements>
-
-<gradio-file name="app.py" entrypoint>
-from transformers_js import import_transformers_js
-import gradio as gr
-transformers = await import_transformers_js()
-pipeline = transformers.pipeline
-pipe = await pipeline('sentiment-analysis')
-
-async def classify(text):
-  return await pipe(text)
-
-demo = gr.Interface(classify, "textbox", "json", examples=["Can science explain consciousness and reality | Anil Seth", "How Do Our Brains Perceive the World Around Us? - with Anil Seth", "The Scientific Problem of Consciousness", "Anil Seth: How your brain invents your self","Anil Seth: How We Build Perception From The Inside Out"])
-demo.launch()
-</gradio-file>
-</gradio-lite>
-</body>
-<body>
-<h4 style="color:red">Click on the "Videos" tab at the top of the page to see more info about the 5 videos featured in these stats!</h4>
+<h4 style="color:red">Click on the "Stats" tab at the top of the webpage to see more analytics about/compare these 5 videos!</h4>
 </body>
 </html>
