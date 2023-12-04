@@ -1,32 +1,62 @@
 <!DOCTYPE html>
 <html>
-	<head>
-    <body style="background-color: #FFEB00;">
-    <h2 style="font-family: 'Arial', sans-serif;text-align: center;"
-      <h2>
-        Rock Paper Scissors! 
-         <img src=https://miro.medium.com/v2/resize:fit:828/format:webp/1*8du96SQUQ0NlWmWvVu20Zw.png
-         format=750w alt="RPS" width="50%" height="50%" class="center-aligned">
-      </h2>
-var results=0;
 
-for (var i=0;i<1;i++)
-  {
- var userChoice = prompt("rock (r), paper (p) or scissor (s)?");
-var computerChoice = Math.random();
-if (computerChoice > 0 && computerChoice < 0.33) {
-  computerChoice = "r";
-} else if (computerChoice > 0.34 && computerChoice < 0.67) {
-  computerChoice = "p";
-} else {
-  computerChoice = "s";
-}
+<head>
+    <title>Rock Paper Scissors Game</title>
+    <style>
+        body {
+            background-color: #FFEB00;
+            text-align: center;
+        }
 
-if (userChoice+computerChoice=="sp" || userChoice+computerChoice=="rs" || userChoice+computerChoice=="pr")  
-{
-results+=1;
-}
-document.write(userChoice,computerChoice, results, " "); 
-}
+        h2 {
+            font-family: 'Arial', sans-serif;
+        }
+
+        .center-aligned {
+            width: 50%;
+            height: 50%;
+            margin: 0 auto;
+            display: block;
+        }
+
+        #result-container {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Rock Paper Scissors!</h2>
+    <button onclick="startGame()">Let's Play!</button>
+    <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*8du96SQUQ0NlWmWvVu20Zw.png" alt="RPS"
+        class="center-aligned">
+
+    <div id="result-container"></div>
+
+    <script>
+        var results = 0;
+
+        function startGame() {
+            var userChoice = prompt("rock (r), paper (p) or scissor (s)?");
+            var computerChoice = Math.random();
+            if (computerChoice > 0 && computerChoice < 0.33) {
+                computerChoice = "r";
+            } else if (computerChoice > 0.34 && computerChoice < 0.67) {
+                computerChoice = "p";
+            } else {
+                computerChoice = "s";
+            }
+
+            if (userChoice + computerChoice == "sp" || userChoice + computerChoice == "rs" || userChoice + computerChoice == "pr") {
+                results += 1;
+            }
 
 
+            document.getElementById("result-container").innerHTML = "Result: " + userChoice + computerChoice + results;
+        }
+    </script>
+</body>
+
+</html>
