@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Your Name</title>
+   <script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
+</head>
+
+<body>
+   <h3>Your CelSci Max!, taking a few seconds to load...</h3>
+
+   <gradio-lite>
+      import gradio as gr
+      import pandas as pd
+
+      def show_df(as1, as2, as3):
+         df = pd.DataFrame({
+            "Videos": ["Daniel Kahneman: The Trouble with Confidence", "Daniel Kahneman: Why We Make Bad Decisions About Money (And What We Can Do About It)",
+                       "Daniel Kahneman: Adversarial Collaboration", "It's all In Your Head: How Do We Really Form Opinions? - Professor Daniel Kahneman",
+                       "2012 - My Recipe for a Better Tomorrow - Professor Daniel Kahneman"],
+            "Views": [232000, 2100000, 27000, 136000, 96000],
+            "Duration": [2.57, 3.57, 2.14, 16.32, 16.17]
+         })
+         print(as1)
+         df = df.style.highlight_max(color='lightgreen', axis=0)
+         return df
+
+      with gr.Blocks() as demo:
+         with gr.Row():
+            with gr.Column():
+               data = gr.Dataframe()
+               demo.load(show_df, None, [data])
+         demo.launch()
+   </gradio-lite>
+</body>
+
+</html>
