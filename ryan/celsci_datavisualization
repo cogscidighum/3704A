@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+<script type="text/javascript">
+window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer", {
+        title: {
+            text: "Ryan Holiday - Views and Minutes"
+        },
+        axisY: {
+            title: "Views",
+            interval: 250000,
+            titleFontColor: "#4B0082", // Indigo color for Views
+            lineColor: "#4B0082",
+            labelFontColor: "#4B0082",
+            tickColor: "#4B0082"
+        },
+        axisY2: {
+            title: "Duration (Minutes)",
+            lineColor: "#00FFFF", // Cyan color for Duration
+            titleFontColor: "#00FFFF",
+            labelFontColor: "#00FFFF",
+            tickColor: "#00FFFF"
+        },
+        legend: {
+            cursor: "pointer",
+            itemclick: toggleDataSeries
+        },
+        data: [{
+            type: "column",
+            name: "Views",
+            showInLegend: true,
+            color: "#4B0082", // Indigo color for Views
+            dataPoints: [
+                { label: "These Simple Words Will Help You Through Life's Most Difficult Situations", y: 1600000 },
+                { label: "60 Stoic Lessons In 1 Minute Or Less", y: 497000 },
+                { label: "How The Stoics Dealt With Anxiety (10 Strategies)", y: 988000 },
+                { label: "Ryan Holiday of Daily Stoic on the Fascinating Life of Marcus Aurelius", y: 4100000 },
+                { label: "50 Rules For Life From Marcus Aurelius", y: 243000 }
+            ]
+        },
+        {
+            type: "column",
+            name: "Duration in Minutes",
+            axisYType: "secondary",
+            showInLegend: true,
+            color: "#00FFFF", // Cyan color for Duration
+            dataPoints: [
+                { label: "These Simple Words Will Help You Through Life's Most Difficult Situations", y: 9.65 },
+                { label: "60 Stoic Lessons In 1 Minute Or Less", y: 45.52 },
+                { label: "How The Stoics Dealt With Anxiety (10 Strategies)", y: 11.25 },
+                { label: "Ryan Holiday of Daily Stoic on the Fascinating Life of Marcus Aurelius", y: 14.83 },
+                { label: "50 Rules For Life From Marcus Aurelius", y: 37.28 }
+            ]
+        }]
+    });
+
+    chart.render();
+
+    function toggleDataSeries(e) {
+        if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+            e.dataSeries.visible = false;
+        } else {
+            e.dataSeries.visible = true;
+        }
+        chart.render();
+    }
+}
+</script>
+</head>
+
+<body>
+    <div id="chartContainer" style="height: 300px; width: 100%;">
+    </div>
+</body>
+</html>
