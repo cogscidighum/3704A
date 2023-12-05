@@ -6,7 +6,7 @@ window.onload = function () {
     var chart = new CanvasJS.Chart("chartContainer");
 
     chart.options.axisY = { prefix: "$", suffix: "K" };
-    chart.options.title = { text: "CelSci Views $ Duration" };
+    chart.options.title = { text: "Nussbaum Views $ Duration" };
 
     var series1 = { //dataSeries - first quarter
         type: "column",
@@ -26,19 +26,19 @@ window.onload = function () {
 
 
     series1.dataPoints = [
-            { label: "Video 1", y: 58 },
-            { label: "Video 2", y: 69 },
-            { label: "Video 3", y: 80 },
-            { label: "Video 4", y: 74 },
-            { label: "Video 5", y: 64 }
+            { label: "Video 1", y: 41000 },
+            { label: "Video 2", y: 11000 },
+            { label: "Video 3", y: 85000 },
+            { label: "Video 4", y: 96000 },
+            { label: "Video 5", y: 3000 }
     ];
 
     series2.dataPoints = [
-        { label: "Video 1", y: 63 },
-        { label: "Video 2", y: 73 },
-        { label: "Video 3", y: 88 },
-        { label: "Video 4", y: 77 },
-        { label: "Video 5", y: 60 }
+        { label: "Video 1", y: 60 },
+        { label: "Video 2", y: 8 },
+        { label: "Video 3", y: 65 },
+        { label: "Video 4", y: 56 },
+        { label: "Video 5", y: 55 }
     ];
 
     chart.render();
