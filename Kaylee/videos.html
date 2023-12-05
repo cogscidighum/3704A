@@ -70,11 +70,11 @@ body {
 .button {
   border: none;
   color: white;
-  padding: 3px 17px;
+  padding: 3px 35px;
   text-align: center;
   text-decoration: none;
   display: inline;
-  font-size: 12px;
+  font-size: 18px;
   font-family:gillsans;
   transition-duration: 0.2s;
   cursor: pointer;
@@ -83,66 +83,109 @@ body {
 .button1 {
   background-color: white; 
   color: black; 
-  border: 2px solid red;
+  border: 2px solid darkgreen;
+  border-radius: 50%;
 }
 
 .button1:hover {
-  background-color: red;
+  background-color: darkgreen;
   color: white;
 }
 
 .button2 {
   background-color: white; 
   color: black; 
-  border: 2px solid white;
+  border: 2px solid coral;
+  border-radius: 50%;
 }
 
 .button2:hover {
-  background-color: red;
+  background-color: coral;
   color: white;
 }
 
 .button3 {
   background-color: white; 
   color: black; 
-  border: 2px solid #ff0000;
+  border: 2px solid red;
+  border-radius: 50%;
 }
 
 .button3:hover {
-  background-color: #ff0000;
+  background-color: red;
   color: white;
 }
 
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
 </style>
 </head>
 <body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+
+let mybutton = document.getElementById("myBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
 <div class="header">
-  <a href="#default" class="logo">Kaylee Chaput - CGSC 3704A</a>
+  <a href="#default" class="logo">Kaylee Chaput - 101230130 - CGSC 3704A</a>
   <div class="header-right">
     <a href="https://cogscidighum.github.io/3704A/Kaylee/home.html">
     <button class="button button1">Home</button>
     <a href="https://cogscidighum.github.io/3704A/Kaylee/stats.html">
-    <button class="button button1">Stats</button>
+    <button class="button button2">Stats</button>
     <a href="https://cogscidighum.github.io/3704A/Kaylee/videos.html">
-    <button class="button button1">Videos</button>
+    <button class="button button3">Videos</button>
     </a>
   </div>
 </div>
-<center><div style="padding:20px">
+<center><div style="padding:20px; margin-left: 100px; margin-right:100px">
 <marquee behavior="scroll" direction="right" font-family="gillsans">Here are some popular YouTube videos with Anil Seth!</marquee>
-<u><h2>Video 1:</h2></u>
+<u><h2>Video 1: Can science explain consciousness and reality?</h2></u>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/KzchHqEEh1I?si=9eOwf6AuUqhO6Xqq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <br><p>enter summary here</p>
-<u><h2>Video 2:</h2></u>
+<u><h2>Video 2: How do our brains perceive the world around us?</h2></u>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EWEwpS8L5Cw?si=uxEGA_7pwwLRTrQM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <br><p>enter summary here</p>
-<u><h2>Video 3:</h2></u>
+<u><h2>Video 3: The scientific problem of consciousness</h2></u>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CJhSSPO8Ulk?si=x-UYq_3f4QMX3si2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <br><p>enter summary here</p>
-<u><h2>Video 4:</h2></u>
+<u><h2>Video 4: How your brain invents your "self"</h2></u>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/z7_LwuuPsAE?si=02ZaoeMNU8drOvCA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <br><p>enter summary here</p>
-<u><h2>Video 5:</h2></u>
+<u><h2>Video 5: How we build perception from the inside out</h2></u>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FfOu14wIvM4?si=WrbwgTtSBMl0H6JM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <br><p>enter summary here</p>
 </div>
