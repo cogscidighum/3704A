@@ -25,7 +25,7 @@
     </style>
     <body> 
     <h1>CogSciDigHumJS</h1>
-    <iframe src="https://cogsphere-acogsphere.hf.space" frameborder="0" width="1000"height="500"></iframe>
+    <iframe src="https://cognitivescience-agcogsphere.hf.space" frameborder="0" width="1000"height="500"></iframe>
     <br>  
     <br><br>
     <label for "nameinput">Name:</label>
@@ -84,7 +84,7 @@
     const generate = document.getElementById("button1");   
     generate.addEventListener("click", async () =>{
         try {         
-            const app = await client("https://cogsphere-acogsphere.hf.space");
+            const app = await client("https://cognitivescience-agcogsphere.hf.space");
             const result = await app.predict(0, [		
                             nameinput.value, // string  in 'Name' Textbox component		
                             (select2.value).toString(), // Rate	
