@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+<html>
+   <title>Darcy ActionXI</title>
+	<h3>Darcy's CelSci Max!, taking a few seconds to load...</h3>
+	<head>
+		<script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
+	</head>
+	<body>
+		<gradio-lite>
+			import gradio as gr
+			import pandas as pd
+			def show_df(as1,as2,as3):
+				 df = pd.DataFrame({
+					  "Videos" : ["Video 1: Donald Hoffman - What is reality?", "Video 2: Truth vs. Reality: How we evolved to survive, not to see what’s really there", "Video 3: Does Consciousness Survive Death?", "Video 4: The Case Against Reality", "Video 5: What is consciousness?"], 
+					  "Views" : [173747, 755095, 127542, 846064, 256368], 
+					  "Duration in seconds" : [633, 1632, 554, 6759, 2062]})
+				 print(as1)
+				 df = df.style.highlight_max(color = 'lightgreen', axis = 0)
+				 return df
+			with gr.Blocks() as demo:
+				with gr.Row():
+					with gr.Column():
+						data = gr.Dataframe()
+						demo.load(show_df, None, [data])
+			demo.launch()
+		</gradio-lite>
+	</body>
+</html>
