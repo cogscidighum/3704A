@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 <html>
-   <title>Rachelle Bazinet</title>
+   <title>Rachelle Bazinet - Action 11</title>
   <h3>Your CelSci Max!, taking a few seconds to load...</h3>
   <head>
     <script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
@@ -12,9 +12,9 @@
       import pandas as pd
       def show_df(as1,as2,as3):
          df = pd.DataFrame({
-            "Videos" : ["Video 1", "Video 2", "Video 3", "Video 4", "Video 5"], 
-            "Views" : [500, 2000, 540, 300, 200], 
-            "Duration" : [30, 20, 70, 35, 22]})
+            "Videos" : ["Neurophilosophy and free will - Patricia Churchland", "Neurophilosophy - Patricia Churchland", "Patricia Churchland on Eliminative Materialism", "The Brains Behind Morality. | Patricia Churchland | TEDxNorrköping", "What is Frank Jackson's Mary Argument? Patricia Churchland for the Royal Institute of Philosophy"], 
+            "Views" : [31656, 28208, 58934, 8163, 4200], 
+            "Duration in minutes" : [16, 14, 9, 19, 16]})
          print(as1)
          df = df.style.highlight_max(color = 'lightgreen', axis = 0)
          return df
