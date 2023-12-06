@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script type="module">
+    import { pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.6.2';
+</script>
+    <script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite@0.4.1/dist/lite.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gradio/lite@0.4.1/dist/lite.css" />
+  </head>
+  <body>
+      <h3>
+        Rachelle Bazinet and Patricia Churchland, Taking a few seconds to load...
+      </h3>
+<gradio-lite>
+
+<gradio-requirements>
+transformers_js_py
+</gradio-requirements>
+
+<gradio-file name="app.py" entrypoint>
+from transformers_js import import_transformers_js
+import gradio as gr
+transformers = await import_transformers_js()
+pipeline = transformers.pipeline
+pipe = await pipeline('sentiment-analysis')
+
+async def classify(text):
+  return await pipe(text)
+
+demo = gr.Interface(classify, "textbox", "json", examples=["Neurophilosophy and free will - Patricia Churchland", "Neurophilosophy - Patricia Churchland", "Patricia Churchland on Eliminative Materialism", "The Brains Behind Morality. | Patricia Churchland | TEDxNorrköping","What is Frank Jackson's Mary Argument? Patricia Churchland for the Royal Institute of Philosophy"])
+demo.launch()
+</gradio-file>
+</gradio-lite>
+    </body>
+</html>
