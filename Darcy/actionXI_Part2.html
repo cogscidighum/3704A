@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+      <script type="module">
+    import { pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.6.2';
+</script>
+		<script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite@0.4.1/dist/lite.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gradio/lite@0.4.1/dist/lite.css" />
+	</head>
+	<body style="background-color: #f0f8ff;">
+      <h3>
+        Darcy and CelSci Name: Donald Hoffman, Taking a few seconds to load...
+      </h3>
+<gradio-lite>
+
+<gradio-requirements>
+transformers_js_py
+</gradio-requirements>
+
+<gradio-file name="app.py" entrypoint>
+from transformers_js import import_transformers_js
+import gradio as gr
+transformers = await import_transformers_js()
+pipeline = transformers.pipeline
+pipe = await pipeline('sentiment-analysis')
+
+async def classify(text):
+	return await pipe(text)
+
+demo = gr.Interface(classify, "textbox", "json", examples=["Donald Hoffman - What is reality?", "Truth vs. Reality: How we evolved to survive, not to see what’s really there | Donald Hoffman ", "Does Consciousness Survive Death? | Prof. Donald Hoffman | The Tim Ferriss Show", "The Case Against Reality | Prof. Donald Hoffman on Conscious Agent Theory","What is consciousness? | Donald Hoffman and Lex Fridman"])
+demo.launch()
+</gradio-file>
+</gradio-lite>
+    </body>
+</html>
