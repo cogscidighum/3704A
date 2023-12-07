@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="background-color: #89CFF0;">
 
 <head>
   <h2 style="color: blue;">CogSciDigHumJS</h2>
@@ -18,44 +18,33 @@
     var celscilist = [
       'Celscis List', 'Anil Seth', 'Andrew2 Huberman', 'Donald Hoffman', 'Doug Hofstadter', 'Howard Gardner', 'Janelle Shane', 'Daniel Kahneman', 'Elizabeth Loftus', 'Elizabeth2 Loftus', 'Patricia Churchland', 'Bret Weinstein', 'Andrew Huberman', 'Tom Scott', 'Melanie Mitchell', 'Jordan Peterson', 'Timnit Gebru', 'Amy Cuddy', 'Mihaly Csikszentmihalyi', 'Martha Nussbaum', 'Noam Chomsky', 'Russell A Barkley', 'Slavoj Žižek', 'Nathaniel Drew', 'Lara Boyd', 'Yuval Noah Harari', 'Jordan2 Peterson', 'Yuval2 Noah Harari', 'Joscha Bach', 'Poppy Crum', 'Ryan Holiday', 'Marvin Chun', 'Jim Davies'
     ]
-
     var select = document.createElement("select");
     var select2 = document.createElement("select");
 
-    
     function addOption(value, text) {
-    
       var option = document.createElement("option");
-
       option.value = value;
       option.text = text;
-      
       select.appendChild(option);
     }
 
     function addOption2(value, text) {
-   
       var option2 = document.createElement("option");
-      
       option2.value = value;
       option2.text = text;
-     
       select2.appendChild(option2);
     }
 
-    
     for (var i = 0; i < celscilist.length; i++) {
       addOption(i, celscilist[i]);
     }
 
-    
     addOption2(0, "Rate");
 
     for (var i = 0; i < 5; i++) {
       addOption2(i, i + 1);
     }
 
-   
     document.body.appendChild(select);
     document.body.appendChild(select2);
   </script>
@@ -64,15 +53,13 @@
     const generate = document.getElementById("button1");
     generate.addEventListener("click", async () => {
       try {
-
         const app = await client("https://cogsphere-acogsphere.hf.space");
         const result = await app.predict(0, [
-          nameinput.value,	
-          select2.value.toString(),		
+          nameinput.value,
+          select2.value.toString(),
           celscilist[select.value],
         ]);
-       
-        output.innerHTML = "Sent!" 
+        output.innerHTML = "Sent!"
       } catch (error) {
         console.log("Error:", error.message);
       }
