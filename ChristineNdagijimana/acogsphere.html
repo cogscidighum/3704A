@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>ACogSphere: Sentiment Analysis</title>
+    <button id="run">ACTION</button>
+    <label>Output:</label>   
+    <div id="output2">This interview with Jordan Peterson was conducted by Russel Brand on his independent media platform. A lot of things were discussed in this interview, some topics that would even require a separate video to thoroughly tackle them. Nonetheless, Peterson and Brand did a good job of covering necessary points and evoking deeper thought and interest on some there points. Topics they covered included the current culture wars, identity politics, censorship, and a bit of religion and theology.</div>
+</head>
+<body> 
+  <script type="module">
+  import { pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.7.0'
+  
+  const generate = document.getElementById("run");   
+  generate.addEventListener("click", async () =>   // Start (
+  {
+      try 
+  {
+      let pipe = await pipeline('text-classification');
+      let output = await pipe('a great life!'); 
+      output2.textContent = JSON.stringify(output);
+  } 
+      catch (error)
+  {
+      console.log("Error:",error.message);
+  }
+  }
+  )//End )
+</script>
+</body>
