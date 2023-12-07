@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer");
+
+    chart.options.axisY = { prefix: "", suffix: "" };
+    chart.options.title = { text: "A selection of Bret Weinstein's Youtube Uploads: Number of Views" };
+
+    var series1 = { //dataSeries - first quarter
+        type: "column",
+        name: "Views",
+        showInLegend: false
+    };
+
+    chart.options.data = [];
+    chart.options.data.push(series1);
+    
+
+
+    series1.dataPoints = [
+            { label: "The Evolutionist Channel Intro", y: 14799, color: "#4CAF50" },
+            { label: "Sympathy and Empathy An Evolutionary Perspective" , y: 13573, color: "#4CAF50" },
+            { label: "Bret Weinstein Testifies to Congress on The Evergreen State College riots, Free Speech & Safe Spaces", y: 2168735, color: "#4CAF50" },
+            { label: "Andy Ngo discusses Antifa attacks with Bret Weinstein | DarkHorse Podcast #1", y: 267292, color: "#4CAF50" },
+            { label: "Bret and Heather 17th DarkHorse Podcast Livestream: Evergreen, 3 Years Post Meltdown", y: 27901, color: "#4CAF50" },
+            { label: "Bret and Heather 10th DarkHorse Podcast Livestream: SARS-CoV2--Unintelligent Design?", y: 49499, color: "#4CAF50" },
+            { label: "The War on Ivermectin: Bret Speaks with Pierre Kory on the Darkhorse Podcast", y: 68446, color: "#4CAF50" },
+            { label: "RFK Jr From the Vault | Unreleased Darkhorse Podcast from 2021", y: 251582, color: "#4CAF50"  },
+                       
+    ];
+
+    
+
+    chart.render();
+}
+</script>
+<script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+</head>
+
+<body>
+    <div id="chartContainer" style="height: 2000px; width: 100%;">
+    </div>
+</body>
+</html>
