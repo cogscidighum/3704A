@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+      <script type="module">
+    import { pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.6.2';
+</script>
+		<script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite@0.4.1/dist/lite.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gradio/lite@0.4.1/dist/lite.css" />
+	</head>
+	<body>
+      <h3>
+        Dominic Weiss - Nathaniel Drew... Loading...
+      </h3>
+<gradio-lite>
+
+<gradio-requirements>
+transformers_js_py
+</gradio-requirements>
+
+<gradio-file name="app.py" entrypoint>
+from transformers_js import import_transformers_js
+import gradio as gr
+transformers = await import_transformers_js()
+pipeline = transformers.pipeline
+pipe = await pipeline('sentiment-analysis')
+
+async def classify(text):
+	return await pipe(text)
+
+demo = gr.Interface(classify, "textbox", "json", examples=["For People Feeling Behind In Life", "The Fastest Way to Learn a New Language: The Solar System Theory", "1 Year of Meditation: What I've Learned", "How to Create the Life You Want (And Find Your North Star)","Dopamine Detox: How to Reset Your Mind"])
+demo.launch()
+</gradio-file>
+</gradio-lite>
+    </body>
+</html>
