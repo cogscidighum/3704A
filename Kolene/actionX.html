@@ -1,0 +1,64 @@
+<html>
+<head>
+<script type="text/javascript">
+window.onload = function () {
+	var chart = new CanvasJS.Chart("chartContainer");
+
+	chart.options.axisY = {suffix: "K" };
+	chart.options.title = { text: "Amy Cuddy's Views + Duration" };
+
+	var series1 = { //dataSeries - first quarter
+    	type: "column",
+    	name: "Views",
+    	color: "Grey",
+  	 
+    	showInLegend: true
+	};
+
+	var series2 = { //dataSeries - second quarter
+    	type: "column",
+    	name: "Duration in seconds",
+    	color: "Blue",
+ 	 
+    	showInLegend: true
+	};
+
+  // var series3 = { //dataSeries - second quarter
+  //   type: "column",
+  //   name: "Interview",
+  //   color: "Black",
+  // };
+
+	chart.options.data = [];
+	chart.options.data.push(series1);
+  //char.option.data.push(series3);
+
+
+	series1.dataPoints = [
+        	{ label: "Power Poses - PopTech", y: 880},
+        	{ label: "Power Poses - EastMan", y: 210},
+        	{ label: "Power Poses - TedTalk", y: 2400 },
+        	{ label: "The Body Language Expert: 4 Body Language Tricks That Will Make People Love You & Respect You!", y: 736},
+	];
+
+	series3.dataPoints = [
+    	{ label: "Video 1", y: 429.6 },
+    	{ label: "Video 2", y: 485.4 },
+    	{ label: "Video 3", y: 482.4 },
+    	{ label: "Video 4", y: 423.6 },
+    	{ label: "Video 5", y: 500.4 }
+	];
+
+  
+
+	chart.render();
+}
+</script>
+<script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+</head>
+
+<body>
+	<div id="chartContainer" style="height: 300px; width: 100%;">
+	</div>
+</body>
+</html>
