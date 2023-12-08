@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #C5EF91;
+            font-family: 'Helvetica', sans-serif;
+            font-size: 16px;
+            color: black;
+        }
+
+        h1 {
+            font-size: 45px;
+            color: #674521;
+            text-align: center;
+        }
+
+    </style>
+  <head>
+      <script type="module">
+    import { pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.6.2';
+</script>
+    <script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite@0.4.1/dist/lite.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gradio/lite@0.4.1/dist/lite.css" />
+  </head>
+  <body>
+      <h3>
+        Oak MacDonald <br>
+Celebrity Scientist Bret Weinstein
+      </h3>
+<gradio-lite>
+
+<gradio-requirements>
+transformers_js_py
+</gradio-requirements>
+
+<gradio-file name="app.py" entrypoint>
+from transformers_js import import_transformers_js
+import gradio as gr
+transformers = await import_transformers_js()
+pipeline = transformers.pipeline
+pipe = await pipeline('sentiment-analysis')
+
+async def classify(text):
+  return await pipe(text)
+
+demo = gr.Interface(classify, "textbox", "json", examples=["The Evolutionist Channel Intro", "Sympathy and Empathy An Evolutionary Perspective",
+          "Bret Weinstein Testifies to Congress on The Evergreen State College riots, Free Speech and Safe Spaces",
+          "Andy Ngo discusses Antifa attacks with Bret Weinstein | DarkHorse Podcast #1",
+          "Bret and Heather 17th DarkHorse Podcast Livestream: Evergreen, 3 Years Post Meltdown",
+          "Bret and Heather 10th DarkHorse Podcast Livestream: SARS-CoV2--Unintelligent Design?",
+          "The War on Ivermectin: Bret Speaks with Pierre Kory on the Darkhorse Podcast",
+          "RFK Jr From the Vault | Unreleased Darkhorse Podcast from 2021"])
+demo.launch()
+</gradio-file>
+</gradio-lite>
+    </body>
+</html>
