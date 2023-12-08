@@ -4,7 +4,7 @@
 		<title>Cognitive Science and Dig humanities</title>
 		<script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
 	</head>
-  <script type="text/javascript">
+  	<script type="text/javascript">
 	window.onload = function () {
 	var chart = new CanvasJS.Chart("chartContainer");
 
@@ -72,18 +72,18 @@
 			import gradio as gr
 			import pandas as pd
 			def show_df(as1,as2,as3):
-			df = pd.DataFrame({
-				"Videos" : ["Your body language shapes who you are", "The Body Language Expert: 4 Body Language Tricks That Will Make People Love You & Respect You!", "Amy Cuddy: Power Poses", "Presence: Bringing Your Boldest Self to Your Biggest Challenges", "Feeling powerless is not being powerless"], 
-				"Views" : [921128, 736246, 890508, 210992, 55023], 
-				"Duration" : [21.02, 89.22, 17.24, 15.33, 20.47]})
-			print(as1)
-			df = df.style.highlight_max(color = 'lightblue', axis = 0)
-			return df
+				df = pd.DataFrame({
+					"Videos" : ["Your body language shapes who you are", "The Body Language Expert: 4 Body Language Tricks That Will Make People Love You & Respect You!", "Amy Cuddy: Power Poses", "Presence: Bringing Your Boldest Self to Your Biggest Challenges", "Feeling powerless is not being powerless"], 
+					"Views" : [921128, 736246, 890508, 210992, 55023], 
+					"Duration" : [21.02, 89.22, 17.24, 15.33, 20.47]})
+				print(as1)
+				df = df.style.highlight_max(color = 'lightblue', axis = 0)
+				return df
 			with gr.Blocks() as demo:
-			with gr.Row():
-			with gr.Column():
-			data = gr.Dataframe()
-			demo.load(show_df, None, [data])
+				with gr.Row():
+					with gr.Column():
+						data = gr.Dataframe()
+						demo.load(show_df, None, [data])
 			demo.launch()
 			</gradio-lite>
 		
