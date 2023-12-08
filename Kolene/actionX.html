@@ -23,15 +23,15 @@ window.onload = function () {
     	showInLegend: true
 	};
 
-  // var series3 = { //dataSeries - second quarter
-  //   type: "column",
-  //   name: "Interview",
-  //   color: "Black",
-  // };
+	// var series3 = { //dataSeries - second quarter
+	//   type: "column",
+	//   name: "Interview",
+	//   color: "Black",
+	// };
 
 	chart.options.data = [];
 	chart.options.data.push(series1);
-  //char.option.data.push(series3);
+  	char.option.data.push(series2);
 
 
 	series1.dataPoints = [
@@ -41,7 +41,7 @@ window.onload = function () {
         	{ label: "The Body Language Expert: 4 Body Language Tricks That Will Make People Love You & Respect You!", y: 736}
 	];
 
-	series3.dataPoints = [
+	series2.dataPoints = [
 	    	{ label: "Power Poses - PopTech", y: 17 },
 	    	{ label: "Power Poses - EastMan", y: 60 },
 	    	{ label: "Power Poses - TedTalk", y: 21 },
