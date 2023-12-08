@@ -1,0 +1,28 @@
+
+<head>
+<html>
+  <h3>Amy Cuddy's max number of views and duration...</h3>
+  <head>
+    <script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
+  </head>
+  <body>
+    <gradio-lite>
+      import gradio as gr
+      import pandas as pd
+      def show_df(as1,as2,as3):
+         df = pd.DataFrame({
+            "Videos" : ["Addiction Explained Rises and Falls in Dopamine", "How to Avoid Unnecessary Dopamine Peaks With Dopamine Stacking", "Improve Your Baseline Dopamine for Motivation and Drive", "How to Stop Procrastination and Increase Motivation", "NEUROSCIENTIST: Social Media Effect ON DOPAMINE"], 
+            "Views" : [31347, 238415, 130549, 139222, 162835], 
+            "Duration" : [7, 4, 8, 7, 8.5]})
+         print(as1)
+         df = df.style.highlight_max(color = 'lightgreen', axis = 0)
+         return df
+      with gr.Blocks() as demo:
+        with gr.Row():
+          with gr.Column():
+            data = gr.Dataframe()
+            demo.load(show_df, None, [data])
+      demo.launch()
+    </gradio-lite>
+  </body>
+</html>
