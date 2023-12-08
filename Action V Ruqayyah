@@ -8,8 +8,8 @@
   <body>
     <script>
         const celscilist = {
-          'Jim Davies': { 'info': { 'views': 600 } },
-          'Jim Davies': { 'info': { 'views': 400 } },
+          'jd': { 'info': { 'views': 600 } },
+          'jd': { 'info': { 'views': 400 } },
         };
         
         let sumOfViews = 0;
