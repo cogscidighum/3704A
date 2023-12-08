@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cognitive Science and Dig humanities</title>
+	</head>
+  <script type="text/javascript">
+window.onload = function () {
+	var chart = new CanvasJS.Chart("chartContainer");
 
+	chart.options.axisY = {suffix: "K" };
+	chart.options.title = { text: "Amy Cuddy's Views + Duration" };
+
+	var series1 = { //dataSeries - first quarter
+    	type: "column",
+    	name: "Views",
+    	color: "LightBlue",
+  	 
+    	showInLegend: true
+	};
+
+	var series2 = { //dataSeries - second quarter
+    	type: "column",
+    	name: "Duration in seconds",
+    	color: "Grey",
+ 	 
+    	showInLegend: true
+	};
+
+	chart.options.data = [];
+	chart.options.data.push(series1);
+	chart.options.data.push(series2);
+
+
+	series1.dataPoints = [
+        	{ label: "Video 1", y: 55},
+        	{ label: "Video 2", y: 921},
+        	{ label: "Video 3", y: 736 },
+        	{ label: "Video 4", y: 890 },
+        	{ label: "Video 5", y: 210 }
+	];
+
+	series2.dataPoints = [
+    	{ label: "Video 1", y: 20.47 },
+    	{ label: "Video 2", y: 21.02 },
+    	{ label: "Video 3", y: 89.22 },
+    	{ label: "Video 4", y: 17.24 },
+    	{ label: "Video 5", y: 68.28 }
+	];
+
+	chart.render();
+}
+</script>
+<script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+</head>
+			<body>
+        <h2 id="intro">
+        <p> A majority of the digital content in which Amy Cuddy appears online revisits the concepts she uncovered in her research. She gave a couple of talks 
+          Similar to the one she gave on ted talks. And gave interviews about the power of body language concepts she developped during her research. </p>
+
+        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+				
+        <h2 id="ref">References</h2>
+				<p class="center">TED. (2012, October 01). Amy Cuddy: Your body language shapes who you are [Video]. YouTube. https://www.youtube.com/watch?v=Ks-_Mh1QhMc&ab_channel=TED</p>
+				<p class="center">Baker, M. (2016). 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454. https://doi.org/10.1038/533452a</p>
+				<p class="center">“A Decade of Power Posing: Where Do We Stand?” BPS, 8 June 2021, www.bps.org.uk/psychologist/decade-power-posing-where-do-we-stand.</p>
+				<p class="center">Loncar, T. (2021, June 8). A Decade of Power Posing: Where Do We Stand? The Psychologist. https://www.bps.org.uk/psychologist/decade-power-posing-where-do-we-stand</p>
+			</body>
+</html>
