@@ -2,9 +2,10 @@
 <html>
 	<head>
 		<title>Cognitive Science and Dig humanities</title>
+		<script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
 	</head>
   <script type="text/javascript">
-window.onload = function () {
+	window.onload = function () {
 	var chart = new CanvasJS.Chart("chartContainer");
 
 	chart.options.axisY = {suffix: "K" };
@@ -49,6 +50,7 @@ window.onload = function () {
 
 	chart.render();
 }
+
 </script>
 <script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
 </head>
@@ -57,10 +59,34 @@ window.onload = function () {
         	<p class="center"> A majority of the digital content in which Amy Cuddy appears online revisits the concepts she uncovered in her research. She gave a couple of talks 
           	Similar to the one she gave on ted talks. And gave interviews about the power of body language concepts she developped during her research. Her interviews are significantly longer
 	  	than the talks she gives, but they touch on similar topics. She does not have a strong internet presence, she does not have tweeter per example. And she has significantly
-		dropped her number of talks since 2028. Hoever, she kept giving interviews, and her most recent one was given only 3months ago. </p>
+		dropped her number of talks since 2028. However, she kept giving interviews, and her most recent one was given only 3months ago. </p>
 
         	<div id="chartContainer" style="height: 300px; width: 100%;"></div>
-				
+
+		<p class="center">
+		Her interviews are very popular, and are notably present in buisness spheres in conversations about being respected, and feeling confident. Her first two talks are her most popular videos 
+		on youtube, and following it is an interview where she discusses ... (WATCH INTERVIEW).
+		</p>
+
+		    <gradio-lite>
+			import gradio as gr
+			import pandas as pd
+			def show_df(as1,as2,as3):
+			df = pd.DataFrame({
+				"Videos" : ["Your body language shapes who you are", "The Body Language Expert: 4 Body Language Tricks That Will Make People Love You & Respect You!", "Amy Cuddy: Power Poses", "Presence: Bringing Your Boldest Self to Your Biggest Challenges", "Feeling powerless is not being powerless"], 
+				"Views" : [921128, 736246, 890508, 210992, 55023], 
+				"Duration" : [21.02, 89.22, 17.24, 15.33, 20.47]})
+			print(as1)
+			df = df.style.highlight_max(color = 'lightblue', axis = 0)
+			return df
+			with gr.Blocks() as demo:
+			with gr.Row():
+			with gr.Column():
+			data = gr.Dataframe()
+			demo.load(show_df, None, [data])
+			demo.launch()
+			</gradio-lite>
+		
 		<h2 id="ref">References</h2>
 		<p class="center">TED. (2012, October 01). Amy Cuddy: Your body language shapes who you are [Video]. YouTube. https://www.youtube.com/watch?v=Ks-_Mh1QhMc&ab_channel=TED</p>
 		<p class="center">Baker, M. (2016). 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454. https://doi.org/10.1038/533452a</p>
