@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>CelSci</title>
+  </head>
+
+  <body>
+    <script>
+        const celscilist = {
+          'Anil Seth': { 'info': { 'views': 14187265 } },
+          'Andrew Huberman 2': { 'info': { 'views': 620004 } },
+          'Donald Hoffman': { 'info': { 'views': 2504274 } },
+          'Doug Hofstadter': { 'info': { 'views': 75493 } },
+          'Howard Gardner': { 'info': { 'views': 1508453 } },
+          'Janelle Shane': { 'info': { 'views': 2755716 } },
+          'Daniel Kahneman': { 'info': { 'views': 1274170 } },
+          'Elizabeth Loftus': { 'info': { 'views': 2190333 } },
+          'Elizabeth Loftus 2': { 'info': { 'views': 2975 } },
+          'Patricia Churchland': { 'info': { 'views': 8026 } },
+          'Bret Weinstein': { 'info': { 'views': 41610 } },
+          'Andrew Huberman': { 'info': { 'views': 55561 } },
+          'Tom Scott': { 'info': { 'views': 2555516 } },
+          'Melanie Mitchell': { 'info': { 'views': 44875 } },
+          'Jordan Peterson': { 'info': { 'views': 236000 } },
+          'Timnit Gebru': { 'info': { 'views': 79338 } },
+          'Amy Cuddy': { 'info': { 'views': 23700189 } },
+          'Mihaly Csikszentmihalyi': { 'info': { 'views': 952791 } },
+          'Martha Nussbaum': { 'info': { 'views': 41046 } },
+          'Noam Chomsky': { 'info': { 'views': 26042 } },
+          'Russell A Barkley': { 'info': { 'views': 786116 } },
+          'Slavoj Žižek': { 'info': { 'views': 153187 } },
+          'Nathaniel Drew': { 'info': { 'views': 126828 } },
+          'Lara Boyd': { 'info': { 'views': 39097670 } },
+          'Yuval Noah Harari': { 'info': { 'views': 439139 } },
+          'Jordan Peterson 2': { 'info': { 'views': 672531 } },
+          'Yuval Noah Harari 2': { 'info': { 'views': 1859772 } },
+          'Joscha Bach': { 'info': { 'views': 528348 } },
+          'Poppy Crum': { 'info': { 'views': 133328 } },
+          'Ryan Holiday': { 'info': { 'views': 34846 } },
+          'Marvin Chun': { 'info': { 'views': 76604 } },
+          'Jim Davies': { 'info': { 'views': 27628 } },
+        };
+  
+          // Extract 'views' values into an array
+          const viewsArray = Object.values(celscilist).map(item => item.info.views);
+          // Calculate the sum of 'views' values
+          function calculateAverage(viewsArray ) {
+            const sum = viewsArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+            
+            return sum / viewsArray.length;
+          }
+          
+          class Celsci {
+            static iscelsci(x) {
+              let y = "false";
+              if (x > calculateAverage(viewsArray)) {
+                y = "true";
+              }
+              return y;
+            }
+          }
+          
+          function checkcelsci(x) {
+            const result = Celsci.iscelsci(celscilist[x]['info']['views']);
+            return result;
+          }
+        
+        // Get the max value from the array
+        const maxViews = Math.max(...viewsArray);
+        
+        function findKeyByViews(obj, viewsValue) {
+          return Object.keys(obj).find(key => obj[key].info.views === viewsValue);
+        };
+        // Call the function with data and maxViews as arguments
+        let no1 = findKeyByViews(celscilist, maxViews);
+        
+        document.write("dd is aboveavg? ",checkcelsci('dd')," #1 is: ",no1, " with viewcounts of ", maxViews );
+    </script>
+  </body>
+</html>
