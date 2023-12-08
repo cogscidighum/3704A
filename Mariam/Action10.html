@@ -1,75 +1,72 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       text-align: center;
-      background-color: lightblue;
+      background-color: #f4f4f4;
     }
-    h1 {
-      color: #333;
+
+    h2 {
+      color: blue;
     }
+
     button {
+      background-color:white;
+      color: #fff;
       padding: 10px 20px;
       font-size: 16px;
       margin: 10px;
       cursor: pointer;
+      border: none;
     }
+
     #result {
       font-size: 18px;
-      font-weight: bold;
       margin-top: 20px;
     }
   </style>
 </head>
 <body>
-
-  <h1>Rock Paper Scissors</h1>
-
-  
-  <button onclick="playGamePrompt()">Play Game (Prompt)</button>
-
-  
+  <h2>Rock-Paper-Scissors Game</h2>
+  <button onclick="playGame('Rock')">Rock</button>
+  <button onclick="playGame('Paper')">Paper</button>
+  <button onclick="playGame('Scissors')">Scissors</button>
   <div id="result"></div>
 
   <script>
-    function playGamePrompt() {
-      var userChoice = prompt("Enter your choice: \n1 for Rock, 2 for Paper, 3 for Scissors");
-      userChoice = parseInt(userChoice); // Convert input to integer
-
-      // Validate user input
-      if (userChoice >= 1 && userChoice <= 3) {
-        var computerChoice = Math.floor(Math.random() * 3) + 1; // Generates a random number between 1 and 3
-
-        var result = determineWinner(userChoice, computerChoice);
-        displayResult(userChoice, computerChoice, result);
+    function playGame(userChoice) {
+      var computerChoice = Math.random();
+      if (computerChoice > 0 && computerChoice < 0.33) {
+        computerChoice = "Rock";
+      } else if (computerChoice > 0.34 && computerChoice < 0.67) {
+        computerChoice = "Paper";
       } else {
-        alert("Invalid choice. Please enter 1, 2, or 3.");
+        computerChoice = "Scissors";
+      }
+
+      var result = determineWinner(userChoice, computerChoice);
+
+      // Display the result
+      document.getElementById('result').innerText = `You chose ${userChoice}. Computer chose ${computerChoice}. Result: ${result}`;
+    }
+
+    function determineWinner(userChoice, computerChoice) {
+      if (userChoice === computerChoice) {
+        return "It's a tie!";
+      } else if (
+        (userChoice === "Rock" && computerChoice === "Scissors") ||
+        (userChoice === "Paper" && computerChoice === "Rock") ||
+        (userChoice === "Scissors" && computerChoice === "Paper")
+      ) {
+        return "You win!";
+      } else {
+        return "You lose!";
       }
     }
-
-   function determineWinner(userChoice, computerChoice) {
-  if (userChoice === computerChoice) {
-    return 'It\'s a tie!';
-  } else if (
-    (userChoice === 1 && computerChoice === 3) ||
-    (userChoice === 2 && computerChoice === 1) ||
-    (userChoice === 3 && computerChoice === 2)
-  ) {
-    return 'You win!';
-  } else {
-    return 'You lose!';
-  }
-}
-
-    function displayResult(userChoice, computerChoice, result) {
-      var resultElement = document.getElementById('result');
-      resultElement.innerHTML = `You chose ${userChoice}. Computer chose ${computerChoice}. Result: ${result}`;
-    }
   </script>
-
 </body>
 </html>
