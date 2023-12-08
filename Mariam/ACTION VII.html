@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>BCogSphere: Retrieval</title>
+    <button id="action">ACTION</button>
+    <label>YouTube Video Link:</label>
+    <input type="text" id="videoLink" placeholder="https://www.youtube.com/embed/LNHBMFCzznE">
+    <label>Abstract:</label>
+    <input type="text" id="abstractInput" placeholder="Dr. Lara Boyd's insightful video, After watching this, your brain will not be the same,  on brain research explores the concept of neuroplasticity and its connection to our everyday experiences and behaviors on the human brain.Dr. Boyd begins her presentation by dispelling common misconceptions about the brain, including the outdated belief that it stops changing after childhood. She emphasizes, Every time you learn something new, your brain changes, highlighting the core principle of neuroplasticity.">
+    <div id="output">Ready!</div>
+</head>
+<body>
+    <script type="module">
+        import { client } from "https://cdn.jsdelivr.net/npm/@gradio/client@0.1.4/dist/index.min.js";
+
+        const generate = document.getElementById("action");
+        generate.addEventListener("click", async () => {
+            try {
+                const videoLink = document.getElementById("videoLink").value;
+                const abstract = document.getElementById("abstractInput").value;
+
+                if (!videoLink || !abstract) {
+                    alert("Please enter both YouTube Video Link and Abstract.");
+                    return;
+                }
+
+                const app = await client("https://cognitivescience-cogsphere.hf.space");
+                const lastview = await app.predict("/predict", [videoLink, abstract]);
+                output.textContent = JSON.stringify(lastview.data);
+
+            } catch (error) {
+                console.log("Error:", error.message);
+            }
+        });
+    </script>
+</body>
+</html>
