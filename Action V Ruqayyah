@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
@@ -8,27 +9,13 @@
   <body>
     <script>
         const celscilist = {
-          'jd': { 'info': { 'views': 600 } },
-          'jd': { 'info': { 'views': 400 } },
+          'jd': { 'info': { 'views': 28000 } },
         };
-        
-        let sumOfViews = 0;
-        let count = 0;
 
-        for (const key in celscilist) {
-          if (celscilist.hasOwnProperty(key)) {
-            const views = celscilist[key].info.views;
-            sumOfViews += views;
-            count++;
-          }
-        }
-
-        const averageViews = sumOfViews / count;
-        
         class Celsci {
           static iscelsci(x) {
             let y = "false";
-            if (x > averageViews) {
+            if (x > 500) {
               y = "true";
             }
             return y;
