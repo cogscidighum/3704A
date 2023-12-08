@@ -1,22 +1,21 @@
-HTMLResult Skip Results Iframe
-EDIT ON
 <!DOCTYPE html>
 <html>
 <head>
+<script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
 <script type="text/javascript">
 window.onload = function () {
     var chart = new CanvasJS.Chart("chartContainer");
 
     chart.options.axisY = { prefix: "$", suffix: "K" };
-    chart.options.title = { text: "CelSci Views $ Duration" };
+    chart.options.title = { text: "CelSci Views & Duration" };
 
-    var series1 = { //dataSeries - first quarter
+    var series1 = {
         type: "column",
         name: "Views",
         showInLegend: true
     };
 
-    var series2 = { //dataSeries - second quarter
+    var series2 = {
         type: "column",
         name: "Duration",
         showInLegend: true
@@ -26,31 +25,29 @@ window.onload = function () {
     chart.options.data.push(series1);
     chart.options.data.push(series2);
 
-
+    // Replace the dataPoints with actual data from your target Celsci
     series1.dataPoints = [
-            { label: "Video 1", y: 58 },
-            { label: "Video 2", y: 69 },
-            { label: "Video 3", y: 80 },
-            { label: "Video 4", y: 74 },
-            { label: "Video 5", y: 64 }
+        { label: "Video 1", y: /* Actual views for Video 1 */ },
+        { label: "Video 2", y: /* Actual views for Video 2 */ },
+        { label: "Video 3", y: /* Actual views for Video 3 */ },
+        { label: "Video 4", y: /* Actual views for Video 4 */ },
+        { label: "Video 5", y: /* Actual views for Video 5 */ }
     ];
 
     series2.dataPoints = [
-        { label: "Video 1", y: 63 },
-        { label: "Video 2", y: 73 },
-        { label: "Video 3", y: 88 },
-        { label: "Video 4", y: 77 },
-        { label: "Video 5", y: 60 }
+        { label: "Video 1", y: /* Actual duration for Video 1 */ },
+        { label: "Video 2", y: /* Actual duration for Video 2 */ },
+        { label: "Video 3", y: /* Actual duration for Video 3 */ },
+        { label: "Video 4", y: /* Actual duration for Video 4 */ },
+        { label: "Video 5", y: /* Actual duration for Video 5 */ }
     ];
 
     chart.render();
 }
 </script>
-<script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
 </head>
 
 <body>
-    <div id="chartContainer" style="height: 300px; width: 100%;">
-    </div>
+    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
 </body>
 </html>
