@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Your Name</title>
+  <script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
+</head>
+
+<body>
+  <h3>Bret Weinstein CelSci Max!, taking a few seconds to load...</h3>
+
+  <gradio-lite>
+    import gradio as gr
+    import pandas as pd
+
+    def show_df(as1, as2, as3):
+      df = pd.DataFrame({
+        "Videos": ["The Evolutionist Channel Intro", "Sympathy and Empathy An Evolutionary Perspective",
+          "Bret Weinstein Testifies to Congress on The Evergreen State College riots, Free Speech and Safe Spaces",
+          "Andy Ngo discusses Antifa attacks with Bret Weinstein | DarkHorse Podcast #1",
+          "Bret and Heather 17th DarkHorse Podcast Livestream: Evergreen, 3 Years Post Meltdown",
+          "Bret and Heather 10th DarkHorse Podcast Livestream: SARS-CoV2--Unintelligent Design?",
+          "The War on Ivermectin: Bret Speaks with Pierre Kory on the Darkhorse Podcast",
+          "RFK Jr From the Vault | Unreleased Darkhorse Podcast from 2021"
+        ],
+        "Views": [13573, 13573, 2168735, 267292, 27901, 49499, 68446, 251582],
+        "Duration": [2.28, 7.28, 15, 71.35, 68.95, 61.26, 176.65, 168]
+      })
+      print(as1)
+      df = df.style.highlight_max(color='lightgreen', axis=0)
+      return df
+
+    with gr.Blocks() as demo:
+      with gr.Row():
+        with gr.Column():
+          data = gr.Dataframe()
+          demo.load(show_df, None, [data])
+      demo.launch()
+  </gradio-lite>
+</body>
+
+</html>
