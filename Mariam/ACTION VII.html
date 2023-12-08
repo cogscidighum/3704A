@@ -1,12 +1,48 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
+
+    <title>ACogSphere: Sentiment Analysis</title>
+    <button id="run">ACTION</button>
+    <label>Input Abstract:</label>
+    <input type="text" id="abstractInput" placeholder="Dr. Lara Boyd's insightful video, After watching this, your brain will not be the same,  on brain research explores the concept of neuroplasticity and its connection to our everyday experiences and behaviors on the human brain.Dr. Boyd begins her presentation by dispelling common misconceptions about the brain, including the outdated belief that it stops changing after childhood. She emphasizes, Every time you learn something new, your brain changes, highlighting the core principle of neuroplasticity.">
+    <label>Output:</label>
+    <div id="output2">Waiting to analyze a great life!</div>
+</head>
+<body>
+    <script type="module">
+        import { pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.7.0';
+
+        const generate = document.getElementById("run");
+        const abstractInput = document.getElementById("abstractInput");
+        const output2 = document.getElementById("output2");
+
+        generate.addEventListener("click", async () => {
+            try {
+                const abstract = abstractInput.value;
+
+                if (!abstract) {
+                    alert("Please enter the abstract.");
+                    return;
+                }
+
+                let pipe = await pipeline('text-classification');
+                let output = await pipe(abstract);
+                output2.textContent = JSON.stringify(output);
+            } catch (error) {
+                console.log("Error:", error.message);
+            }
+        });
+    </script>
+</body>
+</html>
+
+<head>
     <title>BCogSphere: Retrieval</title>
     <button id="action">ACTION</button>
-    <label>YouTube Video Link:</label>
-    <input type="text" id="videoLink" placeholder="https://www.youtube.com/embed/LNHBMFCzznE">
-    <label>Abstract:</label>
-    <input type="text" id="abstractInput" placeholder="Dr. Lara Boyd's insightful video, After watching this, your brain will not be the same,  on brain research explores the concept of neuroplasticity and its connection to our everyday experiences and behaviors on the human brain.Dr. Boyd begins her presentation by dispelling common misconceptions about the brain, including the outdated belief that it stops changing after childhood. She emphasizes, Every time you learn something new, your brain changes, highlighting the core principle of neuroplasticity.">
+    <label>Input YouTube Video Link:</label>
+    <input type="text" id="videoLinkInput" placeholder="https://www.youtube.com/embed/LNHBMFCzznE">
+    <label>Output:</label>
     <div id="output">Ready!</div>
 </head>
 <body>
@@ -14,19 +50,24 @@
         import { client } from "https://cdn.jsdelivr.net/npm/@gradio/client@0.1.4/dist/index.min.js";
 
         const generate = document.getElementById("action");
+        const videoLinkInput = document.getElementById("videoLinkInput");
+        const output = document.getElementById("output");
+
         generate.addEventListener("click", async () => {
             try {
-                const videoLink = document.getElementById("videoLink").value;
-                const abstract = document.getElementById("abstractInput").value;
+                const videoLink = videoLinkInput.value;
 
-                if (!videoLink || !abstract) {
-                    alert("Please enter both YouTube Video Link and Abstract.");
+                if (!videoLink) {
+                    alert("Please enter the YouTube Video Link.");
                     return;
                 }
 
                 const app = await client("https://cognitivescience-cogsphere.hf.space");
-                const lastview = await app.predict("/predict", [videoLink, abstract]);
-                output.textContent = JSON.stringify(lastview.data);
+                const lastView = await app.predict("/predict", [videoLink]);
+
+                // Format and display relevant information from the response
+                const formattedOutput = `View Count: ${lastView.data.viewCount}`;
+                output.textContent = formattedOutput;
 
             } catch (error) {
                 console.log("Error:", error.message);
