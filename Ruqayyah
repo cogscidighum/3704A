@@ -1,1 +1,26 @@
-
+// code
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+  <meta charset="utf-8" />
+  <h1> Cognitive Science and Digital Humanities</h1>
+  <img src="cheetah1.jpg" alt="panda" width="20%">
+  <br>
+  <audio controls srs="audio1.mp3"></audio>
+  <br>
+  <video width="320" height="240" controls>
+    <source src="video1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <br>
+  <iframe width="560" height="315" src="https://www.youtube.com/watch?v=-5CdAup0o-I&ab_channel=PuppyKIMS" id="iframe1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <br>
+  <br>
+  <iframe width="400" height="600" src="https://cogscidighum.github.io/3704A/action2.html" id="iframe2" title="Our webpage!"></iframe>
+  <br>
+</head>
+<body>
+  <h2> Good Bye Digital World!</h2>
+</body>
+</html>
