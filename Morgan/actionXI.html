@@ -12,9 +12,9 @@
       import pandas as pd
       def show_df(as1,as2,as3):
          df = pd.DataFrame({
-            "Videos" : ["Addiction Explained Rises and Falls in Dopamine", "How to Avoid Unnecessary Dopamine Peaks With Dopamine Stacking", "Improve Your Baseline Dopamine for Motivation and Drive", "How to Stop Procrastination and Increase Motivation", "NEUROSCIENTIST: Social Media Effect ON DOPAMINE"], 
-            "Views" : [31347, 238415, 130549, 139222, 162835], 
-            "Duration" : [7, 4, 8, 7, 8.5]})
+            "Videos" : ["Addiction Explained Rises and Falls in Dopamine", "How to Avoid Unnecessary Dopamine Peaks With Dopamine Stacking", "Improve Your Baseline Dopamine for Motivation and Drive", "How to Stop Procrastination and Increase Motivation", "Neuroscientist: We Are Building a Generation of Low Attention"], 
+            "Views" : [31347, 238415, 130549, 139222, 56795], 
+            "Duration" : [7.16, 8.09, 8.03, 7.05, 8.20]})
          print(as1)
          df = df.style.highlight_max(color = 'lightgreen', axis = 0)
          return df
