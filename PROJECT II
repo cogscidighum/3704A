@@ -1,0 +1,51 @@
+
+Code: <!DOCTYPE html>
+<head>
+<html>
+   <title>Your Name</title>
+	<h3>Your CelSci Max!, taking a few seconds to load...</h3>
+	<head>
+		<script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
+	</head>
+	<body>
+		<gradio-lite>
+			import gradio as gr
+			import pandas as pd
+			def show_df(as1,as2,as3):
+				 df = pd.DataFrame({
+					  "Videos" : ["Video 1: Do we see reality as it is? | TED", "Video 2: Is reality real? These neuroscientists don’t think so | Big Think", "Video 3: Donald Hoffman - Why Did Consciousness Emerge?", "Video 4: Donald Hoffman - What is Consciousness?", "Video 5: Does consciousness arise from the brain? | Donald Hoffman challenges Hannah Critchlow"], 
+					  "Views" : [2538225, 3062852, 113158, 173803, 19472], 
+					  "Duration" : [1130, 590, 462, 633, 469]})
+				 print(as1)
+				 df = df.style.highlight_max(color = 'magenta', axis = 0)
+				 return df
+			with gr.Blocks() as demo:
+				with gr.Row():
+					with gr.Column():
+						data = gr.Dataframe()
+						demo.load(show_df, None, [data])
+			demo.launch()
+		</gradio-lite>
+	</body>
+</html>
+
+
+Does consciousness arise from the brain? | Donald Hoffman challenges Hannah Critchlow
+
+When we study morality, we can see regions in the brain that give rise to moral behavoiurs and our moral code, and as our moral values shift, the stratus (area in the brain) changes. Critchlow wants to reduce the definition (in this case) to consciousness. Hoffman says that brain activity is correlated with consciousness however there is no distinct and clear conscious experience (forn example the taste of chocolate) that can be drawn to specific brain activity. He says we don’t really have physicless theories to explain consciousness so we start to adopt theories related to brain structure related to consciousness. In sum, our perceptions are more like a virtual reality, any brain function or structure does not have information about objective reality, so in a way we are imagining everything, so they dont shape us to see the truth.. Space and time are represented in the brain to guide our behaviour that will benefit us evolutionarily, but don’t necessarily show us how reality really is (because we dont need to see reality as it is to survive).
+
+Id reality real? These neuroscientists dont think so
+
+The world of course, does exist, but do we see it as it is? No. our only access to ther world is through our limited senses. What’s interesting is that more ends up showing up for us than what is just projected into the retina. Our nervous system processes these images or sensations and we create reactions, feelings, and new percetptions. Is reality objecitve? What we perceive from the world arre not properties of objective reality but properties of our senses. What makes something objective? Something that continues to exists without our being able to experience them. Tastes, odors and colours are fabrications by our senses and are not really real themselves. Space time itself may not be objective but how? We don't even represent the information we are given as objective, we are seeing the utility of the data not the data itself because what we perceive is for ourselves and just for evolutionary aspects. There is no all-encompassing perspective that gives us the reality. Trans Perspectivism is the ability to take multiple perspectives top be able to see things as a whole, to navigate reality through. 
+
+How did consciousness emerge?
+
+Donald made the claim that evolution drives truth to extinction. Reality is in a different kind of representation to us. He uses the example of a computer. When we are looking at our desktop and there is an icon of a file (that we sre working on) tiny in the corner, is this the true file? No it is a representation of a file, it is not the file itself. The file is not this colour or even in the shape that this icon represents. None of the properties of the graphics on the screen are to reflect the true file. The purpose of the interface is to hide the reality. we dont want to know about the diodes or computer code that make up the file, we want the most accessible and easy representation that will help us do what we need to do (acess the file to work on it). Hiding the truth is helping us, and our perceptions are like a user interface where physical objects are like the icons in our desktop. We think our perceptions represent the truth, but we have such a lack of capacity in being able to understand the truth of reality through our limited senses. To solve the mind-body problem, lets take consciousness as fundamental, what's behind space and time and physical objects is their truth, but we do not need to know it or perceive it in the objective way to survive. Consciousness did not emerge from a prior physical process, Hoffman argues that consciousness is actually fundamental, so we have to think about rewriting the story of the big bang, etc. because instead of objective reality being what is fundamental (or came first), consciousness is actually what's fundamental. How can we rewire that story consistent with our current beliefs? Consciousness didnt evolve, its the ground from which evolution occurs.
+
+What is consciousness? 
+
+Consciousness is not a product of space and time so is it not derived. The typical view is that consciosunesss is a product of our brain and our brain is a byproduct of nature. Hoffman says there is no theory that can prove that consciousness comes from the brain. The interviewever asks Hoffman why he’s taken on this unconventional view of consciousness. He answers that consciousness is a first person subjective, whereas our descriptions of the physical world are third person or what we consider to be “objective”. When I have the experience of a green apple, when we look at the brain, there is nothing in there thats “green” and the activity in the  brain doesnt look like a green apple. We can find specific neural correlates of colour perception and motion percpetion, and know that damage to one part of the brain can seriously impair certain senses, but Hofman argues that we have failed to come up with a scientific theory that will make predictions that say this specific neural activity has to be the smell of the rose, and not the colour red, and that changing this neural activity just slightly, changes the necessary caused experience. Hofmans studied artificial intelligence at MIT, so he was tempted to find a functionalist response or theory of consciousness and how it relates to our physical body, but argues that it is almost impossible to do so, without considering that consciousness emerged from a miracle. We are trying to solve this debate through a physical and functional route, but we are unable to at the current moment. 
+
+Do we see reality as it is?
+
+In this TED talk, Hoffman is back to introduce his radical theory of consciousness. He begins with an example, if we are standing in front of a red tomato, perceiving it, and we close our eyes, we now see black. Does the tomato in front of us continue to exist? We think so. But Hoffman challenges this. He quotes Galielo; “I think that tastes, odors, colours, and so on… reside in consciousness. Hence, if the living creature were removed, all these qualities would be.. Annihalated.” Are we really misinterpreting our experiences that badly? We take vision, for example, and think that the eye is like a camera, snapshotting reality and relaying this image back to us. However all the internal processes behind vision perception and the working of our neurons firing etc, means that this image actualy ends up being constructed by our own brain. Evolutionarily, those of our ancestors that were able to see more accurately, would survive, and we are a product of these perceptually fitter individuals. But this does not necessarily mean that we accurately represent reality. Natural selection does not have to favour seeing reality as it is, it just has to favour seeing reality in a way that would benefit us and lead to our reproduction. Fitness is not the same thing as “reality” and it is fitness that is central in the mathematical equations of evolution. We have seen that organisms that seem to perceive reality more accurately, rather than perceiving in a way that makes them more fit, go extinct. This seems contradictory, how is it that not seeing reality as it is can benefit our survival within reality? Hoffman says that perceiving reality in an interface that hides reality will guide adept behaviour. Physical items are simply icons. Consider what was said in the first summary about the computer icon for a file, which represent a file, but is not the file itself, as if it were, we would be presented with the computer code and all internal workings of what is behind the representation. But we do not need this, instead this icon is the best thing for us to represent the file itself. So in this case, we are perceiving and reconstructing reality to suit us, but not accurately perceiving an objective reality. Reality itself is more like a 3D desktop that hides reality as it is, and represents it in icons in a way that guide us through life. Something this made me think of is how little we see of the electromagnetic spectrum. We see only a certain range of colours, and cannot perceive UV rays, infrared rays, and so on. While UV and infrarays do exist, we do not need them to navigate through the physical reality, so in this sense, Hofman’s theory seems to be completely plausible. It has been intriguing to explore this new theory, and there seems to be a lot of information out there about not perceiving reality as it is. It will be interesting to see which route scientists will take and where this could lead us in any conclusion making about consciousness. 
