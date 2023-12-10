@@ -5,56 +5,101 @@
 		<script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
 	</head>
   	<script type="text/javascript">
-	window.onload = function () {
-	var chart = new CanvasJS.Chart("chartContainer");
-
-	chart.options.axisY = {suffix: "K" };
-	chart.options.title = { text: "Amy Cuddy's Views + Duration" };
-
-	var series1 = { //dataSeries - first quarter
-    	type: "column",
-    	name: "Views",
-    	color: "LightBlue",
-  	 
-    	showInLegend: true
-	};
-
-	var series2 = { //dataSeries - second quarter
-    	type: "column",
-    	name: "Duration in seconds",
-    	color: "Grey",
- 	 
-    	showInLegend: true
-	};
-
-	chart.options.data = [];
-	chart.options.data.push(series1);
-	chart.options.data.push(series2);
-
-
-	series1.dataPoints = [
-        	{ label: "Video 1", y: 55},
-        	{ label: "Video 2", y: 921},
-        	{ label: "Video 3", y: 736 },
-        	{ label: "Video 4", y: 890 },
-        	{ label: "Video 5", y: 210 }
-	];
-
-	series2.dataPoints = [
-    	{ label: "Video 1", y: 20.47 },
-    	{ label: "Video 2", y: 21.02 },
-    	{ label: "Video 3", y: 89.22 },
-    	{ label: "Video 4", y: 17.24 },
-    	{ label: "Video 5", y: 68.28 }
-	];
-
-	chart.render();
-}
-
+		window.onload = function () {
+		var chart = new CanvasJS.Chart("chartContainer");
+	
+		chart.options.axisY = {suffix: "K" };
+		chart.options.title = { text: "Amy Cuddy's Views + Duration" };
+	
+		var series1 = { //dataSeries - first quarter
+	    	type: "column",
+	    	name: "Views",
+	    	color: "LightBlue",
+	  	 
+	    	showInLegend: true
+		};
+	
+		var series2 = { //dataSeries - second quarter
+	    	type: "column",
+	    	name: "Duration in seconds",
+	    	color: "Grey",
+	 	 
+	    	showInLegend: true
+		};
+	
+		chart.options.data = [];
+		chart.options.data.push(series1);
+		chart.options.data.push(series2);
+	
+	
+		series1.dataPoints = [
+	        	{ label: "Video 1", y: 55},
+	        	{ label: "Video 2", y: 921},
+	        	{ label: "Video 3", y: 736 },
+	        	{ label: "Video 4", y: 890 },
+	        	{ label: "Video 5", y: 210 }
+		];
+	
+		series2.dataPoints = [
+	    	{ label: "Video 1", y: 20.47 },
+	    	{ label: "Video 2", y: 21.02 },
+	    	{ label: "Video 3", y: 89.22 },
+	    	{ label: "Video 4", y: 17.24 },
+	    	{ label: "Video 5", y: 68.28 }
+		];
+	
+		chart.render();
+	}
 </script>
+<style>
+	p {
+		margin-right: 90px;
+		margin-left: 15px;
+	}
+	
+	h2 {
+		text-align: center;
+		background: #light-gray;
+	}
+	.intro {
+		align: center;
+	}
+	.center {
+		text-align: center;
+	}
+	div.scroll-container {
+		background-color: #white;
+		overflow: auto;
+		white-space: nowrap;
+		padding: 10px;
+	}
+	
+	div.scroll-container img {
+		padding: 10px;
+	}
+	
+	.column {
+		float: left;
+		width: 33.33%;
+		padding: 5px;
+	}
+	
+	.row::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+</style>
 <script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
 </head>
 	<body>
+		<h2 id="talks" class="center">Her Talks</h2>
+		<div id="scroll-container">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/-1i1BcuhibM?si=ex4hJ3JNAt5guyJ6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>	
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/-1i1BcuhibM?si=ex4hJ3JNAt5guyJ6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/phcDQ0H_LnY?si=AD54ZbqRnXLCZ0pP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/ATo9sYax-AQ?si=7Waxoj9Y2QffGklN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		</div>
         	<h2 id="intro">The other content of Amy Cuddy</h2>
         	<p class="center"> A majority of the digital content in which Amy Cuddy appears online revisits the concepts she uncovered in her research. She gave a couple of talks 
           	Similar to the one she gave on ted talks. And gave interviews about the power of body language concepts she developped during her research. Her interviews are significantly longer
@@ -63,9 +108,11 @@
 
         	<div id="chartContainer" style="height: 300px; width: 100%;"></div>
 
+		<h2 id="interview" class="center">Her Most Popular Interview</h2>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/YEM3nWkB-EE?si=jX2fs81afePTtp-5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		
 		<p class="center">
-		Her interviews are very popular, and are notably present in buisness spheres in conversations about being respected, and feeling confident. Her first two talks are her most popular videos 
-		on youtube, and following it is an interview where she discusses ... (WATCH INTERVIEW).
+		(WATCH INTERVIEW).
 		</p>
 
 		    <gradio-lite>
