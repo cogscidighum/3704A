@@ -96,6 +96,15 @@
 		clear: both;
 		display: table;
 	}
+
+	ul {
+		list-style: none;
+	}
+	
+	li {
+		display: inline-block;
+		margin-right: 10px; /* add spacing between items */
+	}
 </style>
 <script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
 </head>
@@ -116,7 +125,7 @@
 
 		<p>Her most viewed video is the ted talk she gave about power poses, this video went "viral", it became popular and gained a large amout of view very quickly.</p>
 
-				    <gradio-lite>
+			<gradio-lite>
 			import gradio as gr
 			import pandas as pd
 			def show_df(as1,as2,as3):
@@ -136,10 +145,12 @@
 			</gradio-lite>
 		<h2 id="talks" class="center">Her Talks</h2>
 		<div id="scrollmenu">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/-1i1BcuhibM?si=ex4hJ3JNAt5guyJ6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>	
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/-1i1BcuhibM?si=ex4hJ3JNAt5guyJ6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/phcDQ0H_LnY?si=AD54ZbqRnXLCZ0pP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/ATo9sYax-AQ?si=7Waxoj9Y2QffGklN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			<ul>
+			<li><iframe width="560" height="315" src="https://www.youtube.com/embed/-1i1BcuhibM?si=ex4hJ3JNAt5guyJ6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></li>
+			<li> <iframe width="560" height="315" src="https://www.youtube.com/embed/-1i1BcuhibM?si=ex4hJ3JNAt5guyJ6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></li>
+			<li> <iframe width="560" height="315" src="https://www.youtube.com/embed/phcDQ0H_LnY?si=AD54ZbqRnXLCZ0pP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></li>
+			<li> <iframe width="560" height="315" src="https://www.youtube.com/embed/ATo9sYax-AQ?si=7Waxoj9Y2QffGklN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></li>
+			</ul>
 		</div>
 		
 		<h2 id="interview" class="center">Her Most Popular Interview</h2>
@@ -148,7 +159,10 @@
 		<p class="center">
 		Amy Cuddy’s TED Talk was not actually the first talk she gave after publishing her paper on body language and physiology, but it was the most popular. Her TED talk, after being published, quickly ranked as the second most-viewed TED talk, and still ranks as such. She also mentions in her “The Body Language Expert: 4 Body Language Tricks That Will Make People Love You & Respect You!” interview that, to this day, 10 years after her TED talk, she still receives emails from people who felt comforted, seen, and touched by her words. The majority of the videos she has are talks, and most of them summarize the findings of the original research paper. In the interview, she expounds on some other findings, and this essay will explore that conversation and try to bridge in other celscis and empirical findings, her experience and role in the reproduction crisis, and finally, the downfall of going viral and fame.
 
-		In her interview, Cuddy reiterates the importance of body language and body posture, giving examples of the benefits of good posture and opened up yoga poses for people with depression and/or PTSD. In 2017, Wilkes et al. published research on the effect of posture on depressed individuals. They report the positive effects of good posture for self-esteem and mood in healthy individuals but highlight the missing literature on individuals with depression, even though bad and slouched postures are symptoms of depression. The baseline they started with all had a more slouched posture than in the normative data from the original study, and they found that adopting a better posture with the help of physiotherapy tape for 25 minutes improved their fatigue levels and their positive affects (Wilkes et al. 1). Cuddy continues to talk about the positive effect of other body behaviors such as breathing and speech tempo. They continue to discuss factors that might increase self-esteem, such as self-stories and commitment to yourself.
+		In her interview, Cuddy reiterates the importance of body language and body posture, giving examples of the benefits of good posture and opened up yoga poses for people with depression and/or PTSD. In 2017, Wilkes et al. published research on the effect of posture on depressed individuals. They report the positive effects of good posture for self-esteem and mood in healthy individuals but highlight the missing literature on individuals with depression, even though bad and slouched postures are symptoms of depression. The baseline they started with all had a more slouched posture than in the normative data from the original study, and they found that adopting a better posture with the help of physiotherapy tape for 25 minutes improved their fatigue levels and their positive affects (Wilkes et al. 1). 
+		</p>
+		<p class="center">
+		Cuddy continues to talk about the positive effect of other body behaviors such as breathing and speech tempo. They continue to discuss factors that might increase self-esteem, such as self-stories and commitment to yourself.
 		
 		They continue a part of the interview talking about self-confidence and touch on personal narrative, affirming that people with positive narratives have been correlated with living longer. They do acknowledge that a causal link has not been made, and this is the case for many personality and psychology traits that correlate with longevity. Other research has highlighted how self-narrative can reflect someone’s state of mind; for example, people who tell stories where they started off good but experienced a bad event tend to find less coherence in life and tend to be less driven, more anxious, and more depressed (McAdams, 1995). On the other hand, people who tell stories that started off as bad, but something good happened, tend to be more driven, feel a bigger sense of agency, and coherence in their life. In both cases, finding meaning and purpose in their stories was a good coping mechanism to acquire a sense of coherence in their life. I think there are two factors to consider here: how someone tells their story but also the cards they have been dealt in life. The interviewer mentions that being understanding with yourself in how you see and tell your story improves your self-esteem and your commitment to yourself.
 		
