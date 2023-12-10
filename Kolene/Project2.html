@@ -67,15 +67,22 @@
 	.center {
 		text-align: center;
 	}
-	div.scroll-container {
-		background-color: #white;
-		overflow: auto;
-		white-space: nowrap;
-		padding: 10px;
+	div.scrollmenu {
+	  background-color: #333;
+	  overflow: auto;
+	  white-space: nowrap;
 	}
 	
-	div.scroll-container img {
-		padding: 10px;
+	div.scrollmenu a {
+	  display: inline-block;
+	  color: white;
+	  text-align: center;
+	  padding: 14px;
+	  text-decoration: none;
+	}
+	
+	div.scrollmenu a:hover {
+	  background-color: #777;
 	}
 	
 	.column {
@@ -93,14 +100,8 @@
 <script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
 </head>
 	<body>
-		<h2 id="talks" class="center">Her Talks</h2>
-		<div id="scroll-container">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/-1i1BcuhibM?si=ex4hJ3JNAt5guyJ6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>	
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/-1i1BcuhibM?si=ex4hJ3JNAt5guyJ6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/phcDQ0H_LnY?si=AD54ZbqRnXLCZ0pP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/ATo9sYax-AQ?si=7Waxoj9Y2QffGklN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-		</div>
-        	<h2 id="intro">The other content of Amy Cuddy</h2>
+
+        	<h2 id="intro" class="center">The other content of Amy Cuddy</h2>
         	<p class="center"> A majority of the digital content in which Amy Cuddy appears online revisits the concepts she uncovered in her research. She gave a couple of talks 
           	Similar to the one she gave on ted talks. And gave interviews about the power of body language concepts she developped during her research. Her interviews are significantly longer
 	  	than the talks she gives, but they touch on similar topics. She does not have a strong internet presence, she does not have tweeter per example. And she has significantly
@@ -108,6 +109,14 @@
 
         	<div id="chartContainer" style="height: 300px; width: 100%;"></div>
 
+		<h2 id="talks" class="center">Her Talks</h2>
+		<div id="scroll-container">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/-1i1BcuhibM?si=ex4hJ3JNAt5guyJ6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>	
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/-1i1BcuhibM?si=ex4hJ3JNAt5guyJ6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/phcDQ0H_LnY?si=AD54ZbqRnXLCZ0pP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/ATo9sYax-AQ?si=7Waxoj9Y2QffGklN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		</div>
+		
 		<h2 id="interview" class="center">Her Most Popular Interview</h2>
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/YEM3nWkB-EE?si=jX2fs81afePTtp-5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 		
