@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+window.onload = function () {
+  var chart = new CanvasJS.Chart("chartContainer");
+  chart.options.axisY = { prefix: "", suffix: "" };
+  chart.options.title = { text: "View count of Howard Gardner Videos" };  //graph title
+
+  var series1 = { 
+    type: "column",
+    name: "Views",
+    showInLegend: false
+  };
+
+  chart.options.data = [];
+  chart.options.data.push(series1);
+    
+
+
+  series1.dataPoints = [
+  {label: "Howard Gardner on Multiple Intelligences", y: 558000, color: "#3b784b" },
+  {label: "Professor Howard Gardner on Multiple Intelligences" , y: 34000, color: "#3b784b" },
+  {label: "8 Intelligences - Theory of Multiple Intelligences Explained - Dr. Howard Gardner", y: 1200000, color: "#3b784b" },
+  {label: "Faculti - Frames of Mind - Theory of Multiple Intelligences - Howard Gardner", y: 74000, color: "#3b784b" },
+  {label: "Howard Gardner on Mind, Brain, and Education", y: 9200, color: "#3b784b" },                    
+  ];
+  //outputs the chart
+    chart.render();
+}
+  
+  </script>
+  <script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+</head>
+    <div id="chartContainer" style="height: 1000px; width: 100%;">
+    </div>
+</html>
