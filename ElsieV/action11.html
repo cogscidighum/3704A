@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+<html>
+   <title>Elsie</title>
+  <h3>Howard Gardner Max!, taking a few seconds to load...</h3>
+  <head>
+    <script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
+  </head>
+  <body>
+    <gradio-lite>
+      import gradio as gr
+      import pandas as pd
+      def show_df(as1,as2,as3):
+         df = pd.DataFrame({
+            "Videos" : ["Howard Gardner on Multiple Intelligences","Professor Howard Gardner on Multiple Intelligences", "8 Intelligences - Theory of Multiple Intelligences Explained - Dr. Howard Gardner", "Faculti - Frames of Mind - Theory of Multiple Intelligences - Howard Gardner", "Howard Gardner on Mind, Brain, and Education"], 
+            "Views" : [558117, 34579, 1235291, 74860, 9209], 
+            "Duration" : [8, 2, 4.25, 4.75, 4]})
+         print(as1)
+         df = df.style.highlight_max(color = 'lightgreen', axis = 0)
+         return df
+      with gr.Blocks() as demo:
+        with gr.Row():
+          with gr.Column():
+            data = gr.Dataframe()
+            demo.load(show_df, None, [data])
+      demo.launch()
+    </gradio-lite>
+  </body>
+</html>
