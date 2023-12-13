@@ -22,7 +22,7 @@
                  return "", history + [[user_message, None]]
 
              def bot(history):
-                 bot_message = random.choice(["These horrific experiences that are done for a good reason can be manipulated with post-event information.", "As scientists, we make distinctions between the different kinds of memories: these include semantic memories, and personal memories.", "Sometimes memory for abuse which supposedly occurred over years and years are new-found memories the mind creates after the fact.", "I think that having an appreciation of how malleable memory can be is important just for understanding how the mind works!", "I like to sayt that memory works a little bit more like a Wikipedia page, because you can go in there and edit it--but so can other people."])
+                 bot_message = random.choice(["These horrific experiences that are done for a good reason can be manipulated with post-event information.", "As scientists, we make distinctions between the different kinds of memories: these include semantic memories, and personal memories.", "Sometimes memory for abuse which supposedly occurred over years and years are new-found memories the mind creates after the fact.", "I think that having an appreciation of how malleable memory can be is important just for understanding how the mind works!", "I like to say that memory works a little bit more like a Wikipedia page, because you can go in there and edit it--but so can other people."])
                  history[-1][1] = ""
                  for character in bot_message:
                      history[-1][1] += character
