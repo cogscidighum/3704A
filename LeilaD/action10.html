@@ -1,0 +1,63 @@
+<html>
+<head>
+<script type="text/javascript">
+window.onload = function () {
+	var chart = new CanvasJS.Chart("chartContainer");
+
+	chart.options.axisY = {suffix: "K" };
+	chart.options.title = { text: "Timnit Gebru YouTube Stats" };
+
+	var series1 = { //dataSeries - first quarter
+    	type: "column",
+    	name: "Views (in thousands)",
+    	color: "#93745E",
+  	 
+    	showInLegend: true
+	};
+
+	var series2 = { //dataSeries - second quarter
+    	type: "column",
+    	name: "Duration in minutes",
+    	color: "#CCB69C",
+ 	 
+    	showInLegend: true
+	};
+
+	chart.options.data = [];
+	chart.options.data.push(series1);
+	chart.options.data.push(series2);
+
+
+	series1.dataPoints = [
+        	{ label: "How To Stop Artificial Intelligence From Marginalizing Communities", y: 80},
+        	{ label: "Whistleblowers Warn About the Dark Side of AI ", y: 29},
+        	{ label: "AI Ethics Researcher Timnit Gebru's Firing Doesn’t Look Good For Google", y: 107 },
+        	{ label: "Understanding the Limitations of AI: When Algorithms Fail", y: 16 },
+        	{ label: "The Quest for Ethical Artificial Intelligence", y: 9.7 }
+	];
+
+	series2.dataPoints = [
+    	{ label: "How To Stop Artificial Intelligence From Marginalizing Communities", y: 13.67 },
+    	{
+        label: "Whistleblowers Warn About the Dark Side of AI", y: 24.03 },
+    	{ label: "AI Ethics Researcher Timnit Gebru's Firing Doesn’t Look Good For Google", y: 12.25 },
+    	{ label: "Understanding the Limitations of AI: When Algorithms Fail", y: 15.567 },
+    	{ label: "The Quest for Ethical Artificial Intelligence", y: 58.71 }
+	];
+    
+    chart.options.axisX = {
+        interval: 1,
+        labelFontSize: 12,
+    };
+
+	chart.render();
+}
+</script>
+<script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+</head>
+
+<body>
+	<div id="chartContainer" style="height: 500px; width: 100%;">
+	</div>
+</body>
+</html>
