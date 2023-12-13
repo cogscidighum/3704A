@@ -1,0 +1,29 @@
+
+<head>
+<html>
+  <h3>Timnit Gebru Max Views</h3>
+  <head>
+    <script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
+</head>
+  <body>
+    <gradio-lite>
+      import gradio as gr
+      import pandas as pd
+      def show_df(as1,as2,as3):
+         df = pd.DataFrame({
+            "Videos" : ["How To Stop Artificial Intelligence From Marginalizing Communities", "Whistleblowers Warn About the Dark Side of AI ", "AI Ethics Researcher Timnit Gebru's Firing Doesn’t Look Good For Google", "Understanding the Limitations of AI: When Algorithms Fail", "The Quest for Ethical Artificial Intelligence"], 
+            "Views" : [80827, 29428 , 107852, 9755, 7337], 
+            "Duration (mins)" : [13.67, 24.03, 12.25, 15.567, 58.71]})
+         print(as1)
+         df = df.style.highlight_max(color = 'lightblue', axis = 0)
+         return df
+      with gr.Blocks() as demo:
+        with gr.Row():
+          with gr.Column():
+            data = gr.Dataframe()
+            demo.load(show_df, None, [data])
+      demo.launch()
+    </gradio-lite>
+  </body>
+</html>
+
