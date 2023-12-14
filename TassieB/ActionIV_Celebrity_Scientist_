@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>CelSciMax</title>
+  </head>
+
+  <body>
+    <script>
+      const celscilist = {
+        'Ahmad Sohrabi': { 'info': { 'views': /* Add Ahmad's views here */ } },
+        'Philip Weiss': { Mihaly Csikszentmihalyi, ': { 'views': 952791 } },
+        'Meagan Choo-Kang': { 'Janelle Shane, The danger of AI is weirder than you think': { 'views': 2700000 } },
+        'Wing Kuan Leng': { 'Daniel Kahneman,The riddle of experience vs memory': { 'views': 1200000 } },
+        'Darcy Susel': { 'Donald Hoffman, YouTube Video: Do we see reality as it is': { 'views': 2400000 } },
+        'Rachelle Bazinet': { 'Patricia Churchland, The Brains Behind Morality | Patricia Churchland | TEDxNorrköping': { 'views': 8026 } },
+        'Oak MacDonald': { 'Bret Weinstein, The Dawn of AGI: Bret speaks with Alexandros Marinos on the Dark Horse Podcast': { 'views': 41610 } },
+        'Morgan Chau': { 'Andrew Huberman - Neuroscientist: "We Are Building a Generation of Low Attention': { 'views': 55561 } },
+        'Sebastian Sharma': { 'Tom Scott, There is no Algorithm for Truth': { 'views': 2500000 } },
+        'Amanda Skolnik': { 'Dr. Andrew Huberman-Motivation Madness,"Neuroscientist: "DELETE Your Social Media NOW!" - Here's Why!: { 'views': 556000 } },
+        'Helen Awaju': { 'Melanie Mitchell, How to Build Truly Intelligent AI': { 'views': 44000 } },
+        'Maddy Millar': { 'Jordan peterson': { 'views': 236000 } },
+        'Leila Dabakuyo': { 'Timnit Gebru | How To Stop Artificial Intelligence From Marginalizing Communities|': { 'views': 79338 } },
+        'Kolene Lamizana': { 'Amy Cuddy | The power of body language': { 'views': 23700189 } },
+        'Theo Pana': { 'Elizabeth Loftus, How reliable is your memory': { 'views': 2190333 } },
+        'Laiza Robert': { 'The misinformation effect | Elizabeth Loftus |': { 'views': 1700 } },
+        'Joy Nama': { 'Martha Nussbaum, "What Is Anger, and Why Should We Care?': { 'views': 40000 } },
+        'Izzy Laidlaw': { 'Dr Russell A Barkley - 30 Essential Ideas you should know about ADHD, 1B Inhibition, Impulsivity, and Emotion': { 'views': 774000 } },
+        'Rianna Ito': { 'Slavoj Žižek | Surplus Happiness | Slavoj Žižek critiques pleasure |': { 'views': 95000 } },
+        'Teju Oladipo': { 'Noam Chomsky, Advances in AI: ChatGPT': { 'views': 26042 } },
+        'Dominic Weiss': { 'Nathaniel Drew, The Secret to Thriving in Hard Times': { 'views': 126000 } },
+        'Mariam Saleh': { 'Lara Boyd, Neuroscientist,Youtube Video:"After watching this, your brain will not be the same': { 'views': 38000000 } },
+        'Kaylee Chaput': { 'Anil Seth, Your brain hallucinates your conscious reality': { 'views': 14187265 } },
+        'Elsie Valenzona': { 'Howard Gardner, "8 Intelligences: Are You a Jack of All Trades or a Master of One?"': { 'views': 1500000 } },
+        'Maya Pasieczny': { 'The Politics of Consciousness | video lecture with Yuval Noah Harari,': { 'views': 409000 } },
+        'Christine Ndagijimana': { 'Jordan Peterson': { 'views': 672531 } },
+        'Ali Zain Vastani': { 'Marc Andreessen, Marc Andreessen: Future of the Internet, Technology, and AI | Lex Fridman Podcast,': { 'views': 1100000 } },
+        'Suban Hussein': { 'Lex Fridman podcasts - Joscha Bach: Life, Intelligence, Consciousness, AI & the Future of Humans | Lex Fridman Podcast #392 ': { 'views': 493000 } },
+        'Ashley Navas': { 'Poppy Crum, AI Today': { 'views': 130000 } },
+        'Melate Mulugeta': { 'Neuroscience and Artificial Intelligence Need Each Other | Marvin Chun | ': { 'views': /* Add Melate's views here */ } },
+        'Ruqayyah Abdullah': { 'Future Thinking | Jim Davies | ': { 'views': 27000 } },
+        'Ryan Lyster': { 'Ryan Holiday, The Daily Stoic': { 'views': 32000 } },
+        'Isabella St-Marseille': { 'Neuroscience and Artificial Intelligence Need Each Other | Marvin Chun | ': { 'views': 393000 } },
+        'Tassie Bouraoui': {'Yejin Choi, in her TED Talk titled "Why AI is Incredibly Smart and Shockingly Stupid': {'views':1,796,434} },
+
+      };
+
+      // Extract 'views' values into an array
+      const viewsArray = Object.values(celscilist).map(item => item.info.views);
+
+      // Calculate the sum of 'views' values
+      function calculateAverage(viewsArray) {
+        const sum = viewsArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+        return sum / viewsArray.length;
+      }
+
+      // Find the max value from the array
+      const maxViews = Math.max(...viewsArray);
+
+      function findKeyByViews(obj, viewsValue) {
+        return Object.keys(obj).find(key => obj[key].info.views === viewsValue);
+      }
+
+      // Call the function with data and maxViews as arguments
+      let no1 = findKeyByViews(celscilist, maxViews);
+
+      // Output the results
+      document.write(`Is dd above average? ${checkcelsci('dd')} #1 is: ${no1} with view count of ${maxViews}`);
+    </script>
+  </body>
+</html>
