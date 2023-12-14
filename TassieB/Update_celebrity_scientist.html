@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>CelSci</title>
+  </head>
+
+  <body>
+    <script>
+        const celscilist = {
+          'Philip Weiss': { 'info': { 'views': 952791 } },
+          'Meagan Choo-Kang': { 'info': { 'views': 2700000 } },
+          'Wing Kuan Leng': { 'info': { 'views': 1200000 } },
+          'Darcy Susel': { 'info': { 'views': 2400000 } },
+          'Rachelle Bazinet': { 'info': { 'views': 8026 } },
+          'Oak MacDonald': { 'info': { 'views': 41610 } },
+          'Morgan Chau': { 'info': { 'views': 55561 } },
+          'Sebastian Sharma': { 'info': { 'views': 2500000 } },
+          'Amanda Skolnik': { 'info': { 'views': 556000 } },
+          'Helen Awaju': { 'info': { 'views': 44000 } },
+          'Maddy Millar': { 'info': { 'views': 236000 } },
+          'Leila Dabakuyo': { 'info': { 'views': 79338 } },
+          'Kolene Lamizana': { 'info': { 'views': 23700189 } },
+          'Theo Pana': { 'info': { 'views': 2190333 } },
+          'Laiza Robert': { 'info': { 'views': 1700 } },
+          'Joy Nama': { 'info': { 'views': 40000 } },
+          'Izzy Laidlaw': { 'info': { 'views': 774000 } },
+          'Rianna Ito': { 'info': { 'views': 95000 } },
+          'Teju Oladipo': { 'info': { 'views': 26042 } },
+          'Dominic Weiss': { 'info': { 'views': 126000 } },
+          'Mariam Saleh': { 'info': { 'views': 38000000 } },
+          'Kaylee Chaput': { 'info': { 'views': 14187265 } },
+          'Elsie Valenzona': { 'info': { 'views': 1500000 } },
+          'Maya Pasieczny': { 'info': { 'views': 409000 } },
+          'Christine Ndagijimana': { 'info': { 'views': 672531 } },
+          'Ali Zain Vastani': { 'info': { 'views': 1100000 } },
+          'Suban Hussein': { 'info': { 'views': 493000 } },
+          'Ashley Navas': { 'info': { 'views': 130000 } },
+          'Melate Mulugeta': { 'info': { 'views': 0 } }, // Update Melate Mulugeta's views
+          'Ruqayyah Abdullah': { 'info': { 'views': 27000 } },
+          'Ryan Lyster': { 'info': { 'views': 32000 } },
+          'Isabella St-Marseille': { 'info': { 'views': 393000 } }
+        };
+
+        let sumOfViews = 0;
+        let count = 0;
+
+        for (const key in celscilist) {
+          if (celscilist.hasOwnProperty(key)) {
+            const views = celscilist[key].info.views;
+            sumOfViews += views;
+            count++;
+          }
+        }
+
+        const averageViews = sumOfViews / count;
+
+        class Celsci {
+          static iscelsci(x) {
+            let y = "false";
+            if (x > averageViews) {
+              y = "true";
+            }
+            return y;
+          }
+        }
+
+        function checkcelsci(x) {
+          const result = Celsci.iscelsci(celscilist[x]['info']['views']);
+          return result;
+        }
+
+        // Output for each classmate
+        for (const key in celscilist) {
+          if (celscilist.hasOwnProperty(key)) {
+            document.write(`Is ${key} a celebrity scientist? ${checkcelsci(key)}<br>`);
+          }
+        }
+    </script>
+  </body>
+</html>
