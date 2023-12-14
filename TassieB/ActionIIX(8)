@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CogSciDigHumJS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 20px;
+    }
+    h2 {
+      color: #333;
+    }
+    #nameinput {
+      width: 200px;
+      padding: 8px;
+      margin-bottom: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    #output {
+      color: green;
+      margin-bottom: 20px;
+    }
+    #button1 {
+      background-color: orange;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    select {
+      padding: 8px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-right: 10px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #555;
+    }
+  </style>
+</head>
+<body> 
+  <h2>CogSciDigHumJS</h2>
+  <iframe
+    src="https://cogsphere-acogsphere.hf.space"
+    frameborder="0"
+    width="350"
+    height="150"
+  ></iframe>
+  <br>  
+  <label for="nameinput">Name:</label>
+  <input type="text" id="nameinput" placeholder="Enter Your Name Here">
+  <br>
+  <div id="output">Waiting!</div>
+  <label for="celsciSelect">Pick a Celsci and Rate then Vote!</label>
+  <select id="celsciSelect"></select>
+  <select id="rateSelect"></select>
+  <button type="button" id="button1">Vote!</button>
+
+  <script>       
+    var celscilist = [ /* ...Your Celsci list... */ ]
+
+    var celsciSelect = document.getElementById("celsciSelect");
+    var rateSelect = document.getElementById("rateSelect");
+
+    function addOption(select, value, text) {
+      var option = document.createElement("option");
+      option.value = value;
+      option.text = text;
+      select.appendChild(option);
+    }
+
+    for (var i = 0; i < celscilist.length; i++) {
+      addOption(celsciSelect, i, celscilist[i]);
+    }
+
+    addOption(rateSelect, 0, "Rate");
+    for (var i = 1; i <= 5; i++) {
+      addOption(rateSelect, i, i);
+    }
+  </script>
+  <script type="module"> 
+    import { client } from "https://cdn.jsdelivr.net/npm/@gradio/client@0.1.4/dist/index.min.js";
+
+    const generate = document.getElementById("button1");   
+    generate.addEventListener("click", async () =>{
+      try {
+        const app = await client("https://cogsphere-acogsphere.hf.space");
+        const result = await app.predict(0, [
+          nameinput.value,
+          rateSelect.value.toString(),
+          celscilist[celsciSelect.value],
+        ]);
+        document.getElementById("output").innerHTML = "Sent!";
+      } catch (error){
+        console.log("Error:",error.message); 
+      }       
+    });
+  </script>
+</body>
+</html>
