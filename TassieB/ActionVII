@@ -1,0 +1,63 @@
+For Part A (ACogSphere)
+<!DOCTYPE html>
+<html>
+<head>
+   <title>ACogSphere: Sentiment Analysis</title>
+   <button id="run">ACTION</button>
+   <label>Input Abstract:</label>
+   <input type="text" id="abstractInput" placeholder="Enter YouTube Abstract">
+   <label>Output:</label>   
+   <div id="output2">Waiting to analyze a great life!</div>
+</head>
+<body> 
+   <script type="module">
+      import { pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.7.0'
+  
+      const generate = document.getElementById("run");   
+      const abstractInput = document.getElementById("abstractInput");
+
+      generate.addEventListener("click", async () => {
+         try {
+            let pipe = await pipeline('text-classification');
+            let output = await pipe(abstractInput.value);
+            output2.textContent = JSON.stringify(output);
+         } catch (error) {
+            console.log("Error:",error.message);
+         }
+      });
+   </script>
+</body>
+</html>
+
+
+For Part B (BCogSphere)
+<!DOCTYPE html>
+<html lang="en-us">
+<html>
+<head>
+   <title>BCogSphere: Retrieval</title>
+   <button id="action">ACTION</button>
+   <label>Input YouTube Link:</label>
+   <input type="text" id="linkInput" placeholder="Enter YouTube Link">
+   <label>Output:</label>   
+   <div id="output">Ready!</div>
+</head>
+<body> 
+   <script type="module"> 
+      import { client } from "https://cdn.jsdelivr.net/npm/@gradio/client@0.1.4/dist/index.min.js";
+
+      const generate = document.getElementById("action");   
+      const linkInput = document.getElementById("linkInput");
+
+      generate.addEventListener("click", async () => {
+         try {         
+            const app = await client("https://cognitivescience-cogsphere.hf.space");
+            const lastview = await app.predict("/predict", [linkInput.value]);
+            output.textContent = JSON.stringify(lastview.data);     
+         } catch (error) {
+            console.log("Error:",error.message);                
+         }       
+      });
+   </script>
+</body>
+</html>
