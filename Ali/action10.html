@@ -1,0 +1,58 @@
+<html>
+<head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+</style>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script type="text/javascript">
+window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer");
+
+    chart.options.axisY = {suffix: "K" };
+    chart.options.title = { text: "Marc Andreessen's Views + Duration", fontFamily: "Arial, sans-serif" };
+
+    var series1 = { //dataSeries - first quarter
+        type: "column",
+        name: "Views",
+        color: "blue",
+        showInLegend: true
+    };
+
+    var series2 = { //dataSeries - second quarter
+        type: "column",
+        name: "Duration in seconds",
+        color: "red",
+        showInLegend: true
+    };
+
+    chart.options.data = [];
+    chart.options.data.push(series1);
+    chart.options.data.push(series2);
+
+    series1.dataPoints = [
+        { label: "Video 1", y: 367000, link: "https://www.youtube.com/watch?v=yixIc1Ai6jM" },
+        { label: "Video 2", y: 20000, link: "https://www.youtube.com/watch?v=KFboZkwHjsU" },
+        { label: "Video 3", y: 39000, link: "https://www.youtube.com/watch?v=uJ1HfDqM7ns" },
+        { label: "Video 4", y: 1600, link: "https://www.youtube.com/watch?v=e_hiIM-aFYs" },
+        { label: "Video 5", y: 67000, link: "https://www.youtube.com/watch?v=QMnH6KYNuWg" }
+    ];
+
+    series2.dataPoints = [
+        { label: "Video 1", y: 10621 },
+        { label: "Video 2", y: 8135 },
+        { label: "Video 3", y: 3257 },
+        { label: "Video 4", y: 5276 },
+        { label: "Video 5", y: 3257 }
+    ];
+
+    chart.render();
+}
+</script>
+</head>
+
+<body>
+    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+</body>
+</html>
