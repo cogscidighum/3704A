@@ -1,45 +1,49 @@
 <html>
 	<head>
 		<script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
-
 	</head>
 	<body>
 		<gradio-lite>
-         import gradio as gr
-         import random
-         import time
+            import gradio as gr
+            import random
+            import time
 
-         with gr.Blocks() as demo:
-             chatbot = gr.Chatbot()
-             msg = gr.Textbox()
-             clear = gr.Button("Clear")
-             def vote(data: gr.LikeData):
-                if data.liked:
-                    print("You upvoted this response: " + data.value)
-                else:
-                    print("You downvoted this response: " + data.value)
-             def user(user_message, history):
-                 return "", history + [[user_message, None]]
+            with gr.Blocks() as demo:
+                chatbot = gr.Chatbot()
+                msg = gr.Textbox()
+                clear = gr.Button("Clear")
 
-             def bot(history):
-                 bot_message = random.choice(["Wherever there is judgment, there is noise and more of it than you think," 
-, “Intuition feels just the same when is wrong and when is right”, “Some judgments are biases; they are systematically off target. Other judgments are noisy, as people who are expected to agree, end up at very different points around the target”, 
-       “Does the doctor know that he doesn't know”, “Noise audit”])
-                 history[-1][1] = ""
-                 for character in bot_message:
-                     history[-1][1] += character
-                     time.sleep(0.05)
-                     yield history
+                def vote(data: gr.LikeData):
+                    if data.liked:
+                        print("You upvoted this response: " + data.value)
+                    else:
+                        print("You downvoted this response: " + data.value)
 
-             msg.submit(user, [msg, chatbot], [msg, chatbot], queue=False).then(
-                 bot, chatbot, chatbot
-             )
-             clear.click(lambda: None, None, chatbot, queue=False)
-             chatbot.like(vote, None, None)  # Adding this line causes the like/dislike icons to appear in your chatbot
+                def user(user_message, history):
+                    return "", history + [[user_message, None]]
 
+                def bot(history):
+                    bot_message = random.choice([
+                        "Wherever there is judgment, there is noise and more of it than you think,",
+                        "Intuition feels just the same when it is wrong and when it is right",
+                        "Some judgments are biases; they are systematically off target. Other judgments are noisy, as people who are expected to agree, end up at very different points around the target",
+                        "Does the doctor know that he doesn't know",
+                        "Noise audit"
+                    ])
+                    history[-1][1] = ""
+                    for character in bot_message:
+                        history[-1][1] += character
+                        time.sleep(0.05)
+                        yield history
 
-         demo.queue()
-         demo.launch()
+                msg.submit(user, [msg, chatbot], [msg, chatbot], queue=False).then(
+                    bot, chatbot, chatbot
+                )
+                clear.click(lambda: None, None, chatbot, queue=False)
+                chatbot.like(vote, None, None)  # Adding this line causes the like/dislike icons to appear in your chatbot
+
+            demo.queue()
+            demo.launch()
 		</gradio-lite>
 	</body>
 </html>
