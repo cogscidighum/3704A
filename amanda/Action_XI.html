@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+<html>
+   <title>Darcy ActionXI</title>
+	<h3>Amanda's CelSci Max!, taking a few seconds to load...</h3>
+	<head>
+		<script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
+	</head>
+	<body>
+		<gradio-lite>
+			import gradio as gr
+			import pandas as pd
+			def show_df(as1,as2,as3):
+				 df = pd.DataFrame({
+					  "Videos" : ["Video 1: Andrew Huberman - Fitness Toolkit: Protocol & Tools to Optimize Physical Health", "Video 2: Leverage Dopamine to Overcome Procrastination & Optimize Effort Huberman Lab Podcast", "Video 3: Dr. Alia Crum: Science of Mindsets for Health & Performance?", "Video 4: Time Perception & Entrainment by Dopamine, Serotonin & Hormones", "Video 5: Controlling Your Dopamine For Motivation, Focus & Satisfaction "], 
+					  "Views" : [173747, 755095, 127542, 846064, 256368], 
+					  "Duration in seconds" : [1 100 000, 1 067 668 , 635 984,469 217, 8 146 227]})
+				 print(as1)
+				 df = df.style.highlight_max(color = 'lightgreen', axis = 0)
+				 return df
+			with gr.Blocks() as demo:
+				with gr.Row():
+					with gr.Column():
+						data = gr.Dataframe()
+						demo.load(show_df, None, [data])
+			demo.launch()
+		</gradio-lite>
+	</body>
+</html>
