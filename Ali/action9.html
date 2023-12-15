@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <style>
+    body {
+      background: Navy;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      color: white;
+    }
+
+    h3 {
+      color: #fff;
+    }
+
+    button {
+      background-color: #87CEFA;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h3>Rock Paper Scissors</h3>
+
+  <script>
+    var wins = 0;
+    var losses = 0;
+
+    function playRound(userChoice) {
+      var choices = ['r', 'p', 's'];
+      var computerChoice = choices[Math.floor(Math.random() * 3)];
+
+      if (userChoice + computerChoice == 'sp' || userChoice + computerChoice == 'rs' || userChoice + computerChoice == 'pr') {
+        wins += 1;
+      } else if (userChoice + computerChoice == 'rp' || userChoice + computerChoice == 'ps' || userChoice + computerChoice == 'sr') {
+        losses += 1;
+      }
+
+      var resultElement = document.getElementById('result');
+      resultElement.innerText = "Results: Wins - " + wins + " | Losses - " + losses;
+      resultElement.style.color = (wins > losses) ? 'green' : ((wins < losses) ? 'red' : 'white');
+    }
+  </script>
+
+  <button onclick="playRound('r')">Rock</button>
+  <button onclick="playRound('p')">Paper</button>
+  <button onclick="playRound('s')">Scissors</button>
+
+  <p id="result">Results: Wins - 0 | Losses - 0</p>
+
+</body>
+</html>
