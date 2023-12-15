@@ -1,0 +1,38 @@
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gradio/lite@0.4.1/dist/lite.css" />
+	</head>
+	<body style="background-color: ##d9ead3">
+      <h3>
+        Amanda and CelSci Name: Andrew Huberman, Taking a few seconds to load...
+      </h3>
+<gradio-lite>
+
+<gradio-requirements>
+transformers_js_py
+</gradio-requirements>
+
+<gradio-file name="app.py" entrypoint>
+from transformers_js import import_transformers_js
+import gradio as gr
+transformers = await import_transformers_js()
+pipeline = transformers.pipeline
+pipe = await pipeline('sentiment-analysis')
+
+async def classify(text):
+	return await pipe(text)
+
+demo = gr.Interface(classify, "textbox", "json", examples=["Andrew Huberman - 
+
+
+
+1:52:17 / 1:57:49
+
+•
+Should You Train Sick?, Ramping Training
+
+
+Fitness Toolkit: Protocol & Tools to Optimize Physical Health ", "Dr. Alia Crum: Science of Mindsets for Health & Performance ", "Time Perception & Entrainment by Dopamine, Serotonin & Hormones", "Controlling Your Dopamine For Motivation, Focus & Satisfaction"])
+demo.launch()
+</gradio-file>
+</gradio-lite>
+    </body>
+</html>
