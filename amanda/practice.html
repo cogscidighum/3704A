@@ -5,6 +5,17 @@
     <meta charset="utf-8">
     <title>My GitHub Page</title>
     <style>
+        body {
+            display: flex;
+        }
+
+        #toc-container {
+            width: 200px;
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-right: 1px solid #ddd;
+        }
+
         h1 {
             color: black;
             font-size: 30px;
@@ -21,15 +32,6 @@
             font-size: 23px;
         }
 
-        #toc {
-            position: fixed;
-            top: 0;
-            right: 0;
-            background-color: #f0f0f0;
-            padding: 15px;
-            border-left: 1px solid #ddd;
-        }
-
         #toc a {
             display: block;
             margin-bottom: 5px;
@@ -40,14 +42,26 @@
         #toc a:hover {
             color: #21675e;
         }
+
+        #content-container {
+            padding: 15px;
+            background-color: #c7efb9;
+        }
+
+        #content-container img {
+            width: 250px;
+            height: 250px;
+            margin: 15px auto;
+            display: block;
+        }
     </style>
 </head>
 
-<body style="background-color:#c7efb9;">
+<body>
 
-    <div id="toc">
+    <div id="toc-container">
         <h2>Table of Contents</h2>
-        <ul>
+        <ul id="toc">
             <li><a href="#who-is-dr-andrew-huberman">Who is Dr. Andrew Huberman?</a></li>
             <li><a href="#video-1">Video 1: Fitness Toolkit</a></li>
             <li><a href="#video-2">Video 2: Leverage Dopamine to Overcome Procrastination</a></li>
@@ -62,44 +76,48 @@
         </ul>
     </div>
 
-    <div style="text-align: center;">
-        <h1 class="custom-h1">Celebrity Scientist: Dr. Andrew Huberman</h1>
-    </div>
+    <div id="content-container">
 
-    <!-- Rest of your HTML content -->
+        <div style="text-align: center;">
+            <h1 class="custom-h1">Celebrity Scientist: Dr. Andrew Huberman</h1>
+        </div>
 
-    <h1 id="who-is-dr-andrew-huberman">Who is Dr. Andrew Huberman?</h1>
-    <!-- ... -->
+        <!-- Rest of your HTML content -->
 
-    <h2 id="video-1">Video 1: Fitness Toolkit: Protocol and Tools to Optimize Physical Health</h2>
-    <!-- ... -->
+        <h1 id="who-is-dr-andrew-huberman">Who is Dr. Andrew Huberman?</h1>
+        <!-- ... -->
 
-    <!-- Repeat similar structure for other sections -->
+        <h2 id="video-1">Video 1: Fitness Toolkit: Protocol and Tools to Optimize Physical Health</h2>
+        <!-- ... -->
 
-    <h2 id="my-thoughts">My Thoughts:</h2>
-    <!-- ... -->
+        <!-- Repeat similar structure for other sections -->
 
-    <h2 id="bonus-actionxi-amandas-celsci-max">BONUS: ActionXI Amanda's CelSci Max</h2>
-    <!-- ... -->
+        <h2 id="my-thoughts">My Thoughts:</h2>
+        <!-- ... -->
 
-    <h2 id="bonus-actionxi-result-of-video-title">BONUS: ActionXI Result of Video Title</h2>
-    <!-- ... -->
+        <h2 id="bonus-actionxi-amandas-celsci-max">BONUS: ActionXI Amanda's CelSci Max</h2>
+        <!-- ... -->
 
-    <h2 id="bonus-actionxii-chatbot">BONUS: ActionXII Chatbot</h2>
-    <!-- ... -->
+        <h2 id="bonus-actionxi-result-of-video-title">BONUS: ActionXI Result of Video Title</h2>
+        <!-- ... -->
 
-    <h2 id="references">References:</h2>
-    <!-- ... -->
+        <h2 id="bonus-actionxii-chatbot">BONUS: ActionXII Chatbot</h2>
+        <!-- ... -->
 
-    <div style="background-color: #21675e; color: white; text-align: left;padding: 10px;">
-        <p>Amanda Skolnik<br>
-            101158877<br>
-            CGSC 3704A<br>
-            Professor Ahmad Sohrabi<br>
-            Nov 2023
-        </p>
+        <h2 id="references">References:</h2>
+        <!-- ... -->
+
+        <div style="background-color: #21675e; color: white; text-align: left;padding: 10px;">
+            <p>Amanda Skolnik<br>
+                101158877<br>
+                CGSC 3704A<br>
+                Professor Ahmad Sohrabi<br>
+                Nov 2023
+            </p>
+        </div>
     </div>
 
 </body>
 
 </html>
+
