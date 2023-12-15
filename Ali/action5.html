@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>CelSci</title>
+  </head>
+
+  <body>
+    <script>
+          const celscilist = {
+          'MarcAndreessen': {'info': {'views': 1186653} },
+          'JanelleShane': { 'info': { 'views': 2756311 } },
+          'DanielKahneman': { 'info': { 'views': 1274668 } },
+          'DonaldHoffman': { 'info': { 'views': 2509952 } },
+          'PatriciaChurchland': { 'info': { 'views': 8026 } },
+          'BretWeinstein': { 'info': { 'views': 41610 } },
+          'AndrewHuberman ': { 'info': { 'views': 55561 } },
+          'TomScott': { 'info': { 'views': 2556445 } },
+          'AndrewHuberman': { 'info': { 'views': 622161 } },
+          'MelanieMitchell': { 'info': { 'views': 44889 } },
+          'JordanPeterson': { 'info': { 'views': 331219 } },
+          'TimnitGebru': { 'info': { 'views': 79338 } },
+          'AmyCuddy': { 'info': { 'views': 23700189 } },
+          'ElizabethLoftus': { 'info': { 'views': 2190333 } },
+          'ElizabethLoftus': { 'info': { 'views': 3041 } },
+          'MarthaNussbaum': { 'info': { 'views': 41064 } },
+          'RussellBarkley': { 'info': { 'views': 786938 } },
+          'SlavojŽižek': { 'info': { 'views': 154418 } },
+          'NoamChomsky': { 'info': { 'views': 126875 } },
+          'NathanielDrew': { 'info': { 'views': 2190333 } },
+          'LaraBoyd': { 'info': { 'views': 39106997 } },
+          'AnilSeth': { 'info': { 'views': 14187265 } },
+          'HowardGardner': { 'info': { 'views': 1508566 } },
+          'YuvalNoahHarari': { 'info': { 'views': 26042 } }, 
+          'JordanPeterson': { 'info': { 'views': 672531 } },
+          'JoschaBach': { 'info': { 'views': 530132 } },
+          'PoppyCrum': { 'info': { 'views': 133554 } },
+          'RyanHoliday': { 'info': { 'views': 34959 } },
+          'MarvinChun': { 'info': { 'views': 76654 } },
+    
+        };
+        // Step 1: Extract 'views' values into an array
+        //const viewsArray = Object.values(celscilist).map(item => item.info.views);
+
+        // Step 2: Calculate the sum of 'views' values
+        //const sumOfViews = viewsArray.reduce((total, views) => total + views, 0);
+
+        // Step 3: Calculate the average
+        //const averageViews = sumOfViews / viewsArray.length;
+
+        let sumOfViews = 0;
+        let count = 0;
+
+        for (const key in celscilist) {
+          if (celscilist.hasOwnProperty(key)) {
+            const views = celscilist[key].info.views;
+            sumOfViews += views;
+            count++;
+          }
+        }
+
+        const averageViews = sumOfViews / count;
+
+        class Celsci {
+          static iscelsci(x) {
+            let y = "False";
+            if (x > averageViews) {
+              y = "True";
+            }
+            return y;
+          }
+        }
+
+        function checkcelsci(x) {
+          const result = Celsci.iscelsci(celscilist[x]['info']['views']);
+          return result;
+        }
+
+        document.write(checkcelsci('MarcAndreessen'));
+        
+    </script>
+  </body>
+</html>
