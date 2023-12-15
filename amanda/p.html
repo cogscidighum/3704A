@@ -135,32 +135,56 @@ The concept of using rewards to motivate yourself to engage in tasks you dislike
 <p id="space">
 In summary, dopamine is a key determinant of our motivation, excitement, and overall willingness to engage with life's pursuits. Understanding the intricate dance between baseline dopamine, peaks, and our engagement with various activities can help us navigate our emotional experiences more effectively. Dopamine's role in coloring our subjective experiences sheds light on why we are drawn to certain activities and how we can harness this knowledge to lead more rewarding lives.
 
-<h1>My Critical Analysis of the Video:</h1>
+<h1> My Opinon and Takeaways :</h1>
 
 <p id="space">
-Andrew Huberman's video transcript provides a comprehensive overview of the role of dopamine in shaping our experiences and behavior. He debunks the popular notion of "dopamine hits" and instead emphasizes the importance of baseline dopamine levels and how they influence our overall well-being. One key insight he highlights is that your baseline dopamine level plays a pivotal role in determining your mood and motivation.
+Andrew Huberman's insightful video series on the "Huberman Lab" channel provides a comprehensive exploration of dopamine's and other neurotransmitters impact on behavior, debunking the misconception of "dopamine hits" and emphasizing the crucial role of baseline dopamine levels. This array of videos covers key insights, including the nuanced interplay of mindset, physiological processes, and social contexts in stress responses, as discussed in collaboration with Dr. Alia Crum. The videos extend to practical aspects of health optimization in Dr. Huberman's "Fitness Toolkit" episode, addressing physiological factors like insulin and blood glucose while advocating for an inclusive and accessible approach to well-being. Notably, Dr. Huberman goes beyond exercise discussions, exploring post-movement practices, such as cold and heat exposure, and dispelling prevalent health myths. The collective series serves as a valuable resource, empowering individuals to understand dopamine dynamics, manage stress effectively, and adopt personalized strategies for overall health and fitness. Providing free and easily accessible health, lifestyle information is, emphasizing a zero-cost approach to disseminating scientific insights.
 
 <p id="space">
 Huberman also discusses the concept of dopamine peaks and how they affect our experience of various activities. He underlines the fact that the enjoyment of an activity depends on your baseline dopamine when you start and your previous dopamine peaks, dispelling the myth of consistent "dopamine hits." This insight is crucial in understanding why we become desensitized to certain experiences if we engage in them repeatedly.
 
-<p id="space">
-The transcript provides a valuable list of activities and substances that can increase dopamine levels, ranging from chocolate and sex to exercise and even cold exposure. Huberman's explanation of how these different factors affect dopamine levels, both in terms of the extent of increase and the duration, is informative.
 
-<h2>My Opinion and Takeaways:</h2>
+#some fun stuff: 
+ <!DOCTYPE html>
+<head>
+<html>
+   <title>Amanda Skolnik</title>
+	<h3>Your CelSci Max!, taking a few seconds to load...</h3>
+	<head>
+		<script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
+	</head>
+	<body>
+		<gradio-lite>
+			import gradio as gr
+			import pandas as pd
+			def show_df(as1,as2,as3):
+				 df = pd.DataFrame({
+					  "Videos" : ["Video 1", "Video 2", "Video 3", "Video 4", "Video 5"], 
+					  "Views" : [500, 2000, 540, 300, 200], 
+					  "Duration" : [30, 20, 70, 35, 22]})
+				 print(as1)
+				 df = df.style.highlight_max(color = 'lightgreen', axis = 0)
+				 return df
+			with gr.Blocks() as demo:
+				with gr.Row():
+					with gr.Column():
+						data = gr.Dataframe()
+						demo.load(show_df, None, [data])
+			demo.launch()
+		</gradio-lite>
+	</body>
+</html>
 
-<p id="space">
-I agree with Dr. Huberman on several important points raised in the video. His emphasis on the detrimental effects of constantly seeking dopamine hits through activities like scrolling through social media resonates with me. It is clear that our culture's obsession with instant gratification and the constant pursuit of pleasure can lead to negative consequences for our well-being.
-
-<p id="space"> Furthermore, I concur with the idea that finding a balance in everyday life is essential for maintaining optimal dopamine levels and, consequently, a happy and healthy life. Overindulgence in activities that provide rapid dopamine spikes can lead to desensitization and reduced enjoyment over time.
-
-<p id="space">
-The difficulty people face when trying to quit social media is indeed a critical issue. The constant barrage of notifications and the fear of missing out make it challenging to break free from the addictive cycle. Huberman's video sheds light on the importance of taking charge of one's life and well-being, emphasizing the need for balance and not relying on dopamine hits in every aspect of life.
-
-<h1>Conclusion:</h1> 
-
-In summary, Andrew Huberman's insights on dopamine, its effects on our experiences, and the need for balance in our pursuit of pleasure are crucial in an age where instant gratification and constant dopamine stimulation have become the norm. It's essential to acknowledge the impact of these factors on our lives and strive for a more balanced and mindful approach to well-being.  
-<div style="text-align: center;">  
-<h2>References:</h2>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <h2>References:</h2>
  <p id="space"> 
   Ducharme, J. (2023b, June 28). How podcaster Andrew Huberman got America to care about science. Time. https://time.com/6290594/andrew-hubman-lab-podcast-interview/
   Moon. (2023b, August 25). The cancelling of Andrew Huberman [Video]. YouTube. https://www.youtube.com/watch?v=rj76CcZt1m4
