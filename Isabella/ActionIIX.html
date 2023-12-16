@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors Game</title>
+  <style>
+    body {
+      font-family: 'Calibri';
+      background-color: #ADD8E6;
+      text-align: center;
+      margin-top: 70px;
+    }
+
+    #game-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #322;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #322;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="game-container">
+    <h1>Rock Paper Scissors Game</h1>
+    <button onclick="playGame('Rock')">Rock</button>
+    <button onclick="playGame('Paper')">Paper</button>
+    <button onclick="playGame('Scissors')">Scissors</button>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    function playGame(userChoice) {
+      var computerChoice = generateComputerChoice();
+      var result = determineWinner(userChoice, computerChoice);
+
+      displayResult(userChoice, computerChoice, result);
+    }
+
+    function generateComputerChoice() {
+      var randomNum = Math.random();
+      if (randomNum > 0 && randomNum < 0.33) {
+        return "Rock";
+      } else if (randomNum > 0.34 && randomNum < 0.67) {
+        return "Paper";
+      } else {
+        return "Scissors";
+      }
+    }
+
+    function determineWinner(user, computer) {
+      if (user === computer) {
+        return "It's a draw!";
+      } else if (
+        (user === "Rock" && computer === "Scissors") ||
+        (user === "Paper" && computer === "Rock") ||
+        (user === "Scissors" && computer === "Paper")
+      ) {
+        return "Congrats!";
+      } else {
+        return "Better Luck Next Time!";
+      }
+    }
+
+    function displayResult(user, computer, result) {
+      var resultMessage = `You chose ${user}. Computer chose ${computer}. ${result}`;
+      document.getElementById("result").innerText = resultMessage;
+    }
+  </script>
+</body>
+
+</html>
