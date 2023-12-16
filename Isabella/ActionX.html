@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+<script type="text/javascript">
+
+window.onload = function () {
+	var chart = new CanvasJS.Chart("chartContainer", {
+		title:{
+			text: "Mavin Chun's View Counts"              
+		},
+		data: [              
+		{
+			// Change type to "doughnut", "line", "splineArea", etc.
+			type: "doughnut",
+			dataPoints: [
+				{ label: "Video1",  y: 1500 },
+				{ label: "Video2", y: 1000000 },
+				{ label: "Video3", y: 42000 },
+				{ label: "Video4",  y: 345 },
+				{ label: "Video5",  y: 517  },
+              { label: "Video6",  y: 1000  }
+			]
+		}
+		]
+	});
+	chart.render();
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+</body>
+</html>
