@@ -107,14 +107,12 @@
 
   <div id="criticism" class="card">
     <strong>Criticism:</strong>
-    <p>Starting with the intersection of artificial intelligence (AI) and consciousness, Joscha Bach takes readers on a thought-provoking journey. His novel viewpoint is apparent even though his beliefs are not well supported by evidence. Of particular note, Bach expresses the belief that, with some acknowledged limits, language models such as ChatGPT have the potential to outperform human capabilities. AI's alignment with human ideals, especially Artificial General Intelligence (AGI), is a critical component. Bach underscores the complex task of reconciling AI with the wide range of human values and the necessity of adopting a more comprehensive viewpoint in conversations about AGI ethics. Although there are doubts regarding the viability of Bach's opinions, his ability to articulate novel concepts and profound social observations makes the exploration of the rapidly changing fields of consciousness and artificial intelligence fascinating. </p></div>
+    <p>Starting with the intersection of artificial intelligence (AI) and consciousness, Joscha Bach takes readers on a thought-provoking journey. His novel viewpoint is apparent even though his beliefs are not well supported by evidence. Of particular note, Bach expresses the belief that, with some acknowledged limits, language models such as ChatGPT have the potential to outperform human capabilities. AI's alignment with human ideals, especially Artificial General Intelligence (AGI), is a critical component. Bach underscores the complex task of reconciling AI with the wide range of human values and the necessity of adopting a more comprehensive viewpoint in conversations about AGI ethics. Although there are doubts regarding the viability of Bach's opinions, his ability to articulate novel concepts and profound social observations makes the exploration of the rapidly changing fields of consciousness and artificial intelligence fascinating. </p>
+      </div>
+    </section>
 
-</body>
-</html>
-
-
-<head>
-<html>
+  <section id="videos" class="card">
+    
   <h3>Videos, Views and duration</h3>
   <head>
     <script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
@@ -139,4 +137,58 @@
       demo.launch()
     </gradio-lite>
   </body>
+    </section>
+
+  <section id="chart" class="card">
+    <h3>Chart: Videos, Views, and Duration</h3>
+    <script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+    <script type="text/javascript">
+      window.onload = function () {
+        var chart = new CanvasJS.Chart("chartContainer");
+
+        chart.options.axisY = { prefix: "$", suffix: "K" };
+        chart.options.title = { text: "CelSci Views $ Duration" };
+
+        var series1 = { //dataSeries - first quarter
+          type: "column",
+          name: "Views",
+          showInLegend: true
+        };
+
+        var series2 = { //dataSeries - second quarter
+          type: "column",
+          name: "Duration(minutes)",
+          showInLegend: true
+        };
+
+        chart.options.data = [];
+        chart.options.data.push(series1);
+        chart.options.data.push(series2);
+
+        series1.dataPoints = [
+          { label: "Video 1", y: 89 },
+          { label: "Video 2", y: 160 },
+          { label: "Video 3", y: 14 },
+          { label: "Video 4", y: 2.2 },
+          { label: "Video 5", y: 38 }
+        ];
+
+        series2.dataPoints = [
+          { label: "Video 1", y: 12 },
+          { label: "Video 2", y: 180 },
+          { label: "Video 3", y: 28 },
+          { label: "Video 4", y: 28 },
+          { label: "Video 5", y: 90 }
+        ];
+
+        chart.render();
+      }
+    </script>
+    <body>
+      <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+    </body>
+  </section>
+
+</body>
+
 </html>
