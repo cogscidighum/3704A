@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Project 2</title>
+<link rel="icon" href="https://www.iconninja.com/files/205/914/484/leather-brown-folder-icon.png">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  background: #D4C9BC;
+  font-family: "Trebuchet MS";
+  font-size: 17px;
+  color: #362B21;
+  text-align: left;;
+}
+
+
+h1, h2, h3, h4, h5 {
+        font-family: Georgia, serif;
+        text-align: center;
+      }
+.sidenav {
+  height: 100%;
+  width: 260px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: -200px;
+  background-color: #362B21;
+  overflow-x: hidden;
+  padding-left: 20px;
+  opacity: 0.8;
+}
+
+
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+.sidenav:hover {
+		left: 0;
+        opacity: 1.0;
+}
+
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+
+.main {
+  margin-left: 200px; 
+  font-size: 20px; 
+  padding: 0px 10px;
+}
+
+
+.active {
+
+  color: white;
+}
+
+.dropdown-container {
+  display: none;
+  padding-left: 8px;
+}
+
+
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+.accordion {
+  background-color: #886248;
+  font-family: "Trebuchet MS";
+  color: white;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ad8468;
+}
+
+.accordion:after {
+  font-size: 30px;
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: #D4C9BC;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.1s ease-out;
+} 
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+      <br>
+      <a href="#Abstract">Abstract</a>
+
+      <button class="dropdown-btn" href="#Videos">Videos 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="#Utopia">Eugenics & the Promise of Utopia through AGI</a>
+        <a href="#Dark">The Dark Side of AI</a>
+        <a href="#Google">Timnit Gebru's Firing & Google</a>
+      <a href="#Limitations">Limitations of AI</a>
+        <a href="#EthicalAI">Ethical Artificial Intelligence</a>
+      </div>
+
+      <button class="dropdown-btn">Research<i class="fa fa-caret-down"></i>
+  </button>
+   <div class="dropdown-container">
+    <a href="#">Responsible AI</a>
+    <a href="#">AI Art and its Impact on Artists</a>
+  </div>
+      <a href="#SocMed">Social Media</a>
+      <a href="#Analysis">Analysis</a>
+      <a href="#References">References</a>
+</div>
+
+<div style="margin-left: 80px; margin-right: 80px;">
+  <br>
+    <h1 id="Abstract">Timnit Gebru : Computer Scientist Researching Algorithmic Bias</h1>
+    <p style="text-align: left;"><img style="float: right; padding: 10px;"  src="https://static01.nyt.com/images/2020/12/03/business/00googleai/merlin_180772398_f6098f27-13e0-4cd8-981b-5cd3cc7900cc-superJumbo.jpg" alt="CelSci Image" width="380" height="290"/></p>
+    <div style="text-align: left;">
+  
+     <p>
+      In the field of AI , Dr. Timnit Gebru is a personality that stands out. She is a Computer Scientist and Political activist who earned her a Bachelor and Master of Science degree in electrical engineering and a PhD in computer vision at Stanford University. 
+      Timnit Gebru has lent her skills to big tech companies such as Apple, Microsoft and Google.<sup> <a href="#ref1">1</a></sup>
+    </p>
+    <p>
+      In this project, we will look at some of the insights Dr. Gebru shares in concern to the field of AI. 
+      I will be discussing some research papers she has authored as well as five videos of Timnit Gebru. Gebru does not seem to have her own YouTube channel so the videos I will be referncing are talks or lectures that she has given as well as interviews.
+    </p>
+    <p>
+      In these interviews there is a common theme, she typically talks of the dangers of encoding our biases in AI models and shares her insight on avanues to mitigate the harm these biases can cause.
+      In the current state of technological advances with AI and Large Language Models, Timnit Gebru is seen as a controversial CelSci (Celebrity Scientist) especially because she does not hesitate to openly talk about her perspective not only in talks and academic spaces but especially on social media sites,
+       she adeptly bridges the gap between the advancing tech world, who's leaders portray themselves to be stoic and the more morally conscious general population
+    </p>
+
+    <p>
+      Through listening to her point of view, in this project I hope you will be able to learn more about the current problems at hand with AI, what we can do as students of Digital Humanites, how we can protect ourselves from the dangers
+      as end users and the responsibilites of companies and researchers who have a hand in developing said technolgy.
+    </p>
+    </div>
+    
+<h1 id="Videos">Videos & Discussion</h1>
+<button class="accordion"><h2 id="Utopia">1. Eugenics and the Promise of Utopia through AGI</h2></button>
+<div class="panel">
+<p><iframe width="700" height="355" style="float: left; padding: 10px;" src="https://www.youtube.com/embed/P7XT4TWLzJw?si=1LDRViWg-Z_zU1tw" title="Utopia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<div style="text-align: left;">
+  <p>In this video, Timnit Gebru describes the current tech climate and the rise of AGI ( Artificial General Intelligence) likening it to a second wave of eugenics. She discuss the historical roots of the first wave movement who&rsquo;s aim was &ldquo;improving the human stock&rdquo; and highlighted all the injustices people who supported this movement perpetrated and warns us of the dangers of making the same mistake a second time.</p>
+  <p>Timnit highlights this second wave of eugenists (from 1990s to present) who, instead of making policies and taking blatantly violent recourses like those in the first wave, use biotechnology to &ldquo;design&rdquo; children but it&rsquo;s not viewed as the problem it is because they are not coercing the population(like in the first wave) and using technology.</p>
+  <p>Émile Torres is a researcher Timnit collaborates with often. Émile coined the term TESCREAL and in this video she defines what the term means and talk about how all of these associated views can be problematic.</p>
+  <p><strong>Transhumainsm :</strong> Julian Huxley was president of the British eugenics society and says that the point is for us to transcend humanity, modern transhumanism is like post humanism but to make a superior human.</p>
+  <p><strong>Extropians : </strong> are the worlds first organised transhumanist movement.</p>
+  <p><strong>Singualritanism : </strong>  is people who believe that at one point humans and machines will merge and that we won&rsquo;t be able to understand machines anymore because technology will be evolving quickly. Intelligence explosion whee algorithms undergo self improvement until they become super intelligent.</p>
+  <p><strong> Cosmist : </strong> manifesto says that humans will merge technology and spread to the stars, they say that transhumans</p>
+  <p><strong> Rationalism </strong></p>
+  <p>Extropianism, singularitarianism, and cosmism are just variations of transhumanism.</p>
+  <p><strong> Effective Altruism : </strong> similar to rationalism, doing the most good possible with finite resources. The initial goal was with current problems such as global poverty but now they are thinking lots of years into the future.</p>
+  <p><strong> Longtermism : </strong> Longtermism is the ethical view that positively influencing the long-term future is a key moral priority of our time.</p>
+  <p>Timnit gives some examples of TESCREALs to be persons like Bostrom, Yudkowsky, MacAskill, Musk, Altman and Bankman-Fried</p>
+  <p>She says that the historical roots of these categories overlap and all lead to first wave eugenicists and that they all want to radically change the human form. 
+    They are very interested in eschatology (the ultimate end of the universe), understanding their logic with utopian ideals and thinking that this “end” will create a perfect world but they
+     also think that this same technology might bring an apocalypse.
+    They believe that it is our priority to both build utopia and avoid apocalypse, ultimately focusing on the end</p>
+  <p>They have highlighted their discriminatory views using outdated metrics such as IQ tests. They introduced a novel metric, PELTIV (Potential Expected Long-Term Instrumental Value) as a metric to assess individual
+    members of the community to know "who will be more likely to develop high 'dedication' to EA” (Effective Altruism)</p>
+  <p>This metric is very clearly discrimnatory because a Low PELTIV value was assigned to applicants who worked to reduce global poverty or mitigate climate change, while the highest value was assigned to those who directly worked for EA organizations or on artificial intelligence.
+    </p>
+
+  </p>
+</div>
+</div>
+
+<br>
+
+<button class="accordion"><h2 id="Dark">2. Whistleblowers Warn About the Dark Side of AI</h2></button>
+<div class="panel">
+<p><iframe width="700" height="355" style="float: right; padding: 10px;" src="https://www.youtube.com/embed/QHlacIwhZVo?si=hOH9r7UnGfusQ5Zy" title="Utopia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<div style="text-align: left;">
+  <p>In this video, Emily Chang Interviews Ifeoma Ozoma, former Pinterest policy manager, she said a colleague made her aware of a pay disparity and she brought it up and as a result she lost her job. She also interviews Timnit Gebru and Safiya Noble.</p> 
+  <p>Timnit Gebru has been blowing the whistle about biases in ai research, while she worked at Google she authored a paper talking about the biases in ChatGpt and BARD, she says she got fired from google but google managers say she resigned.</p>
+  <p>They mention that it is common that others think that they are being luddites and opposing technological advances, but it's the complete opposite. They are not anti Technology but pro human dignity.</p>
+  <p>They keep the public from truly understanding what happens and that it’s just a black box to the users. Algorithms are dangerous when users don’t have a choice to opt in or out, they talk about entities such as insurance companies and mortgage companies that use algorithms to determine what benefits they allocate to a person and the dangers that come with that, these dangers are very easy to predict.</p>
+  <p>Timnit dislikes that OpenAI is becoming a central power in AI. Where their GPT models are being built on for everything, where if you need a doctor or a lawyer you can talk to <strong> their</strong>  chatbot.They say that we can begin by disentangling healthcare from employment so the employees can freely and openly talk about the problems. We need to work against the concerted efforts of companies to make technology mysterious and magical to the users so they are oblivious to the fact that their data is being stolen. 
+    The interviewees all agree that  doom mongering or doomers are not entirely wrong. They don’t mean in the sense of sci-fi literature but rather the fact that people are having high sentences from courts and no access to healthcare (because of insurance algorithms), more realistic matters.</p>
+  <p> </p>
+</div>
+</div>
+
+<br>
+
+<button class="accordion"><h2 id="Google">3. AI Ethics Researcher Timnit Gebru's Firing Doesn’t Look Good For Google</h2></button>
+<div class="panel">
+<p><iframe width="700" height="355" style="float: left; padding: 10px;" src="https://www.youtube.com/embed/fWqpPsMXVsI?si=YlrHfqsaOK_6DKgG" title="Utopia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<div style="text-align: left;">
+  <p>
+    In this interview they discus the fact that Timnit Gebru no longer works at Google. Google maintains that Timnit Gebru resigned but she insists that she was fired. 
+All of this happened during the publishing of her paper “On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜” as it was critiquing AI from OpenAI, Google and some other companies, she said that she had proposed to take her name off the paper and retract the paper.
+Some of her colleagues at google resigned as well and made petitions to protest her firing.
+  </p>  
+  <p>
+    She insists that her and her co authors weren’t talking about google specific technology and the cited papers from many other big tech companies. 
+    In the paper they talk about how they don’t think that it will make much of a difference to create very big Language Models and about the environmental risks and that we should focus on the current issues with yes we have. 
+     </p>
+  <p>
+    Timnit mentions that she does not appreciate the fact that people who work on this kind of novel technology always seem to forget minority groups, as a person who develops this technology, you need to consider many point of views to be able to identify the risks. 
+    She was part of the Google Ethical AI team, but she does not think they were listened to much. She says that the team was seen as firefighters or some sort of damage control when they could have spent the time to do some actual research and to brainstorm solutions. 
+    She mentions that when papers gained more traction externally was usually when Google agreed to make changes. But as she had made the team, she said they made a paper on gender recognition ai technology that did have an impact and that they tried.
+  </p>
+
+</div>
+</div>
+
+<br>
+
+<button class="accordion"><h2 id="Limitations">4. Understanding the Limitations of AI: When Algorithms Fail</h2></button>
+<div class="panel">
+<p><iframe width="700" height="355" style="float: right; padding: 10px;" src="https://www.youtube.com/embed/aKf6pB4p06E?si=RAthZaiFwhFfYfAn" title="Utopia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<div style="text-align: left;">
+  <p>In this video timing Gebru talks about actual crime rates versus predicted cremates by algorithms. 
+    For example prediction about drug related crimes. This type of data uses reported drug use and not <strong>actual</strong> use of drugs. 
+    She says that crimes are typically more reported in certain areas that a are disadvantaged and that it makes sense to use that but it’s not entirely the truth.
+  </p>
+  <p>
+    She signed a letter against “Extreme Vetting Initiative” where immigration systems enforcement was proposing to partner with big tech companies to scan social media profiles to analyse peoples social media activity to determine if someone will be a good immigrant or to see who will be a good citizen, Timnit is a refugee and she said this is something she holds close to heart.
+  </p>
+  <p>
+    She talks about translation problems with translation tools and the biases that are encoded into these systems. 
+    They result in people being imprisoned due to this kind of bias. She talks about problems with face recognition software saying that we can’t ignore social and structural problems such as racism being encoded into these things to have further insight the technology will be used and how it will be benefitting and not.
+  </p>
+  <p>
+    Again brings up that there are no laws and restrictions, equal employment laws and law enforcement breaking laws. She says datasheets should be provided for this technology just as it is provided for hardware parts, about the ideal uses and things like that. 
+    She talks about drugs and women not being allowed to partake in clinical trials of drugs and she thinks that we should learn from these mistakes in the past. These drugs were pulled from the market because they were affecting women negatively.
+  </p>
+</div>
+</div>
+
+<br>
+
+<button class="accordion"><h2 id="EthicalAI">5. The Quest for Ethical Artificial Intelligence</h2></button>
+<div class="panel">
+<p><iframe width="700" height="355" style="float: left; padding: 10px;" src="https://www.youtube.com/embed/b_--xrN3eso?si=b1DN6eDqucu7qGHs" title="Utopia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<div style="text-align: left;">
+  <p>
+    She encourages people to unionise and says that it’s unfair that students and researchers careers are controlled by how liked they are and says that if they are unionised they are able to refuse to work on unethical projects.
+  </p>  
+  <p>
+    Timnit says that it’s unfortunate that most of the AI being developed is being funded by military groups to be used by them. It’s unfair that they are able to use a large amount of money to fuel their interest of hurting people more efficiently. 
+    Corporations are more interested in making a profit than actually imparting goodness. Researchers should strive for community and not exploitative research, parachute researching is what she calls it. She says that research is generally a very exploitative endeavour and that she wants those groups to be supported and actually benefit from the research and just not be consulted when informations is needed.
+  </p>
+  <p>
+    She says that a lot of ethics things related to AI are tied to labour laws because she thinks that many corporations go into AI to automate systems to avoid paying people, though it’s not at that stage yet where everything is automated, she brings up Kenyan workers being exploited by OpenAI, being paid at a meagre rate of $2 an hour and says that silicon valley is creating a global underclass because of this.
+  </p>
+  <p>
+  There should be more regulations and better labour laws so everything is fair and ethical from this point of view.
+  </p>
+</div>
+</div>
+
+
+<h1 id="Research">Research</h1>
+
+<h4 style="text-decoration-line: underline; text-decoration-style: dashed;">A Human Rights-Based Approach to Responsible AI.</h4>
+<p>
+  Fairness, accountability, transparency and ethics (FATE) research in AI is what Timnit and her co-authors suggest as a solution to biases they also bring up questions around how AI models might be problematically biased, unfair, or unethical, and how to make them “fairer” and more “ethical”.
+</p>
+<p>
+  The research community working in this area greatly lacks in terms of geo-cultural diversity so most of the research produced is primarily framed in a Western lens.
+  The authors of this paper push for regulation around AI, they give the example of UDHR (Universal Declaration of Human Rights) by the UN and say that it is an extensively detailed list of what every human being is entitled to, they give examples such as the right to life, liberty and security, right to privacy, right to be free of discrimination, and right to freedom of expression and that these qualities are important to build ethical AI systems.
+</p>
+<p>
+  They mention that there is. Current research going on to identify ways to make AI research support human rights practices. The paper says that the efforts include trying to improve “human rights reporting in conflict zones using automated analysis of satellite imagery”.
+</p>
+<p>
+  Authors maintain that science should be gears toward fulfilling human rights and advancements should benefit the greater population and should not be kept only for those in the west or of a certain economic class. They say that science should be shared, science has no borders, it’s every scientist responsibility to contribute to shared knowledge.
+</p>
+<p>
+
+Human Rights can be an avenue for AI research, general society and policy makers to have a common language to communicate effectively about matters concerning AI. It can be a way to close the knowledge gap so all of these sides can gain insight from one another.
+</p>
+
+
+<h4 style="text-decoration-line: underline; text-decoration-style: dashed;">AI Art and its Impact on Artists.</h4>
+<p>
+  The topic of AI “Art” is controversial. The authors discuss what this kind of technology means for Artists and also discuss what we count as art. AI Art models like DALLE take in text as input and output images. They say that are is a uniquely human activity, we are anthropomorphising AI by calling some of these models artists and also by describing them as being “inspired” by their training data (which consists of stolen artwork) both of these things are misguided and harmful.
+</p>
+<p>
+  The authors mention that the philosopher John Dewey says that an art style is developed throng interactions with a cultural environment and not sampling being mimicry from the training data an AI model is exposed to.
+</p>
+<p>
+  They give the example of Claude Monet Nymphéas [Water Lilies] series of painting that he made after he lost his son. His experience of this loss, as a human inspired this series of artwork so it has a sort of sentiment and meaning. The same is true for other artists, their art is unique to the experiences, influences and environment.
+</p>
+<p>
+  AI image generators cause harm to artists because some corporations or individuals see the output of these generators as “good enough” and just don’t work with artists as much anymore. They mention as well that the CEO of Sability AI accused artists on wanting to have a “monopoly on visual communications” and “skill segregation”.
+</p>
+<p>
+  OpenAI has no disclosed the data set that was used for DALLE and that raises doubts about said data because we don't know if it was trained on only free use images or copyrighted images. They also mention data laundering and that it might be something that AI companies partake in.Some artists feel that  their copyrighted images have been made into training data for these things and some have managed to even prove this. All of these terrible practices with data and the work of others causes artists to be hesitant to share their work and also to post tutorials for other artists to learn, the authors say that this limits the creativity of humans as a whole.
+</p>
+<p>
+  It’s hard to purse cases of theft of art in this kind of scenario in a legal setting because there aren’t many laws about this.They still believe that AI generators can still be a medium to express oneself as an artist, using the example of Anna Ridler, who created the piece “Mosaic Virus” who trained an AI Image generator with 10,000 phots of tulips she had taken herself.
+</p>
+<p>
+  
+</p>
+<h1 id="SocMed">Social Media</h1>
+
+<h1 id="Analysis">Analysis</h1>
+
+
+
+<div id="chartContainer" style="height: 600px; width: 80%; text-align: center; margin: 0 auto;"></div>
+
+<gradio-lite>
+  import gradio as gr
+  import pandas as pd
+  def show_df(as1,as2,as3):
+     df = pd.DataFrame({
+        "Videos" : ["How To Stop Artificial Intelligence From Marginalizing Communities", "Whistleblowers Warn About the Dark Side of AI ", "AI Ethics Researcher Timnit Gebru's Firing Doesn’t Look Good For Google", "Understanding the Limitations of AI: When Algorithms Fail", "The Quest for Ethical Artificial Intelligence"], 
+        "Views" : [80827, 29428 , 107852, 9755, 7337], 
+        "Duration (mins)" : [13.67, 24.03, 12.25, 15.567, 58.71]})
+     print(as1)
+     df = df.style.highlight_max(color = 'lightblue', axis = 0)
+     return df
+  with gr.Blocks() as demo:
+    with gr.Row():
+      with gr.Column():
+        data = gr.Dataframe()
+        demo.load(show_df, None, [data])
+  demo.launch()
+</gradio-lite>
+
+
+
+<details>
+<summary style= "font-family: Georgia, serif; font-size: 24px; font-weight: bold;">Chat Bot!</summary>
+<gradio-lite>
+  import gradio as gr
+  import random
+  import time
+
+  with gr.Blocks() as demo:
+      chatbot = gr.Chatbot()
+      msg = gr.Textbox()
+      clear = gr.Button("Clear")
+      def vote(data: gr.LikeData):
+         if data.liked:
+             print("You upvoted this response: " + data.value)
+         else:
+             print("You downvoted this response: " + data.value)
+      def user(user_message, history):
+          return "", history + [[user_message, None]]
+
+      def bot(history):
+          bot_message = random.choice(["Dr. Timnit Gebru is a Computer Scientist and Political activist.", "LLMs do not truly understand what they are outputting", "early Automobile testing, when seatbelts would only be tested on men", "There should be more laws to regulate AI", "This is my final ACTION!"])
+          history[-1][1] = ""
+          for character in bot_message:
+              history[-1][1] += character
+              time.sleep(0.05)
+              yield history
+
+      msg.submit(user, [msg, chatbot], [msg, chatbot], queue=False).then(
+          bot, chatbot, chatbot
+      )
+      clear.click(lambda: None, None, chatbot, queue=False)
+      chatbot.like(vote, None, None)  # Adding this line causes the like/dislike icons to appear in your chatbot
+
+
+  demo.queue()
+  demo.launch()
+</gradio-lite>
+</details>
+
+<h1 id="References">References</h1>
+ 
+<script>
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+
+</script>
+<script type="text/javascript">
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer");
+  
+    chart.options.axisY = {suffix: "K" };
+    chart.options.title = { text: "Timnit Gebru YouTube Stats" };
+  
+    var series1 = { //dataSeries - first quarter
+        type: "column",
+        name: "Views (in thousands)",
+        color: "#93745E",
+       
+        showInLegend: true
+    };
+  
+    var series2 = { //dataSeries - second quarter
+        type: "column",
+        name: "Duration in minutes",
+        color: "#CCB69C",
+      
+        showInLegend: true
+    };
+  
+    chart.options.data = [];
+    chart.options.data.push(series1);
+    chart.options.data.push(series2);
+  
+  
+    series1.dataPoints = [
+            { label: "How To Stop Artificial Intelligence From Marginalizing Communities", y: 80},
+            { label: "Whistleblowers Warn About the Dark Side of AI ", y: 29},
+            { label: "AI Ethics Researcher Timnit Gebru's Firing Doesn’t Look Good For Google", y: 107 },
+            { label: "Understanding the Limitations of AI: When Algorithms Fail", y: 16 },
+            { label: "The Quest for Ethical Artificial Intelligence", y: 9.7 }
+    ];
+  
+    series2.dataPoints = [
+        { label: "How To Stop Artificial Intelligence From Marginalizing Communities", y: 13.67 },
+        {
+          label: "Whistleblowers Warn About the Dark Side of AI", y: 24.03 },
+        { label: "AI Ethics Researcher Timnit Gebru's Firing Doesn’t Look Good For Google", y: 12.25 },
+        { label: "Understanding the Limitations of AI: When Algorithms Fail", y: 15.567 },
+        { label: "The Quest for Ethical Artificial Intelligence", y: 58.71 }
+    ];
+      
+      chart.options.axisX = {
+          interval: 1,
+          labelFontSize: 12,
+      };
+  
+    chart.render();
+  }
+  </script>
+<script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+<script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
+
+</body>
+</html> 
