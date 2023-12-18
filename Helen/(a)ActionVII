@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>ACogSphere: Sentiment Analysis</title>
+    <button id="run">ACTION</button>
+    <label>Output:</label>   
+    <div id="output2">Waiting to analyize a great life!</div>
+</head>
+<body> 
+  <script type="module">
+  import { pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.7.0'
+  
+  const generate = document.getElementById("run");   
+  generate.addEventListener("click", async () =>   // Start (
+  {
+      try 
+  {
+      let pipe = await pipeline('text-classification');
+      let output = await pipe('Melanie Mitchell explores the definition of "true intelligence" and whether or not AI can ever obtain this. Melanie believes that AI can never be truly intelligent until it can learn to complete tasks which are uniquely human like our ability to think abstractly and make analogies. It is believed that developmental psychology and children aquisition may be useful in figuring out how to make AI more capable of handling real-world scienarios. However, as of right now, Melanie is still convinced that AI is not truly intelligent.'); 
+      output2.textContent = JSON.stringify(output);
+  } 
+      catch (error)
+  {
+      console.log("Error:",error.message);
+  }
+  }
+  )//End )
+</script>
+</body>
+     
