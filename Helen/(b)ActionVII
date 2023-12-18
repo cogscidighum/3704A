@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<html>
+<head>
+   <title>BCogSphere: Retreival</title>
+		<button id="action">ACTION</button>
+    <label>Output:</label>   
+    <div id="output">Ready!</div>
+</head>
+  
+	<body> 
+<script type="module"> 
+    import { client } from "https://cdn.jsdelivr.net/npm/@gradio/client@0.1.4/dist/index.min.js";
+
+    const generate = document.getElementById("action");   
+    generate.addEventListener("click", async () =>{
+        try {         
+
+          const app = await client("https://cognitivescience-cogsphere.hf.space");
+          const lastview = await app.predict("/predict", [      
+           "https://www.youtube.com/watch?v=cz1UfjZjjyk",
+          ]);
+           output.textContent = JSON.stringify(lastview.data);     
+          
+            } catch (error){
+                 console.log("Error:",error.message);                
+            }       
+        }       
+)
+    </script>
+    </body>
+</html>
