@@ -1,1 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Mulish" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
+    body {
+      font-family: 'Mulish', sans-serif;
+      background: #f8f9fa;
+      color: #343a40;
+      padding: 20px;
+    }
+
+    header {
+      background: #343a40;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #343a40;
+    }
+
+    nav a {
+      color: #f76083 !important;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: white !important;
+    }
+
+    .margin {
+      margin-bottom: 25px;
+    }
+
+    #backToTop {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: #f76083;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+    }
+
+    #backToTop:hover {
+      background-color: #343a40;
+    }
+
+    .container-fluid {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2, h4 {
+      color: #343a40;
+    }
+
+    iframe {
+      border: 2px solid #f76083;
+      border-radius: 8px;
+    }
+
+    img {
+      border-radius: 8px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .video-container {
+      position: relative;
+      overflow: hidden;
+      padding-top: 56.25%;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .card {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Exploring Minds: Elizabeth Loftus</h1>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#introduction">Introduction</a></li>
+        <li class="nav-item"><a class="nav-link" href="#biography">Biography</a></li>
+        <li class="nav-item"><a class="nav-link" href="#videos">Videos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#criticalAnalysis">Critical Analysis</a></li>
+        <li class="nav-item"><a class="nav-link" href="#references">References</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <button onclick="topFunction()" id="backToTop" title="Back to Top">Top</button>
+
+<div class="container-fluid margin">
+  <h2 id="introduction">Introduction</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <p>Elizabeth Loftus, a prominent cognitive psychologist and a renowned figure in the field of memory research, has dedicated her career to unraveling the complexities of human memory. In her YouTube video titled "How Reliable is Your Memory?" she delves into the intricate nature of memory, challenging common beliefs about its accuracy and highlighting the susceptibility of memory to external influences. This critical analysis aims to examine Loftus's perspective, offering both praise for her groundbreaking contributions and constructive criticism where warranted.</p>
+
+      <p>Elizabeth Loftus has undeniably made substantial contributions to the understanding of memory. Her groundbreaking work has debunked the myth of memory infallibility, emphasizing the crucial role of external factors in shaping and distorting our recollections. The misinformation effect, eloquently demonstrated through Loftus's experiments, has prompted a paradigm shift in how society perceives and relies on memory, especially within legal systems. By challenging long-held assumptions, Loftus has opened new avenues for research and raised critical questions about the reliability of memory in various contexts.</p>
+    </div>
+    <div class="col-md-6">
+      <!-- Images in the same row -->
+      <div class="row">
+        <div class="col-md-4">
+          <img src="https://www.verywellmind.com/thmb/UJ0EwCLjxXA3CUSUHBQdXfLNLAw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Elizabeth-Loftus-56a792243df78cf772973bba.jpg" alt="Elizabeth Loftus 1" class="img-fluid card">
+        </div>
+        <div class="col-md-4">
+          <img src="https://wpvip.ted.com/wp-content/uploads/sites/2/2013/06/tg2013_027570_dsc_1945.jpg" alt="Elizabeth Loftus 2" class="img-fluid card">
+        </div>
+        <div class="col-md-4">
+          <img src="https://www.nih.gov/sites/default/files/news-events/research-matters/2008/20080915-memory.jpg" alt="Brain image" class="img-fluid card">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+<div class="container-fluid">
+  <h2 class="margin" id="videos">Videos</h2>
+  <div class="row">
+
+    <!-- Video 1 -->
+    <div class="col-md-4">
+      <h4>Video 1: How Does Memory Work?</h4>
+      <div class="video-container">
+        <iframe width="1280" height="720" src="https://www.youtube.com/embed/D022rRNHzcA" title="Elizabeth Loftus - How Does Memory Work?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- Video 2 -->
+    <div class="col-md-4">
+      <h4>Video 2: Memory Malleability</h4>
+      <div class="video-container">
+        <iframe width="1280" height="720" src="https://www.youtube.com/embed/4Ey7MBiDVH8" title="Memory Malleability, Dr. Elizabeth Loftus" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- Video 3 -->
+    <div class="col-md-4">
+      <h4>Video 3: The Misinformation Effect</h4>
+      <div class="video-container">
+        <iframe width="1280" height="720" src="https://www.youtube.com/embed/3RKDVB6qizA" title="The misinformation effect | Elizabeth Loftus | Nobel Prize Summit 2023" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- Video 4 -->
+    <div class="col-md-4">
+      <h4>Video 4: The Memory Factory</h4>
+      <div class="video-container">
+        <iframe width="1280" height="720" src="https://www.youtube.com/embed/KC9CRBvIAsQ" title="Elizabeth Loftus | The Memory Factory || Radcliffe Institute" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- Video 5 -->
+    <div class="col-md-4">
+      <h4>Video 5: How Memory can be Manipulated</h4>
+      <div class="video-container">
+        <iframe width="1280" height="720" src="https://www.youtube.com/embed/v-krDtRkuqs" title="How Memory can be Manipulated with Elizabeth Loftus, PhD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+  
+  <div class="container-fluid">
+    <h2 class="margin" id="criticalAnalysis">Critical Analysis</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <p>Agreeing with Loftus's perspective is inevitable given the substantial evidence she presents. The misinformation effect and the unreliability of eyewitness testimony are undeniable phenomena supported by robust empirical research. Loftus's findings have far-reaching implications, particularly in the legal system, where her work has led to critical reconsiderations of the weight assigned to eyewitness accounts.</p>
+      </div>
+      <div class="col-md-4">
+        <p>However, a cautious approach is necessary, especially when applying Loftus's findings universally. While her research has illuminated important aspects of memory, it is essential to recognize that not all memories are equally susceptible to external influence. The agreement with Loftus should be tempered with an acknowledgment of the complexities inherent in human memory.</p>
+      </div>
+      <div class="col-md-4">
+        <p>That being said, while Loftus's work has been groundbreaking, it is essential to scrutinize her perspective critically. One potential critique lies in the generalization of her findings to all aspects of memory. While her experiments reveal the vulnerability of episodic memory, it is crucial to acknowledge that memory is a multifaceted construct with different subsystems. Loftus's emphasis on the fallibility of memory might inadvertently overshadow its remarkable capacity for accurate recollection in many instances.</p>
+      </div>
+    </div>
+<div class="row">
+  <div class="col-md-12">
+    <p>Furthermore, Loftus's focus on external influences and misinformation might downplay the significance of intrinsic factors shaping memory. Individual differences, cognitive biases, and emotional states can also significantly impact memory formation and retrieval. A more comprehensive exploration of these factors could provide a more nuanced understanding of memory's intricacies.</p>
+  </div>
+</div>
+  </div>
+  <div class="container-fluid margin">
+    <h2 class="margin" id="references">References</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <p>E. F. Loftus, and J. E. Pickrell, The Formation of False Memories. <a href="https://journals.healio.com/doi/abs/10.3928/0048-5713-19951201-07" target="_blank">link</a></p>
+        <p>E. F. Loftus, Eyewitness Testimony <a href="https://books.google.ca/books?hl=en&lr=&id=uBlAU24-qsoC&oi=fnd&pg=PA1&dq=elizabeth+loftus&ots=xAT8KByUy4&sig=qqihtnP50VrUKaI83REHwRqX79A#v=onepage&q=elizabeth%20loftus&f=false" target="_blank">link</a></p>
+      </div>
+      <div class="col-md-6">
+        <p>TED. (2013, 09, 23). <em>How Reliable is Your Memory? | Elizabeth Loftus</em> [Video]. YouTube. <a href="https://www.youtube.com/watch?v=PB2OegI6wvI" target="_blank">link</a></p>
+        <p>Note: This webpage was crafted using HTML, CSS, and a touch of JavaScript for user interactivity.</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    let mybutton = document.getElementById("backToTop");
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+</body>
+</html>
