@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Ryan Holiday - Daily Stoic</title>
+   <h3>Ryan Holiday's Stoic Videos, taking a few seconds to load...</h3>
+   <script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
+</head>
+<body style="background-color: #f0f8ff;">
+   <gradio-lite>
+      import gradio as gr
+      import pandas as pd
+
+      def show_df():
+         df = pd.DataFrame({
+            "Videos": [
+               "8 Stoic Habits That Will Improve Your Life",
+               "7 Stoic Keys To Being A Great Leader | Ryan Holiday Speaks To The U.S. Military",
+               "8 Stoic Don'ts For A Better Life",
+               "10 Stoic Habits To Practice In 2024",
+               "The 4 Virtues Marcus Aurelius Lived By | Ryan Holiday | Daily Stoic"
+            ], 
+            "Views": [1300000, 23000, 2200000, 100000, 93000], 
+            "Duration (mm:ss)": ["15:31", "25:19", "8:44", "11:47", "5:34"]
+         })
+         df = df.style.applymap(lambda x: 'background-color: lightpurple' if isinstance(x, str) else '')
+         return df
+
+      with gr.Blocks() as demo:
+         with gr.Row():
+            with gr.Column():
+               data = gr.Dataframe()
+               demo.load(show_df, None, [data])
+      demo.launch()
+   </gradio-lite>
+</body>
+</html>
