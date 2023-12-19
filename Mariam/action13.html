@@ -6,10 +6,9 @@
     <gradio-lite>
       <gr.Blocks>
         <gr.Chatbot>
-          <gr.Textbox>
-          </gr.Textbox>
-        </gr.Textbox>
-      </gr.Chatbot>
+          <gr.Textbox></gr.Textbox>
+        </gr.Chatbot>
+      </gr.Blocks>
       <gr.Button value="Clear"></gr.Button>
       <gr.Code>
         import random
@@ -21,9 +20,9 @@
         def bot(history):
           bot_message = random.choice([
             ". To intentionally influence how stress affects our brains, she suggests activities like exercise, enough sleep, and mindfulness.",
-            "Dr. Boyd emphasizes the plasticity of the brain, stating, "If you learn new things, take new opportunities, and start participating in new activities, you're changing who you are." ",
+            "Dr. Boyd emphasizes the plasticity of the brain, stating, 'If you learn new things, take new opportunities, and start participating in new activities, you're changing who you are.' ",
             "Dr. Boyd concludes with an optimistic outlook on the future of educational neuroscience and neuroplasticity",
-            "As Dr. Boyd states , "pick something you like and do it at a moderate intensity as often as you can," promising the physical benefits to overall brain health and quality of life.",
+            "As Dr. Boyd states, 'pick something you like and do it at a moderate intensity as often as you can,' promising the physical benefits to overall brain health and quality of life.",
             "Dr. Boyd plans on examining changes in brain structure, thickness in the cortex, myelin levels, and functional activity pattern"
           ])
 
@@ -45,14 +44,13 @@
       </gr.Code>
 
       <gr.Code>
-        chatbot.like(vote, None, None)  # Adding this line causes the like/dislike icons to appear in your chatbot
+        chatbot.like(vote, None, None)  <!-- Adding this line causes the like/dislike icons to appear in your chatbot -->
       </gr.Code>
 
       <gr.Code>
         demo.queue()
         demo.launch()
       </gr.Code>
-    </gr.Blocks>
     </gradio-lite>
   </body>
 </html>
