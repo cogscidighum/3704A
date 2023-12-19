@@ -5,27 +5,25 @@
   <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
   <script type="text/javascript">
     window.onload = function () {
-      var chart = new CanvasJS.Chart("chartContainer");
-
-      chart.options.axisY = { title: "View Count (millions)" };
-      chart.options.title = { text: "Jordan Peterson Video View Count" };
-
-      var series1 = { //dataSeries - first quarter
-        type: "column",
-        name: "Views",
-        showInLegend: true
-      };
-
-      chart.options.data = [];
-      chart.options.data.push(series1);
-
-      series1.dataPoints = [
-        { label: "Psychology, Sexuality, and the AI Revolution", y: 500000 },
-        { label: "The NUMBER ONE Reason for Divorce, Depression & Dark Thoughts!", y: 981666 },
-        { label: "Jordan Peterson’s Full Interview with Piers Morgan", y: 5406268 },
-        { label: "The Radical Left is Guilt-Tripping the West into Oblivion", y: 2608801 },
-        { label: "How to Become the Person You’ve Always Wanted To Be", y: 8475482 }
-      ];
+      var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+        title: {
+          text: "Jordan Peterson Video View Count"
+        },
+        axisY: {
+          title: "View Count (millions)"
+        },
+        data: [{
+          type: "bar",
+          dataPoints: [
+            { label: "Psychology, Sexuality, and the AI Revolution", y: 500000 },
+            { label: "The NUMBER ONE Reason for Divorce, Depression & Dark Thoughts!", y: 981666 },
+            { label: "Jordan Peterson’s Full Interview with Piers Morgan", y: 5406268 },
+            { label: "The Radical Left is Guilt-Tripping the West into Oblivion", y: 2608801 },
+            { label: "How to Become the Person You’ve Always Wanted To Be", y: 8475482 }
+          ]
+        }]
+      });
 
       chart.render();
     }
@@ -33,8 +31,7 @@
 </head>
 
 <body>
-  <div id="chartContainer" style="height: 300px; width: 100%;">
-  </div>
+  <div id="chartContainer" style="height: 300px; width: 100%;"></div>
 </body>
 
 </html>
