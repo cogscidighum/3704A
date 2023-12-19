@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="module">
+        import { pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.6.2';
+    </script>
+    <script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite@0.4.1/dist/lite.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gradio/lite@0.4.1/dist/lite.css" />
+</head>
+<body>
+    <h3>
+        The Ryan Connection: Stoic Insights by Ryan Lyster, Featuring Ryan Holiday
+    </h3>
+    <gradio-lite>
+        <gradio-requirements>
+            transformers_js_py
+        </gradio-requirements>
+
+        <gradio-file name="app.py" entrypoint>
+            from transformers_js import import_transformers_js
+            import gradio as gr
+            transformers = await import_transformers_js()
+            pipeline = transformers.pipeline
+            pipe = await pipeline('sentiment-analysis')
+
+            async def classify(text):
+                return await pipe(text)
+
+            demo = gr.Interface(classify, "textbox", "json", examples=[
+                "8 Stoic Habits That Will Improve Your Life",
+                "7 Stoic Keys To Being A Great Leader | Ryan Holiday Speaks To The U.S. Military",
+                "8 Stoic Don'ts For A Better Life",
+                "10 Stoic Habits To Practice In 2024",
+                "The 4 Virtues Marcus Aurelius Lived By | Ryan Holiday | Daily Stoic"
+            ])
+            demo.launch()
+        </gradio-file>
+    </gradio-lite>
+</body>
+</html>
