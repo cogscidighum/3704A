@@ -27,6 +27,7 @@
 <script type="text/javascript">
 window.onload = function () {
     var chart = new CanvasJS.Chart("chartContainer");
+  chart.options.backgroundColor = "lightblue";
 
     chart.options.axisY = { prefix: " ", suffix: "k/minutes" };
     chart.options.title = { text: "CelSci Views $ Duration" };
@@ -35,12 +36,14 @@ window.onload = function () {
         type: "column",
         name: "Views(in K)",
         showInLegend: true
+        color: "black"
     };
 
     var series2 = { //dataSeries - second quarter
         type: "column",
         name: "Duration(in minutes)",
         showInLegend: true
+        color: "grey"
     };
 
     chart.options.data = [];
