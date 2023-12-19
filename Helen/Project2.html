@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            font-size: 18px;
+        }
+
+        header {
+            background-color: #E1BEE7;
+            color: #311B92;
+            text-align: center;
+            padding: 20px;
+        }
+
+        section {
+            margin: 20px;
+        }
+
+        h2 {
+            color: #E1BEE7;
+        }
+
+        .purple-container {
+            background-color: #CE93D8;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        img {
+            max-width: 20%;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .video-container {
+            background-color: #BA68C8;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        button {
+            background-color: #E1BEE7;
+            color: #311B92;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #CE93D8;
+        }
+
+        footer {
+            background-color: #E1BEE7;
+            color: #311B92;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        footer p {
+            text-align: left;
+        }
+    </style>
+    <script>
+        function scrollToElement(elementId) {
+            var element = document.getElementById(elementId);
+            element.scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Project 2</h1>
+        <p>Helen Awaju</p>
+    </header>
+
+    <section>
+        <div class="purple-container">
+        	<h1>Cognitive Scientist: Melanie Mitchell</h1>
+            <img src="https://m.media-amazon.com/images/S/amzn-author-media-prod/jrl7ifpns69mgisj8jmour3ccu._SX450_CR0%2C0%2C450%2C450_.jpg" alt="Melanie Mitchell" style="max-width: 100%; border-radius: 8px; margin-top: 10px;">
+        </div>
+
+        <div style="text-align: center;">
+    		<button onclick="scrollToElement('video1')">Video 1</button>
+    		<button onclick="scrollToElement('video2')">Video 2</button>
+    		<button onclick="scrollToElement('video3')">Video 3</button>
+    		<button onclick="scrollToElement('video4')">Video 4</button>
+    		<button onclick="scrollToElement('video5')">Video 5</button>
+    		<button onclick="scrollToElement('action')">Actions</button>
+		</div>
+
+		<br>
+        <div id="whoIsMelanie" class="video-container">
+            <h2>Who is Melanie Mitchell?</h2>
+            <h3>Professional Background</h3>
+            <p>Born and raised in Los Angeles, California, Mitchell's academic journey started at Brown University, where her interest in artificial intelligence flourished after reading Douglas Hofstadter's Gödel, Escher, Bach. Following her graduation, she became a high school math teacher in New York City before pursuing her passion for AI. Mitchell's determination led her to work with Hofstadter, and earning her Ph.D. in 1990. Currently a Professor at the Santa Fe Institute and Portland State University, Mitchell has played a pivotal role in developing the Complexity Explorer platform, offering online courses with substantial enrollment. Her impact extends to organizing workshops and participating in interdisciplinary forums on biological and artificial intelligence. However, Mitchell has mostly concentrated her research on understanding how humans make analogies and think abstractly in hopes of potentially enabling machines to one day be capable of recognizing and understanding analogies. </p>
+            <h3>Achievements</h3>
+            <p>Mitchell obtained her Ph.D. in 1990 from the University of Michigan under the mentorship of Douglas Hofstadter and John Holland. Her dissertation led to the development of the Copycat cognitive architecture.</p>
+            <h3>Popular Publications</h3>
+            <p>Melanie Mitchell's notable books include "Analogy-Making as Perception" (1993), "An Introduction to Genetic Algorithms" (1998), "Complexity: A Guided Tour" (2009), and "Artificial Intelligence: A Guide for Thinking Humans" (2019).</p>
+            <br>
+            
+            <img src="https://melaniemitchell.me/BooksContent/AMAP.jpg" alt="Melanie Mitchell">
+            
+            <img src="https://melaniemitchell.me/BooksContent/IntroGA.jpg" alt="Melanie Mitchell">
+            
+            <img src="https://melaniemitchell.me/BooksContent/CAGT.jpg" alt="Melanie Mitchell">
+            
+            <img src="https://melaniemitchell.me/aibook/AIGFTH.jpg" alt="Melanie Mitchell">
+            <br>
+            <p>The five videos with Melanie Mitchell discusses the relationship and disparities between humans and artificial intelligence while covering a variety of topics such as the foundations of intelligence, the development of AI, its capabilities and limitations, self-driving cars, and the debate surrounding AI as an existential threat.</p>
+        </div>
+
+        <div id="video1" class="video-container">
+            <div class="video-block">
+                <h2>Video 1</h2>
+                <p>1K views and 19:55 minutes</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/NLMW9twrlaQ?si=D6fVGtJb_TMKyBsp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <p>In this presentation, Mitchell explores her work in abstraction and analogy, particularly focusing on how it intersects with the concept of collective intelligence. Drawing inspiration from Douglas Hofstadter's book, she discusses the emergence of intelligence, problem-solving, and abstract thinking from the collective behavior of simple components. The talk introduces the Copycat domain, where a model based on collective information processing is used to solve analogy problems. The system features fine-grained agents working in parallel, employing both competitive and cooperative actions, and Mitchell emphasizes the dynamic and feedback-driven nature of her approach.</p>
+                <br>
+                <h3>Analysis</h3>
+                <p>The video provides valuable insights into the Mitchell's research on abstraction and analogy, offering a unique perspective on how collective intelligence principles can be applied to AI. The use of the Copycat domain and the demonstration of the model in action help convey the dynamic nature of her approach. The acknowledgement of limitations and ongoing work, especially in applying the architecture to other domains, reflects a commitment to refining and extending the model's applicability, which is vital in scientific research. The emphasis on the need for evaluation methods speaks to the broader challenges in assessing the abstraction and generalization abilities of AI systems, contributing to the ongoing discourse in the field.</p>
+            </div>
+        </div>
+
+        <div id="video2" class="video-container">
+        
+                <h2>Video 2</h2>
+                <p>2,924 views and 34:23 minutes</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/zb39ty248bU?si=8cVOrNk5dzVAqmHJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <p>Melanie Mitchell, discusses the challenges and fallacies in artificial intelligence (AI). She explores the historical context of AI predictions, including the recurring pattern of overoptimism followed by disappointment, known as the AI winter. Mitchell highlights fallacies such as the "first step fallacy," "easy things are easy and hard things are hard," "wishful mnemonics," and the belief that intelligence is solely in the brain. She emphasizes the need to address issues like transparency, bias, common sense, and the difficulty of imparting human-like learning and understanding to AI systems.</p>
+                <br>
+                <h3>Analysis</h3>
+                <p>Mitchell provides a critical examination of prevalent misconceptions in AI development, urging a nuanced understanding of its challenges. The discussion on shortcuts in machine learning, where systems learn to exploit specific features without grasping the underlying task, underscores the need for transparency and robustness. The fallacies of wishful mnemonics and the assumption that intelligence resides solely in the brain raise important questions about how humans perceive and attribute capabilities to AI. Mitchell's insights prompt reflection on the fundamental obstacles in achieving human-level AI, particularly in areas such as common sense and abstract thinking. The call to address biases and enhance transparency aligns with the ongoing efforts to develop responsible and ethical AI systems.</p>
+            </div>
+        </div>
+
+        <div id="video3" class="video-container">
+        
+                <h2>Video 3</h2>
+                <p>922 views and 44:50 minutes</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/yi90lTPLx-8?si=-lZYRZg4XaU_Xraw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <p>In this video, the discussion revolves around the topic of existential risk associated with artificial general intelligence (AGI). Mitchell expresses skepticism about AGI posing an immediate existential threat, emphasizing the need to focus on near-term risks instead. The conversation delves into the advancements in large language models, particularly GPT-3, and the debate surrounding their potential for generality. Mitchell also highlights the challenges of assessing AI's reasoning abilities and the necessity versus sufficiency in determining their significance. The discussion shifts to current risks, such as deepfakes, biases in AI systems, and the societal implications of AI, with a focus on the importance of regulation and international cooperation. The conversation concludes by addressing the need for education in understanding the social impacts of technology.</p>
+                <br>
+                <h3>Analysis</h3>
+                <p>The discussion provides a nuanced exploration of existential risks related to AGI, emphasizing Mitchell's skepticism about its immediate threat. The conversation effectively navigates through various facets of AI, from scaling language models to current risks. Mitchell acknowledges the complexity of assessing AI's reasoning abilities and highlights the importance of education in addressing societal impacts. The discussion also touches on the challenges of regulating AI and the need for international cooperation, providing a comprehensive overview of the multifaceted landscape of AI risks and their implications for society.</p>
+            </div>
+        </div>
+        
+        <div id="video4" class="video-container">
+        
+                <h2>Video 4</h2>
+                <p>361 views and 43:00 minutes</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/U_YMmy18E0s?si=gv9ekBv0rjJQkd-q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <p>In this interview, the speaker engages in a discussion with Melanie Mitchell. Melanie discusses ongoing projects related to various aspects of AI and the exploration of intelligence in different disciplines. The conversation covers the challenges of defining artificial intelligence, its historical development from rule-based systems to machine learning and deep learning, and the distinction between narrow AI and general AI. The dialogue also addresses the current capabilities and limitations of AI, emphasizing the difficulty of achieving human-like intelligence.</p>
+                <br>
+                <h3>Analysis</h3>
+                <p>The interview provides insights into the evolving landscape of artificial intelligence. It highlights the ongoing efforts to understand intelligence across diverse domains and the perpetual challenge of defining and achieving artificial intelligence. The speaker explores the historical progression of AI, emphasizing the shift from rule-based systems to machine learning and the recent success of deep learning. The discussion on self-driving cars sheds light on the complexities involved, from different levels of autonomy to challenges in predicting human behavior and the limitations imposed by the lack of common sense in machines. Overall, the interview offers a comprehensive view of the current state of AI and its future prospects, acknowledging both advancements and persistent challenges.</p>
+            </div>
+        </div>
+        
+        <div id="video5" class="video-container">
+        
+                <h2>Video 5</h2>
+                <p>443 views and 5:57 minutes</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/skRgYH7oAjc?si=P62pn85jQBqXabhJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <p>In this discussion, Melanie Mitchell addresses the historical fears surrounding machines and their potential existential threat to humanity. She argues against the notion that artificial intelligence (AI) poses a real-life existential threat in the foreseeable future. Melanie contends that the scenarios often imagined for AI-related existential risks lack scientific basis and empirical evidence. She dismisses the idea of a malevolent superintelligent AI actively seeking to destroy humanity, emphasizing that AI systems lack desires or intentions. Melanie also critiques the fallacy of dumb superintelligence, highlighting that AI misinterpreting human wishes to the extent of causing harm is unlikely due to the absence of common sense understanding. Additionally, she refutes the idea that a genocidal group could leverage AI to annihilate humanity, asserting that the complexity of societal institutions acts as a barrier to such catastrophic events. Melanie cautions against sensationalist claims, stating that labeling AI as an existential threat can mislead the public, divert attention from real risks, and hinder potential benefits from technological progress.</p>
+                <br>
+                <h3>Analysis</h3>
+                <p> Melanie provides a rational and evidence-based perspective on the perceived existential threat of AI. She systematically dismantles the three posited scenarios, highlighting the lack of scientific foundation and the implausibility of AI-driven human extinction. Her argument underscores the importance of approaching AI risks with a balanced perspective, acknowledging genuine concerns while avoiding unfounded speculations. Melanie draws parallels with other technologies like vaccines, emphasizing the need for scientific evaluation rather than succumbing to baseless fears. Overall, her analysis encourages an understanding of AI's potential risks and benefits grounded in empirical data and scientific scrutiny.</p>
+            </div>
+        </div>
+        
+        <div class="purple-container">
+        	<h2>Combined Video Analyses</h2>
+            <p>Engaging with Melanie Mitchell's insights on artificial intelligence (AI) provides a compelling journey through the intricate landscape of this evolving field. Mitchell's perspective is a harmonious blend of caution and optimism, an approach that becomes evident as she explores the intricate foundations of intelligence in natural and artificial systems. Her emphasis on interdisciplinary collaboration highlights the complexity of intelligence, urging a collective effort to unravel its diverse dimensions. The evolving definition of AI, as articulated by Mitchell, underscores the perpetual challenge of encapsulating intelligence within a singular framework, a challenge that technology continually reshapes.</p>
+
+<p>Navigating the historical trajectory of AI development, Mitchell offers a discerning analysis of its evolution, from rule-based systems to the dominance of machine learning and deep learning. Her recognition of narrow AI's triumphs in specific tasks is juxtaposed against the persistent gap in achieving general AI, providing a valuable lens for evaluating the current state and future trajectories of AI technologies.</p>
+
+<p>Mitchell's exploration of AI's humanity delves into task-specific advancements, such as language translation and image recognition, while highlighting the nuanced disparities that distinguish machines from human intelligence. Personal anecdotes, like the challenges faced with a Scottish accent in Google Translate, vividly illustrate the existing limitations and ongoing efforts to fortify the adaptability of AI systems.</p>
+
+<p>In dissecting the complexities of self-driving cars, Mitchell pragmatically discusses autonomy levels and acknowledges the formidable task of infusing common sense into AI. Her analysis emphasizes the need for judicious restrictions, recognizing the imperative to balance technological progress with safety and ethical considerations.</p>
+
+<p>When dissecting the existential threat discourse surrounding AI, Mitchell adopts a rational stance, debunking hypothetical scenarios and advocating for empirical evidence over unfounded speculations. Her cautionary analogy with vaccines serves as a stark reminder not to stifle AI's potential benefits due to sensationalist claims.</p>
+
+<p>In summary, Melanie Mitchell's work on AI offers a balanced, informed, and deeply insightful perspective. Her analyses contribute to a nuanced understanding of AI's current landscape, its challenges, and the imperative of responsible development. Mitchell's discussions echo a call for a scientific, evidence-based approach, urging an acknowledgment of both the potential risks and transformative benefits inherent in the realm of artificial intelligence.</p>
+            <img src="">
+        </div>
+        
+        <div class="purple-container">
+        	<h2>Possible Future Research</h2>
+            <p>The insights shared by Melanie Mitchell in the five videos pave the way for intriguing avenues of future research in artificial intelligence. First and foremost, the evolving definition of intelligence in natural and artificial systems, as discussed by Mitchell, suggests a rich area for interdisciplinary exploration. Future research could delve deeper into understanding how collaboration across diverse disciplines can enhance our comprehension of intelligence, both in humans and machines. Additionally, Mitchell's distinction between narrow and general AI prompts questions about the feasibility and pathways to achieving broader artificial intelligence. Investigating the fundamental challenges hindering the development of general AI, and exploring innovative approaches to bridge this gap, could be a compelling avenue for future research. Furthermore, the pragmatic assessment of self-driving cars and the challenges associated with achieving autonomy at Level 5 opens the door for research into refining AI systems for real-world applications, addressing safety concerns, and developing effective restrictions to balance technological progress with ethical considerations. Finally, Mitchell's critical analysis of AI as an existential threat calls for research that goes beyond hypothetical scenarios, focusing on empirical studies to assess the actual risks and benefits of AI in diverse contexts. Future research could explore methodologies for evidence-based risk assessment, ethical guidelines for AI development, and strategies to mitigate potential harms while maximizing the transformative potential of artificial intelligence.</p>
+            <img src="">
+        </div>
+        
+        <div id="action" class="video-container">
+        	<h2>Action X</h2>
+            <iframe src="https://cogscidighum.github.io/3704A/Helen/actionx.html" width="90%" height="300px" frameborder="0"></iframe>
+        </div>
+        
+        <div class="video-container">
+        	<h2>Action XI</h2>
+            <iframe src="https://cogscidighum.github.io/3704A/Helen/action11.html" width="90%" height="300px" frameborder="0"></iframe>
+        </div>
+
+    </section>
+
+    <footer>
+        <h1>Works Cited</h1>
+
+        <h3>Video references</h3>
+        <p>YouTube. (2022, February 15). The Copycat architecture - Douglas Hofstadter. <a href="https://youtu.be/NLMW9twrlaQ?si=Mo5Or_hhzYubQtjW" target="_blank">https://youtu.be/NLMW9twrlaQ?si=Mo5Or_hhzYubQtjW</a></p>
+        <p>YouTube. (2022, January 22). Melanie Mitchell, Complexity and the Illusion of Smart AI | Lex Fridman Podcast # 195. <a href="https://youtu.be/zb39ty248bU?si=proAIh5d4ZvJvm8Q" target="_blank">https://youtu.be/zb39ty248bU?si=proAIh5d4ZvJvm8Q</a></p>
+        <p>YouTube. (2021, April 7). Artificial Intelligence: A Conversation with Melanie Mitchell. <a href="https://www.youtube.com/watch?v=yi90lTPLx-8" target="_blank">https://www.youtube.com/watch?v=yi90lTPLx-8</a></p>
+        <p>YouTube. (2021, March 6). AI alignment with Melanie Mitchell | AI Alignment Podcast #11. <a href="https://www.youtube.com/watch?v=U_YMmy18E0s" target="_blank">https://www.youtube.com/watch?v=U_YMmy18E0s</a></p>
+        <p>YouTube. (2023, July 6). Melanie Mitchell: Complexity: A Guided Tour | Artificial Intelligence Podcast. <a href="https://www.youtube.com/watch?v=skRgYH7oAjc" target="_blank">https://www.youtube.com/watch?v=skRgYH7oAjc</a></p>
+
+        <h3>Photo references</h3>
+        <p>Amazon Author Media. (n.d.). Melanie Mitchell. <a href="https://m.media-amazon.com/images/S/amzn-author-media-prod/jrl7ifpns69mgisj8jmour3ccu._SX450_CR0%2C0%2C450%2C450_.jpg" target="_blank">https://m.media-amazon.com/images/S/amzn-author-media-prod/jrl7ifpns69mgisj8jmour3ccu._SX450_CR0%2C0%2C450%2C450_.jpg</a></p>
+        <p>Melanie Mitchell. (n.d.). Analogy-Making as Perception. <a href="https://melaniemitchell.me/BooksContent/AMAP.jpg" target="_blank">https://melaniemitchell.me/BooksContent/AMAP.jpg</a></p>
+        <p>Melanie Mitchell. (n.d.). An Introduction to Genetic Algorithms. <a href="https://melaniemitchell.me/BooksContent/IntroGA.jpg" target="_blank">https://melaniemitchell.me/BooksContent/IntroGA.jpg</a></p>
+        <p>Melanie Mitchell. (n.d.). Complexity: A Guided Tour. <a href="https://melaniemitchell.me/BooksContent/CAGT.jpg" target="_blank">https://melaniemitchell.me/BooksContent/CAGT.jpg</a></p>
+        <p>Melanie Mitchell. (n.d.). Artificial Intelligence: A Guide for Thinking Humans. <a href="https://melaniemitchell.me/aibook/AIGFTH.jpg" target="_blank">https://melaniemitchell.me/aibook/AIGFTH.jpg</a></p>
+
+        <h3>Other references</h3>
+        <p>Santa Fe Institute. (n.d.). Melanie Mitchell. <a href="https://www.santafe.edu/people/profile/melanie-mitchell" target="_blank">https://www.santafe.edu/people/profile/melanie-mitchell</a></p>
+    </footer>
