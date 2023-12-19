@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Ryan Holiday - Ryan Lyster</title>
+   <style>
+       #output2 {
+           color: purple; 
+       }
+       button {
+           background-color: purple; 
+           color: white;
+           padding: 5px 10px;
+           margin: 5px;
+           border: none;
+           cursor: pointer;
+       }
+       button:hover {
+           background-color: darkpurple;
+       }
+   </style>
+</head>
+<body> 
+    <button id="run">ACTION</button>
+    <label>Output:</label>   
+    <div id="output2">Ryan Holiday stands out as a modern author and thinker, renowned for his contributions to the revival of Stoicism and its integration into today's lifestyle.</div>
+
+    <script type="module">
+        import { pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.7.0'
+
+        const generate = document.getElementById("run");   
+        generate.addEventListener("click", async () => {
+            try {
+                let pipe = await pipeline('text-classification');
+                let output = await pipe(document.getElementById("output2").textContent); 
+                document.getElementById("output2").textContent = JSON.stringify(output);
+            } catch (error) {
+                console.log("Error:", error.message);
+            }
+        });
+    </script>
+</body>
+</html>
