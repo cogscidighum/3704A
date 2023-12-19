@@ -157,8 +157,8 @@ Furthermore, Dr. Boyd states “the singlest largest drive of neuroplasticity is
             var chart = new CanvasJS.Chart("chartContainer");
 
             // Set the background color of the chart
-            chart.options.backgroundColor = "lightblue"; // Change this to your desired color
-
+            chart.options.backgroundColor = "lightblue"; 
+         
             chart.options.axisY = { prefix: " ", suffix: "k/minutes" };
             chart.options.title = { text: "CelSci Views & Duration" };
 
@@ -166,14 +166,14 @@ Furthermore, Dr. Boyd states “the singlest largest drive of neuroplasticity is
                 type: "column",
                 name: "Views(in K)",
                 showInLegend: true,
-                color: "black" // Change this to your desired color
+                color: "black" 
             };
 
             var series2 = { //dataSeries - second quarter
                 type: "column",
                 name: "Duration(in minutes)",
                 showInLegend: true,
-                color: "grey" // Change this to your desired color
+                color: "grey" 
             };
 
             chart.options.data = [];
@@ -182,7 +182,7 @@ Furthermore, Dr. Boyd states “the singlest largest drive of neuroplasticity is
 
             series1.dataPoints = [
                 { label: "How can stress affect learning?", y: 22 },
-                { label: "Your Plastic Brain - Lara Boyd Professor, Center for Brain Health", y: 20 },
+                { label: "Lara Boyd: Stroke Recovery ", y: 20 },
                 { label: "Educational Neuroplasticity", y: 13 },
                 { label: "Exercise Your Brain!", y: 26 },
                 { label: "Dr. Lara Boyd: Plasticity and the Brains of Children with Learning Disabilities", y: 22 }
@@ -190,7 +190,7 @@ Furthermore, Dr. Boyd states “the singlest largest drive of neuroplasticity is
 
             series2.dataPoints = [
                 { label: "How can stress affect learning?", y: 12 },
-                { label: "Your Plastic Brain - Lara Boyd Professor, Center for Brain Health", y: 38 },
+                { label: "Lara Boyd: Stroke Recovery ", y: 2 },
                 { label: "Educational Neuroplasticity", y: 9 },
                 { label: "Exercise Your Brain", y: 77 },
                 { label: "Dr. Lara Boyd: Plasticity and the Brains of Children with Learning Disabilities", y: 60 }
