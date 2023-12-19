@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        window.onload = function () {
+            var chart = new CanvasJS.Chart("chartContainer");
+
+            chart.options.title = { text: "Melanie Mitchell: YouTube Stats" };
+
+            var series1 = { //dataSeries - first quarter
+                type: "column",
+                name: "Views",
+                color: "#4F81BC",
+                showInLegend: true
+            };
+
+            var series2 = { //dataSeries - second quarter
+                type: "column",
+                name: "Duration in minutes",
+                color: "#8FAADC",
+                showInLegend: true,
+                axisYType: "secondary",
+            };
+
+            chart.options.data = [];
+            chart.options.data.push(series1);
+            chart.options.data.push(series2);
+
+            series1.dataPoints = [
+                { label: "Abstraction and Analogy in Artificial Intelligence", y: 1000 },
+                { label: "Why AI is harder than we think", y: 2924 },
+                { label: "Existential risk from AI: A skeptical perspective", y: 922 },
+                { label: "Can AI Be Human?", y: 361 },
+                { label: "Munk Debate on Artificial Intelligence", y: 443 }
+            ];
+
+            series2.dataPoints = [
+                { label: "Abstraction and Analogy in Artificial Intelligence", y: 195.5 }, // Adjusted for better visibility
+                { label: "Why AI is harder than we think", y: 342.3 }, // Adjusted for better visibility
+                { label: "Existential risk from AI: A skeptical perspective", y: 445 },
+                { label: "Can AI Be Human?", y: 430 },
+                { label: "Munk Debate on Artificial Intelligence", y: 55.7 }, // Adjusted for better visibility
+            ];
+
+            chart.options.axisX = {
+                interval: 1,
+                labelFontSize: 12,
+            };
+
+            chart.options.axisY = {
+                title: "Views",
+                suffix: ""
+            };
+
+            chart.options.axisY2 = {
+                title: "Duration in minutes",
+                suffix: ""
+            };
+
+            chart.render();
+        }
+    </script>
+    <script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+</head>
+
+<body>
+    <div id="chartContainer" style="height: 500px; width: 100%;">
+    </div>
+</body>
+</html>
