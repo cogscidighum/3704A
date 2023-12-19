@@ -1,11 +1,35 @@
-// Simple RPS
-var userChoice = prompt("Do you choose rock, paper or scissors?");
-var computerChoice = Math.random();
-if (computerChoice > 0 && computerChoice < 0.33) {
-  computerChoice = "Rock";
-} else if (computerChoice > 0.34 && computerChoice < 0.67) {
-  computerChoice = "Paper";
-} else {
-  computerChoice = "Scissors";
-}
-console.log(computerChoice);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .title-container {
+            background-color: #f0f8ff; /* AliceBlue background color */
+            padding: 20px;
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle effect */
+            text-align: center;
+            margin: 20px;
+        }
+
+        .custom-h1 {
+            color: royalblue;
+            font-size: 40px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .cool-text {
+            font-size: 20px;
+            color: #4CAF50;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title-container">
+        <h1 class="custom-h1">Project 2 - Five Critical Analysis Videos by Dr. Lara Boyd by Mariam Saleh</h1>
+    </div>
