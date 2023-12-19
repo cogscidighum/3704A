@@ -230,7 +230,7 @@ Furthermore, Dr. Boyd states “the singlest largest drive of neuroplasticity is
 
 
 
-
+ <h1>Take a Break! Click and Play: Rock, Paper, Scissor</h1>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -293,6 +293,115 @@ Furthermore, Dr. Boyd states “the singlest largest drive of neuroplasticity is
 </html>
 
 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      background-color: lightyellow;
+    }
+
+    h2 {
+      color: blue;
+    }
+
+    button {
+      background-color:lightblue;
+      color: black;
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+      border: none;
+    }
+
+    #result {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Rock-Paper-Scissors Game</h2>
+  <button onclick="playGame('Rock')">Rock</button>
+  <button onclick="playGame('Paper')">Paper</button>
+  <button onclick="playGame('Scissors')">Scissors</button>
+  <div id="result"></div>
+
+  <script>
+    function playGame(userChoice) {
+      var computerChoice = Math.random();
+      if (computerChoice > 0 && computerChoice < 0.33) {
+        computerChoice = "Rock";
+      } else if (computerChoice > 0.34 && computerChoice < 0.67) {
+        computerChoice = "Paper";
+      } else {
+        computerChoice = "Scissors";
+      }
+
+      var result = determineWinner(userChoice, computerChoice);
+
+      // Display the result
+      document.getElementById('result').innerText = `You chose ${userChoice}. Computer chose ${computerChoice}. Result: ${result}`;
+    }
+
+    function determineWinner(userChoice, computerChoice) {
+      if (userChoice === computerChoice) {
+        return "It's a tie!";
+      } else if (
+        (userChoice === "Rock" && computerChoice === "Scissors") ||
+        (userChoice === "Paper" && computerChoice === "Rock") ||
+        (userChoice === "Scissors" && computerChoice === "Paper")
+      ) {
+        return "You win!";
+      } else {
+        return "You lose!";
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
 
 
 
