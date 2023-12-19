@@ -1,39 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .title-container {
-            background-color:lightblye /
-            padding: 20px;
-            border-radius: 10px; /
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
-            text-align: center;
-            margin: 20px;
-        }
+<html>
+  <head>
+      <script type="module">
+        import { pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.6.2';
+      </script>
+      <script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite@0.4.1/dist/lite.js"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gradio/lite@0.4.1/dist/lite.css" />
+  </head>
+  <body>
+      <h3>
+        Your Name and CelSci Name here, Taking a few seconds to load...
+      </h3>
+      <gradio-lite>
+          <!-- Gradio Requirements -->
+          <gradio-requirements>
+              transformers_js_py
+          </gradio-requirements>
 
-        .custom-h1 {
-            color: royalblue;
-            font-size: 40px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
+          <!-- Gradio File Configuration -->
+          <gradio-file name="app.py" entrypoint>
+              from transformers_js import import_transformers_js
+              import gradio as gr
 
-        .cool-text {
-            font-size: 20px;
-            color: #4CAF50;
-            margin-top: 20px;
-            text-align: center;
-        }
-    </style>
-</head>
+              transformers = await import_transformers_js()
+              pipeline = transformers.pipeline
+              pipe = await pipeline('sentiment-analysis')
 
-<body>
-    <div class="title-container">
-        <h1 class="custom-h1">Project 2 - Five Critical Analysis Videos by Dr. Lara Boyd by Mariam Saleh</h1>
-    </div>
+              async def classify(text):
+                  return await pipe(text)
 
-</body>
-
+              demo = gr.Interface(classify, "textbox", "json", examples=[
+                  "How can stress affect learning?",
+                  "Lara Boyd: Stroke Recovery",
+                  "Educational Neuroplasticity",
+                  "Exercise Your Brain!",
+                  "Current Arrowsmith Program Research Initiatives"
+              ])
+              demo.launch()
+          </gradio-file>
+      </gradio-lite>
+  </body>
 </html>
+
