@@ -16,69 +16,8 @@
   </head>
 
   <body>
-    <h1 class="custom-h1"> Project 2 - Dr. Lara Boyd by Mariam Saleh </h1>
-   
-<h1>Duration and Views of Dr.Lara Boyd's 5 videos: </h1>
-   <h1>" Video 1: How can stress affect learning? 
-    Video 2: Your Plastic Brain - Lara Boyd Professor
-    Video 3: Center for Brain Health
-    Video 4:Educational Neuroplasticity,Exercise Your Brain!
-    Video 5: Dr. Lara Boyd: Plasticity and the Brains of Children with Learning Disabilities"  </h1>
-<script type="text/javascript">
-window.onload = function () {
-    var chart = new CanvasJS.Chart("chartContainer");
-  chart.options.backgroundColor = "lightblue";
+    <h1 class="custom-h1"> Project 2 - Five Critical Analysis Videos by Dr. Lara Boyd by Mariam Saleh </h1>
 
-    chart.options.axisY = { prefix: " ", suffix: "k/minutes" };
-    chart.options.title = { text: "CelSci Views $ Duration" };
-
-    var series1 = { //dataSeries - first quarter
-        type: "column",
-        name: "Views(in K)",
-        showInLegend: true
-        color: "black"
-    };
-
-    var series2 = { //dataSeries - second quarter
-        type: "column",
-        name: "Duration(in minutes)",
-        showInLegend: true
-        color: "grey"
-    };
-
-    chart.options.data = [];
-    chart.options.data.push(series1);
-    chart.options.data.push(series2);
-
-
-    series1.dataPoints = [
-            { label: "How can stress affect learning?", y: 22 },
-            { label: "Your Plastic Brain - Lara Boyd Professor, Center for Brain Health", y: 20 },
-            { label: "Educational Neuroplasticity", y: 13 },
-            { label: "Exercise Your Brain!", y: 26 },
-            { label: "Dr. Lara Boyd: Plasticity and the Brains of Children with Learning Disabilities", y: 22 }
-    ];
-
-    series2.dataPoints = [
-            { label: "How can stress affect learning?", y: 12 },
-            { label: "Your Plastic Brain - Lara Boyd Professor, Center for Brain Health", y: 38 },
-            { label: "Educational Neuroplasticity", y: 9 },
-            { label: "Exercise Your Brain", y: 77 },  // Update the label here
-            { label: "Dr. Lara Boyd: Plasticity and the Brains of Children with Learning Disabilities", y: 60 }
-    ];
-
-    
-
-    chart.render();
-}
-</script>
-<script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
-</head>
-
-<body>
-    <div id="chartContainer" style="height: 600px; width: 100%;">
-    </div>
-</body>
 
 
 
@@ -202,6 +141,78 @@ Furthermore, Dr. Boyd states “the singlest largest drive of neuroplasticity is
 
 
 
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</head>
+<body>
+    <h1>Duration and Views of Dr.Lara Boyd's 5 videos: </h1>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            var chart = new CanvasJS.Chart("chartContainer");
+
+            // Set the background color of the chart
+            chart.options.backgroundColor = "lightblue"; // Change this to your desired color
+
+            chart.options.axisY = { prefix: " ", suffix: "k/minutes" };
+            chart.options.title = { text: "CelSci Views & Duration" };
+
+            var series1 = { //dataSeries - first quarter
+                type: "column",
+                name: "Views(in K)",
+                showInLegend: true,
+                color: "black" // Change this to your desired color
+            };
+
+            var series2 = { //dataSeries - second quarter
+                type: "column",
+                name: "Duration(in minutes)",
+                showInLegend: true,
+                color: "grey" // Change this to your desired color
+            };
+
+            chart.options.data = [];
+            chart.options.data.push(series1);
+            chart.options.data.push(series2);
+
+            series1.dataPoints = [
+                { label: "How can stress affect learning?", y: 22 },
+                { label: "Your Plastic Brain - Lara Boyd Professor, Center for Brain Health", y: 20 },
+                { label: "Educational Neuroplasticity", y: 13 },
+                { label: "Exercise Your Brain!", y: 26 },
+                { label: "Dr. Lara Boyd: Plasticity and the Brains of Children with Learning Disabilities", y: 22 }
+            ];
+
+            series2.dataPoints = [
+                { label: "How can stress affect learning?", y: 12 },
+                { label: "Your Plastic Brain - Lara Boyd Professor, Center for Brain Health", y: 38 },
+                { label: "Educational Neuroplasticity", y: 9 },
+                { label: "Exercise Your Brain", y: 77 },
+                { label: "Dr. Lara Boyd: Plasticity and the Brains of Children with Learning Disabilities", y: 60 }
+            ];
+
+            chart.render();
+        }
+    </script>
+
+    <div id="chartContainer" style="height: 600px; width: 100%;"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+   
 
    
 
