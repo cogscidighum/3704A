@@ -8,12 +8,54 @@
     <style>
         body {
             background-color: #c7efb9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            font-family: 'Calibri', sans-serif;
+        }
+
+        #toc {
+            width: 200px;
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-right: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        #toc h2 {
+            color: #21675e;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        #toc ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #toc li {
+            margin-bottom: 8px;
+        }
+
+        #toc a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+        }
+
+        #toc a:hover {
+            color: #21675e;
+        }
+
+        .content {
+            flex: 1;
+            padding: 15px;
         }
 
         h1 {
             color: black;
             font-size: 30px;
-            font-family: 'Calibri';
         }
 
         .custom-h1 {
@@ -24,26 +66,6 @@
         h2 {
             color: #21675e;
             font-size: 23px;
-        }
-
-        #toc {
-            position: fixed;
-            top: 0;
-            right: 0;
-            background-color: #f0f0f0;
-            padding: 15px;
-            border-left: 1px solid #ccc;
-        }
-
-        #toc a {
-            display: block;
-            margin-bottom: 8px;
-            text-decoration: none;
-            color: #333;
-        }
-
-        #toc a:hover {
-            color: #21675e;
         }
     </style>
 </head>
@@ -61,25 +83,27 @@
         </ul>
     </div>
 
-    <div style="text-align: center;">
-        <h1 class="custom-h1">Celebrity Scientist: Dr. Andrew Huberman</h1>
+    <div class="content">
+        <div style="text-align: center;">
+            <h1 class="custom-h1">Celebrity Scientist: Dr. Andrew Huberman</h1>
+        </div>
+
+        <!-- ... (rest of your HTML content) -->
+
+        <h2 id="video-1">Video 1: Fitness Toolkit: Protocol and Tools to Optimize Physical Health</h2>
+        <div style="text-align: center;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/q1Ss8sTbFBY" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- ... (repeat for other videos) -->
+
+        <h2 id="video-2">Video 2: Leverage Dopamine to Overcome Procrastination and Optimize Effort</h2>
+        <div style="text-align: center;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/K-TW2Chpz4k" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- ... (rest of your HTML content) -->
     </div>
-
-    <!-- ... (rest of your HTML content) -->
-
-    <h2 id="video-1">Video 1: Fitness Toolkit: Protocol and Tools to Optimize Physical Health</h2>
-    <div style="text-align: center;">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/q1Ss8sTbFBY" frameborder="0" allowfullscreen></iframe>
-    </div>
-
-
-
-    <h2 id="video-2">Video 2: Leverage Dopamine to Overcome Procrastination and Optimize Effort</h2>
-    <div style="text-align: center;">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/K-TW2Chpz4k" frameborder="0" allowfullscreen></iframe>
-    </div>
-
-  
 
 </body>
 
