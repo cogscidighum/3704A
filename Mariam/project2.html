@@ -167,69 +167,6 @@ Furthermore, Dr. Boyd states “the singlest largest drive of neuroplasticity is
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-
-
-<html>
-<head>
-   <title>BCogSphere: Retrieval</title>
-</head>
-<body>
-    <button id="action">ACTION</button>
-    <label>Output:</label>
-    <div id="output">Ready!</div>
-
-    <script type="module">
-        import { client } from "https://cdn.jsdelivr.net/npm/@gradio/client@0.1.4/dist/index.min.js";
-
-        const generate = document.getElementById("click here");
-        const output = document.getElementById("output ");
-
-        generate.addEventListener("click", async () => {
-            try {
-                output.textContent = "Hope you enjoyed reading my Project 2!";
-            } catch (error) {
-                console.log("Error:", error.message);
-            }
-        });
-    </script>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-
-
-
-
-
-
  <h1>Take a Break! Click and Play: Rock, Paper, Scissor</h1>
 <html lang="en">
 <head>
@@ -402,14 +339,36 @@ Furthermore, Dr. Boyd states “the singlest largest drive of neuroplasticity is
 
 
    
+<html>
+<head>
+   <title>BCogSphere: Retrieval</title>
+</head>
+<body>
+    <button id="action">ACTION</button>
+    <label>Output:</label>
+    <div id="output">Ready!</div>
+
+    <script type="module">
+        import { client } from "https://cdn.jsdelivr.net/npm/@gradio/client@0.1.4/dist/index.min.js";
+
+        const generate = document.getElementById("action");
+        const output = document.getElementById("output");
+
+        generate.addEventListener("click", async () => {
+            try {
+                output.textContent = "Hope you enjoyed reading my Project_2 ! ";
+            } catch (error) {
+                console.log("Error:", error.message);
+            }
+        });
+    </script>
+</body>
+</html>
 
 
 
 
 
-
-
-   
 
    
 
