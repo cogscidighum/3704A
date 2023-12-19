@@ -9,7 +9,7 @@
   </head>
   <body>
       <h3>
-        Your Name and CelSci Name here, Taking a few seconds to load...
+        Lara Boyd, Taking a few seconds to load...
       </h3>
 <gradio-lite>
 
@@ -32,6 +32,36 @@ demo.launch()
 </gradio-file>
 </gradio-lite>
     </body>
+</html>
+
+<!DOCTYPE html>
+<head>
+<html>
+   <title>Mariam</title>
+  <h3>Lara Boyd, taking a few seconds to load...</h3>
+  <head>
+    <script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
+  </head>
+  <body>
+    <gradio-lite>
+      import gradio as gr
+      import pandas as pd
+      def show_df(as1,as2,as3):
+         df = pd.DataFrame({
+            "Videos" : ["How can stress affect learning?", "Lara Boyd: Stroke Recovery", "Educational Neuroplasticity", ""Exercise Your Brain", "Current Arrowsmith Program Research Initiatives"], 
+            "Views" : [500, 2000, 540, 300, 200], 
+            "Duration" : [30, 20, 70, 35, 22]})
+         print(as1)
+         df = df.style.highlight_max(color = 'lightgreen', axis = 0)
+         return df
+      with gr.Blocks() as demo:
+        with gr.Row():
+          with gr.Column():
+            data = gr.Dataframe()
+            demo.load(show_df, None, [data])
+      demo.launch()
+    </gradio-lite>
+  </body>
 </html>
 
 
