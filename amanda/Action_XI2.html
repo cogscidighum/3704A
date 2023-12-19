@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Amanda and CelSci Name: Andrew Huberman</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gradio/lite@0.4.1/dist/lite.css" />
+</head>
+
+<body style="background-color: #d9ead3;">
+    <h3>Amanda and CelSci Name: Andrew Huberman, Taking a few seconds to load...</h3>
+
+    <script src="https://cdn.jsdelivr.net/npm/@gradio/lite@0.4.1/dist/lite.js"></script>
+    <script>
+        const grInterface = gr.Interface(
+            async (text) => {
+                // Your sentiment analysis logic here (without using await)
+                return { result: "Your sentiment analysis result here" };
+            },
+            "textbox",
+            "json",
+            { examples: ["Your example text here"] }
+        );
+        grInterface.launch();
+    </script>
+</body>
+
+</html>
