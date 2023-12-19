@@ -2,7 +2,7 @@
 <head>
 <html>
    <title>Tassie</title>
-	<h3>Yejin Choi: Analysis</h3>
+	<h3>Dr. Scott Bolland: Analysis</h3>
 	<head>
 		<script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
 	</head>
@@ -13,8 +13,8 @@
 			def show_df(as1,as2,as3):
 				 df = pd.DataFrame({
 					  "Videos" : ["Teaching for tomorrow - AI, design thinking and the future of work", "Succeeding Scientifically - 3 breakthrough strategies for effectively achieving your goals", "Succeeding Scientifically Episode 1 - The Surprising Truth about Wellbeing", "Succeeding Scientifically Episode 2 - Navigating Life's Complex Challenges", "Succeeding Scientificially Episode 3 - The Happiness Advantage"], 
-					  "Views" : [1796434, 1200000, 2000000, 452000, 8200000], 
-					  "Duration" : [401, 1109, 1009, 2751, 440]})
+					  "Views" : [97,11,61,34,34], 
+					  "Duration" : [30:30, 32:21, 7:26, 8:59]})
 				 print(as1)
 				 df = df.style.highlight_max(color = 'lightgreen', axis = 0)
 				 return df
