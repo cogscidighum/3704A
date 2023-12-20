@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rock-Paper-Scissors Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+    }
+    #result {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Rock-Paper-Scissors Game</h1>
+  <div id="game">
+    <p>Pick your choice:</p>
+    <button class="button" id="rock">Rock</button>
+    <button class="button" id="paper">Paper</button>
+    <button class="button" id="scissors">Scissors</button>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    let userWins = 0;
+    let computerWins = 0;
+    let ties = 0;
+    let trials = 0;
+
+    function computerChoice() {
+      const random = Math.random();
+      if (random < 0.33) return "Rock";
+      else if (random < 0.67) return "Paper";
+      else return "Scissors";
+    }
+
+    function playRound(userChoice) {
+      const computer = computerChoice();
+      let result;
+
+      if (
+        (userChoice === "Rock" && computer === "Scissors") ||
+        (userChoice === "Paper" && computer === "Rock") ||
+        (userChoice === "Scissors" && computer === "Paper")
+      ) {
+        userWins++;
+        result = "You win!";
+      } else if (userChoice === computer) {
+        ties++;
+        result = "It's a tie!";
+      } else {
+        computerWins++;
+        result = "You lose!";
+      }
+
+      document.getElementById("result").innerText = result;
+      trials++;
+
+      if (trials < 24) {
+        setTimeout(() => {
+          document.getElementById("result").innerText = "";
+        }, 1500);
+      } else {
+        displayResults();
+      }
+    }
+
+    function displayResults() {
+      const resultDiv = document.getElementById("game");
+      resultDiv.innerHTML = `
+        <p>Game Over!</p>
+        <p>User Wins: ${userWins}</p>
+        <p>Computer Wins: ${computerWins}</p>
+        <p>Ties: ${ties}</p>
+      `;
+    }
+
+    document.getElementById("rock").addEventListener("click", () => playRound("Rock"));
+    document.getElementById("paper").addEventListener("click", () => playRound("Paper"));
+    document.getElementById("scissors").addEventListener("click", () => playRound("Scissors"));
+  </script>
+</body>
+</html>

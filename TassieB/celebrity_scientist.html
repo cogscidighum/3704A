@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Is Yejin Choi a Celebrity Scientist?</title>
+</head>
+<body>
+    <h1>Is Yejin Choi a Celebrity Scientist?</h1>
+    <p>Yejin Choi, in her TED Talk titled "Why AI is Incredibly Smart and Shockingly Stupid," has 1,796,434 views.</p>
+    <p id="result"></p>
+
+    <script>
+        function checkCelebrityScientist(views) {
+            // You can define a threshold for what you consider a "celebrity scientist."
+            const threshold = 1000000; // For example, 1 million views
+
+            if (views >= threshold) {
+                return 'true';
+            } else {
+                return 'false';
+            }
+        }
+
+        // Get the number of views from the provided TED Talk.
+        const views = 1796434; // You can replace this with the actual number of views.
+
+        // Check if Yejin Choi is a celebrity scientist based on the number of views.
+        const isCelebrity = checkCelebrityScientist(views);
+
+        // Display the result on the page.
+        const resultElement = document.getElementById("result");
+        resultElement.textContent = `Is Yejin Choi a celebrity scientist? ${isCelebrity}`;
+    </script>
+</body>
+</html>
