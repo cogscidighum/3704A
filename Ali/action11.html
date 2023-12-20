@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+<html>
+   <title>Ali Zain Vastani</title>
+  <h3>Marc Andreessen!, taking a few seconds to load...</h3>
+  <head>
+    <script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
+  </head>
+  <body>
+    <gradio-lite>
+      import gradio as gr
+      import pandas as pd
+      
+      def show_df(as1, as2, as3):
+          df = pd.DataFrame({
+              "Videos": ["How Risk Taking, Innovation & Artificial Intelligence Transform Human Experience", 
+                         "AI and the Future of Hollywood", 
+                         "Building, Web3, Collapsing Trust, and Realignments", 
+                         "Marc Andreessen on Techno-Optimism and Its Enemies", 
+                         "Debating the Future of AI"],
+              "Views": [371477, 20868, 39907, 1791, 67341], 
+              "Duration": [10621, 8135, 3257, 5276, 3257]
+          })
+          print(as1)
+          df = df.style.highlight_max(color='lightgreen', axis=0)
+          return df
+      
+      with gr.Blocks() as demo:
+          with gr.Row():
+              with gr.Column():
+                  data = gr.Dataframe()
+                  demo.load(show_df, None, [data])
+      demo.launch()
+      
