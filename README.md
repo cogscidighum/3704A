@@ -78,6 +78,7 @@ Marc Andreessen, [Marc Andreessen: Future of the Internet, Technology, and AI | 
 [ACTION VI](https://github.com/cogscidighum/3704A/blob/main/Ali/action6.html) [ACTION IIX](https://github.com/cogscidighum/3704A/blob/main/Ali/action8.html)
 [ACTION IX](https://github.com/cogscidighum/3704A/blob/main/Ali/action9.html) [ACTION X](https://github.com/cogscidighum/3704A/blob/main/Ali/action10.html)
 [ACTION XI](https://github.com/cogscidighum/3704A/blob/main/Ali/action11.html) [ACTION XII](https://github.com/cogscidighum/3704A/blob/main/Ali/action12.html)
+[PROJECT 2](https://github.com/cogscidighum/3704A/blob/main/Ali/project2.html)
 # Suban Hussein
 Lex Fridman podcasts -  [Joscha Bach: Life, Intelligence, Consciousness, AI & the Future of Humans | Lex Fridman Podcast #392](https://www.youtube.com/watch?v=e8qJsk1j2zE) , 493K views
 # Ashley Navas
